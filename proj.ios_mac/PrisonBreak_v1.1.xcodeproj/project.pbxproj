@@ -54,6 +54,7 @@
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
+		E30E77811BCAD7DE0053F4B1 /* CacheData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30E777F1BCAD7DE0053F4B1 /* CacheData.cpp */; settings = {ASSET_TAGS = (); }; };
 		E3CB5E761BC9753A005123B8 /* Constant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4A1BC9753A005123B8 /* Constant.cpp */; settings = {ASSET_TAGS = (); }; };
 		E3CB5E771BC9753A005123B8 /* Data_FigureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4B1BC9753A005123B8 /* Data_FigureInfo.swift */; settings = {ASSET_TAGS = (); }; };
 		E3CB5E781BC9753A005123B8 /* GameCommonScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4C1BC9753A005123B8 /* GameCommonScene.cpp */; settings = {ASSET_TAGS = (); }; };
@@ -149,6 +150,8 @@
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		E30E777F1BCAD7DE0053F4B1 /* CacheData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CacheData.cpp; sourceTree = "<group>"; };
+		E30E77801BCAD7DE0053F4B1 /* CacheData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheData.h; sourceTree = "<group>"; };
 		E3CB5E4A1BC9753A005123B8 /* Constant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Constant.cpp; sourceTree = "<group>"; };
 		E3CB5E4B1BC9753A005123B8 /* Data_FigureInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data_FigureInfo.swift; sourceTree = "<group>"; };
 		E3CB5E4C1BC9753A005123B8 /* GameCommonScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameCommonScene.cpp; path = ../Classes/GameCommonScene.cpp; sourceTree = "<group>"; };
@@ -431,6 +434,8 @@
 		E3CB5EC61BC97B88005123B8 /* UTIL */ = {
 			isa = PBXGroup;
 			children = (
+				E30E777F1BCAD7DE0053F4B1 /* CacheData.cpp */,
+				E30E77801BCAD7DE0053F4B1 /* CacheData.h */,
 				E3CB5E4A1BC9753A005123B8 /* Constant.cpp */,
 				E3CB5E551BC9753A005123B8 /* Constant.h */,
 			);
@@ -659,6 +664,7 @@
 				E3CB5E831BC9753A005123B8 /* FigureVo.cpp in Sources */,
 				E3CB5E791BC9753A005123B8 /* StartScene.cpp in Sources */,
 				E3CB5E8E1BC9753A005123B8 /* SystemVo.cpp in Sources */,
+				E30E77811BCAD7DE0053F4B1 /* CacheData.cpp in Sources */,
 				E3CB5E7E1BC9753A005123B8 /* CourseScene.cpp in Sources */,
 				E3CB5E7C1BC9753A005123B8 /* AnimationScene.cpp in Sources */,
 				E3CB5E761BC9753A005123B8 /* Constant.cpp in Sources */,
@@ -693,6 +699,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -710,7 +717,7 @@
 					"/Applications/Cocos/frameworks/cocos2d-x-3.8/cocos/platform/ios/Simulation",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/frameworks/cocos2d-x-3.8/prebuilt/ios";
 				OTHER_LDFLAGS = " $(_COCOS_LIB_IOS_END)";
@@ -732,6 +739,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
@@ -747,7 +755,7 @@
 					"/Applications/Cocos/frameworks/cocos2d-x-3.8/cocos/platform/ios/Simulation",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/frameworks/cocos2d-x-3.8/prebuilt/ios";
 				OTHER_LDFLAGS = " $(_COCOS_LIB_IOS_END)";
