@@ -3,7 +3,7 @@
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
-      <ObjectData Name="Scene" Tag="59" ctype="GameNodeObjectData">
+      <ObjectData Name="Scene" Visible="False" Tag="59" ctype="GameNodeObjectData">
         <Size X="960.0000" Y="640.0000" />
         <Children>
           <AbstractNodeData Name="Backgroud_Selection_2" ActionTag="1895603562" Tag="61" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" StretchWidthEnable="True" StretchHeightEnable="True" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
@@ -29,7 +29,7 @@
           <AbstractNodeData Name="UI_Selection_3" ActionTag="-261428536" VisibleForFrame="False" Tag="34" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="96.8884" RightMargin="-96.8884" TopMargin="-85.6216" BottomMargin="85.6216" InnerActionSpeed="1.0000" ctype="ProjectNodeObjectData">
             <Size X="960.0000" Y="640.0000" />
             <AnchorPoint />
-            <Position X="96.8884" Y="85.6216" />
+            <Position X="96.8640" Y="85.6320" />
             <Scale ScaleX="0.8052" ScaleY="0.7571" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.1009" Y="0.1338" />

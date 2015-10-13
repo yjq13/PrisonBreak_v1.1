@@ -74,7 +74,7 @@
 		E3CB5E871BC9753A005123B8 /* GameVo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E641BC9753A005123B8 /* GameVo.cpp */; settings = {ASSET_TAGS = (); }; };
 		E3CB5E891BC9753A005123B8 /* OC_callFigureInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E681BC9753A005123B8 /* OC_callFigureInfo.mm */; settings = {ASSET_TAGS = (); }; };
 		E3CB5E8A1BC9753A005123B8 /* OC_callGameInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E6A1BC9753A005123B8 /* OC_callGameInfo.mm */; settings = {ASSET_TAGS = (); }; };
-		E3CB5E8B1BC9753A005123B8 /* SelectScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E6E1BC9753A005123B8 /* SelectScene.cpp */; settings = {ASSET_TAGS = (); }; };
+		E3CB5E8B1BC9753A005123B8 /* SelectScene_ALL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E6E1BC9753A005123B8 /* SelectScene_ALL.cpp */; settings = {ASSET_TAGS = (); }; };
 		E3CB5E8C1BC9753A005123B8 /* setScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E701BC9753A005123B8 /* setScene.cpp */; settings = {ASSET_TAGS = (); }; };
 		E3CB5E8D1BC9753A005123B8 /* SystemPo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E731BC9753A005123B8 /* SystemPo.swift */; settings = {ASSET_TAGS = (); }; };
 		E3CB5E8E1BC9753A005123B8 /* SystemVo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E741BC9753A005123B8 /* SystemVo.cpp */; settings = {ASSET_TAGS = (); }; };
@@ -183,8 +183,8 @@
 		E3CB5E691BC9753A005123B8 /* OC_callGameInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OC_callGameInfo.h; sourceTree = "<group>"; };
 		E3CB5E6A1BC9753A005123B8 /* OC_callGameInfo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OC_callGameInfo.mm; sourceTree = "<group>"; };
 		E3CB5E6B1BC9753A005123B8 /* OC_callSystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OC_callSystemInfo.h; sourceTree = "<group>"; };
-		E3CB5E6E1BC9753A005123B8 /* SelectScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SelectScene.cpp; path = ../Classes/SelectScene.cpp; sourceTree = "<group>"; };
-		E3CB5E6F1BC9753A005123B8 /* SelectScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectScene.h; path = ../Classes/SelectScene.h; sourceTree = "<group>"; };
+		E3CB5E6E1BC9753A005123B8 /* SelectScene_ALL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SelectScene_ALL.cpp; path = ../Classes/SelectScene_ALL.cpp; sourceTree = "<group>"; };
+		E3CB5E6F1BC9753A005123B8 /* SelectScene_ALL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectScene_ALL.h; path = ../Classes/SelectScene_ALL.h; sourceTree = "<group>"; };
 		E3CB5E701BC9753A005123B8 /* setScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = setScene.cpp; path = ../Classes/setScene.cpp; sourceTree = "<group>"; };
 		E3CB5E711BC9753A005123B8 /* setScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = setScene.h; path = ../Classes/setScene.h; sourceTree = "<group>"; };
 		E3CB5E721BC9753A005123B8 /* StartScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartScene.h; path = ../Classes/StartScene.h; sourceTree = "<group>"; };
@@ -479,8 +479,8 @@
 				E3CB5E601BC9753A005123B8 /* GameCommonSprite.h */,
 				E3CB5E611BC9753A005123B8 /* GameController.cpp */,
 				E3CB5E621BC9753A005123B8 /* GameController.h */,
-				E3CB5E6E1BC9753A005123B8 /* SelectScene.cpp */,
-				E3CB5E6F1BC9753A005123B8 /* SelectScene.h */,
+				E3CB5E6E1BC9753A005123B8 /* SelectScene_ALL.cpp */,
+				E3CB5E6F1BC9753A005123B8 /* SelectScene_ALL.h */,
 				E3CB5E701BC9753A005123B8 /* setScene.cpp */,
 				E3CB5E711BC9753A005123B8 /* setScene.h */,
 				E3CB5E4C1BC9753A005123B8 /* GameCommonScene.cpp */,
@@ -657,7 +657,7 @@
 				E3CB5E7B1BC9753A005123B8 /* OC_callSystemInfo.mm in Sources */,
 				E3CB5E8A1BC9753A005123B8 /* OC_callGameInfo.mm in Sources */,
 				E3CB5E7F1BC9753A005123B8 /* Data_GameInfo.swift in Sources */,
-				E3CB5E8B1BC9753A005123B8 /* SelectScene.cpp in Sources */,
+				E3CB5E8B1BC9753A005123B8 /* SelectScene_ALL.cpp in Sources */,
 				E3CB5E851BC9753A005123B8 /* GameController.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				E3CB5E7A1BC9753A005123B8 /* initDocuments.swift in Sources */,

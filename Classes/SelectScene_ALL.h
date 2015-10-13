@@ -6,14 +6,14 @@
 //
 //
 
-#ifndef __PrisonBreak__SelectScene__
-#define __PrisonBreak__SelectScene__
+#ifndef __PrisonBreak__SelectScene_ALL__
+#define __PrisonBreak__SelectScene_ALL__
 
 #include "cocos2d.h"
 class Select : public cocos2d::Layer
 {
 public:
-    //static cocos2d::Scene* createScene();
+    static cocos2d::Scene* createScene();
     
     virtual bool init();
     

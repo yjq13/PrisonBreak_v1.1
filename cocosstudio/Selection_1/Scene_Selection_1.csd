@@ -3,7 +3,7 @@
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
-      <ObjectData Name="Scene" Tag="8" ctype="GameNodeObjectData">
+      <ObjectData Name="Scene" Visible="False" Tag="8" ctype="GameNodeObjectData">
         <Size X="960.0000" Y="640.0000" />
         <Children>
           <AbstractNodeData Name="Background_Selection_1" ActionTag="-220318043" Tag="9" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="456.0000" RightMargin="456.0000" TopMargin="297.0000" BottomMargin="297.0000" StretchWidthEnable="True" StretchHeightEnable="True" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
