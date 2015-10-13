@@ -6,7 +6,7 @@
       <ObjectData Name="Layer" Tag="97" ctype="GameLayerObjectData">
         <Size X="960.0000" Y="640.0000" />
         <Children>
-          <AbstractNodeData Name="Background_Selection_3" ActionTag="963366194" Tag="98" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="0.0000" TopMargin="0.0001" BottomMargin="-0.0001" StretchWidthEnable="True" StretchHeightEnable="True" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="Background_Selection_3" ActionTag="963366194" Tag="98" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" TopMargin="0.0001" BottomMargin="-0.0001" StretchWidthEnable="True" StretchHeightEnable="True" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="960.0000" Y="640.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="480.0000" Y="319.9999" />
@@ -34,7 +34,7 @@
           <AbstractNodeData Name="Button_Tool1" ActionTag="1228145090" Tag="100" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="258.0931" RightMargin="655.9069" TopMargin="240.7946" BottomMargin="363.2054" TouchEnable="True" FontSize="14" ButtonText="道具1" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="281.0931" Y="381.2054" />
+            <Position X="281.0880" Y="381.1840" />
             <Scale ScaleX="4.0794" ScaleY="5.4267" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.2928" Y="0.5956" />
@@ -49,7 +49,7 @@
           <AbstractNodeData Name="Button_Tool2" ActionTag="944381245" Tag="101" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="679.7706" RightMargin="234.2294" TopMargin="237.5163" BottomMargin="366.4837" TouchEnable="True" FontSize="14" ButtonText="道具2" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="702.7706" Y="384.4837" />
+            <Position X="702.8160" Y="384.5120" />
             <Scale ScaleX="4.0794" ScaleY="5.4267" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.7321" Y="0.6008" />
@@ -61,10 +61,10 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Price_Tool1" ActionTag="218453866" Tag="102" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="298.8636" RightMargin="639.1365" TopMargin="397.8005" BottomMargin="219.1995" FontSize="20" LabelText="10" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+          <AbstractNodeData Name="Text_Price_Tool1" ActionTag="218453866" Tag="102" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="298.8636" RightMargin="639.1365" TopMargin="397.8005" BottomMargin="219.1995" FontSize="20" LabelText="10" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="22.0000" Y="23.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="309.8636" Y="230.6995" />
+            <Position X="309.8880" Y="230.7200" />
             <Scale ScaleX="2.1188" ScaleY="2.7322" />
             <CColor A="255" R="255" G="0" B="0" />
             <PrePosition X="0.3228" Y="0.3605" />
@@ -72,10 +72,10 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Price_Tool2" ActionTag="1216127733" Tag="103" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="736.5975" RightMargin="201.4025" TopMargin="397.4102" BottomMargin="219.5898" FontSize="20" LabelText="10" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+          <AbstractNodeData Name="Text_Price_Tool2" ActionTag="1216127733" Tag="103" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="736.5975" RightMargin="201.4025" TopMargin="397.4102" BottomMargin="219.5898" FontSize="20" LabelText="10" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="22.0000" Y="23.0000" />
             <AnchorPoint ScaleX="0.5230" ScaleY="0.4830" />
-            <Position X="748.1033" Y="230.6994" />
+            <Position X="748.1280" Y="230.7200" />
             <Scale ScaleX="2.1188" ScaleY="2.7322" />
             <CColor A="255" R="255" G="0" B="0" />
             <PrePosition X="0.7793" Y="0.3605" />
@@ -83,10 +83,10 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Num_Tool1" ActionTag="-1119845529" Tag="105" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="314.3593" RightMargin="634.6407" TopMargin="471.9873" BottomMargin="145.0127" FontSize="20" LabelText="0" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+          <AbstractNodeData Name="Text_Num_Tool1" ActionTag="-1119845529" Tag="105" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="314.3593" RightMargin="634.6407" TopMargin="471.9873" BottomMargin="145.0127" FontSize="20" LabelText="0" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="11.0000" Y="23.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="319.8593" Y="156.5127" />
+            <Position X="319.8720" Y="156.5440" />
             <Scale ScaleX="2.1188" ScaleY="2.7322" />
             <CColor A="255" R="255" G="0" B="0" />
             <PrePosition X="0.3332" Y="0.2446" />
@@ -94,10 +94,10 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Num_Tool2" ActionTag="-2038160545" Tag="104" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="750.3850" RightMargin="198.6150" TopMargin="467.5606" BottomMargin="149.4394" FontSize="20" LabelText="0" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+          <AbstractNodeData Name="Text_Num_Tool2" ActionTag="-2038160545" Tag="104" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="750.3850" RightMargin="198.6150" TopMargin="467.5606" BottomMargin="149.4394" FontSize="20" LabelText="0" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="11.0000" Y="23.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="755.8850" Y="160.9394" />
+            <Position X="755.9040" Y="160.9600" />
             <Scale ScaleX="2.1188" ScaleY="2.7322" />
             <CColor A="255" R="255" G="0" B="0" />
             <PrePosition X="0.7874" Y="0.2515" />
@@ -108,7 +108,7 @@
           <AbstractNodeData Name="Button_StartGame" ActionTag="-668916387" Tag="106" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="461.7154" RightMargin="452.2846" TopMargin="548.4470" BottomMargin="55.5530" TouchEnable="True" FontSize="14" ButtonText="开始游戏" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="484.7154" Y="73.5530" />
+            <Position X="484.7040" Y="73.5360" />
             <Scale ScaleX="5.7154" ScaleY="3.3363" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5049" Y="0.1149" />

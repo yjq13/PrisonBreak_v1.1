@@ -28,14 +28,9 @@
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
         <OpenedDocuments>
-          <FilePathData Path="Start/Scene_Start.csd" />
-          <FilePathData Path="Selection_2/Scene_Selection_2.csd" />
-          <FilePathData Path="DiamondShop/Scene_DiamondShop.csd" />
-          <FilePathData Path="DiamondShop/Layer_DiamondShop.csd" />
-          <FilePathData Path="Selection_1/Scene_Selection_1.csd" />
-          <FilePathData Path="Selection_2/Layer_Selection_2.csd" />
+          <FilePathData Path="Selection_2/Layer_Selection_3.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="DiamondShop/Scene_DiamondShop.csd" />
+        <ActiveDocument Path="Selection_2/Layer_Selection_3.csd" />
       </Value>
     </Item>
   </Properties>

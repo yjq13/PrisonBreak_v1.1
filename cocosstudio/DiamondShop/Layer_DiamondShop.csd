@@ -78,10 +78,10 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_11" ActionTag="-1558454323" Tag="132" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="145.9901" RightMargin="768.0099" TopMargin="295.2852" BottomMargin="308.7148" TouchEnable="True" FontSize="14" ButtonText="10个" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_fewDiamonds" ActionTag="-1558454323" Tag="132" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="145.9901" RightMargin="768.0099" TopMargin="295.2852" BottomMargin="308.7148" TouchEnable="True" FontSize="14" ButtonText="10个" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="168.9901" Y="326.7148" />
+            <Position X="168.9600" Y="326.7200" />
             <Scale ScaleX="3.3512" ScaleY="4.3798" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.1760" Y="0.5105" />
@@ -93,10 +93,10 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_11_0" ActionTag="-2113511531" Tag="136" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="470.4531" RightMargin="443.5469" TopMargin="295.2853" BottomMargin="308.7147" TouchEnable="True" FontSize="14" ButtonText="25个" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_someDiamonds" ActionTag="-2113511531" Tag="136" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="470.4531" RightMargin="443.5469" TopMargin="295.2853" BottomMargin="308.7147" TouchEnable="True" FontSize="14" ButtonText="25个" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="493.4531" Y="326.7147" />
+            <Position X="493.4400" Y="326.7200" />
             <Scale ScaleX="3.3512" ScaleY="4.3798" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5140" Y="0.5105" />
@@ -108,10 +108,10 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_11_1" ActionTag="1517486531" Tag="137" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="801.6754" RightMargin="112.3246" TopMargin="295.2859" BottomMargin="308.7141" TouchEnable="True" FontSize="14" ButtonText="70个" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_manyDiamonds" ActionTag="1517486531" Tag="137" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="801.6754" RightMargin="112.3246" TopMargin="295.2859" BottomMargin="308.7141" TouchEnable="True" FontSize="14" ButtonText="70个" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="824.6754" Y="326.7141" />
+            <Position X="824.6400" Y="326.7200" />
             <Scale ScaleX="3.3512" ScaleY="4.3798" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.8590" Y="0.5105" />
