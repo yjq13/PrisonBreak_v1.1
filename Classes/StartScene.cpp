@@ -5,6 +5,8 @@
 #include "GameCommonScene.h"
 #include "FigureVo.h"
 #include "Constant.h"
+#include "cocostudio/CocoStudio.h"
+#include "ui/CocosGUI.h"
 
 USING_NS_CC;
 
@@ -36,6 +38,7 @@ bool Start::init()
     initDocuments();
     ALLINFO.setConstant();
     printf("%d\n", ALLINFO.GOLD_COIN);
+    
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
@@ -104,8 +107,13 @@ void Start::menuCloseCallback(Ref* pSender)
 //点击按钮转到游戏界面
 void Start::turnToGame(Ref* pSender)
 {
+    //auto rootNode = CSLoader::createNode("MainScene.csb");
+    
+    //addChild(rootNode);
+    
+    //auto Scene = rootNode->getChildByName<>("");
     auto scene=Game::createScene();
     //下面搞个翻页效果
     auto transition=TransitionPageTurn::create(1.5f, scene, false);
-    Director::getInstance()->replaceScene(transition);
+    Director::getInstance()->replaceScene(scene);
 }
