@@ -81,7 +81,7 @@
           <AbstractNodeData Name="Button_Level_1" ActionTag="-1818372507" Tag="19" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="176.1852" RightMargin="737.8148" TopMargin="294.9039" BottomMargin="309.0961" TouchEnable="True" FontSize="14" ButtonText="第一关" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="199.1852" Y="327.0961" />
+            <Position X="199.2000" Y="327.1040" />
             <Scale ScaleX="3.8193" ScaleY="4.6024" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.2075" Y="0.5111" />

@@ -29,9 +29,9 @@ public:
     
     void turnToGame(cocos2d::Ref* pSender,int step);
     
-    void show_Diamond_Buy(cocos2d::Ref* pSender);
+    void show_GameReady(cocos2d::Ref* pSender);
     
-    void closeLayer(Ref* pSender);
+    void closeLayer(cocos2d::Ref* pSender);
     // implement the "static create()" method manually
     CREATE_FUNC(Select_Detail);
 };

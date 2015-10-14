@@ -56,7 +56,7 @@ bool Select_Detail::init(){
     Button_Close->addTouchEventListener(this, toucheventselector(Select_Detail::closeLayer));
     
     
-    Button_StartGame->addTouchEventListener(this, toucheventselector(::Select_Detail::turnToGame));
+    Button_StartGame->addTouchEventListener(this, toucheventselector(Select_Detail::turnToGame));
     
     rootNodeS->addChild(rootNodeL_Diamond);
     
@@ -64,13 +64,16 @@ bool Select_Detail::init(){
     
     rootNodeS->addChild(rootNodeL_GameStep);
     
-    rootNodeL_Diamond->setVisible(false);
+    rootNodeL_GameStep->setVisible(false);
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     rootNodeL_Diamond->setPosition(visibleSize*1/2);
     rootNodeL_Diamond->setScale(0.5);
+    
+    rootNodeL_GameStep->setPosition(visibleSize*1/2);
+    rootNodeL_GameStep->setScale(0.5);
     
     rootNodeL_Basis->setPosition(visibleSize*1/2);
     rootNodeL_Basis->setScale(0.5);
@@ -84,12 +87,12 @@ bool Select_Detail::init(){
     
     auto Button_Back = rootNodeL_Basis->getChildByName<ui::Button*>("Button_Back");
     
-    auto Button_GameStep = rootNodeL_Basis->getChildByName<ui::Button*>("Button_GameStep");
+    auto Button_GameStep = rootNodeL_Basis->getChildByName<ui::Button*>("Button_Level_1");
     
     
     Button_Back->addTouchEventListener(this, toucheventselector(Select_Detail::menuCloseCallback));
     
-    Button_GameStep->addTouchEventListener(this, toucheventselector(Select_Detail::show_Diamond_Buy));
+    Button_GameStep->addTouchEventListener(this, toucheventselector(Select_Detail::show_GameReady));
     
     
     return true;
@@ -120,7 +123,7 @@ void Select_Detail::turnToGame(Ref* pSender,int step)
 }
 
 
-void Select_Detail::show_Diamond_Buy(Ref* pSender)
+void Select_Detail::show_GameReady(Ref* pSender)
 {
     rootNodeL_GameStep->setVisible(true);
 }
