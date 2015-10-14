@@ -24,7 +24,7 @@
           <AbstractNodeData Name="Image_Gold" ActionTag="-2069983422" Tag="75" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="509.3828" RightMargin="404.6172" TopMargin="24.5419" BottomMargin="569.4581" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="46.0000" Y="46.0000" />
             <AnchorPoint ScaleX="0.4742" ScaleY="0.4193" />
-            <Position X="531.1974" Y="588.7467" />
+            <Position X="531.1960" Y="588.7459" />
             <Scale ScaleX="1.8661" ScaleY="1.1925" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5533" Y="0.9199" />
@@ -34,7 +34,7 @@
           <AbstractNodeData Name="Image_Diamond" ActionTag="-1375100621" Tag="76" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="719.6494" RightMargin="194.3506" TopMargin="23.8288" BottomMargin="570.1712" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="46.0000" Y="46.0000" />
             <AnchorPoint ScaleX="0.5224" ScaleY="0.4519" />
-            <Position X="743.6782" Y="590.9596" />
+            <Position X="743.6798" Y="590.9586" />
             <Scale ScaleX="1.9533" ScaleY="1.1065" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.7747" Y="0.9234" />
@@ -55,7 +55,7 @@
           <AbstractNodeData Name="Text_DiamondNum" ActionTag="1437933319" Tag="78" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="818.2425" RightMargin="130.7575" TopMargin="37.0463" BottomMargin="579.9537" FontSize="20" LabelText="0" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="11.0000" Y="23.0000" />
             <AnchorPoint ScaleX="0.4650" ScaleY="0.4785" />
-            <Position X="823.3577" Y="590.9596" />
+            <Position X="823.3575" Y="590.9592" />
             <Scale ScaleX="2.9634" ScaleY="2.1548" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.8577" Y="0.9234" />
@@ -70,6 +70,21 @@
             <Scale ScaleX="1.0962" ScaleY="1.3689" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.9384" Y="0.9234" />
+            <PreSize X="0.0000" Y="0.0000" />
+            <TextColor A="255" R="65" G="65" B="70" />
+            <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+            <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
+            <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+            <OutlineColor A="255" R="255" G="0" B="0" />
+            <ShadowColor A="255" R="110" G="110" B="110" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Button_Level_1" ActionTag="-1818372507" Tag="19" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="176.1852" RightMargin="737.8148" TopMargin="294.9039" BottomMargin="309.0961" TouchEnable="True" FontSize="14" ButtonText="第一关" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="46.0000" Y="36.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="199.1852" Y="327.0961" />
+            <Scale ScaleX="3.8193" ScaleY="4.6024" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.2075" Y="0.5111" />
             <PreSize X="0.0000" Y="0.0000" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
