@@ -13,7 +13,13 @@
 
 class Select_Detail : public cocos2d::Layer
 {
+private:
+    cocos2d::Node* rootNodeS;
+    cocos2d::Node* rootNodeL_Basis;
+    cocos2d::Node* rootNodeL_Diamond;
+    cocos2d::Node* rootNodeL_GameStep;
 public:
+    
     cocos2d::Scene* createScene();
     
     bool init();
@@ -21,9 +27,14 @@ public:
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
     
-    //void turnToSelect_ALL(cocos2d::Ref* pSender);
+    void turnToGame(cocos2d::Ref* pSender,int step);
+    
+    void show_Diamond_Buy(cocos2d::Ref* pSender);
+    
+    void closeLayer(Ref* pSender);
     // implement the "static create()" method manually
     CREATE_FUNC(Select_Detail);
 };
+
 
 #endif /* SelectScene_2_hpp */

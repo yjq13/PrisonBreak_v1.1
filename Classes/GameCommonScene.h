@@ -13,9 +13,9 @@
 USING_NS_CC;
 class Game : public Layer{
 public:
-    static Scene* createScene();
+    Scene* createScene();
     PhysicsWorld* m_world;
-    virtual bool init();
+    bool init();
     void setPhyWorld(PhysicsWorld* world){
     m_world=world;
     };
