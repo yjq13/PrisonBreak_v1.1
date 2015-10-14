@@ -55,6 +55,7 @@
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
 		E30E77811BCAD7DE0053F4B1 /* CacheData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30E777F1BCAD7DE0053F4B1 /* CacheData.cpp */; settings = {ASSET_TAGS = (); }; };
+		E346FBE21BCD7103009DF9FA /* SelectScene_Detail.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E346FBE01BCD7103009DF9FA /* SelectScene_Detail.cpp */; settings = {ASSET_TAGS = (); }; };
 		E3CB5E761BC9753A005123B8 /* Constant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4A1BC9753A005123B8 /* Constant.cpp */; settings = {ASSET_TAGS = (); }; };
 		E3CB5E771BC9753A005123B8 /* Data_FigureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4B1BC9753A005123B8 /* Data_FigureInfo.swift */; settings = {ASSET_TAGS = (); }; };
 		E3CB5E781BC9753A005123B8 /* GameCommonScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4C1BC9753A005123B8 /* GameCommonScene.cpp */; settings = {ASSET_TAGS = (); }; };
@@ -152,6 +153,8 @@
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		E30E777F1BCAD7DE0053F4B1 /* CacheData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CacheData.cpp; sourceTree = "<group>"; };
 		E30E77801BCAD7DE0053F4B1 /* CacheData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheData.h; sourceTree = "<group>"; };
+		E346FBE01BCD7103009DF9FA /* SelectScene_Detail.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SelectScene_Detail.cpp; sourceTree = "<group>"; };
+		E346FBE11BCD7103009DF9FA /* SelectScene_Detail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectScene_Detail.h; sourceTree = "<group>"; };
 		E3CB5E4A1BC9753A005123B8 /* Constant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Constant.cpp; sourceTree = "<group>"; };
 		E3CB5E4B1BC9753A005123B8 /* Data_FigureInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data_FigureInfo.swift; sourceTree = "<group>"; };
 		E3CB5E4C1BC9753A005123B8 /* GameCommonScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameCommonScene.cpp; path = ../Classes/GameCommonScene.cpp; sourceTree = "<group>"; };
@@ -487,6 +490,8 @@
 				E3CB5E4D1BC9753A005123B8 /* GameCommonScene.h */,
 				E3CB5E4E1BC9753A005123B8 /* StartScene.cpp */,
 				E3CB5E721BC9753A005123B8 /* StartScene.h */,
+				E346FBE01BCD7103009DF9FA /* SelectScene_Detail.cpp */,
+				E346FBE11BCD7103009DF9FA /* SelectScene_Detail.h */,
 			);
 			name = UI;
 			path = ../proj.ios_mac;
@@ -652,6 +657,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3CB5E841BC9753A005123B8 /* GameCommonSprite.cpp in Sources */,
+				E346FBE21BCD7103009DF9FA /* SelectScene_Detail.cpp in Sources */,
 				E3CB5E8D1BC9753A005123B8 /* SystemPo.swift in Sources */,
 				E3CB5E771BC9753A005123B8 /* Data_FigureInfo.swift in Sources */,
 				E3CB5E7B1BC9753A005123B8 /* OC_callSystemInfo.mm in Sources */,

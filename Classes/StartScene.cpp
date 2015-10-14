@@ -55,7 +55,7 @@ bool Start::init()
 //
     auto button_Start = rootNodeL->getChildByName<ui::Button*>("Button_Start");
     
-    button_Start->addTouchEventListener(this, toucheventselector(Start::turnToGame));
+    button_Start->addTouchEventListener(this, toucheventselector(Start::turnToSelect));
     
     
 //    /////////////////////////////
@@ -111,19 +111,22 @@ bool Start::init()
 }
 
 
-//void Start::menuCloseCallback(Ref* pSender)
-//{
-//    Director::getInstance()->end();
-//    
-//#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-//    exit(0);
-//#endif
-//}
+void Start::menuCloseCallback(Ref* pSender)
+{
+    Director::getInstance()->end();
+    
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    exit(0);
+#endif
+}
 
 //点击按钮转到游戏界面
-void Start::turnToGame(Ref* pSender)
+void Start::turnToSelect(Ref* pSender)
 {
-    auto scene=Select::createScene();
+    Select select;
+    auto scene=select.createScene();
+    
+    this->removeAllChildren();
     //下面搞个翻页效果
     auto transition=TransitionPageTurn::create(1.5f, scene, false);
     Director::getInstance()->replaceScene(transition);
