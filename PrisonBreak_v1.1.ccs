@@ -4,8 +4,8 @@
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
         <Folder Name="Start">
-          <Project Name="Layer_Start.csd" Type="Layer" />
           <Project Name="Scene_Start.csd" Type="Scene" />
+          <Project Name="Layer_Start.csd" Type="Layer" />
         </Folder>
         <Folder Name="Selection_1">
           <Project Name="Layer_Selection_1.csd" Type="Layer" />
@@ -24,6 +24,7 @@
         <Folder Name="Game" />
         <Image Name="P1.jpg" />
         <Image Name="P2.jpg" />
+        <Image Name="00.jpg" />
       </RootFolder>
     </Group>
   </SolutionFolder>

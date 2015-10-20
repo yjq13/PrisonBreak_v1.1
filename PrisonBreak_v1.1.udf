@@ -32,6 +32,7 @@
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
         <OpenedDocuments>
+<<<<<<< Updated upstream
           <FilePathData Path="Selection_2/Scene_Selection_2.csd" />
           <FilePathData Path="Selection_2/Layer_Selection_3.csd" />
           <FilePathData Path="Selection_2/Layer_Selection_2.csd" />
@@ -40,6 +41,12 @@
           <FilePathData Path="DiamondShop/Scene_DiamondShop.csd" />
         </OpenedDocuments>
         <ActiveDocument Path="Selection_2/Layer_Selection_2.csd" />
+=======
+          <FilePathData Path="Start/Scene_Start.csd" />
+          <FilePathData Path="Start/Layer_Start.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="Start/Layer_Start.csd" />
+>>>>>>> Stashed changes
       </Value>
     </Item>
   </Properties>
