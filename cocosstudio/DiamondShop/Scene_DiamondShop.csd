@@ -4,7 +4,7 @@
     <Content>
       <Animation Duration="0" Speed="1.0000" />
       <ObjectData Name="Scene" Visible="False" Tag="71" ctype="GameNodeObjectData">
-        <Size X="960.0000" Y="640.0000" />
+        <Size X="1334.0000" Y="750.0000" />
         <Children>
           <AbstractNodeData Name="Background_DiamondShop" ActionTag="1588504101" Tag="114" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="456.9999" RightMargin="457.0001" TopMargin="297.0000" BottomMargin="297.0000" StretchWidthEnable="True" StretchHeightEnable="True" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="46.0000" Y="46.0000" />
