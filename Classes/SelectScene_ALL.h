@@ -12,6 +12,8 @@
 #include "cocos2d.h"
 class Select : public cocos2d::Layer
 {
+    cocos2d::Node* rootNodeS;
+    cocos2d::Node* rootNodeL;
 public:
     cocos2d::Scene* createScene();
     

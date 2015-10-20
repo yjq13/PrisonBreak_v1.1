@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef __PrisonBreak__AnimationScene__
-#define __PrisonBreak__AnimationScene__
+#ifndef __PrisonBreak__ShopScene__
+#define __PrisonBreak__ShopScene__
 
 #include "cocos2d.h"
 

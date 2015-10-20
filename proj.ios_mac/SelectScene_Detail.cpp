@@ -12,7 +12,7 @@
 #include "ui/CocosGUI.h"
 #include "SelectScene_Detail.h"
 #include "GameCommonScene.h"
-
+#include "Constant_Use.h"
 USING_NS_CC;
 using namespace ui;
 
@@ -66,21 +66,19 @@ bool Select_Detail::init(){
     
     rootNodeL_GameStep->setVisible(false);
     
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
-    rootNodeL_Diamond->setPosition(visibleSize*1/2);
+    rootNodeL_Diamond->setPosition(CONSTANT_USE.VISIBLE_SIZE*1/2);
     rootNodeL_Diamond->setScale(0.5);
     
-    rootNodeL_GameStep->setPosition(visibleSize*1/2);
+    rootNodeL_GameStep->setPosition(CONSTANT_USE.VISIBLE_SIZE*1/2);
     rootNodeL_GameStep->setScale(0.5);
     
-    rootNodeL_Basis->setPosition(visibleSize*1/2);
+    rootNodeL_Basis->setPosition(CONSTANT_USE.VISIBLE_SIZE*1/2);
     rootNodeL_Basis->setScale(0.5);
     
     rootNodeS->addChild(rootNodeL_Basis);
     
-    rootNodeS->setPosition(visibleSize*-1/2);
+    rootNodeS->setPosition(CONSTANT_USE.VISIBLE_SIZE*-1/2);
     
     addChild(rootNodeS);
     
@@ -117,8 +115,8 @@ void Select_Detail::turnToGame(Ref* pSender,int step)
     Game gameScene;
     auto sceneNew = gameScene.createScene();
     //下面搞个翻页效果
-    this->removeAllChildren();
-    auto transition=TransitionPageTurn::create(1.5f, sceneNew, false);
+    //this->removeAllChildren();
+    TransitionPageTurn* transition=TransitionPageTurn::create(1.5f, sceneNew, false);
     Director::getInstance()->replaceScene(transition);
 }
 

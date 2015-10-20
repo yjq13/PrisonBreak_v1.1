@@ -54,6 +54,7 @@
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
+		E30AC89E1BD5AADB005B8686 /* Constant_Use.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC89C1BD5AADB005B8686 /* Constant_Use.cpp */; settings = {ASSET_TAGS = (); }; };
 		E30E77811BCAD7DE0053F4B1 /* CacheData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30E777F1BCAD7DE0053F4B1 /* CacheData.cpp */; settings = {ASSET_TAGS = (); }; };
 		E346FBE21BCD7103009DF9FA /* SelectScene_Detail.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E346FBE01BCD7103009DF9FA /* SelectScene_Detail.cpp */; settings = {ASSET_TAGS = (); }; };
 		E3CB5E761BC9753A005123B8 /* Constant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4A1BC9753A005123B8 /* Constant.cpp */; settings = {ASSET_TAGS = (); }; };
@@ -62,7 +63,7 @@
 		E3CB5E791BC9753A005123B8 /* StartScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4E1BC9753A005123B8 /* StartScene.cpp */; settings = {ASSET_TAGS = (); }; };
 		E3CB5E7A1BC9753A005123B8 /* initDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4F1BC9753A005123B8 /* initDocuments.swift */; settings = {ASSET_TAGS = (); }; };
 		E3CB5E7B1BC9753A005123B8 /* OC_callSystemInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E501BC9753A005123B8 /* OC_callSystemInfo.mm */; settings = {ASSET_TAGS = (); }; };
-		E3CB5E7C1BC9753A005123B8 /* AnimationScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E511BC9753A005123B8 /* AnimationScene.cpp */; settings = {ASSET_TAGS = (); }; };
+		E3CB5E7C1BC9753A005123B8 /* ShopScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E511BC9753A005123B8 /* ShopScene.cpp */; settings = {ASSET_TAGS = (); }; };
 		E3CB5E7D1BC9753A005123B8 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E531BC9753A005123B8 /* AppDelegate.cpp */; settings = {ASSET_TAGS = (); }; };
 		E3CB5E7E1BC9753A005123B8 /* CourseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E561BC9753A005123B8 /* CourseScene.cpp */; settings = {ASSET_TAGS = (); }; };
 		E3CB5E7F1BC9753A005123B8 /* Data_GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E581BC9753A005123B8 /* Data_GameInfo.swift */; settings = {ASSET_TAGS = (); }; };
@@ -151,6 +152,8 @@
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		E30AC89C1BD5AADB005B8686 /* Constant_Use.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Constant_Use.cpp; sourceTree = "<group>"; };
+		E30AC89D1BD5AADB005B8686 /* Constant_Use.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant_Use.h; sourceTree = "<group>"; };
 		E30E777F1BCAD7DE0053F4B1 /* CacheData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CacheData.cpp; sourceTree = "<group>"; };
 		E30E77801BCAD7DE0053F4B1 /* CacheData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheData.h; sourceTree = "<group>"; };
 		E346FBE01BCD7103009DF9FA /* SelectScene_Detail.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SelectScene_Detail.cpp; sourceTree = "<group>"; };
@@ -162,8 +165,8 @@
 		E3CB5E4E1BC9753A005123B8 /* StartScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StartScene.cpp; path = ../Classes/StartScene.cpp; sourceTree = "<group>"; };
 		E3CB5E4F1BC9753A005123B8 /* initDocuments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = initDocuments.swift; sourceTree = "<group>"; };
 		E3CB5E501BC9753A005123B8 /* OC_callSystemInfo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OC_callSystemInfo.mm; sourceTree = "<group>"; };
-		E3CB5E511BC9753A005123B8 /* AnimationScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AnimationScene.cpp; path = ../Classes/AnimationScene.cpp; sourceTree = "<group>"; };
-		E3CB5E521BC9753A005123B8 /* AnimationScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimationScene.h; path = ../Classes/AnimationScene.h; sourceTree = "<group>"; };
+		E3CB5E511BC9753A005123B8 /* ShopScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShopScene.cpp; path = ../Classes/ShopScene.cpp; sourceTree = "<group>"; };
+		E3CB5E521BC9753A005123B8 /* ShopScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShopScene.h; path = ../Classes/ShopScene.h; sourceTree = "<group>"; };
 		E3CB5E531BC9753A005123B8 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = ../Classes/AppDelegate.cpp; sourceTree = "<group>"; };
 		E3CB5E541BC9753A005123B8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../Classes/AppDelegate.h; sourceTree = "<group>"; };
 		E3CB5E551BC9753A005123B8 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
@@ -441,6 +444,8 @@
 				E30E77801BCAD7DE0053F4B1 /* CacheData.h */,
 				E3CB5E4A1BC9753A005123B8 /* Constant.cpp */,
 				E3CB5E551BC9753A005123B8 /* Constant.h */,
+				E30AC89C1BD5AADB005B8686 /* Constant_Use.cpp */,
+				E30AC89D1BD5AADB005B8686 /* Constant_Use.h */,
 			);
 			name = UTIL;
 			sourceTree = "<group>";
@@ -472,8 +477,8 @@
 		E3CB5EC91BC97BCE005123B8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				E3CB5E511BC9753A005123B8 /* AnimationScene.cpp */,
-				E3CB5E521BC9753A005123B8 /* AnimationScene.h */,
+				E3CB5E511BC9753A005123B8 /* ShopScene.cpp */,
+				E3CB5E521BC9753A005123B8 /* ShopScene.h */,
 				E3CB5E531BC9753A005123B8 /* AppDelegate.cpp */,
 				E3CB5E541BC9753A005123B8 /* AppDelegate.h */,
 				E3CB5E561BC9753A005123B8 /* CourseScene.cpp */,
@@ -668,11 +673,12 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				E3CB5E7A1BC9753A005123B8 /* initDocuments.swift in Sources */,
 				E3CB5E831BC9753A005123B8 /* FigureVo.cpp in Sources */,
+				E30AC89E1BD5AADB005B8686 /* Constant_Use.cpp in Sources */,
 				E3CB5E791BC9753A005123B8 /* StartScene.cpp in Sources */,
 				E3CB5E8E1BC9753A005123B8 /* SystemVo.cpp in Sources */,
 				E30E77811BCAD7DE0053F4B1 /* CacheData.cpp in Sources */,
 				E3CB5E7E1BC9753A005123B8 /* CourseScene.cpp in Sources */,
-				E3CB5E7C1BC9753A005123B8 /* AnimationScene.cpp in Sources */,
+				E3CB5E7C1BC9753A005123B8 /* ShopScene.cpp in Sources */,
 				E3CB5E761BC9753A005123B8 /* Constant.cpp in Sources */,
 				E3CB5E7D1BC9753A005123B8 /* AppDelegate.cpp in Sources */,
 				E3CB5E871BC9753A005123B8 /* GameVo.cpp in Sources */,

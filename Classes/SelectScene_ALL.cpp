@@ -11,7 +11,7 @@
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
 #include "SelectScene_Detail.h"
-
+#include "Constant_Use.h"
 USING_NS_CC;
 using namespace ui;
 
@@ -34,20 +34,17 @@ bool Select::init(){
     {
         return false;
     }
-    printf("@@@@@@@\n");
-    auto rootNodeS = CSLoader::createNode("res/Selection_1/Scene_Selection_1.csb");
+    rootNodeS = CSLoader::createNode("res/Selection_1/Scene_Selection_1.csb");
     
-    auto rootNodeL = CSLoader::createNode("res/Selection_1/Layer_Selection_1.csb");
+    rootNodeL = CSLoader::createNode("res/Selection_1/Layer_Selection_1.csb");
     
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
-    rootNodeL->setPosition(visibleSize*1/2);
+    rootNodeL->setPosition(CONSTANT_USE.VISIBLE_SIZE*1/2);
     rootNodeL->setScale(0.5);
     
     rootNodeS->addChild(rootNodeL);
     
-    rootNodeS->setPosition(visibleSize*-1/2);
+    rootNodeS->setPosition(CONSTANT_USE.VISIBLE_SIZE*-1/2);
     
     addChild(rootNodeS);
     
@@ -78,11 +75,15 @@ bool Select::init(){
 
 }
 
+
+
+
+
 void Select::menuCloseCallback(Ref* pSender)
 {
     Start start;
     auto Scene=start.createScene();
-    auto transition=TransitionPageTurn::create(1.5f, Scene, false);
+    auto transition=CONSTANT_USE.createTransition_Page(Scene);
     Director::getInstance()->replaceScene(transition);
 
 //#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
@@ -92,13 +93,16 @@ void Select::menuCloseCallback(Ref* pSender)
 
 
 
+
+
+
 void Select::turnToSelect_2(Ref* pSender)
 {
     Select_Detail select_detail;
     auto sceneNew= select_detail.createScene();
     //下面搞个翻页效果
-    this->removeAllChildren();
-    auto transition=TransitionPageTurn::create(1.5f, sceneNew, false);
+    //this->removeAllChildren();
+    auto transition=CONSTANT_USE.createTransition_Page(sceneNew);
     Director::getInstance()->replaceScene(transition);
 }
 
