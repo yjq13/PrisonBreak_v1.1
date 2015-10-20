@@ -22,6 +22,8 @@
           <Project Name="Layer_DiamondShop.csd" Type="Layer" />
         </Folder>
         <Folder Name="Game" />
+        <Image Name="P1.jpg" />
+        <Image Name="P2.jpg" />
       </RootFolder>
     </Group>
   </SolutionFolder>

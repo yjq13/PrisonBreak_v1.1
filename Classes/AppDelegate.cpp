@@ -40,13 +40,14 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto glview = director->getOpenGLView();
     if(!glview) {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
-        glview = GLViewImpl::createWithRect("PrisonBreak", Rect(0, 0, designResolutionSize.width, designResolutionSize.height));
+        glview = GLViewImpl::createWithRect("PrisonBreak", Rect(0, 0, 1334, 750));
+        CCLOG("wocao")
 #else
         glview = GLViewImpl::create("PrisonBreak");
 #endif
         director->setOpenGLView(glview);
     }
-
+director->getOpenGLView()->setDesignResolutionSize(1334, 750, ResolutionPolicy::FIXED_HEIGHT);
     // turn on display FPS
     
     //我把它关了
@@ -56,8 +57,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0 / 60);
 
     // Set the design resolution
-    glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::NO_BORDER);
+    
     Size frameSize = glview->getFrameSize();
+    CCLOG("%f,%f",frameSize.height,frameSize.width);
     // if the frame's height is larger than the height of medium size.
     if (frameSize.height > mediumResolutionSize.height)
     {        
@@ -73,7 +75,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     {        
         director->setContentScaleFactor(MIN(smallResolutionSize.height/designResolutionSize.height, smallResolutionSize.width/designResolutionSize.width));
     }
-
+//
     register_all_packages();
 
     // create a scene. it's an autorelease object

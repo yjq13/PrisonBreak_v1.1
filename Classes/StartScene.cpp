@@ -61,10 +61,6 @@ bool Start::init()
 }
 
 
-
-
-
-
 void Start::menuCloseCallback(Ref* pSender)
 {
     Director::getInstance()->end();
