@@ -60,13 +60,13 @@ bool Select::init(){
     auto Button_Back = rootNodeL->getChildByName<ui::Button*>("Button_Back");
     
     
-    Button_Part_1->addTouchEventListener(this, toucheventselector(Select::turnToSelect_2));
+    Button_Part_1->addTouchEventListener(this, toucheventselector(Select::turnToSelect_Detail));
     
-    Button_Part_2->addTouchEventListener(this, toucheventselector(Select::turnToSelect_2));
+    Button_Part_2->addTouchEventListener(this, toucheventselector(Select::turnToSelect_Detail));
     
-    Button_Part_3->addTouchEventListener(this, toucheventselector(Select::turnToSelect_2));
+    Button_Part_3->addTouchEventListener(this, toucheventselector(Select::turnToSelect_Detail));
     
-    Button_Part_4->addTouchEventListener(this, toucheventselector(Select::turnToSelect_2));
+    Button_Part_4->addTouchEventListener(this, toucheventselector(Select::turnToSelect_Detail));
     
     Button_Back->addTouchEventListener(this, toucheventselector(Select::menuCloseCallback));
     
@@ -96,7 +96,7 @@ void Select::menuCloseCallback(Ref* pSender)
 
 
 
-void Select::turnToSelect_2(Ref* pSender)
+void Select::turnToSelect_Detail(Ref* pSender)
 {
     Select_Detail select_detail;
     auto sceneNew= select_detail.createScene();

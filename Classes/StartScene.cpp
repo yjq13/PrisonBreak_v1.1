@@ -61,17 +61,6 @@ bool Start::init()
 }
 
 
-void Start::menuCloseCallback(Ref* pSender)
-{
-    Director::getInstance()->end();
-    
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    exit(0);
-#endif
-}
-
-
-
 
 //点击按钮转到游戏界面
 void Start::turnToSelect(Ref* pSender)

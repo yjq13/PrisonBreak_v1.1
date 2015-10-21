@@ -10,12 +10,13 @@
 #define __PrisonBreak__GameCommonScene__
 
 #include "cocos2d.h"
+#include "MyScene.h"
 USING_NS_CC;
-class Game : public Layer{
+class Game : public MyScene{
 public:
-    Scene* createScene();
+    virtual Scene* createScene();
     PhysicsWorld* m_world;
-    bool init();
+    virtual bool init();
     void setPhyWorld(PhysicsWorld* world){
     m_world=world;
     };

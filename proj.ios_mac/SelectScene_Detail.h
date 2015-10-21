@@ -10,8 +10,8 @@
 #define __SELECTSCENE_DETAIL_H__
 
 #include "cocos2d.h"
-
-class Select_Detail : public cocos2d::Layer
+#include "MyScene.h"
+class Select_Detail : public MyScene
 {
 private:
     cocos2d::Node* rootNodeS;
@@ -20,9 +20,9 @@ private:
     cocos2d::Node* rootNodeL_GameStep;
 public:
     
-    cocos2d::Scene* createScene();
+    virtual cocos2d::Scene* createScene();
     
-    bool init();
+    virtual bool init();
     
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);

@@ -10,19 +10,20 @@
 #define __PrisonBreak__SelectScene_ALL__
 
 #include "cocos2d.h"
-class Select : public cocos2d::Layer
+#include "MyScene.h"
+class Select : public MyScene
 {
     cocos2d::Node* rootNodeS;
     cocos2d::Node* rootNodeL;
 public:
-    cocos2d::Scene* createScene();
+    virtual cocos2d::Scene* createScene();
     
-    bool init();
+    virtual bool init();
     
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
     
-    void turnToSelect_2(cocos2d::Ref* pSender);
+    void turnToSelect_Detail(cocos2d::Ref* pSender);
     // implement the "static create()" method manually
     CREATE_FUNC(Select);
 };
