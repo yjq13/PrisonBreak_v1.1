@@ -14,7 +14,7 @@
 class Select_Detail : public MyScene
 {
 private:
-    cocos2d::Node* rootNodeS;
+    //cocos2d::Node* rootNodeS;
     cocos2d::Node* rootNodeL_Basis;
     cocos2d::Node* rootNodeL_Diamond;
     cocos2d::Node* rootNodeL_GameStep;

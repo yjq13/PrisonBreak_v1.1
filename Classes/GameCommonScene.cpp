@@ -80,6 +80,7 @@ void Game::setUI(){
     auto sprite2=Sprite::create("01.jpg");
     sprite2->setPosition(Vec2(300 , 250));
     auto wallBody2=PhysicsBody::createBox(sprite2->getContentSize());
+    
     wallBody2->setGravityEnable(false);
     wallBody2->setContactTestBitmask(0xFFFFFFFF);
     sprite2->setPhysicsBody(wallBody2);
