@@ -72,7 +72,7 @@ void Game::setUI(){
     //    wallBody1->getShape(0)->setDensity(1.0);
     //    Vect force = Vect(500000.0f, 500000.0f);
     //    wallBody1->applyImpulse(force);
-    wallBody1->setContactTestBitmask(0xFFFFFFFF);
+    wallBody1->setContactTestBitmask(0xFFFFFF);
     sprite1->setPhysicsBody(wallBody1);
     sprite1->setTag(1);
     this->addChild(sprite1);
@@ -87,15 +87,15 @@ void Game::setUI(){
     this->addChild(sprite2);
     sprite2->runAction(MoveTo::create(2, Vec2(400, 400)));
     
-    Sprite* edgeSpace=Sprite::create();
-    PhysicsBody* boundBody=PhysicsBody::createEdgeBox(visibleSize,PHYSICSBODY_MATERIAL_DEFAULT,3);
-    boundBody->getShape(0)->setFriction(0.0f);
-    boundBody->getShape(0)->setRestitution(1.0f);
-    
-    edgeSpace->setPhysicsBody(boundBody);
-    edgeSpace->setPosition(Point(visibleSize.width/2,visibleSize.height/2));
-    this->addChild(edgeSpace);
-    edgeSpace->setTag(0);
+//    Sprite* edgeSpace=Sprite::create();
+//    PhysicsBody* boundBody=PhysicsBody::createEdgeBox(visibleSize,PHYSICSBODY_MATERIAL_DEFAULT,3);
+//    boundBody->getShape(0)->setFriction(0.0f);
+//    boundBody->getShape(0)->setRestitution(1.0f);
+//    
+//    edgeSpace->setPhysicsBody(boundBody);
+//    edgeSpace->setPosition(Point(visibleSize.width/2,visibleSize.height/2));
+//    this->addChild(edgeSpace);
+//    edgeSpace->setTag(0);
     
     auto listener=EventListenerTouchOneByOne::create();
     listener->onTouchMoved=CC_CALLBACK_2(Game::onTouchMoved, this);
@@ -146,7 +146,8 @@ void Game::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event){
         if (i!=0&&points[i].x!=0) {
             actionVector.pushBack(MoveTo::create(ccpSub(points[i-1], points[i]).length()/100, points[i]));
         }
-    }if(isMoved){
+    }
+    if(isMoved){
         auto allAction=Sequence::create(actionVector);
         ballOne->runAction(allAction);
     }
