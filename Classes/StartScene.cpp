@@ -43,6 +43,11 @@ bool Start::init()
     rootNodeS = CSLoader::createNode("res/Start/Scene_Start.csb");
     rootNodeL = CSLoader::createNode("res/Start/Layer_Start.csb");
     
+    setUI();
+    return true;
+}
+
+void Start::setUI(){
     auto button_Start = rootNodeL->getChildByName<ui::Button*>("Button_Start");
     
     button_Start->addTouchEventListener(this, toucheventselector(Start::turnToSelect));
@@ -50,14 +55,11 @@ bool Start::init()
     //auto Scene = rootNodeS->getChildByName<cocos2d::Scene*>("Scene");
     
     rootNodeL->setPosition(CONSTANT_USE.VISIBLE_SIZE*1/2);
-    rootNodeL->setScale(0.5);
+    //rootNodeL->setScale(0.5);
     
     rootNodeS->addChild(rootNodeL);
     rootNodeS->setPosition(CONSTANT_USE.VISIBLE_SIZE*-1/2);
     addChild(rootNodeS);
-//
-    
-    return true;
 }
 
 

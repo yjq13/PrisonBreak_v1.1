@@ -11,9 +11,8 @@
 
 #include <cocos2d.h>
 class Sprite_protagonist : public cocos2d::Sprite{
-    
-    
-    
+public:
+    virtual cocos2d::Sprite* create();
 };
 
 #endif /* Sprite_Component_hpp */

@@ -16,9 +16,6 @@
 USING_NS_CC;
 using namespace ui;
 
-
-
-
 Scene* Select_Detail::createScene(){
     // 'scene' is an autorelease object
     auto scene = Scene::create();
@@ -33,6 +30,8 @@ Scene* Select_Detail::createScene(){
 
     return scene;
 }
+
+
 
 bool Select_Detail::init(){
     if ( !Layer::init() )
@@ -49,6 +48,15 @@ bool Select_Detail::init(){
     
     rootNodeL_GameStep = CSLoader::createNode("res/Selection_2/Layer_Selection_3.csb");
     
+    setUI();
+    
+    return true;
+}
+
+
+
+
+void Select_Detail::setUI(){
     
     auto Button_Close   =  rootNodeL_GameStep->getChildByName<ui::Button*>("Button_Close");
     auto Button_StartGame = rootNodeL_GameStep->getChildByName<ui::Button*>("Button_StartGame");
@@ -68,13 +76,13 @@ bool Select_Detail::init(){
     
     
     rootNodeL_Diamond->setPosition(CONSTANT_USE.VISIBLE_SIZE*1/2);
-    rootNodeL_Diamond->setScale(0.5);
+    //rootNodeL_Diamond->setScale(0.5);
     
     rootNodeL_GameStep->setPosition(CONSTANT_USE.VISIBLE_SIZE*1/2);
-    rootNodeL_GameStep->setScale(0.5);
+    //rootNodeL_GameStep->setScale(0.5);
     
     rootNodeL_Basis->setPosition(CONSTANT_USE.VISIBLE_SIZE*1/2);
-    rootNodeL_Basis->setScale(0.5);
+    //rootNodeL_Basis->setScale(0.5);
     
     rootNodeS->addChild(rootNodeL_Basis);
     
@@ -91,10 +99,8 @@ bool Select_Detail::init(){
     Button_Back->addTouchEventListener(this, toucheventselector(Select_Detail::menuCloseCallback));
     
     Button_GameStep->addTouchEventListener(this, toucheventselector(Select_Detail::show_GameReady));
-    
-    
-    return true;
 }
+
 
 
 void Select_Detail::menuCloseCallback(Ref* pSender)
@@ -110,6 +116,8 @@ void Select_Detail::menuCloseCallback(Ref* pSender)
 }
 
 
+
+
 void Select_Detail::turnToGame(Ref* pSender,int step)
 {
     Game gameScene;
@@ -119,6 +127,8 @@ void Select_Detail::turnToGame(Ref* pSender,int step)
     TransitionPageTurn* transition=TransitionPageTurn::create(1.5f, sceneNew, false);
     Director::getInstance()->replaceScene(transition);
 }
+
+
 
 
 void Select_Detail::show_GameReady(Ref* pSender)

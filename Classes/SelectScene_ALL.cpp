@@ -38,9 +38,17 @@ bool Select::init(){
     
     rootNodeL = CSLoader::createNode("res/Selection_1/Layer_Selection_1.csb");
     
+    setUI();
+    
+    
+    return true;
 
+}
+
+
+void Select::setUI(){
     rootNodeL->setPosition(CONSTANT_USE.VISIBLE_SIZE*1/2);
-    rootNodeL->setScale(0.5);
+    //rootNodeL->setScale(0.5);
     
     rootNodeS->addChild(rootNodeL);
     
@@ -69,14 +77,8 @@ bool Select::init(){
     Button_Part_4->addTouchEventListener(this, toucheventselector(Select::turnToSelect_Detail));
     
     Button_Back->addTouchEventListener(this, toucheventselector(Select::menuCloseCallback));
-    
-    
-    return true;
 
 }
-
-
-
 
 
 void Select::menuCloseCallback(Ref* pSender)

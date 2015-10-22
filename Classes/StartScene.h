@@ -11,6 +11,8 @@ public:
 
     virtual bool init();
     
+    virtual void setUI();
+    
     void turnToSelect(cocos2d::Ref* pSender);
     // implement the "static create()" method manually
     CREATE_FUNC(Start);

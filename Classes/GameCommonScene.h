@@ -28,15 +28,15 @@ public:
     //重载触控函数
     Point points[10000];//手指画出来的点集
     int index;//计数器
-    bool onTouchBegan(Touch* touch,Event* event);
-    void onTouchMoved(Touch* touch,Event* event);
-    void onTouchEnded(Touch* touch,Event* event);
+//    bool onTouchBegan(Touch* touch,Event* event);
+//    void onTouchMoved(Touch* touch,Event* event);
+//    void onTouchEnded(Touch* touch,Event* event);
    // void onTouchCancel(Touch* touch,Event* event);
-    bool isMoved;//用于判断是否画完线路
     
+    bool isMoved;//用于判断是否画完线路
     //下面是检测碰撞的方法
-    bool onContactBegin(const PhysicsContact& contact);
-    Sprite* ballOne;
+   // bool onContactBegin(const PhysicsContact& contact);
+    Sprite* protagonist;
     Sprite* ballTwo;
     // implement the "static create()" method manually
     CREATE_FUNC(Game);

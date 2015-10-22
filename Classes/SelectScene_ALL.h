@@ -20,6 +20,8 @@ public:
     
     virtual bool init();
     
+    virtual void setUI();
+    
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
     

@@ -20,7 +20,7 @@ public:
     
     virtual bool init();
     
-    
+    virtual void setUI();
     CREATE_FUNC(MyScene);
 };
 

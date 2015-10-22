@@ -40,3 +40,8 @@ bool MyScene::init()
     
        return true;
 }
+
+
+void MyScene::setUI(){
+    
+}
