@@ -59,6 +59,10 @@ void Start::setUI(){
     CCLOG("%f",CONSTANT_USE.VISIBLE_SIZE.width);
     rootNodeS->addChild(rootNodeL);
     addChild(rootNodeS);
+    
+    //直接添加图片
+    auto background=ImageView::create("P2.jpg");
+    addChild(background,1);
 }
 
 
