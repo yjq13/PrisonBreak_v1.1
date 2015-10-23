@@ -21,7 +21,7 @@ Sprite* Sprite_protagonist::create(){
     ManBody->setGravityEnable(false);
     ManBody->setContactTestBitmask(0xFFFF);
     protagonist->setPhysicsBody(ManBody);
-    protagonist->setTag(1);
+    //protagonist->setTag(1);
 
     return protagonist;
     

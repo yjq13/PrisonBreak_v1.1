@@ -38,6 +38,7 @@ void moveListener::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event, La
     auto r=DrawNode::create();
     layer->addChild(r);
     if(index>0){
+        r->setTag(index);
         r->drawSegment(points[index-1], p, 10, Color4F(CCRANDOM_0_1(), CCRANDOM_0_1(), CCRANDOM_0_1(), 1));
     }
     index++;
@@ -46,24 +47,46 @@ void moveListener::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event, La
 void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, Layer* layer){
     printf("ed");
     //下面是主角跟随路线移动
-    Sprite_protagonist spritePro;
-    
-    Sprite* protagonist = spritePro.create();
-    
-    layer->addChild(protagonist);
-    //s->autorelease();
-    protagonist->setPosition(points[0]);
-    layer->addChild(protagonist);
-    //下面是填装动作的容器
+        //下面是填装动作的容器
+    bool isValid = moveListener::isMoveValid();
     Vector<FiniteTimeAction*> actionVector;
     for (int i=0;i<10000;i++){
         if (i!=0&&points[i].x!=0) {
             actionVector.pushBack(MoveTo::create(ccpSub(points[i-1], points[i]).length()/100, points[i]));
         }
     }
-    if(isMoved){
+    if(isMoved&&isValid){
+        Sprite_protagonist spritePro;
+        
+        Sprite* protagonist = spritePro.create();
+        
+        layer->addChild(protagonist);
+        //s->autorelease();
+        protagonist->setPosition(points[0]);
+        layer->addChild(protagonist);
+
+        
         auto allAction=Sequence::create(actionVector);
         protagonist->runAction(allAction);
+        
+    }else{
+        if(!isValid){
+            for(int i = 0; i<=index;i++){
+            layer->removeChildByTag(i);
+            }
+        }
     }
+    
     isMoved=false;
+}
+
+//判断是否有效地移动
+bool moveListener::isMoveValid(){
+    
+    bool isValid = false;
+    if(isStart&&isDestination){
+        isValid = true;
+    }
+    
+    return isValid;
 }

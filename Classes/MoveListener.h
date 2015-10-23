@@ -15,6 +15,8 @@ private:
     cocos2d::Point points[10000];//手指画出来的点集
     int index = 0;//计数器
     bool isMoved = false;//用于判断是否画完线路
+    bool isStart = false;
+    bool isDestination = false;
 public:
     virtual EventListenerTouchOneByOne* create(cocos2d::Layer* layer);
     
@@ -24,6 +26,7 @@ public:
     
     void onTouchEnded(cocos2d::Touch* touch,cocos2d::Event* event, cocos2d::Layer* layer);
 
+    bool isMoveValid();
 };
 
 #endif /* MoveListener_hpp */

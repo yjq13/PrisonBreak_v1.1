@@ -521,6 +521,7 @@
 		E3CB5EC91BC97BCE005123B8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E3EF16481BDA3BEC001E3EA3 /* Game_Map */,
 				E30AC8A91BD92C61005B8686 /* Game_Component */,
 				E3CB5E511BC9753A005123B8 /* ShopScene.cpp */,
 				E3CB5E521BC9753A005123B8 /* ShopScene.h */,
@@ -576,6 +577,13 @@
 			children = (
 			);
 			name = MusicFile;
+			sourceTree = "<group>";
+		};
+		E3EF16481BDA3BEC001E3EA3 /* Game_Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Game_Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
