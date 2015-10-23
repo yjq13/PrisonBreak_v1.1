@@ -28,6 +28,9 @@ bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
     for (int i=0;i<10000;i++){
         points[i]=ccp(0,0);
     }
+    //获得起始点坐标
+    auto p=touch->getLocation();
+    
     return true;
 }
 
@@ -69,13 +72,14 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, La
         auto allAction=Sequence::create(actionVector);
         protagonist->runAction(allAction);
         
-    }else{
-        if(!isValid){
-            for(int i = 0; i<=index;i++){
-            layer->removeChildByTag(i);
-            }
-        }
     }
+//    else{
+//        if(!isValid){
+//            for(int i = 0; i<=index;i++){
+//            layer->removeChildByTag(i);
+//            }
+//        }
+//    }
     
     isMoved=false;
 }

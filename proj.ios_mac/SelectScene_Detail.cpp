@@ -74,19 +74,16 @@ void Select_Detail::setUI(){
     
     rootNodeL_GameStep->setVisible(false);
     
+    rootNodeL_Diamond->setPositionX(rootNodeL_Diamond->getPositionX()+CONSTANT_USE.ORIGIN.x);
+    rootNodeL_Diamond->setScaleX(CONSTANT_USE.VISIBLE_SIZE.width/CONSTANT_USE.DESIGN_SIZE.width);
     
-    rootNodeL_Diamond->setPosition(CONSTANT_USE.VISIBLE_SIZE*1/2);
-    //rootNodeL_Diamond->setScale(0.5);
+    rootNodeL_GameStep->setPositionX(rootNodeL_GameStep->getPositionX()+CONSTANT_USE.ORIGIN.x);
+    rootNodeL_GameStep->setScaleX(CONSTANT_USE.VISIBLE_SIZE.width/CONSTANT_USE.DESIGN_SIZE.width);
     
-    rootNodeL_GameStep->setPosition(CONSTANT_USE.VISIBLE_SIZE*1/2);
-    //rootNodeL_GameStep->setScale(0.5);
-    
-    rootNodeL_Basis->setPosition(CONSTANT_USE.VISIBLE_SIZE*1/2);
-    //rootNodeL_Basis->setScale(0.5);
+    rootNodeL_Basis->setPositionX(rootNodeL_Basis->getPositionX()+CONSTANT_USE.ORIGIN.x);
+    rootNodeL_Basis->setScaleX(CONSTANT_USE.VISIBLE_SIZE.width/CONSTANT_USE.DESIGN_SIZE.width);
     
     rootNodeS->addChild(rootNodeL_Basis);
-    
-    rootNodeS->setPosition(CONSTANT_USE.VISIBLE_SIZE*-1/2);
     
     addChild(rootNodeS);
     

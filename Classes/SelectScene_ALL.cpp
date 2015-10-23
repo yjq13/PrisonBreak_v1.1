@@ -47,13 +47,10 @@ bool Select::init(){
 
 
 void Select::setUI(){
-    rootNodeL->setPosition(CONSTANT_USE.VISIBLE_SIZE*1/2);
-    //rootNodeL->setScale(0.5);
-    
+    rootNodeL->setPositionX(rootNodeL->getPositionX()+CONSTANT_USE.ORIGIN.x);
+    rootNodeL->setScaleX(CONSTANT_USE.VISIBLE_SIZE.width/CONSTANT_USE.DESIGN_SIZE.width);
+
     rootNodeS->addChild(rootNodeL);
-    
-    rootNodeS->setPosition(CONSTANT_USE.VISIBLE_SIZE*-1/2);
-    
     addChild(rootNodeS);
     
     

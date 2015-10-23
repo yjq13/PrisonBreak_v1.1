@@ -16,16 +16,6 @@
             <PreSize X="1.0000" Y="1.0000" />
             <FileData Type="Normal" Path="P2.jpg" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="UI_Selection_1" ActionTag="-278588835" Tag="47" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" RightMargin="-374.0000" TopMargin="-110.0000" InnerActionSpeed="1.0000" ctype="ProjectNodeObjectData">
-            <Size X="1334.0000" Y="750.0000" />
-            <AnchorPoint />
-            <Position />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition />
-            <PreSize X="1.3896" Y="1.1719" />
-            <FileData Type="Normal" Path="Selection_1/Layer_Selection_1.csd" Plist="" />
-          </AbstractNodeData>
         </Children>
       </ObjectData>
     </Content>

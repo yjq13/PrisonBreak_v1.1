@@ -2,51 +2,9 @@
   <Properties>
     <Item Key="CocosRecentOperation">
       <Value ctype="CocosRecentOperation">
-        <LastPublishType Value="XCode" />
+        <LastPublishType Value="Resource" />
         <IsLastPublish Value="True" />
         <LastRunType Value="Mac" />
-      </Value>
-    </Item>
-    <Item Key="PackageParamsKey">
-      <Value ctype="PackageParams">
-        <LuaIsEncrypt Value="False" />
-        <LuaEncryptKey Value="" />
-        <LuaEncryptSign Value="" />
-        <Android_PackageName Value="org.cocos.PrisonBreakv11" />
-        <AndroidkeyStore Value="" />
-        <AndroidVersion Value="" />
-        <iOS_Target Value="PrisonBreak_v1.1-mobile" />
-        <iOS_BundleID Value="iPhone Developer: jiaqi Ying (P5FPNL6P7D)" />
-
-        <Platform Value="None" />
-        <RunPlatform Value="None" />
-        <FrameworkVersion Value="cocos2d-x-3.8" />
-        <IsDebugKeystore Value="True" />
-        <KeystorePassword Value="" />
-        <KeystoreAliasName Value="" />
-        <KeystoreAliasPassword Value="" />
-        <EnableSourceMap Value="False" />
-        <EnableHTML5Advanced Value="False" />
-      </Value>
-    </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-<<<<<<< Updated upstream
-          <FilePathData Path="Selection_2/Scene_Selection_2.csd" />
-          <FilePathData Path="Selection_2/Layer_Selection_3.csd" />
-          <FilePathData Path="Selection_2/Layer_Selection_2.csd" />
-          <FilePathData Path="Selection_2/Layer_Dialog_Buy.csd" />
-          <FilePathData Path="DiamondShop/Layer_DiamondShop.csd" />
-          <FilePathData Path="DiamondShop/Scene_DiamondShop.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="Selection_2/Layer_Selection_2.csd" />
-=======
-          <FilePathData Path="Start/Scene_Start.csd" />
-          <FilePathData Path="Start/Layer_Start.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="Start/Layer_Start.csd" />
->>>>>>> Stashed changes
       </Value>
     </Item>
   </Properties>

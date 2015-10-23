@@ -1,9 +1,10 @@
 #include "AppDelegate.h"
 #include "StartScene.h"
+#include "Constant_Use.h"
 
 USING_NS_CC;
 
-static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320);
+static cocos2d::Size designResolutionSize = CONSTANT_USE.DESIGN_SIZE;
 static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
 static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024, 768);
 static cocos2d::Size largeResolutionSize = cocos2d::Size(2048, 1536);
@@ -40,14 +41,16 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto glview = director->getOpenGLView();
     if(!glview) {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
-        glview = GLViewImpl::createWithRect("PrisonBreak", Rect(0, 0, 1334, 750));
-        CCLOG("wocao")
+        glview = GLViewImpl::createWithRect("PrisonBreak", Rect(0, 0, designResolutionSize));
+       
 #else
         glview = GLViewImpl::create("PrisonBreak");
 #endif
         director->setOpenGLView(glview);
     }
-director->getOpenGLView()->setDesignResolutionSize(1334, 750, ResolutionPolicy::FIXED_HEIGHT);
+    director->getOpenGLView()->setDesignResolutionSize(designResolutionSize, ResolutionPolicy::NO_BORDER);
+    
+
     // turn on display FPS
     
     //我把它关了
@@ -59,7 +62,6 @@ director->getOpenGLView()->setDesignResolutionSize(1334, 750, ResolutionPolicy::
     // Set the design resolution
     
     Size frameSize = glview->getFrameSize();
-    CCLOG("%f,%f",frameSize.height,frameSize.width);
     // if the frame's height is larger than the height of medium size.
     if (frameSize.height > mediumResolutionSize.height)
     {        

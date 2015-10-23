@@ -10,6 +10,7 @@
 #include "Sprite_protagonist.h"
 #include "MoveListener.h"
 #include "Move_action.h"
+#include "cocostudio/CocoStudio.h"
 USING_NS_CC;
 
 Scene* Game :: createScene(){
@@ -30,6 +31,10 @@ bool Game::init(){
     EventListenerPhysicsContact* contactListener = moveaction.create();
     
     _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
+    
+    rootNodeS = CSLoader::createNode("res/Game/Scene_Game.csb");
+    
+    rootNodeL = CSLoader::createNode("res/Game/Layer_Game.csb");
     
     setUI();
     

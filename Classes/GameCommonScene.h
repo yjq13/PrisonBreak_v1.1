@@ -13,6 +13,7 @@
 #include "MyScene.h"
 USING_NS_CC;
 class Game : public MyScene{
+     cocos2d::Node* rootNodeL;
 public:
     virtual Scene* createScene();
     PhysicsWorld* m_world;

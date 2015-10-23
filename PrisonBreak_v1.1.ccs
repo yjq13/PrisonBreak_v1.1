@@ -21,10 +21,12 @@
           <Project Name="Scene_DiamondShop.csd" Type="Scene" />
           <Project Name="Layer_DiamondShop.csd" Type="Layer" />
         </Folder>
-        <Folder Name="Game" />
+        <Folder Name="Game">
+          <Project Name="Scene_Game.csd" Type="Scene" />
+          <Project Name="Layer_Game.csd" Type="Layer" />
+        </Folder>
         <Image Name="P1.jpg" />
         <Image Name="P2.jpg" />
-        <Image Name="00.jpg" />
       </RootFolder>
     </Group>
   </SolutionFolder>
