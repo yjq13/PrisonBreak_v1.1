@@ -22,7 +22,7 @@ public:
     
     cocos2d::TransitionPageTurn* createTransition_Page(cocos2d::Scene* sceneNew);
     
-    cocos2d::Size DESIGN_SIZE;
+    cocos2d::Size DESIGN_SIZE=Size(1334.0,750.0);
     
 };
 static Constant_Use CONSTANT_USE;

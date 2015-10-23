@@ -36,7 +36,7 @@ bool Start::init()
     {
         return false;
     }
-    
+    CONSTANT_USE.init();
     initDocuments();
     ALLINFO.setConstant();
     printf("%d\n", ALLINFO.GOLD_COIN);
@@ -56,7 +56,7 @@ void Start::setUI(){
     
     rootNodeL->setPositionX(rootNodeL->getPositionX()+CONSTANT_USE.ORIGIN.x);
     rootNodeL->setScaleX(CONSTANT_USE.VISIBLE_SIZE.width/CONSTANT_USE.DESIGN_SIZE.width);
-    
+    CCLOG("%f",CONSTANT_USE.VISIBLE_SIZE.width);
     rootNodeS->addChild(rootNodeL);
     addChild(rootNodeS);
 }

@@ -14,6 +14,7 @@ cocos2d::TransitionPageTurn* Constant_Use::createTransition_Page(cocos2d::Scene*
 }
 
 bool Constant_Use::init(){
+    CCLog("OKK!!@!!");
     VISIBLE_SIZE = cocos2d::Director::getInstance()->getVisibleSize();
     
     ORIGIN = cocos2d::Director::getInstance()->getVisibleOrigin();
