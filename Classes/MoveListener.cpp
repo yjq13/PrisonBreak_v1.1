@@ -45,7 +45,7 @@ bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event, La
 }
 
 void moveListener::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event, Layer* layer){
-    //isMoved=true;
+    isMoved=true;
     points[index]=touch->getLocation();
     auto p=touch->getLocation();
     auto r=DrawNode::create();
@@ -64,7 +64,7 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, La
     //destinationPosition=layer->getChildByName<ui::ImageView*>("Image_Destination");
 
     auto p=touch->getLocation();
-    if (true
+    if (isMoved
 //        p.x>destinationPosition->getPositionX()&&p.x<(destinationPosition->getPositionX()+destinationPosition->getContentSize().width)&&p.y>destinationPosition->getPositionY()&&p.y<(destinationPosition->getPositionY()+destinationPosition->getContentSize().height)
         ) {
         //下面是主角跟随路线移动
@@ -94,6 +94,7 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, La
         }
 
     }
+    isMoved=false;
 
     
 }

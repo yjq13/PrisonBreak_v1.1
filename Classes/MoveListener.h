@@ -15,6 +15,7 @@ class moveListener : public cocos2d::EventListenerTouchOneByOne{
 private:
     cocos2d::Point points[10000];//手指画出来的点集
     int index = 0;//计数器
+    bool isMoved=false;
     //下面获取游戏地图上的起点和终点
     cocos2d::ui::ImageView* startPosition;
     cocos2d::ui::ImageView* destinationPosition;
