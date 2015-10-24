@@ -12,9 +12,9 @@
 #include <cocos2d.h>
 class Sprite_protagonist : public cocos2d::Sprite{
 public:
-    Sprite_protagonist();
+    //Sprite_protagonist();
     
-    //static cocos2d::Sprite* create(const std::string& filename);
+    static cocos2d::Sprite* create();
 };
 
 #endif /* Sprite_Component_hpp */
