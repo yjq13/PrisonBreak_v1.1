@@ -51,7 +51,7 @@ void Game::setUI(){
     rootNodeL->setScaleX(VISIBLE_SIZE.width/DESIGN_SIZE.width);
     CCLOG("%f",VISIBLE_SIZE.width);
     rootNodeS->addChild(rootNodeL);
-    addChild(rootNodeS);
+   // addChild(rootNodeS);
 //    rootNodeL->setPositionX(rootNodeL->getPositionX()+origin.x);
 //    rootNodeL->setScaleX(visibleSize.width/DESIGN_SIZE.width);
 //    CCLOG("%f",VISIBLE_SIZE.width);

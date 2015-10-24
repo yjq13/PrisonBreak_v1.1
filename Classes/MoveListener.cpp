@@ -23,7 +23,8 @@ EventListenerTouchOneByOne* moveListener::create(Layer* layer){
 
 bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event, Layer* layer){
     //下面获取游戏地图上的起点和终点
-     startPosition=layer->getChildByName<ui::ImageView*>("Image_Start");
+    
+    //startPosition=layer->getChildByName<ui::ImageView*>("Image_Start");
      //destinationPosition=layer->getChildByName<ui::ImageView*>("Image_Destination");
     
     CCLOG("begin");
@@ -34,12 +35,13 @@ bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event, La
     }
     //计算玩家触摸点是否在起始点内
     auto p=touch->getLocation();
-    CCLOG("(%f,%f)",startPosition->getPositionX(),p.y);
-    if (p.x>startPosition->getPositionX()&&p.x<(startPosition->getPositionX()+startPosition->getContentSize().width)&&p.y>startPosition->getPositionY()&&p.y<(startPosition->getPositionY()+startPosition->getContentSize().height)) {
-        return true;
-    } else {
-        return false;
-    }
+    //CCLOG("(%f,%f)",startPosition->getPositionX(),p.y);
+//    if (p.x>startPosition->getPositionX()&&p.x<(startPosition->getPositionX()+startPosition->getContentSize().width)&&p.y>startPosition->getPositionY()&&p.y<(startPosition->getPositionY()+startPosition->getContentSize().height)) {
+//        return true;
+//    } else {
+//        return false;
+//    }
+    return true;
 }
 
 void moveListener::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event, Layer* layer){
@@ -59,10 +61,12 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, La
      printf("ed");
     //下面获取游戏地图上的起点和终点
     //startPosition=layer->getChildByName<ui::ImageView*>("Image_Start");
-    destinationPosition=layer->getChildByName<ui::ImageView*>("Image_Destination");
+    //destinationPosition=layer->getChildByName<ui::ImageView*>("Image_Destination");
 
     auto p=touch->getLocation();
-    if (p.x>destinationPosition->getPositionX()&&p.x<(destinationPosition->getPositionX()+destinationPosition->getContentSize().width)&&p.y>destinationPosition->getPositionY()&&p.y<(destinationPosition->getPositionY()+destinationPosition->getContentSize().height)) {
+    if (true
+//        p.x>destinationPosition->getPositionX()&&p.x<(destinationPosition->getPositionX()+destinationPosition->getContentSize().width)&&p.y>destinationPosition->getPositionY()&&p.y<(destinationPosition->getPositionY()+destinationPosition->getContentSize().height)
+        ) {
         //下面是主角跟随路线移动
         //下面是填装动作的容器
         Vector<FiniteTimeAction*> actionVector;

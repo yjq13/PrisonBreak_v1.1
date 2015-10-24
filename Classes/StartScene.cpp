@@ -52,12 +52,10 @@ bool Start::init()
 
 void Start::setUI(){
     //直接添加图片
-    auto visibleSize=Director::getInstance()->getVisibleSize();
-    auto orign=Director::getInstance()->getVisibleOrigin();
     auto background=Sprite::create("res/P2.jpg");
-    background->setScale(1334.0/background->getContentSize().width,750.0/background->getContentSize().height);
-    background->setPositionX(visibleSize.width/2+orign.x);
-    background->setPositionY(visibleSize.height/2+orign.y);
+    background->setScale(DESIGN_SIZE.width/background->getContentSize().width,DESIGN_SIZE.height/background->getContentSize().height);
+    background->setPositionX(VISIBLE_SIZE.width/2+ORIGIN.x);
+    background->setPositionY(VISIBLE_SIZE.height/2+ORIGIN.y);
     addChild(background,1);
     
     
