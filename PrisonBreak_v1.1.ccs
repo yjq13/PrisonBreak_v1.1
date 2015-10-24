@@ -27,6 +27,7 @@
         </Folder>
         <Image Name="P1.jpg" />
         <Image Name="P2.jpg" />
+        <Image Name="12.jpg" />
       </RootFolder>
     </Group>
   </SolutionFolder>

@@ -14,28 +14,36 @@ USING_NS_CC;
 EventListenerTouchOneByOne* moveListener::create(Layer* layer){
     auto listener=EventListenerTouchOneByOne::create();
     listener->onTouchMoved=CC_CALLBACK_2(moveListener::onTouchMoved, this, layer);
-    listener->onTouchBegan=CC_CALLBACK_2(moveListener::onTouchBegan, this);
+    listener->onTouchBegan=CC_CALLBACK_2(moveListener::onTouchBegan, this, layer);
     listener->onTouchEnded=CC_CALLBACK_2(moveListener::onTouchEnded, this, layer);
     
     return listener;
 }
 
 
-bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
+bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event, Layer* layer){
+    //下面获取游戏地图上的起点和终点
+     startPosition=layer->getChildByName<ui::ImageView*>("Image_Start");
+     //destinationPosition=layer->getChildByName<ui::ImageView*>("Image_Destination");
+    
     CCLOG("begin");
     //计数器归零,数组清空
     index=0;
     for (int i=0;i<10000;i++){
         points[i]=ccp(0,0);
     }
-    //获得起始点坐标
+    //计算玩家触摸点是否在起始点内
     auto p=touch->getLocation();
-    
-    return true;
+    CCLOG("(%f,%f)",startPosition->getPositionX(),p.y);
+    if (p.x>startPosition->getPositionX()&&p.x<(startPosition->getPositionX()+startPosition->getContentSize().width)&&p.y>startPosition->getPositionY()&&p.y<(startPosition->getPositionY()+startPosition->getContentSize().height)) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 void moveListener::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event, Layer* layer){
-    isMoved=true;
+    //isMoved=true;
     points[index]=touch->getLocation();
     auto p=touch->getLocation();
     auto r=DrawNode::create();
@@ -48,17 +56,21 @@ void moveListener::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event, La
 }
 
 void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, Layer* layer){
-    printf("ed");
-    //下面是主角跟随路线移动
+     printf("ed");
+    //下面获取游戏地图上的起点和终点
+    //startPosition=layer->getChildByName<ui::ImageView*>("Image_Start");
+    destinationPosition=layer->getChildByName<ui::ImageView*>("Image_Destination");
+
+    auto p=touch->getLocation();
+    if (p.x>destinationPosition->getPositionX()&&p.x<(destinationPosition->getPositionX()+destinationPosition->getContentSize().width)&&p.y>destinationPosition->getPositionY()&&p.y<(destinationPosition->getPositionY()+destinationPosition->getContentSize().height)) {
+        //下面是主角跟随路线移动
         //下面是填装动作的容器
-    bool isValid = moveListener::isMoveValid();
-    Vector<FiniteTimeAction*> actionVector;
-    for (int i=0;i<10000;i++){
-        if (i!=0&&points[i].x!=0) {
-            actionVector.pushBack(MoveTo::create(ccpSub(points[i-1], points[i]).length()/100, points[i]));
+        Vector<FiniteTimeAction*> actionVector;
+        for (int i=0;i<10000;i++){
+            if (i!=0&&points[i].x!=0) {
+                actionVector.pushBack(MoveTo::create(ccpSub(points[i-1], points[i]).length()/100, points[i]));
+            }
         }
-    }
-    if(isMoved&&isValid){
         Sprite_protagonist spritePro;
         
         Sprite* protagonist = spritePro.create();
@@ -67,30 +79,19 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, La
         //s->autorelease();
         protagonist->setPosition(points[0]);
         layer->addChild(protagonist);
-
+        
         
         auto allAction=Sequence::create(actionVector);
         protagonist->runAction(allAction);
-        
+
+    } else {
+        for(int i = 0; i<=index;i++){
+            layer->removeChildByTag(i);
+        }
+
     }
-//    else{
-//        if(!isValid){
-//            for(int i = 0; i<=index;i++){
-//            layer->removeChildByTag(i);
-//            }
-//        }
-//    }
+
     
-    isMoved=false;
 }
 
-//判断是否有效地移动
-bool moveListener::isMoveValid(){
-    
-    bool isValid = false;
-    if(isStart&&isDestination){
-        isValid = true;
-    }
-    
-    return isValid;
-}
+

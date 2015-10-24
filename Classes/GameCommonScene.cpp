@@ -11,6 +11,8 @@
 #include "MoveListener.h"
 #include "Move_action.h"
 #include "cocostudio/CocoStudio.h"
+#include "Constant_Use.h"
+#include "ui/CocosGUI.h"
 USING_NS_CC;
 
 Scene* Game :: createScene(){
@@ -42,8 +44,20 @@ bool Game::init(){
 }
 void Game::setUI(){
     //测试在界面上放置组件
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+//    Size visibleSize = Director::getInstance()->getVisibleSize();
+//    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    
+    rootNodeL->setPositionX(rootNodeL->getPositionX()+ORIGIN.x);
+    rootNodeL->setScaleX(VISIBLE_SIZE.width/DESIGN_SIZE.width);
+    CCLOG("%f",VISIBLE_SIZE.width);
+    rootNodeS->addChild(rootNodeL);
+    addChild(rootNodeS);
+//    rootNodeL->setPositionX(rootNodeL->getPositionX()+origin.x);
+//    rootNodeL->setScaleX(visibleSize.width/DESIGN_SIZE.width);
+//    CCLOG("%f",VISIBLE_SIZE.width);
+//    rootNodeS->addChild(rootNodeL);
+//    addChild(rootNodeS);
+    
     //    auto gameLabel=Label::createWithTTF("GAME", "fonts/Marker Felt.ttf", 24);
     //    gameLabel->setPosition(Vec2(origin.x + visibleSize.width/2,
     //                                origin.y + visibleSize.height - gameLabel->getContentSize().height));
@@ -53,7 +67,7 @@ void Game::setUI(){
     image1->setPosition(100, 100);
     auto menu=Menu::create(image1,NULL);
     menu->setPosition(100,100);
-
+    addChild(menu);
     
     moveListener movelistener;
     

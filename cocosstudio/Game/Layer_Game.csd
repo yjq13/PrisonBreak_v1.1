@@ -18,15 +18,15 @@
       <ObjectData Name="Layer" Tag="157" ctype="GameLayerObjectData">
         <Size X="1334.0000" Y="750.0000" />
         <Children>
-          <AbstractNodeData Name="Image_Start" ActionTag="-379596379" Tag="168" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="174.0347" RightMargin="1113.9653" TopMargin="41.8919" BottomMargin="662.1081" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
-            <Size X="46.0000" Y="46.0000" />
+          <AbstractNodeData Name="Image_Start" ActionTag="-379596379" Tag="168" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="157.2268" RightMargin="1051.7732" TopMargin="119.5743" BottomMargin="520.4257" Scale9Width="125" Scale9Height="110" ctype="ImageViewObjectData">
+            <Size X="125.0000" Y="110.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="197.0347" Y="685.1081" />
-            <Scale ScaleX="2.7539" ScaleY="2.5200" />
+            <Position X="219.7268" Y="575.4257" />
+            <Scale ScaleX="1.3016" ScaleY="1.6261" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.1477" Y="0.9135" />
-            <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
+            <PrePosition X="0.1647" Y="0.7672" />
+            <PreSize X="0.0937" Y="0.1467" />
+            <FileData Type="Normal" Path="12.jpg" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="Image_Destination" ActionTag="613995204" Tag="169" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="1048.0391" RightMargin="239.9609" TopMargin="41.8937" BottomMargin="662.1063" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="46.0000" Y="46.0000" />
@@ -60,13 +60,13 @@
             <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Guard_1" ActionTag="-983426302" Tag="172" IconVisible="False" LeftMargin="520.9477" RightMargin="767.0523" TopMargin="354.3802" BottomMargin="349.6198" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Sprite_Guard_1" ActionTag="-983426302" Tag="172" IconVisible="False" LeftMargin="440.2703" RightMargin="847.7297" TopMargin="351.1530" BottomMargin="352.8470" ctype="SpriteObjectData">
             <Size X="46.0000" Y="46.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="543.9477" Y="372.6198" />
+            <Position X="463.2703" Y="375.8470" />
             <Scale ScaleX="1.9354" ScaleY="1.8185" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.4078" Y="0.4968" />
+            <PrePosition X="0.3473" Y="0.5011" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />

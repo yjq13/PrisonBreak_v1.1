@@ -47,6 +47,16 @@ bool Start::init()
 }
 
 void Start::setUI(){
+    //直接添加图片
+    auto visibleSize=Director::getInstance()->getVisibleSize();
+    auto orign=Director::getInstance()->getVisibleOrigin();
+    auto background=Sprite::create("res/P2.jpg");
+    background->setScale(1334.0/background->getContentSize().width,750.0/background->getContentSize().height);
+    background->setPositionX(visibleSize.width/2+orign.x);
+    background->setPositionY(visibleSize.height/2+orign.y);
+    addChild(background,1);
+    
+    
     auto button_Start = rootNodeL->getChildByName<ui::Button*>("Button_Start");
     
     button_Start->addTouchEventListener(this, toucheventselector(Start::turnToSelect));
@@ -57,11 +67,9 @@ void Start::setUI(){
     rootNodeL->setScaleX(VISIBLE_SIZE.width/DESIGN_SIZE.width);
     
     rootNodeS->addChild(rootNodeL);
-    addChild(rootNodeS);
+    addChild(rootNodeS,2);
     
-    //直接添加图片
-    auto background=ImageView::create("P2.jpg");
-    addChild(background,1);
+
 }
 
 
