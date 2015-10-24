@@ -47,9 +47,9 @@ bool Select::init(){
 
 
 void Select::setUI(){
-    rootNodeL->setPositionX(rootNodeL->getPositionX()+CONSTANT_USE.ORIGIN.x);
-    rootNodeL->setScaleX(CONSTANT_USE.VISIBLE_SIZE.width/CONSTANT_USE.DESIGN_SIZE.width);
-    CCLOG("%f",CONSTANT_USE.VISIBLE_SIZE.width);
+    rootNodeL->setPositionX(rootNodeL->getPositionX()+ORIGIN.x);
+    rootNodeL->setScaleX(VISIBLE_SIZE.width/DESIGN_SIZE.width);
+    CCLOG("%f",VISIBLE_SIZE.width);
     rootNodeS->addChild(rootNodeL);
     addChild(rootNodeS);
     
@@ -82,7 +82,7 @@ void Select::menuCloseCallback(Ref* pSender)
 {
     Start start;
     auto Scene=start.createScene();
-    auto transition=CONSTANT_USE.createTransition_Page(Scene);
+    auto transition=createTransition_Page(Scene);
     Director::getInstance()->replaceScene(transition);
 
 //#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
@@ -101,7 +101,7 @@ void Select::turnToSelect_Detail(Ref* pSender)
     auto sceneNew= select_detail.createScene();
     //下面搞个翻页效果
     //this->removeAllChildren();
-    auto transition=CONSTANT_USE.createTransition_Page(sceneNew);
+    auto transition=createTransition_Page(sceneNew);
     Director::getInstance()->replaceScene(transition);
 }
 

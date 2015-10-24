@@ -48,8 +48,12 @@ bool AppDelegate::applicationDidFinishLaunching() {
 #endif
         director->setOpenGLView(glview);
     }
-    director->getOpenGLView()->setDesignResolutionSize(CONSTANT_USE.DESIGN_SIZE.width,CONSTANT_USE.DESIGN_SIZE.height, ResolutionPolicy::NO_BORDER);
+    VISIBLE_SIZE = cocos2d::Director::getInstance()->getVisibleSize();
     
+    ORIGIN = cocos2d::Director::getInstance()->getVisibleOrigin();
+    
+    director->getOpenGLView()->setDesignResolutionSize(DESIGN_SIZE.width,DESIGN_SIZE.height, ResolutionPolicy::NO_BORDER);
+   
     
     // turn on display FPS
     

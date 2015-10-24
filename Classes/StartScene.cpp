@@ -36,7 +36,6 @@ bool Start::init()
     {
         return false;
     }
-    CONSTANT_USE.init();
     initDocuments();
     ALLINFO.setConstant();
     printf("%d\n", ALLINFO.GOLD_COIN);
@@ -54,9 +53,9 @@ void Start::setUI(){
     
     //auto Scene = rootNodeS->getChildByName<cocos2d::Scene*>("Scene");
     
-    rootNodeL->setPositionX(rootNodeL->getPositionX()+CONSTANT_USE.ORIGIN.x);
-    rootNodeL->setScaleX(CONSTANT_USE.VISIBLE_SIZE.width/CONSTANT_USE.DESIGN_SIZE.width);
-    CCLOG("%f",CONSTANT_USE.VISIBLE_SIZE.width);
+    rootNodeL->setPositionX(rootNodeL->getPositionX()+ORIGIN.x);
+    rootNodeL->setScaleX(VISIBLE_SIZE.width/DESIGN_SIZE.width);
+    
     rootNodeS->addChild(rootNodeL);
     addChild(rootNodeS);
     
@@ -75,6 +74,6 @@ void Start::turnToSelect(Ref* pSender)
     
     //this->removeAllChildren();
     //下面搞个翻页效果
-    TransitionPageTurn* transition = CONSTANT_USE.createTransition_Page(scene);
+    TransitionPageTurn* transition = createTransition_Page(scene);
     Director::getInstance()->replaceScene(transition);
 }
