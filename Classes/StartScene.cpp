@@ -36,6 +36,10 @@ bool Start::init()
     {
         return false;
     }
+    VISIBLE_SIZE = cocos2d::Director::getInstance()->getVisibleSize();
+    
+    ORIGIN = cocos2d::Director::getInstance()->getVisibleOrigin();
+    
     initDocuments();
     ALLINFO.setConstant();
     printf("%d\n", ALLINFO.GOLD_COIN);

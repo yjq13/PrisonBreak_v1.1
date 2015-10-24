@@ -48,9 +48,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 #endif
         director->setOpenGLView(glview);
     }
-    VISIBLE_SIZE = cocos2d::Director::getInstance()->getVisibleSize();
     
-    ORIGIN = cocos2d::Director::getInstance()->getVisibleOrigin();
     
     director->getOpenGLView()->setDesignResolutionSize(DESIGN_SIZE.width,DESIGN_SIZE.height, ResolutionPolicy::NO_BORDER);
    
