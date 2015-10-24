@@ -65,7 +65,7 @@ void Start::setUI(){
     
     rootNodeL->setPositionX(rootNodeL->getPositionX()+ORIGIN.x);
     rootNodeL->setScaleX(VISIBLE_SIZE.width/DESIGN_SIZE.width);
-    
+    //CCLOG("%f",VISIBLE_SIZE.width);
     rootNodeS->addChild(rootNodeL);
     addChild(rootNodeS,2);
     
