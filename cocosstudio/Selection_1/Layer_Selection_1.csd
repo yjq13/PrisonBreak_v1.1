@@ -16,7 +16,7 @@
             <PreSize X="1.0000" Y="1.0000" />
             <FileData Type="Normal" Path="P2.jpg" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_Back" ActionTag="1601702668" Tag="23" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="62.4036" RightMargin="851.5964" TopMargin="40.4447" BottomMargin="563.5553" TouchEnable="True" FontSize="14" ButtonText="back" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_Back" ActionTag="1601702668" Tag="23" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="62.4036" RightMargin="851.5964" TopMargin="40.4447" BottomMargin="563.5553" TouchEnable="True" FontSize="14" ButtonText="back" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="85.4036" Y="691.5553" />
@@ -73,7 +73,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_AddDiamond" ActionTag="-409627225" Tag="30" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="877.8247" RightMargin="36.1753" TopMargin="31.0397" BottomMargin="572.9603" TouchEnable="True" FontSize="14" ButtonText="+" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_AddDiamond" ActionTag="-409627225" Tag="30" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="877.8247" RightMargin="36.1753" TopMargin="31.0397" BottomMargin="572.9603" TouchEnable="True" FontSize="14" ButtonText="+" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="1274.8247" Y="700.9603" />
@@ -88,7 +88,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_Part_1" ActionTag="-1538144334" Tag="43" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="200.4450" RightMargin="1087.5549" TopMargin="358.2328" BottomMargin="355.7672" TouchEnable="True" FontSize="14" ButtonText="新手教学" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_Part_1" ActionTag="-1538144334" Tag="43" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="200.4450" RightMargin="1087.5549" TopMargin="358.2328" BottomMargin="355.7672" TouchEnable="True" FontSize="14" ButtonText="新手教学" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="223.4450" Y="373.7672" />
@@ -103,7 +103,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_Part_2" ActionTag="-161265924" Tag="44" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="516.9133" RightMargin="771.0867" TopMargin="359.6466" BottomMargin="354.3534" TouchEnable="True" FontSize="14" ButtonText="内层" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_Part_2" ActionTag="-161265924" Tag="44" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="516.9133" RightMargin="771.0867" TopMargin="359.6466" BottomMargin="354.3534" TouchEnable="True" FontSize="14" ButtonText="内层" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="539.8698" Y="372.3534" />
@@ -118,7 +118,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_Part_3" ActionTag="-1473037855" Tag="45" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="827.1858" RightMargin="460.8142" TopMargin="355.6186" BottomMargin="358.3814" TouchEnable="True" FontSize="14" ButtonText="中层" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_Part_3" ActionTag="-1473037855" Tag="45" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="827.1858" RightMargin="460.8142" TopMargin="355.6186" BottomMargin="358.3814" TouchEnable="True" FontSize="14" ButtonText="中层" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="850.1582" Y="376.3814" />
@@ -133,7 +133,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_Part_4" ActionTag="543110847" Tag="46" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="1125.9158" RightMargin="162.0842" TopMargin="359.7218" BottomMargin="354.2782" TouchEnable="True" FontSize="14" ButtonText="外层" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_Part_4" ActionTag="543110847" Tag="46" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="1125.9158" RightMargin="162.0842" TopMargin="359.7218" BottomMargin="354.2782" TouchEnable="True" FontSize="14" ButtonText="外层" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="1148.9742" Y="372.2782" />

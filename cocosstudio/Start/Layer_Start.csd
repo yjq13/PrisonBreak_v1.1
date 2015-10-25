@@ -16,7 +16,7 @@
             <PreSize X="1.0000" Y="1.0000" />
             <FileData Type="Normal" Path="P2.jpg" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_Start" ActionTag="-640947691" Tag="10" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="645.0672" RightMargin="642.9328" TopMargin="407.4000" BottomMargin="306.6000" TouchEnable="True" FontSize="14" ButtonText="START" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_Start" ActionTag="-640947691" Tag="10" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="645.0672" RightMargin="642.9328" TopMargin="407.4000" BottomMargin="306.6000" TouchEnable="True" FontSize="14" ButtonText="START" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="668.0672" Y="324.6000" />
@@ -31,7 +31,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_About" ActionTag="-1565270860" Tag="11" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="462.1650" RightMargin="451.8350" TopMargin="453.6681" BottomMargin="150.3319" TouchEnable="True" FontSize="14" ButtonText="ABOUT" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_About" ActionTag="-1565270860" Tag="11" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="462.1650" RightMargin="451.8350" TopMargin="453.6681" BottomMargin="150.3319" TouchEnable="True" FontSize="14" ButtonText="ABOUT" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="674.2036" Y="197.2500" />
