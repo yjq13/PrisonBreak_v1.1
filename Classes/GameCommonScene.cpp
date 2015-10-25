@@ -13,6 +13,7 @@
 #include "cocostudio/CocoStudio.h"
 #include "Constant_Use.h"
 #include "ui/CocosGUI.h"
+#include "Section.h"
 USING_NS_CC;
 
 Scene* Game :: createScene(){
@@ -71,6 +72,22 @@ void Game::setUI(){
     
 //    auto test=rootNodeL->getChildByName<ui::ImageView*>("Image_Start");
 //    CCLOG("%f",test->getPosition().x);
+    
+    auto startPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Start");
+    //这里应该加个异常检测，日后再说
+    auto stopPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Stop");
+    auto destinationPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Destination");
+    Size size_start = startPosition->getContentSize();
+    Vec2 position_start = startPosition->getPosition();
+    startSection=Section(&size_start, &position_start);
+    
+    Size size_stop = stopPosition->getContentSize();
+    Vec2 position_stop = stopPosition->getPosition();
+    stopSection=Section(&size_stop, &position_stop);
+    
+    Size size_destination = destinationPosition->getContentSize();
+    Vec2 position_destination = destinationPosition->getPosition();
+    destinationSection=Section(&size_destination, &position_destination);
     
     moveListener movelistener;
     

@@ -11,8 +11,13 @@ bool Section::isInside(cocos2d::Touch* touch){
     auto p=touch->getLocation();
     //CCLOG("(%f,%f)",startPosition->getPositionX(),p.y);
     if (p.x>=position->x&&p.x<=(position->x+size->width)&&p.y>=position->y&&p.y<=(position->y+size->height)) {
+        
+
+        CCLOG("inside");
         return true;
     } else {
+        CCLOG("%f,%f,,,,size::%f,%f",position->x,position->y,size->width,size->height);
+        CCLOG("outside");
         return false;
     }
 }

@@ -17,19 +17,19 @@
       </Animation>
       <AnimationList>
         <AnimationInfo Name="animation0" StartIndex="0" EndIndex="20">
-          <RenderColor A="150" R="255" G="248" B="220" />
+          <RenderColor A="255" R="255" G="248" B="220" />
         </AnimationInfo>
       </AnimationList>
       <ObjectData Name="Layer" Tag="157" ctype="GameLayerObjectData">
         <Size X="1334.0000" Y="750.0000" />
         <Children>
-          <AbstractNodeData Name="Image_Start" ActionTag="-379596379" Tag="168" IconVisible="False" LeftMargin="125.2852" RightMargin="1083.7148" TopMargin="44.0718" BottomMargin="595.9282" Scale9Width="125" Scale9Height="110" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="Image_Start" ActionTag="-379596379" Tag="168" IconVisible="False" LeftMargin="125.2866" RightMargin="1083.7134" TopMargin="274.5623" BottomMargin="365.4377" Scale9Width="125" Scale9Height="110" ctype="ImageViewObjectData">
             <Size X="125.0000" Y="110.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="187.7852" Y="650.9282" />
-            <Scale ScaleX="1.1157" ScaleY="1.4149" />
+            <Position X="187.7866" Y="420.4377" />
+            <Scale ScaleX="2.8572" ScaleY="2.8118" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.1408" Y="0.8679" />
+            <PrePosition X="0.1408" Y="0.5606" />
             <PreSize X="0.0937" Y="0.1467" />
             <FileData Type="Normal" Path="12.jpg" Plist="" />
           </AbstractNodeData>
@@ -90,6 +90,16 @@
             <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Image_Stop" ActionTag="1455529122" Tag="18" IconVisible="False" LeftMargin="677.2357" RightMargin="610.7643" TopMargin="638.0055" BottomMargin="65.9945" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+            <Size X="46.0000" Y="46.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="700.2357" Y="88.9945" />
+            <Scale ScaleX="2.1135" ScaleY="2.5310" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.5249" Y="0.1187" />
+            <PreSize X="0.0000" Y="0.0000" />
+            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

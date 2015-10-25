@@ -11,6 +11,7 @@
 
 #include "cocos2d.h"
 #include "MyScene.h"
+#include "Section.h"
 USING_NS_CC;
 class Game : public MyScene{
      cocos2d::Node* rootNodeL;
@@ -37,6 +38,12 @@ public:
     bool isMoved;//用于判断是否画完线路
     //下面是检测碰撞的方法
    // bool onContactBegin(const PhysicsContact& contact);
+    
+    //下面获取游戏地图上的起点和终点区域
+    Section startSection;
+    Section stopSection;
+    Section destinationSection;
+    
     Sprite* protagonist;
     Sprite* ballTwo;
     // implement the "static create()" method manually
