@@ -13,9 +13,15 @@
 #include "cocos2d.h"
 class moveAction : public cocos2d::EventListenerPhysicsContact{
 public:
-   virtual EventListenerPhysicsContact* create();
+    virtual EventListenerPhysicsContact* createPro_Jailer();
     
-   bool onContactBegin(const cocos2d::PhysicsContact& contact);
+    bool onContactBeginPro_Jailer();
+    
+    bool onContactBeginPro_Mouse();
+
+    bool onContactBeginPro_Coin();
+    
+    bool switchMoveAction(const cocos2d::PhysicsContact &contact);
 };
 
 #endif /* Move_action_hpp */

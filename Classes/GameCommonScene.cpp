@@ -30,7 +30,7 @@ bool Game::init(){
 
     moveAction moveaction;
     
-    EventListenerPhysicsContact* contactListener = moveaction.create();
+    EventListenerPhysicsContact* contactListener = moveaction.createPro_Jailer();
     
     _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
     

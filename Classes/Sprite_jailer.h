@@ -11,8 +11,8 @@
 #include <cocos2d.h>
 
 class Sprite_jailer : public cocos2d::Sprite{
-    
-    
+public:    
+    static cocos2d::Sprite* create(int number);
     
 };
 

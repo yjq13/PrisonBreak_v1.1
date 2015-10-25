@@ -8,11 +8,11 @@
 
 #include "Sprite_protagonist.h"
 #include "cocos2d.h"
-
+#include "Constant_Use.h"
 USING_NS_CC;
 
 
-Sprite* Sprite_protagonist::create(){
+Sprite* Sprite_protagonist::create(int number){
     auto protagonist=Sprite::create("05.jpg");
     
     auto ManBody=PhysicsBody::createBox(protagonist->getContentSize());
@@ -22,7 +22,7 @@ Sprite* Sprite_protagonist::create(){
     ManBody->setGravityEnable(false);
     ManBody->setContactTestBitmask(0xFFFF);
     protagonist->setPhysicsBody(ManBody);
-    //protagonist->setTag(1);
+    protagonist->setTag(PROTAGONIST_TAG+number);
 
     return protagonist;
     

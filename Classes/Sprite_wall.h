@@ -11,8 +11,8 @@
 
 #include <cocos2d.h>
 class Sprite_wall : public cocos2d::Sprite{
-    
-    
+public:    
+    static cocos2d::Sprite* create();
     
 };
 

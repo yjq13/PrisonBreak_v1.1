@@ -17,5 +17,7 @@ cocos2d::Size VISIBLE_SIZE = cocos2d::Director::getInstance()->getVisibleSize();
 
 cocos2d::Vec2 ORIGIN = cocos2d::Director::getInstance()->getVisibleOrigin();
 
-
 cocos2d::Size DESIGN_SIZE = Size(1334.0,750.0);
+
+
+

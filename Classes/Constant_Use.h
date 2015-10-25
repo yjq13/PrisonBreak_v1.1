@@ -19,5 +19,13 @@ USING_NS_CC;
     
     extern cocos2d::Size DESIGN_SIZE;
 
+    const int PROTAGONIST_TAG= 1000;
 
+    const int MOUSE_TAG = 2000;
+
+    const int JAILER_TAG = 3000;
+
+    const int COIN_TAG = 4000;
+
+    const int WALL_TAG = 5000;
 #endif /* Constant_Use_h*/

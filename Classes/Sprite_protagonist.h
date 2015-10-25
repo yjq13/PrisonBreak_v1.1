@@ -14,7 +14,7 @@ class Sprite_protagonist : public cocos2d::Sprite{
 public:
     //Sprite_protagonist();
     
-    static cocos2d::Sprite* create();
+    static cocos2d::Sprite* create(int number);
 };
 
 #endif /* Sprite_Component_hpp */

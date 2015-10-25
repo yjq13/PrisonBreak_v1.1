@@ -75,9 +75,8 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, La
                 actionVector.pushBack(MoveTo::create(ccpSub(points[i-1], points[i]).length()/100, points[i]));
             }
         }
-        //Sprite_protagonist* protagonist = new Sprite_protagonist();
         
-        Sprite* protagonist = Sprite_protagonist::create();
+        Sprite* protagonist = Sprite_protagonist::create(1);
         protagonist->setPosition(points[0]);
         
         layer->addChild(protagonist);
