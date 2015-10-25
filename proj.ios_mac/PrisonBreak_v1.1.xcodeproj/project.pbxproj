@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		049178E21BDBDBB2004AAF5C /* Section.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049178E01BDBDBB2004AAF5C /* Section.cpp */; settings = {ASSET_TAGS = (); }; };
 		04F24EA79E2FEB16726F1559 /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D364C16A410D74FA7F2CF54 /* libcocos2d Mac.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -106,6 +107,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		049178E01BDBDBB2004AAF5C /* Section.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Section.cpp; sourceTree = "<group>"; };
+		049178E11BDBDBB2004AAF5C /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D364C16A410D74FA7F2CF54 /* libcocos2d Mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcocos2d Mac.a"; path = "/Applications/Cocos/frameworks/cocos2d-x-3.8/prebuilt/mac/libcocos2d Mac.a"; sourceTree = "<absolute>"; };
@@ -437,6 +440,8 @@
 				E30AC8BA1BD984AC005B8686 /* MoveListener.h */,
 				E30AC8BC1BD98B94005B8686 /* Move_action.cpp */,
 				E30AC8BD1BD98B94005B8686 /* Move_action.h */,
+				049178E01BDBDBB2004AAF5C /* Section.cpp */,
+				049178E11BDBDBB2004AAF5C /* Section.h */,
 			);
 			name = BL;
 			sourceTree = "<group>";
@@ -729,6 +734,7 @@
 				E3CB5E8E1BC9753A005123B8 /* SystemVo.cpp in Sources */,
 				E30E77811BCAD7DE0053F4B1 /* CacheData.cpp in Sources */,
 				E3CB5E7C1BC9753A005123B8 /* ShopScene.cpp in Sources */,
+				049178E21BDBDBB2004AAF5C /* Section.cpp in Sources */,
 				E3CB5E761BC9753A005123B8 /* Constant.cpp in Sources */,
 				E3CB5E7D1BC9753A005123B8 /* AppDelegate.cpp in Sources */,
 				E3CB5E871BC9753A005123B8 /* GameVo.cpp in Sources */,

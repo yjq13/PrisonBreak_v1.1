@@ -15,16 +15,21 @@
           </PointFrame>
         </Timeline>
       </Animation>
+      <AnimationList>
+        <AnimationInfo Name="animation0" StartIndex="0" EndIndex="20">
+          <RenderColor A="150" R="255" G="248" B="220" />
+        </AnimationInfo>
+      </AnimationList>
       <ObjectData Name="Layer" Tag="157" ctype="GameLayerObjectData">
         <Size X="1334.0000" Y="750.0000" />
         <Children>
-          <AbstractNodeData Name="Image_Start" ActionTag="-379596379" Tag="168" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="157.2268" RightMargin="1051.7732" TopMargin="119.5743" BottomMargin="520.4257" Scale9Width="125" Scale9Height="110" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="Image_Start" ActionTag="-379596379" Tag="168" IconVisible="False" LeftMargin="125.2852" RightMargin="1083.7148" TopMargin="44.0718" BottomMargin="595.9282" Scale9Width="125" Scale9Height="110" ctype="ImageViewObjectData">
             <Size X="125.0000" Y="110.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="219.7268" Y="575.4257" />
-            <Scale ScaleX="1.3016" ScaleY="1.6261" />
+            <Position X="187.7852" Y="650.9282" />
+            <Scale ScaleX="1.1157" ScaleY="1.4149" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.1647" Y="0.7672" />
+            <PrePosition X="0.1408" Y="0.8679" />
             <PreSize X="0.0937" Y="0.1467" />
             <FileData Type="Normal" Path="12.jpg" Plist="" />
           </AbstractNodeData>
@@ -70,6 +75,21 @@
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Button_2" ActionTag="-1951456635" Tag="17" IconVisible="False" LeftMargin="669.7592" RightMargin="618.2408" TopMargin="159.7290" BottomMargin="554.2710" TouchEnable="True" FontSize="14" ButtonText="fuck" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="46.0000" Y="36.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="692.7592" Y="572.2710" />
+            <Scale ScaleX="4.7877" ScaleY="5.0332" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.5193" Y="0.7630" />
+            <PreSize X="0.0000" Y="0.0000" />
+            <TextColor A="255" R="65" G="65" B="70" />
+            <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+            <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
+            <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+            <OutlineColor A="255" R="255" G="0" B="0" />
+            <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

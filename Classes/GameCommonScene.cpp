@@ -51,7 +51,7 @@ void Game::setUI(){
     rootNodeL->setScaleX(VISIBLE_SIZE.width/DESIGN_SIZE.width);
     CCLOG("%f",VISIBLE_SIZE.width);
     rootNodeS->addChild(rootNodeL);
-   // addChild(rootNodeS);
+    addChild(rootNodeS);
 //    rootNodeL->setPositionX(rootNodeL->getPositionX()+origin.x);
 //    rootNodeL->setScaleX(visibleSize.width/DESIGN_SIZE.width);
 //    CCLOG("%f",VISIBLE_SIZE.width);
@@ -68,6 +68,9 @@ void Game::setUI(){
     auto menu=Menu::create(image1,NULL);
     menu->setPosition(100,100);
     addChild(menu);
+    
+//    auto test=rootNodeL->getChildByName<ui::ImageView*>("Image_Start");
+//    CCLOG("%f",test->getPosition().x);
     
     moveListener movelistener;
     

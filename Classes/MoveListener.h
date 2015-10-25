@@ -11,18 +11,21 @@
 
 #include <cocos2d.h>
 #include "ui/CocosGUI.h"
+#include "Section.h"
 class moveListener : public cocos2d::EventListenerTouchOneByOne{
 private:
     cocos2d::Point points[10000];//手指画出来的点集
     int index = 0;//计数器
     bool isMoved=false;
-    //下面获取游戏地图上的起点和终点
-    cocos2d::ui::ImageView* startPosition;
-    cocos2d::ui::ImageView* destinationPosition;
+    //下面获取游戏地图上的起点和终点区域
+    Section startSection=Section();
+    Section stopSection;
+    Section destinationSection;
+   
 public:
     virtual EventListenerTouchOneByOne* create(cocos2d::Layer* layer);
     
-    bool onTouchBegan(cocos2d::Touch* touch,cocos2d::Event* event, cocos2d::Layer* layer);
+    bool onTouchBegan(cocos2d::Touch* touch,cocos2d::Event* event);
     
     void onTouchMoved(cocos2d::Touch* touch,cocos2d::Event* event, cocos2d::Layer* layer);
     

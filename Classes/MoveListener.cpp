@@ -9,23 +9,37 @@
 #include "MoveListener.h"
 #include "Sprite_protagonist.h"
 #include "cocos2d.h"
+#include "Section.h"
 USING_NS_CC;
 
 EventListenerTouchOneByOne* moveListener::create(Layer* layer){
     auto listener=EventListenerTouchOneByOne::create();
-    listener->onTouchMoved=CC_CALLBACK_2(moveListener::onTouchMoved, this, layer);
-    listener->onTouchBegan=CC_CALLBACK_2(moveListener::onTouchBegan, this, layer);
+    listener->onTouchMoved=CC_CALLBACK_2(moveListener::onTouchMoved, this,layer);
+    listener->onTouchBegan=CC_CALLBACK_2(moveListener::onTouchBegan, this);
     listener->onTouchEnded=CC_CALLBACK_2(moveListener::onTouchEnded, this, layer);
     
+    auto startPosition=layer->getChildByName<ui::ImageView*>("Image_Start");
+    //这里应该加个异常检测，日后再说
+    auto stopPosition=layer->getChildByName<ui::ImageView*>("Image_Stop");
+    auto destinationPosition=layer->getChildByName<ui::ImageView*>("Image_Destination");
+    CCLOG("这一层里有%zd个children",layer->getChildrenCount());
+    Size size_start = startPosition->getContentSize();
+    Vec2 position_start = startPosition->getPosition();
+    startSection=Section(&size_start, &position_start);
+    
+    
+    Size size_stop = stopPosition->getContentSize();
+    Vec2 position_stop = stopPosition->getPosition();
+    stopSection=Section(&size_stop, &position_stop);
+    
+    Size size_destination = destinationPosition->getContentSize();
+    Vec2 position_destination = destinationPosition->getPosition();
+    destinationSection=Section(&size_destination, &position_destination);
     return listener;
 }
 
 
-bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event, Layer* layer){
-    //下面获取游戏地图上的起点和终点
-    
-    //startPosition=layer->getChildByName<ui::ImageView*>("Image_Start");
-     //destinationPosition=layer->getChildByName<ui::ImageView*>("Image_Destination");
+bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
     
     CCLOG("begin");
     //计数器归零,数组清空
@@ -34,14 +48,10 @@ bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event, La
         points[i]=ccp(0,0);
     }
     //计算玩家触摸点是否在起始点内
-    auto p=touch->getLocation();
-    //CCLOG("(%f,%f)",startPosition->getPositionX(),p.y);
-//    if (p.x>startPosition->getPositionX()&&p.x<(startPosition->getPositionX()+startPosition->getContentSize().width)&&p.y>startPosition->getPositionY()&&p.y<(startPosition->getPositionY()+startPosition->getContentSize().height)) {
-//        return true;
-//    } else {
-//        return false;
-//    }
-    return true;
+    //auto p=touch->getLocation();
+    // CCLOG("(%f,%f)",startPosition->getPositionX(),p.y);
+    return startSection.isInside(touch);
+    //return true;
 }
 
 void moveListener::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event, Layer* layer){
@@ -58,15 +68,10 @@ void moveListener::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event, La
 }
 
 void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, Layer* layer){
-     printf("ed");
-    //下面获取游戏地图上的起点和终点
-    //startPosition=layer->getChildByName<ui::ImageView*>("Image_Start");
-    //destinationPosition=layer->getChildByName<ui::ImageView*>("Image_Destination");
-
+    printf("ed");
     auto p=touch->getLocation();
-    if (isMoved
-//        p.x>destinationPosition->getPositionX()&&p.x<(destinationPosition->getPositionX()+destinationPosition->getContentSize().width)&&p.y>destinationPosition->getPositionY()&&p.y<(destinationPosition->getPositionY()+destinationPosition->getContentSize().height)
-        ) {
+    if (isMoved&&(stopSection.isInside(touch)||destinationSection.isInside(touch)))
+    {
         //下面是主角跟随路线移动
         //下面是填装动作的容器
         Vector<FiniteTimeAction*> actionVector;
@@ -81,21 +86,22 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, La
         
         //layer->addChild(protagonist);
         //s->autorelease();
-       
+        
         layer->addChild(protagonist);
         
         
         auto allAction=Sequence::create(actionVector);
         protagonist->runAction(allAction);
-
+        
+        
     } else {
         for(int i = 0; i<=index;i++){
             layer->removeChildByTag(i);
         }
-
+        
     }
     isMoved=false;
-
+    
     
 }
 

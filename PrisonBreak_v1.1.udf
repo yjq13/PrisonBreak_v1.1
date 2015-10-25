@@ -25,5 +25,18 @@
         <EnableHTML5Advanced Value="False" />
       </Value>
     </Item>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="Game/Scene_Game.csd" />
+          <FilePathData Path="Game/Layer_Game.csd" />
+          <FilePathData Path="Start/Layer_Start.csd" />
+          <FilePathData Path="Start/Scene_Start.csd" />
+          <FilePathData Path="Selection_1/Layer_Selection_1.csd" />
+          <FilePathData Path="Selection_1/Scene_Selection_1.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="Game/Layer_Game.csd" />
+      </Value>
+    </Item>
   </Properties>
 </UserData>
