@@ -11,8 +11,8 @@
 #include "Constant_Use.h"
 USING_NS_CC;
 
-Sprite* Sprite_mouse::create(int number){
-    auto mouse=Sprite::create("05.jpg");
+Sprite* Sprite_mouse::create(int number,Sprite* getSprite){
+    auto mouse = getSprite;
     
     auto ManBody=PhysicsBody::createBox(mouse->getContentSize());
     

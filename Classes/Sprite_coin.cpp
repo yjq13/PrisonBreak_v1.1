@@ -11,8 +11,8 @@
 #include "Constant_Use.h"
 USING_NS_CC;
 
-Sprite* Sprite_coin::create(int number){
-    auto coin=Sprite::create("05.jpg");
+Sprite* Sprite_coin::create(int number,Sprite* getSprite){
+    auto coin= getSprite;
     
     auto ManBody=PhysicsBody::createBox(coin->getContentSize());
     

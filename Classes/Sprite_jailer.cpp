@@ -11,8 +11,8 @@
 #include "Constant_Use.h"
 USING_NS_CC;
 
-Sprite* Sprite_jailer::create(int number){
-    auto jailer=Sprite::create("05.jpg");
+Sprite* Sprite_jailer::create(int number,Sprite* getSprite){
+    auto jailer= getSprite;
     
     auto ManBody=PhysicsBody::createBox(jailer->getContentSize());
     

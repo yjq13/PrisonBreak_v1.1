@@ -14,7 +14,8 @@
 class CacheData{
 public:
     int GOLD_COIN_GET = 0;
-    int DIAMOND_GET = 1000;
+    int DIAMOND_GET = 0;
+    int TIME_GET = 0;
 };
 
 static CacheData CACHEINFO;

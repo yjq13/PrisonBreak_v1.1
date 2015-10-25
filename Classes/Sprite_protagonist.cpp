@@ -24,6 +24,7 @@ Sprite* Sprite_protagonist::create(int number){
     protagonist->setPhysicsBody(ManBody);
     protagonist->setTag(PROTAGONIST_TAG+number);
 
+    
     return protagonist;
     
 }

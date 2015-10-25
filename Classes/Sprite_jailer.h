@@ -12,7 +12,7 @@
 
 class Sprite_jailer : public cocos2d::Sprite{
 public:    
-    static cocos2d::Sprite* create(int number);
+    static cocos2d::Sprite* create(int number,cocos2d::Sprite* getSprite);
     
 };
 
