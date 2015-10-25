@@ -40,7 +40,7 @@ bool Select_Detail::init(){
     }
     
     
-    rootNodeS = CSLoader::createNode("res/Selection_2/Scene_Selection_2.csb");
+    //rootNodeS = CSLoader::createNode("res/Selection_2/Scene_Selection_2.csb");
     
     rootNodeL_Basis = CSLoader::createNode("res/Selection_2/Layer_Selection_2.csb");
     
@@ -66,26 +66,29 @@ void Select_Detail::setUI(){
     
     Button_StartGame->addTouchEventListener(this, toucheventselector(Select_Detail::turnToGame));
     
-    rootNodeS->addChild(rootNodeL_Diamond);
+    //rootNodeS->addChild(rootNodeL_Diamond);
     
     rootNodeL_Diamond->setVisible(false);
     
-    rootNodeS->addChild(rootNodeL_GameStep);
+    //rootNodeS->addChild(rootNodeL_GameStep);
     
     rootNodeL_GameStep->setVisible(false);
     
-    rootNodeL_Diamond->setPositionX(rootNodeL_Diamond->getPositionX()+ORIGIN.x);
-    rootNodeL_Diamond->setScaleX(VISIBLE_SIZE.width/DESIGN_SIZE.width);
     
-    rootNodeL_GameStep->setPositionX(rootNodeL_GameStep->getPositionX()+ORIGIN.x);
-    rootNodeL_GameStep->setScaleX(VISIBLE_SIZE.width/DESIGN_SIZE.width);
+    //rootNodeS->addChild(rootNodeL_Basis);
+    rootNodeL_Basis->setContentSize(VISIBLE_SIZE);
+    ui::Helper::doLayout(rootNodeL_Basis);
     
-    rootNodeL_Basis->setPositionX(rootNodeL_Basis->getPositionX()+ORIGIN.x);
-    rootNodeL_Basis->setScaleX(VISIBLE_SIZE.width/DESIGN_SIZE.width);
+    rootNodeL_Diamond->setContentSize(VISIBLE_SIZE);
+    ui::Helper::doLayout(rootNodeL_Diamond);
     
-    rootNodeS->addChild(rootNodeL_Basis);
+    rootNodeL_GameStep->setContentSize(VISIBLE_SIZE);
+    ui::Helper::doLayout(rootNodeL_GameStep);
     
-    addChild(rootNodeS);
+    
+    addChild(rootNodeL_Basis);
+    addChild(rootNodeL_Diamond);
+    addChild(rootNodeL_GameStep);
     
     
     auto Button_Back = rootNodeL_Basis->getChildByName<ui::Button*>("Button_Back");

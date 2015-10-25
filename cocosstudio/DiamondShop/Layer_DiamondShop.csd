@@ -6,6 +6,16 @@
       <ObjectData Name="Layer" Tag="72" ctype="GameLayerObjectData">
         <Size X="1334.0000" Y="750.0000" />
         <Children>
+          <AbstractNodeData Name="Background_DiamondShop" ActionTag="1934656826" Tag="215" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="643.9982" RightMargin="644.0018" TopMargin="352.0012" BottomMargin="351.9988" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+            <Size X="46.0000" Y="46.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="667.0000" Y="375.0000" />
+            <Scale ScaleX="28.7364" ScaleY="16.3099" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.5000" Y="0.5000" />
+            <PreSize X="0.0345" Y="0.0613" />
+            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
+          </AbstractNodeData>
           <AbstractNodeData Name="Button_Back" ActionTag="-566858004" Tag="126" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="62.4036" RightMargin="851.5964" TopMargin="40.4447" BottomMargin="563.5553" TouchEnable="True" FontSize="14" ButtonText="back" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />

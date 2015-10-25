@@ -43,7 +43,6 @@ bool Start::init()
     initDocuments();
     setConstant();
     printf("%d\n", GOLD_COIN);
-    rootNodeS = CSLoader::createNode("res/Start/Scene_Start.csb");
     rootNodeL = CSLoader::createNode("res/Start/Layer_Start.csb");
     
     setUI();
@@ -51,25 +50,13 @@ bool Start::init()
 }
 
 void Start::setUI(){
-    //直接添加图片
-    auto background=Sprite::create("res/P2.jpg");
-    background->setScale(DESIGN_SIZE.width/background->getContentSize().width,DESIGN_SIZE.height/background->getContentSize().height);
-    background->setPositionX(VISIBLE_SIZE.width/2+ORIGIN.x);
-    background->setPositionY(VISIBLE_SIZE.height/2+ORIGIN.y);
-    addChild(background,1);
-    
     
     auto button_Start = rootNodeL->getChildByName<ui::Button*>("Button_Start");
     
     button_Start->addTouchEventListener(this, toucheventselector(Start::turnToSelect));
-    
-    //auto Scene = rootNodeS->getChildByName<cocos2d::Scene*>("Scene");
-    
-    rootNodeL->setPositionX(rootNodeL->getPositionX()+ORIGIN.x);
-    rootNodeL->setScaleX(VISIBLE_SIZE.width/DESIGN_SIZE.width);
-    //CCLOG("%f",VISIBLE_SIZE.width);
-    rootNodeS->addChild(rootNodeL);
-    addChild(rootNodeS,2);
+    rootNodeL->setContentSize(VISIBLE_SIZE);
+    ui::Helper::doLayout(rootNodeL);
+    addChild(rootNodeL);
     
 
 }

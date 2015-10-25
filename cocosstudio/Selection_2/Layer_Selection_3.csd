@@ -6,10 +6,10 @@
       <ObjectData Name="Layer" Tag="97" ctype="GameLayerObjectData">
         <Size X="1334.0000" Y="750.0000" />
         <Children>
-          <AbstractNodeData Name="Background_Selection_3" ActionTag="963366194" Tag="98" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" TopMargin="0.0001" BottomMargin="-0.0001" StretchWidthEnable="True" StretchHeightEnable="True" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="Background_Selection_3" ActionTag="963366194" Tag="98" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" TopMargin="0.0001" BottomMargin="-0.0001" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="1334.0000" Y="750.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="667.0000" Y="374.9999" />
+            <Position X="667.0000" Y="375.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5000" />

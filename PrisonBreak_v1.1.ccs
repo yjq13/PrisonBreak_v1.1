@@ -4,25 +4,20 @@
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
         <Folder Name="Start">
-          <Project Name="Scene_Start.csd" Type="Scene" />
           <Project Name="Layer_Start.csd" Type="Layer" />
         </Folder>
         <Folder Name="Selection_1">
           <Project Name="Layer_Selection_1.csd" Type="Layer" />
-          <Project Name="Scene_Selection_1.csd" Type="Scene" />
         </Folder>
         <Folder Name="Selection_2">
           <Project Name="Layer_Selection_2.csd" Type="Layer" />
-          <Project Name="Scene_Selection_2.csd" Type="Scene" />
           <Project Name="Layer_Selection_3.csd" Type="Layer" />
           <Project Name="Layer_Dialog_Buy.csd" Type="Layer" />
         </Folder>
         <Folder Name="DiamondShop">
-          <Project Name="Scene_DiamondShop.csd" Type="Scene" />
           <Project Name="Layer_DiamondShop.csd" Type="Layer" />
         </Folder>
         <Folder Name="Game">
-          <Project Name="Scene_Game.csd" Type="Scene" />
           <Project Name="Layer_Game.csd" Type="Layer" />
         </Folder>
         <Image Name="P1.jpg" />

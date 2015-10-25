@@ -6,6 +6,16 @@
       <ObjectData Name="Layer" Tag="60" ctype="GameLayerObjectData">
         <Size X="1334.0000" Y="750.0000" />
         <Children>
+          <AbstractNodeData Name="Background_Selection_2" ActionTag="1414423381" Tag="134" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="644.0000" RightMargin="644.0000" TopMargin="352.0004" BottomMargin="351.9996" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+            <Size X="46.0000" Y="46.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="667.0000" Y="374.9996" />
+            <Scale ScaleX="28.8370" ScaleY="16.0320" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.5000" Y="0.5000" />
+            <PreSize X="0.0000" Y="0.0000" />
+            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
+          </AbstractNodeData>
           <AbstractNodeData Name="Button_Back" ActionTag="-213106155" Tag="74" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="62.4036" RightMargin="851.5964" TopMargin="40.4447" BottomMargin="563.5553" TouchEnable="True" FontSize="14" ButtonText="back" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />

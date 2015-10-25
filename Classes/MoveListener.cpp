@@ -35,6 +35,7 @@ bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
     //计算玩家触摸点是否在起始点内
     //auto p=touch->getLocation();
     // CCLOG("(%f,%f)",startPosition->getPositionX(),p.y);
+    //注意，下面的调用是个空值，为了不报错加的
     Game g;
     return g.startSection.isInside(touch);
     //return true;

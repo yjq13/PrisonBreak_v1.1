@@ -23,6 +23,16 @@
       <ObjectData Name="Layer" Tag="157" ctype="GameLayerObjectData">
         <Size X="1334.0000" Y="750.0000" />
         <Children>
+          <AbstractNodeData Name="BackGround_Game" ActionTag="-1674459379" Tag="191" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="641.2436" RightMargin="646.7564" TopMargin="352.5741" BottomMargin="351.4259" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+            <Size X="46.0000" Y="46.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="664.1986" Y="374.4000" />
+            <Scale ScaleX="28.8279" ScaleY="16.0832" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.4979" Y="0.4992" />
+            <PreSize X="0.0000" Y="0.0000" />
+            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
+          </AbstractNodeData>
           <AbstractNodeData Name="Image_Start" ActionTag="-379596379" Tag="168" IconVisible="False" LeftMargin="125.2866" RightMargin="1083.7134" TopMargin="274.5623" BottomMargin="365.4377" Scale9Width="125" Scale9Height="110" ctype="ImageViewObjectData">
             <Size X="125.0000" Y="110.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />

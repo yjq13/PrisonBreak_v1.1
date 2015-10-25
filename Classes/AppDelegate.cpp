@@ -50,8 +50,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     }
     
     
-    director->getOpenGLView()->setDesignResolutionSize(DESIGN_SIZE.width,DESIGN_SIZE.height, ResolutionPolicy::NO_BORDER);
-   
+    director->getOpenGLView()->setDesignResolutionSize(DESIGN_SIZE.width,DESIGN_SIZE.height, ResolutionPolicy::FIXED_HEIGHT);
+   //添加二级目录
+    FileUtils::getInstance()->addSearchPath("res");
     
     // turn on display FPS
     

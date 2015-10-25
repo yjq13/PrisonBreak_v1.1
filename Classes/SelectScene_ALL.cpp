@@ -34,7 +34,7 @@ bool Select::init(){
     {
         return false;
     }
-    rootNodeS = CSLoader::createNode("res/Selection_1/Scene_Selection_1.csb");
+    //rootNodeS = CSLoader::createNode("res/Selection_1/Scene_Selection_1.csb");
     
     rootNodeL = CSLoader::createNode("res/Selection_1/Layer_Selection_1.csb");
     
@@ -47,11 +47,13 @@ bool Select::init(){
 
 
 void Select::setUI(){
-    rootNodeL->setPositionX(rootNodeL->getPositionX()+ORIGIN.x);
-    rootNodeL->setScaleX(VISIBLE_SIZE.width/DESIGN_SIZE.width);
-    CCLOG("%f",VISIBLE_SIZE.width);
-    rootNodeS->addChild(rootNodeL);
-    addChild(rootNodeS);
+//    rootNodeL->setPositionX(rootNodeL->getPositionX()+ORIGIN.x);
+//    rootNodeL->setScaleX(VISIBLE_SIZE.width/DESIGN_SIZE.width);
+//    CCLOG("%f",VISIBLE_SIZE.width);
+    //rootNodeS->addChild(rootNodeL);
+    rootNodeL->setContentSize(VISIBLE_SIZE);
+    ui::Helper::doLayout(rootNodeL);
+    addChild(rootNodeL);
     
     
     auto Button_Part_1 = rootNodeL->getChildByName<ui::Button*>("Button_Part_1");
