@@ -60,15 +60,15 @@ void Game::setUI(){
     auto destinationPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Destination");
     Size size_start = startPosition->getContentSize();
     Vec2 position_start = startPosition->getPosition();
-    startSection=Section(&size_start, &position_start);
+    START_SECTION=Section(&size_start, &position_start);
     
     Size size_stop = stopPosition->getContentSize();
     Vec2 position_stop = stopPosition->getPosition();
-    stopSection=Section(&size_stop, &position_stop);
+    STOP_SECTION=Section(&size_stop, &position_stop);
     
     Size size_destination = destinationPosition->getContentSize();
     Vec2 position_destination = destinationPosition->getPosition();
-    destinationSection=Section(&size_destination, &position_destination);
+    DESTINATION_SECTION=Section(&size_destination, &position_destination);
     
     moveListener movelistener;
     

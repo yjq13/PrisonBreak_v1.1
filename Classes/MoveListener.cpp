@@ -11,6 +11,7 @@
 #include "cocos2d.h"
 #include "Section.h"
 #include "GameCommonScene.h"
+#include "Constant_Use.h"
 USING_NS_CC;
 
 EventListenerTouchOneByOne* moveListener::create(Layer* layer){
@@ -36,9 +37,8 @@ bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
     //auto p=touch->getLocation();
     // CCLOG("(%f,%f)",startPosition->getPositionX(),p.y);
     //注意，下面的调用是个空值，为了不报错加的
-    Game g;
-    return g.startSection.isInside(touch);
-    //return true;
+    return START_SECTION.isInside(touch);
+    return true;
 }
 
 void moveListener::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event, Layer* layer){
@@ -56,9 +56,8 @@ void moveListener::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event, La
 
 void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, Layer* layer){
     printf("ed");
-    Game g;
     auto p=touch->getLocation();
-    if (isMoved&&(g.stopSection.isInside(touch)||g.destinationSection.isInside(touch)))
+    if (isMoved&&(STOP_SECTION.isInside(touch)||DESTINATION_SECTION.isInside(touch)))
     {
         //下面是主角跟随路线移动
         //下面是填装动作的容器

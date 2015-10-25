@@ -40,9 +40,6 @@ public:
    // bool onContactBegin(const PhysicsContact& contact);
     
     //下面获取游戏地图上的起点和终点区域
-    Section startSection;
-    Section stopSection;
-    Section destinationSection;
     
     Sprite* protagonist;
     Sprite* ballTwo;

@@ -9,7 +9,13 @@
 #ifndef Constant_Use_h
 #define Constant_Use_h
 #include <stdio.h>
+#include "Section.h"
 USING_NS_CC;
+    extern Section START_SECTION;
+
+    extern Section DESTINATION_SECTION;
+
+    extern Section STOP_SECTION;
 
     extern cocos2d::Size VISIBLE_SIZE;
     

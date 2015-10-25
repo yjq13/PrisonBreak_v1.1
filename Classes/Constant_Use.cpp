@@ -19,5 +19,9 @@ cocos2d::Vec2 ORIGIN = cocos2d::Director::getInstance()->getVisibleOrigin();
 
 cocos2d::Size DESIGN_SIZE = Size(1334.0,750.0);
 
+Section START_SECTION = Section();
 
+Section DESTINATION_SECTION = Section();
+
+Section STOP_SECTION = Section();
 
