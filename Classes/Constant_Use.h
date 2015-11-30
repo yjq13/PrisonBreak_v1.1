@@ -25,7 +25,7 @@ USING_NS_CC;
     
     extern cocos2d::Size DESIGN_SIZE;
 
-    const int PROTAGONIST_TAG= 1000;
+    const int PROTAGONIST_TAG = 1000;
 
     const int MOUSE_TAG = 2000;
 
