@@ -66,7 +66,6 @@
 		E30AC8BE1BD98B94005B8686 /* Move_action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8BC1BD98B94005B8686 /* Move_action.cpp */; };
 		E30E77811BCAD7DE0053F4B1 /* CacheData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30E777F1BCAD7DE0053F4B1 /* CacheData.cpp */; };
 		E346FBE21BCD7103009DF9FA /* SelectScene_Detail.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E346FBE01BCD7103009DF9FA /* SelectScene_Detail.cpp */; };
-		E369982B1C0BCD3F007BB3C8 /* Img_name.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E36998291C0BCD3F007BB3C8 /* Img_name.cpp */; };
 		E3CB5E761BC9753A005123B8 /* Constant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4A1BC9753A005123B8 /* Constant.cpp */; };
 		E3CB5E771BC9753A005123B8 /* Data_FigureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4B1BC9753A005123B8 /* Data_FigureInfo.swift */; };
 		E3CB5E781BC9753A005123B8 /* GameCommonScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4C1BC9753A005123B8 /* GameCommonScene.cpp */; };
@@ -183,8 +182,6 @@
 		E30E77801BCAD7DE0053F4B1 /* CacheData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheData.h; sourceTree = "<group>"; };
 		E346FBE01BCD7103009DF9FA /* SelectScene_Detail.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SelectScene_Detail.cpp; sourceTree = "<group>"; };
 		E346FBE11BCD7103009DF9FA /* SelectScene_Detail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectScene_Detail.h; sourceTree = "<group>"; };
-		E36998291C0BCD3F007BB3C8 /* Img_name.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Img_name.cpp; sourceTree = "<group>"; };
-		E369982A1C0BCD3F007BB3C8 /* Img_name.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Img_name.h; sourceTree = "<group>"; };
 		E3CB5E4A1BC9753A005123B8 /* Constant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Constant.cpp; sourceTree = "<group>"; };
 		E3CB5E4B1BC9753A005123B8 /* Data_FigureInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data_FigureInfo.swift; sourceTree = "<group>"; };
 		E3CB5E4C1BC9753A005123B8 /* GameCommonScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameCommonScene.cpp; path = ../Classes/GameCommonScene.cpp; sourceTree = "<group>"; };
@@ -498,8 +495,6 @@
 				E3CB5E551BC9753A005123B8 /* Constant.h */,
 				E30AC89C1BD5AADB005B8686 /* Constant_Use.cpp */,
 				E30AC89D1BD5AADB005B8686 /* Constant_Use.h */,
-				E36998291C0BCD3F007BB3C8 /* Img_name.cpp */,
-				E369982A1C0BCD3F007BB3C8 /* Img_name.h */,
 			);
 			name = UTIL;
 			sourceTree = "<group>";
@@ -730,7 +725,6 @@
 				E3CB5E8A1BC9753A005123B8 /* OC_callGameInfo.mm in Sources */,
 				E30AC8B81BD9329B005B8686 /* Sprite_wall.cpp in Sources */,
 				E3CB5E7F1BC9753A005123B8 /* Data_GameInfo.swift in Sources */,
-				E369982B1C0BCD3F007BB3C8 /* Img_name.cpp in Sources */,
 				E3CB5E8B1BC9753A005123B8 /* SelectScene_ALL.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				E3CB5E7A1BC9753A005123B8 /* initDocuments.swift in Sources */,

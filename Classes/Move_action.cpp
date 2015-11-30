@@ -11,7 +11,7 @@
 #include "Constant_Use.h"
 USING_NS_CC;
 
-EventListenerPhysicsContact* moveAction::createPro_Jailer(){
+EventListenerPhysicsContact* moveAction::createProAction(){
     EventListenerPhysicsContact* contactListener=EventListenerPhysicsContact::create();
     
     contactListener->onContactBegin=CC_CALLBACK_1(moveAction::switchMoveAction, this);

@@ -16,6 +16,7 @@ USING_NS_CC;
 
 EventListenerTouchOneByOne* moveListener::create(Layer* layer){
     auto listener=EventListenerTouchOneByOne::create();
+    
     listener->onTouchMoved=CC_CALLBACK_2(moveListener::onTouchMoved, this,layer);
     listener->onTouchBegan=CC_CALLBACK_2(moveListener::onTouchBegan, this);
     listener->onTouchEnded=CC_CALLBACK_2(moveListener::onTouchEnded, this, layer);

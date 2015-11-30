@@ -13,7 +13,7 @@
 #include "cocos2d.h"
 class moveAction : public cocos2d::EventListenerPhysicsContact{
 public:
-    virtual EventListenerPhysicsContact* createPro_Jailer();
+    virtual EventListenerPhysicsContact* createProAction();
     
     bool onContactBeginPro_Jailer();
     

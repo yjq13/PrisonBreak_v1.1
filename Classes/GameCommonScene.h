@@ -12,9 +12,11 @@
 #include "cocos2d.h"
 #include "MyScene.h"
 #include "Section.h"
+#include "cocostudio/CocoStudio.h"
 USING_NS_CC;
 class Game : public MyScene{
-     cocos2d::Node* rootNodeL;
+    cocos2d::Node* rootNodeL;
+    cocostudio::timeline::ActionTimeline* rootTimeLine;
 public:
     virtual Scene* createScene();
     PhysicsWorld* m_world;

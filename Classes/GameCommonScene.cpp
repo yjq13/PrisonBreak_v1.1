@@ -31,13 +31,17 @@ bool Game::init(){
 
     moveAction moveaction;
     
-    EventListenerPhysicsContact* contactListener = moveaction.createPro_Jailer();
+    EventListenerPhysicsContact* contactListener = moveaction.createProAction();
     
     _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
     
     //rootNodeS = CSLoader::createNode("res/Game/Scene_Game.csb");
     
     rootNodeL = CSLoader::createNode("res/Game/Layer_Game.csb");
+    
+    rootTimeLine = CSLoader::createTimeline("res/Game/Layer_Game.csb");
+    
+    
     
     setUI();
     
@@ -57,7 +61,16 @@ void Game::setUI(){
     auto startPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Start");
     //这里应该加个异常检测，日后再说
     auto stopPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Stop");
+    
     auto destinationPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Destination");
+    
+    auto jailer_1 = rootNodeL->getChildByName<Sprite*>("Sprite_Jailer_1");
+    
+    rootNodeL->runAction(rootTimeLine);
+    
+    rootTimeLine->gotoFrameAndPlay(0, true);
+    printf("run!!!!!!");
+    
     Size size_start = startPosition->getContentSize();
     Vec2 position_start = startPosition->getPosition();
     START_SECTION=Section(&size_start, &position_start);
