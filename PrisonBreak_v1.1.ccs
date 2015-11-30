@@ -18,12 +18,36 @@
           <Project Name="Layer_DiamondShop.csd" Type="Layer" />
         </Folder>
         <Folder Name="Game">
-          <Project Name="Layer_Game.csd" Type="Layer" />
+          <Folder Name="Part_1">
+            <Project Name="Layer_Game_Level_1.csd" Type="Layer" />
+            <Project Name="Layer_Game_Level_2.csd" Type="Layer" />
+            <Project Name="Layer_Game_Level_3.csd" Type="Layer" />
+          </Folder>
+          <Folder Name="Part_2">
+            <Project Name="Layer_Game_Level_1.csd" Type="Layer" />
+          </Folder>
+          <Folder Name="Part_3" />
+          <Folder Name="Part_4" />
         </Folder>
         <Image Name="P1.jpg" />
         <Image Name="P2.jpg" />
         <Image Name="12.jpg" />
         <Image Name="25.jpg" />
+        <Folder Name="Picture">
+          <Image Name="Button_About.png" />
+          <Image Name="Button_AddDiamond.png" />
+          <Image Name="Button_Back.png" />
+          <Image Name="Button_Buy.png" />
+          <Image Name="Button_Cancle.png" />
+          <Image Name="Button_Close.png" />
+          <Image Name="Button_Level.png" />
+          <Image Name="Button_Setting.png" />
+          <Image Name="Button_Start.png" />
+          <Image Name="Button_Sure.png" />
+          <Image Name="Sprite_Jailer.png" />
+          <Image Name="Sprite_Mouse.png" />
+          <Image Name="Sprite_Protagonist.png" />
+        </Folder>
       </RootFolder>
     </Group>
   </SolutionFolder>
