@@ -24,4 +24,5 @@ Section START_SECTION = Section();
 Section DESTINATION_SECTION = Section();
 
 Section STOP_SECTION = Section();
+string PATH_NOW = "";
 

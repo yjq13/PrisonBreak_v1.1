@@ -8,8 +8,10 @@
 
 #ifndef Constant_Use_h
 #define Constant_Use_h
+#include <string>
 #include <stdio.h>
 #include "Section.h"
+using namespace std;
 USING_NS_CC;
     extern Section START_SECTION;
 
@@ -24,6 +26,8 @@ USING_NS_CC;
     extern cocos2d::TransitionPageTurn* createTransition_Page(cocos2d::Scene* sceneNew);
     
     extern cocos2d::Size DESIGN_SIZE;
+
+    extern string PATH_NOW;
 
     const int PROTAGONIST_TAG = 1000;
 

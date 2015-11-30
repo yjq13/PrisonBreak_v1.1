@@ -15,16 +15,20 @@
 #include "ui/CocosGUI.h"
 #include "Section.h"
 #include "Sprite_jailer.h"
+#include <string>
+#include <iostream>
+using namespace std;
 USING_NS_CC;
 
 int i = 0;
-Scene* Game::createScene(string path){
+Scene* Game::createScene(){
     auto scene=Scene::createWithPhysics();
     //scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     auto layer=Game::create();
-    layer->setPhyWorld(scene->getPhysicsWorld());
+    
+    init();
+    //layer->setPhyWorld(scene->getPhysicsWorld());
     scene->addChild(layer);
-    path_string=path;
     return scene;
 }
 bool Game::init(){
@@ -40,13 +44,13 @@ bool Game::init(){
     
     //rootNodeS = CSLoader::createNode("res/Game/Scene_Game.csb");
     
-    string hand = "res/Game";
-    string follow = "Layer_Game_Level_";
+    string hand = "res/Game/";
     string tail = ".csb";
-    string allpath = hand+path_string+follow+tail;
-    rootNodeL = CSLoader::createNode(allpath);
+    string all = hand+PATH_NOW+tail;
+    cout<<PATH_NOW;
+    rootNodeL = CSLoader::createNode(all);
     
-    rootTimeLine = CSLoader::createTimeline(allpath);
+    rootTimeLine = CSLoader::createTimeline(all);
     
     
     

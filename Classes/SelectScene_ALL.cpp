@@ -85,6 +85,7 @@ void Select::menuCloseCallback(Ref* pSender)
 {
     Start start;
     auto Scene=start.createScene();
+
     auto transition=createTransition_Page(Scene);
     Director::getInstance()->replaceScene(transition);
 
@@ -106,8 +107,8 @@ void Select::turnToSelect_Detail(Ref* pSender,int number)
     bool result = lock.checkLock_outside(number);
     if(result){
         Select_Detail select_detail;
-        
-        auto sceneNew= select_detail.createScene("Part_1");
+        PATH_NOW = "Part_1";
+        auto sceneNew= select_detail.createScene();
         
         //下面搞个翻页效果
         //this->removeAllChildren();

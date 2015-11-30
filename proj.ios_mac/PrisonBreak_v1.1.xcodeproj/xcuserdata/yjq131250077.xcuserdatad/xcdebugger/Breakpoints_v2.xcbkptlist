@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SelectScene_Detail.h"
-            timestampString = "470581107.126965"
+            timestampString = "470593560.947962"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "class Select_Detail"
             landmarkType = "3">
          </BreakpointContent>
@@ -118,11 +118,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SelectScene_Detail.cpp"
-            timestampString = "470586430.988651"
+            timestampString = "470593560.947962"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "Select_Detail::setUI()"
             landmarkType = "5">
          </BreakpointContent>
@@ -134,11 +134,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Constant_Use.h"
-            timestampString = "467503439.772038"
+            timestampString = "470592870.875183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24">
+            startingLineNumber = "26"
+            endingLineNumber = "26">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -164,11 +164,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameCommonScene.cpp"
-            timestampString = "470581107.126965"
+            timestampString = "470593966.105108"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "Game::setUI()"
             landmarkType = "5">
          </BreakpointContent>
@@ -176,15 +176,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SelectScene_Detail.h"
-            timestampString = "470581107.126965"
+            timestampString = "470591115.741704"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "class Select_Detail"
             landmarkType = "3">
          </BreakpointContent>
@@ -196,12 +196,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SelectScene_Detail.cpp"
-            timestampString = "470586430.988651"
+            timestampString = "470593560.947962"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "Select_Detail::turnToGame(Ref* pSender,string path,string step)"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "Select_Detail::turnToGame(Ref* pSender,string step)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -18,14 +18,12 @@ using namespace std;
 class Select_Detail : public MyScene
 {
 private:
-    //cocos2d::Node* rootNodeS;
     cocos2d::Node* rootNodeL_Basis;
     cocos2d::Node* rootNodeL_Diamond;
     cocos2d::Node* rootNodeL_GameStep;
-    string path_string;
 public:
     
-    virtual cocos2d::Scene* createScene(string path);
+    virtual cocos2d::Scene* createScene();
     
     virtual bool init();
     
@@ -36,13 +34,13 @@ public:
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
     
-    void turnToGame(cocos2d::Ref* pSender,string path,string step);
+    void turnToGame(cocos2d::Ref* pSender,string step);
     
     void show_GameReady(cocos2d::Ref* pSender);
     
     void closeLayer(cocos2d::Ref* pSender);
     // implement the "static create()" method manually
-    //CREATE_FUNC(Select_Detail);
+    CREATE_FUNC(Select_Detail);
 };
 
 

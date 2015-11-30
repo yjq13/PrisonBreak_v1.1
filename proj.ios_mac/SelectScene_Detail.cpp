@@ -16,7 +16,7 @@
 USING_NS_CC;
 using namespace ui;
 
-Scene* Select_Detail::createScene(string path){
+Scene* Select_Detail::createScene(){
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
@@ -24,11 +24,12 @@ Scene* Select_Detail::createScene(string path){
     
     
     auto layer = Select_Detail::create();
+    
     init();
+    
     // add layer as a child to scene
     scene->addChild(layer);
    
-    path_string = path;
     // return the scene
     
     return scene;
@@ -67,7 +68,7 @@ void Select_Detail::setUI(){
     Button_Close->addTouchEventListener(this, toucheventselector(Select_Detail::closeLayer));
     
     
-    Button_StartGame->addTouchEventListener(CC_CALLBACK_1(Select_Detail::turnToGame,this,path_string,"1"));
+    Button_StartGame->addTouchEventListener(CC_CALLBACK_1(Select_Detail::turnToGame,this,"1"));
     
     //rootNodeS->addChild(rootNodeL_Diamond);
     
@@ -121,15 +122,15 @@ void Select_Detail::menuCloseCallback(Ref* pSender)
 
 
 
-void Select_Detail::turnToGame(Ref* pSender,string path,string step)
+void Select_Detail::turnToGame(Ref* pSender,string step)
 {
     Game gameScene;
     if(step=="1"){
         printf("hahah,sadiao");
     }
-    string follow = "Layer_Game_Level_";
-    path_string = path_string+follow+step+path;
-    auto sceneNew = gameScene.createScene(path_string);
+    string follow = "/Layer_Game_Level_";
+    PATH_NOW = PATH_NOW+follow+step;
+    auto sceneNew = gameScene.createScene();
     //下面搞个翻页效果
     //this->removeAllChildren();
     TransitionPageTurn* transition=TransitionPageTurn::create(1.5f, sceneNew, false);
@@ -141,6 +142,9 @@ void Select_Detail::turnToGame(Ref* pSender,string path,string step)
 
 void Select_Detail::show_GameReady(Ref* pSender)
 {
+    //scene->getChildByName<cocos2d::Layer*>("layer")->getChildByName<cocos2d::Node*>("rootNodeL_GameStep")-
+    //layer->getChildByName("rootNodeL_GameStep")->setVisible(true);
+    //layer->
     rootNodeL_GameStep->setVisible(true);
 }
 

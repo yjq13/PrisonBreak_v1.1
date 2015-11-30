@@ -18,11 +18,11 @@ using namespace std;
 
 USING_NS_CC;
 class Game : public MyScene{
+    
     cocos2d::Node* rootNodeL;
     cocostudio::timeline::ActionTimeline* rootTimeLine;
-    string path_string;
 public:
-    virtual Scene* createScene(string path_string);
+    virtual Scene* createScene();
     PhysicsWorld* m_world;
     virtual bool init();
     void setPhyWorld(PhysicsWorld* world){
