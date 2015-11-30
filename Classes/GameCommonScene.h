@@ -13,12 +13,16 @@
 #include "MyScene.h"
 #include "Section.h"
 #include "cocostudio/CocoStudio.h"
+#include <string>
+using namespace std;
+
 USING_NS_CC;
 class Game : public MyScene{
     cocos2d::Node* rootNodeL;
     cocostudio::timeline::ActionTimeline* rootTimeLine;
+    string path_string;
 public:
-    virtual Scene* createScene();
+    virtual Scene* createScene(string path_string);
     PhysicsWorld* m_world;
     virtual bool init();
     void setPhyWorld(PhysicsWorld* world){

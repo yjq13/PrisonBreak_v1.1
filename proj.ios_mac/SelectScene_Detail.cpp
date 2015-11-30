@@ -16,18 +16,21 @@
 USING_NS_CC;
 using namespace ui;
 
-Scene* Select_Detail::createScene(){
+Scene* Select_Detail::createScene(string path){
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
-    auto layer = Select_Detail::create();
     
+    
+    auto layer = Select_Detail::create();
+    init();
     // add layer as a child to scene
     scene->addChild(layer);
    
+    path_string = path;
     // return the scene
-
+    
     return scene;
 }
 
@@ -39,7 +42,7 @@ bool Select_Detail::init(){
         return false;
     }
     
-    
+    printf("GGsimida");
     //rootNodeS = CSLoader::createNode("res/Selection_2/Scene_Selection_2.csb");
     
     rootNodeL_Basis = CSLoader::createNode("res/Selection_2/Layer_Selection_2.csb");
@@ -64,7 +67,7 @@ void Select_Detail::setUI(){
     Button_Close->addTouchEventListener(this, toucheventselector(Select_Detail::closeLayer));
     
     
-    Button_StartGame->addTouchEventListener(this, toucheventselector(Select_Detail::turnToGame));
+    Button_StartGame->addTouchEventListener(CC_CALLBACK_1(Select_Detail::turnToGame,this,path_string,"1"));
     
     //rootNodeS->addChild(rootNodeL_Diamond);
     
@@ -118,10 +121,15 @@ void Select_Detail::menuCloseCallback(Ref* pSender)
 
 
 
-void Select_Detail::turnToGame(Ref* pSender,int step)
+void Select_Detail::turnToGame(Ref* pSender,string path,string step)
 {
     Game gameScene;
-    auto sceneNew = gameScene.createScene();
+    if(step=="1"){
+        printf("hahah,sadiao");
+    }
+    string follow = "Layer_Game_Level_";
+    path_string = path_string+follow+step+path;
+    auto sceneNew = gameScene.createScene(path_string);
     //下面搞个翻页效果
     //this->removeAllChildren();
     TransitionPageTurn* transition=TransitionPageTurn::create(1.5f, sceneNew, false);

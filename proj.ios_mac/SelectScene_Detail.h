@@ -9,8 +9,11 @@
 #ifndef __SELECTSCENE_DETAIL_H__
 #define __SELECTSCENE_DETAIL_H__
 
+#include <string>
 #include "cocos2d.h"
 #include "MyScene.h"
+using namespace std;
+
 class Select_Detail : public MyScene
 {
 private:
@@ -18,24 +21,27 @@ private:
     cocos2d::Node* rootNodeL_Basis;
     cocos2d::Node* rootNodeL_Diamond;
     cocos2d::Node* rootNodeL_GameStep;
+    string path_string;
 public:
     
-    virtual cocos2d::Scene* createScene();
+    virtual cocos2d::Scene* createScene(string path);
     
     virtual bool init();
     
     virtual void setUI();
     
+    
+    
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
     
-    void turnToGame(cocos2d::Ref* pSender,int step);
+    void turnToGame(cocos2d::Ref* pSender,string path,string step);
     
     void show_GameReady(cocos2d::Ref* pSender);
     
     void closeLayer(cocos2d::Ref* pSender);
     // implement the "static create()" method manually
-    CREATE_FUNC(Select_Detail);
+    //CREATE_FUNC(Select_Detail);
 };
 
 

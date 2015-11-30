@@ -11,6 +11,7 @@
 
 #include <cocos2d.h>
 #include "ui/CocosGUI.h"
+#include "cocostudio/CocoStudio.h"
 #include "Section.h"
 class moveListener : public cocos2d::EventListenerTouchOneByOne{
 private:
@@ -19,13 +20,13 @@ private:
     bool isMoved=false;
    
 public:
-    virtual EventListenerTouchOneByOne* create(cocos2d::Layer* layer);
+    virtual EventListenerTouchOneByOne* create(cocos2d::Layer* layer,cocostudio::timeline::ActionTimeline* rootTimeLine);
     
-    bool onTouchBegan(cocos2d::Touch* touch,cocos2d::Event* event);
+    bool onTouchBegan(cocos2d::Touch* touch,cocos2d::Event* event,cocostudio::timeline::ActionTimeline* rootTimeLine);
     
     void onTouchMoved(cocos2d::Touch* touch,cocos2d::Event* event, cocos2d::Layer* layer);
     
-    void onTouchEnded(cocos2d::Touch* touch,cocos2d::Event* event, cocos2d::Layer* layer);
+    void onTouchEnded(cocos2d::Touch* touch,cocos2d::Event* event, cocos2d::Layer* layer,cocostudio::timeline::ActionTimeline* rootTimeLine);
 
     //bool isMoveValid();
 };

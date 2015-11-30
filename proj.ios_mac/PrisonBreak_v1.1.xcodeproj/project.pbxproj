@@ -66,6 +66,7 @@
 		E30AC8BE1BD98B94005B8686 /* Move_action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8BC1BD98B94005B8686 /* Move_action.cpp */; };
 		E30E77811BCAD7DE0053F4B1 /* CacheData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30E777F1BCAD7DE0053F4B1 /* CacheData.cpp */; };
 		E346FBE21BCD7103009DF9FA /* SelectScene_Detail.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E346FBE01BCD7103009DF9FA /* SelectScene_Detail.cpp */; };
+		E369982E1C0C24AA007BB3C8 /* LockofSelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */; };
 		E3CB5E761BC9753A005123B8 /* Constant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4A1BC9753A005123B8 /* Constant.cpp */; };
 		E3CB5E771BC9753A005123B8 /* Data_FigureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4B1BC9753A005123B8 /* Data_FigureInfo.swift */; };
 		E3CB5E781BC9753A005123B8 /* GameCommonScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4C1BC9753A005123B8 /* GameCommonScene.cpp */; };
@@ -182,6 +183,8 @@
 		E30E77801BCAD7DE0053F4B1 /* CacheData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheData.h; sourceTree = "<group>"; };
 		E346FBE01BCD7103009DF9FA /* SelectScene_Detail.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SelectScene_Detail.cpp; sourceTree = "<group>"; };
 		E346FBE11BCD7103009DF9FA /* SelectScene_Detail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectScene_Detail.h; sourceTree = "<group>"; };
+		E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LockofSelect.cpp; sourceTree = "<group>"; };
+		E369982D1C0C24AA007BB3C8 /* LockofSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockofSelect.h; sourceTree = "<group>"; };
 		E3CB5E4A1BC9753A005123B8 /* Constant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Constant.cpp; sourceTree = "<group>"; };
 		E3CB5E4B1BC9753A005123B8 /* Data_FigureInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data_FigureInfo.swift; sourceTree = "<group>"; };
 		E3CB5E4C1BC9753A005123B8 /* GameCommonScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameCommonScene.cpp; path = ../Classes/GameCommonScene.cpp; sourceTree = "<group>"; };
@@ -442,6 +445,8 @@
 				E30AC8BD1BD98B94005B8686 /* Move_action.h */,
 				049178E01BDBDBB2004AAF5C /* Section.cpp */,
 				049178E11BDBDBB2004AAF5C /* Section.h */,
+				E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */,
+				E369982D1C0C24AA007BB3C8 /* LockofSelect.h */,
 			);
 			name = BL;
 			sourceTree = "<group>";
@@ -742,6 +747,7 @@
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				E3CB5E801BC9753A005123B8 /* Data_SystemInfo.swift in Sources */,
 				E3CB5E781BC9753A005123B8 /* GameCommonScene.cpp in Sources */,
+				E369982E1C0C24AA007BB3C8 /* LockofSelect.cpp in Sources */,
 				E3CB5E821BC9753A005123B8 /* FigurePo.swift in Sources */,
 				E30AC8B51BD93281005B8686 /* Sprite_coin.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,

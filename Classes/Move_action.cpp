@@ -50,7 +50,6 @@ bool moveAction::switchMoveAction(const cocos2d::PhysicsContact &contact){
 
 bool moveAction::onContactBeginPro_Jailer(){
     CCLOG("Pro_Jailer boom!!!!");
-//    removeChild(protagonist);
     return true;
 }
 

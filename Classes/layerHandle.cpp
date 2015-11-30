@@ -14,19 +14,19 @@
 #include "Constant_Use.h"
 USING_NS_CC;
 
-EventListenerTouchOneByOne* moveListener::create(Layer* layer){
+EventListenerTouchOneByOne* moveListener::create(Layer* layer,cocostudio::timeline::ActionTimeline* rootTimeLine){
     auto listener=EventListenerTouchOneByOne::create();
     
     listener->onTouchMoved=CC_CALLBACK_2(moveListener::onTouchMoved, this,layer);
-    listener->onTouchBegan=CC_CALLBACK_2(moveListener::onTouchBegan, this);
-    listener->onTouchEnded=CC_CALLBACK_2(moveListener::onTouchEnded, this, layer);
+    listener->onTouchBegan=CC_CALLBACK_2(moveListener::onTouchBegan, this,rootTimeLine);
+    listener->onTouchEnded=CC_CALLBACK_2(moveListener::onTouchEnded, this, layer,rootTimeLine);
     
    
     return listener;
 }
 
 
-bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
+bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event,cocostudio::timeline::ActionTimeline* rootTimeLine){
     
     CCLOG("begin with (%f,%f)",touch->getLocation().x,touch->getLocation().y);
     //计数器归零,数组清空
@@ -38,24 +38,28 @@ bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
     //auto p=touch->getLocation();
     // CCLOG("(%f,%f)",startPosition->getPositionX(),p.y);
     //注意，下面的调用是个空值，为了不报错加的
+    if(START_SECTION.isInside(touch)){
+        rootTimeLine->gotoFrameAndPause(0);
+    }
     return START_SECTION.isInside(touch);
     return true;
 }
 
 void moveListener::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event, Layer* layer){
+    
     isMoved=true;
     points[index]=touch->getLocation();
     auto p=touch->getLocation();
     auto r=DrawNode::create();
     layer->addChild(r);
     if(index>0){
-        r->setTag(index);
+        r->setTag(index+10000);
         r->drawSegment(points[index-1], p, 10, Color4F(CCRANDOM_0_1(), CCRANDOM_0_1(), CCRANDOM_0_1(), 1));
     }
     index++;
 }
 
-void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, Layer* layer){
+void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, Layer* layer,cocostudio::timeline::ActionTimeline* rootTimeLine){
     printf("ed");
     auto p=touch->getLocation();
     if (isMoved&&(STOP_SECTION.isInside(touch)||DESTINATION_SECTION.isInside(touch)))
@@ -69,7 +73,7 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, La
             }
         }
 
-        Sprite* protagonist = Sprite_protagonist::create(1);
+        Sprite* protagonist = Sprite_protagonist::create(0);
         protagonist->setPosition(points[0]);
         
         //layer->addChild(protagonist);
@@ -78,17 +82,21 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, La
         layer->addChild(protagonist);
         
         
+        
+        
         auto allAction=Sequence::create(actionVector);
         protagonist->runAction(allAction);
         
         
-    } else {
-        for(int i = 0; i<=index;i++){
+    }
+        for(int i = 10000; i<=index+10000;i++){
             layer->removeChildByTag(i);
         }
-        
-    }
+    
+    rootTimeLine->gotoFrameAndPlay(0, true);
+    
     isMoved=false;
+    
     
     
 }

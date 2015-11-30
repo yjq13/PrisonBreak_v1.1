@@ -14,14 +14,17 @@
 #include "Constant_Use.h"
 #include "ui/CocosGUI.h"
 #include "Section.h"
+#include "Sprite_jailer.h"
 USING_NS_CC;
 
-Scene* Game :: createScene(){
+int i = 0;
+Scene* Game::createScene(string path){
     auto scene=Scene::createWithPhysics();
     //scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     auto layer=Game::create();
     layer->setPhyWorld(scene->getPhysicsWorld());
     scene->addChild(layer);
+    path_string=path;
     return scene;
 }
 bool Game::init(){
@@ -37,9 +40,13 @@ bool Game::init(){
     
     //rootNodeS = CSLoader::createNode("res/Game/Scene_Game.csb");
     
-    rootNodeL = CSLoader::createNode("res/Game/Layer_Game.csb");
+    string hand = "res/Game";
+    string follow = "Layer_Game_Level_";
+    string tail = ".csb";
+    string allpath = hand+path_string+follow+tail;
+    rootNodeL = CSLoader::createNode(allpath);
     
-    rootTimeLine = CSLoader::createTimeline("res/Game/Layer_Game.csb");
+    rootTimeLine = CSLoader::createTimeline(allpath);
     
     
     
@@ -64,12 +71,17 @@ void Game::setUI(){
     
     auto destinationPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Destination");
     
-    auto jailer_1 = rootNodeL->getChildByName<Sprite*>("Sprite_Jailer_1");
+    auto Demo_jailer_1 = rootNodeL->getChildByName<Sprite*>("Sprite_Jailer_1");
+    
+    Sprite* jailer_1_get = Sprite_jailer::create(1,Demo_jailer_1);
+    
+    rootNodeL->addChild(jailer_1_get);
     
     rootNodeL->runAction(rootTimeLine);
     
     rootTimeLine->gotoFrameAndPlay(0, true);
-    printf("run!!!!!!");
+    
+    
     
     Size size_start = startPosition->getContentSize();
     Vec2 position_start = startPosition->getPosition();
@@ -85,7 +97,7 @@ void Game::setUI(){
     
     moveListener movelistener;
     
-    EventListenerTouchOneByOne* listener = movelistener.create(this);
+    EventListenerTouchOneByOne* listener = movelistener.create(this,rootTimeLine);
     
     _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     

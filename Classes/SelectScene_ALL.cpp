@@ -12,6 +12,7 @@
 #include "ui/CocosGUI.h"
 #include "SelectScene_Detail.h"
 #include "Constant_Use.h"
+#include "LockofSelect.h"
 USING_NS_CC;
 using namespace ui;
 
@@ -67,13 +68,13 @@ void Select::setUI(){
     auto Button_Back = rootNodeL->getChildByName<ui::Button*>("Button_Back");
     
     
-    Button_Part_1->addTouchEventListener(this, toucheventselector(Select::turnToSelect_Detail));
+    Button_Part_1->addTouchEventListener(CC_CALLBACK_1(Select::turnToSelect_Detail,this,1));
     
-    Button_Part_2->addTouchEventListener(this, toucheventselector(Select::turnToSelect_Detail));
+    Button_Part_2->addTouchEventListener(CC_CALLBACK_1(Select::turnToSelect_Detail,this,2));
     
-    Button_Part_3->addTouchEventListener(this, toucheventselector(Select::turnToSelect_Detail));
+    Button_Part_3->addTouchEventListener(CC_CALLBACK_1(Select::turnToSelect_Detail,this,3));
     
-    Button_Part_4->addTouchEventListener(this, toucheventselector(Select::turnToSelect_Detail));
+    Button_Part_4->addTouchEventListener(CC_CALLBACK_1(Select::turnToSelect_Detail,this,4));
     
     Button_Back->addTouchEventListener(this, toucheventselector(Select::menuCloseCallback));
 
@@ -97,13 +98,23 @@ void Select::menuCloseCallback(Ref* pSender)
 
 
 
-void Select::turnToSelect_Detail(Ref* pSender)
+void Select::turnToSelect_Detail(Ref* pSender,int number)
 {
-    Select_Detail select_detail;
-    auto sceneNew= select_detail.createScene();
-    //下面搞个翻页效果
-    //this->removeAllChildren();
-    auto transition=createTransition_Page(sceneNew);
-    Director::getInstance()->replaceScene(transition);
+    printf("%d",number);
+    
+    LockofSelect lock;
+    bool result = lock.checkLock_outside(number);
+    if(result){
+        Select_Detail select_detail;
+        
+        auto sceneNew= select_detail.createScene("Part_1");
+        
+        //下面搞个翻页效果
+        //this->removeAllChildren();
+        auto transition=createTransition_Page(sceneNew);
+        Director::getInstance()->replaceScene(transition);
+    }else{
+        
+    }
 }
 

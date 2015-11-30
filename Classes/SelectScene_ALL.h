@@ -25,7 +25,7 @@ public:
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
     
-    void turnToSelect_Detail(cocos2d::Ref* pSender);
+    void turnToSelect_Detail(cocos2d::Ref* pSender,int number);
     // implement the "static create()" method manually
     CREATE_FUNC(Select);
 };
