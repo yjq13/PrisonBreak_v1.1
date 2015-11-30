@@ -83,15 +83,15 @@ void Game::setUI(){
     
     
     
-    Size size_start = startPosition->getContentSize();
+    CCSize size_start = startPosition->getContentSize();
     Vec2 position_start = startPosition->getPosition();
     START_SECTION=Section(&size_start, &position_start);
     
-    Size size_stop = stopPosition->getContentSize();
+    CCSize size_stop = stopPosition->getContentSize();
     Vec2 position_stop = stopPosition->getPosition();
     STOP_SECTION=Section(&size_stop, &position_stop);
     
-    Size size_destination = destinationPosition->getContentSize();
+    CCSize size_destination = destinationPosition->getContentSize();
     Vec2 position_destination = destinationPosition->getPosition();
     DESTINATION_SECTION=Section(&size_destination, &position_destination);
     

@@ -34,7 +34,7 @@ public:
     //触屏测试
     CCSprite* sprite;
     //重载触控函数
-    Point points[10000];//手指画出来的点集
+    CCPoint points[10000];//手指画出来的点集
     int index;//计数器
 //    bool onTouchBegan(Touch* touch,Event* event);
 //    void onTouchMoved(Touch* touch,Event* event);

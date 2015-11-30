@@ -12,6 +12,7 @@
 #include <string>
 #include "cocos2d.h"
 #include "MyScene.h"
+#include "LTInfiniteScrollView.h"
 using namespace std;
 
 class Select_Detail : public MyScene
