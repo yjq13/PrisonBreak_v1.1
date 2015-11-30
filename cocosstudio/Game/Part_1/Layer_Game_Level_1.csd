@@ -1,22 +1,22 @@
 <GameProjectFile>
-  <PropertyGroup Type="Layer" Name="Layer_Game" ID="ee805791-65ee-4ac4-a791-96afc34a7ae4" Version="2.3.2.3" />
+  <PropertyGroup Type="Layer" Name="Layer_Game_Level_1" ID="ee805791-65ee-4ac4-a791-96afc34a7ae4" Version="2.3.2.3" />
   <Content ctype="GameProjectContent">
     <Content>
-      <Animation Duration="20" Speed="1.0000" ActivedAnimationName="animation0">
+      <Animation Duration="100" Speed="1.0000" ActivedAnimationName="animation0">
         <Timeline ActionTag="-983426302" Property="Position">
           <PointFrame FrameIndex="0" X="463.2703" Y="375.8470">
             <EasingData Type="0" />
           </PointFrame>
-          <PointFrame FrameIndex="10" X="732.1949" Y="365.0898">
+          <PointFrame FrameIndex="50" X="732.1949" Y="365.0898">
             <EasingData Type="0" />
           </PointFrame>
-          <PointFrame FrameIndex="20" X="463.2703" Y="375.8470">
+          <PointFrame FrameIndex="100" X="463.2703" Y="375.8470">
             <EasingData Type="0" />
           </PointFrame>
         </Timeline>
       </Animation>
       <AnimationList>
-        <AnimationInfo Name="animation0" StartIndex="0" EndIndex="20">
+        <AnimationInfo Name="animation0" StartIndex="0" EndIndex="100">
           <RenderColor A="255" R="255" G="248" B="220" />
         </AnimationInfo>
       </AnimationList>
@@ -75,13 +75,13 @@
             <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-983426302" Tag="172" IconVisible="False" LeftMargin="467.1628" RightMargin="820.8373" TopMargin="352.2287" BottomMargin="351.7713" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-983426302" Tag="172" IconVisible="False" LeftMargin="633.8960" RightMargin="654.1040" TopMargin="358.8982" BottomMargin="345.1018" ctype="SpriteObjectData">
             <Size X="46.0000" Y="46.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="490.1628" Y="374.7713" />
+            <Position X="656.8960" Y="368.1018" />
             <Scale ScaleX="1.9354" ScaleY="1.8185" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.3674" Y="0.4997" />
+            <PrePosition X="0.4924" Y="0.4908" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
