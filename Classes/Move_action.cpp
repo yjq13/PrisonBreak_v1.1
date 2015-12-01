@@ -12,8 +12,9 @@
 USING_NS_CC;
 
 EventListenerPhysicsContact* moveAction::createProAction(){
-    EventListenerPhysicsContact* contactListener=EventListenerPhysicsContact::create();
     
+    EventListenerPhysicsContact* contactListener=EventListenerPhysicsContact::create();
+    //
     contactListener->onContactBegin=CC_CALLBACK_1(moveAction::switchMoveAction, this);
     return contactListener;
 }

@@ -12,8 +12,8 @@
 USING_NS_CC;
 
 
-Sprite* Sprite_protagonist::create(int number){
-    auto protagonist=Sprite::create("05.jpg");
+Sprite* Sprite_protagonist::create(int number,cocos2d::Sprite* getSprite){
+    auto protagonist=getSprite;
     
     auto ManBody=PhysicsBody::createBox(protagonist->getContentSize());
     

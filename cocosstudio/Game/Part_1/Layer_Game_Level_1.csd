@@ -6,13 +6,13 @@
       <ObjectData Name="Layer" Tag="157" ctype="GameLayerObjectData">
         <Size X="2208.0000" Y="1242.0000" />
         <Children>
-          <AbstractNodeData Name="BackGround_Game" ActionTag="-1674459379" Tag="191" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="-4.6365" RightMargin="4.6365" TopMargin="6.3142" BottomMargin="-6.3141" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="BackGround_Game" ActionTag="-1674459379" Tag="191" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="16.3633" RightMargin="-16.3633" TopMargin="75.3342" BottomMargin="-75.3342" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="2208.0000" Y="1242.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1099.3633" Y="614.6658" />
+            <Position X="1120.3633" Y="545.6658" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.4979" Y="0.4949" />
+            <PrePosition X="0.5074" Y="0.4393" />
             <PreSize X="1.6552" Y="1.6560" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
@@ -29,7 +29,7 @@
           <AbstractNodeData Name="Image_Destination" ActionTag="613995204" Tag="169" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="2034.7612" RightMargin="127.2388" TopMargin="113.3590" BottomMargin="1082.6410" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="46.0000" Y="46.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="2057.7612" Y="1105.6410" />
+            <Position X="2057.8560" Y="1105.6410" />
             <Scale ScaleX="5.0646" ScaleY="3.2140" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.9320" Y="0.8902" />
@@ -61,7 +61,7 @@
           <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-983426302" Tag="172" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="-104.7922" RightMargin="431.7922" TopMargin="-211.5396" BottomMargin="-31.4604" ctype="SpriteObjectData">
             <Size X="1881.0000" Y="1485.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="835.7078" Y="711.0396" />
+            <Position X="835.7280" Y="711.0396" />
             <Scale ScaleX="0.1000" ScaleY="0.1000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.3785" Y="0.5725" />
@@ -82,7 +82,7 @@
           <AbstractNodeData Name="Sprite_Protagonist" ActionTag="6202671" Tag="70" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="-1219.0631" RightMargin="570.0631" TopMargin="-373.5576" BottomMargin="199.5577" ctype="SpriteObjectData">
             <Size X="2857.0000" Y="1416.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="209.4369" Y="907.5577" />
+            <Position X="209.5392" Y="907.5577" />
             <Scale ScaleX="0.0753" ScaleY="0.1000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.0949" Y="0.7307" />

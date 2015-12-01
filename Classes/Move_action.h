@@ -15,6 +15,7 @@ class moveAction : public cocos2d::EventListenerPhysicsContact{
 private:
     cocos2d::Node* node_Pro;
     cocos2d::Node* node_else;
+
 public:
     virtual EventListenerPhysicsContact* createProAction();
     

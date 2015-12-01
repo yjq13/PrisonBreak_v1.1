@@ -14,7 +14,8 @@
 #include "Constant_Use.h"
 USING_NS_CC;
 
-EventListenerTouchOneByOne* moveListener::create(Layer* layer,cocostudio::timeline::ActionTimeline* rootTimeLine){
+EventListenerTouchOneByOne* moveListener::create(Node* layer,cocostudio::timeline::ActionTimeline* rootTimeLine){
+    
     auto listener=EventListenerTouchOneByOne::create();
     
     listener->onTouchMoved=CC_CALLBACK_2(moveListener::onTouchMoved, this,layer);
@@ -27,7 +28,9 @@ EventListenerTouchOneByOne* moveListener::create(Layer* layer,cocostudio::timeli
 
 
 bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event,cocostudio::timeline::ActionTimeline* rootTimeLine){
-    
+    if(!moveLock){
+        return false;
+    }
     CCLOG("begin with (%f,%f)",touch->getLocation().x,touch->getLocation().y);
     //计数器归零,数组清空
     index=0;
@@ -45,7 +48,7 @@ bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event,coc
     return true;
 }
 
-void moveListener::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event, Layer* layer){
+void moveListener::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event, Node* layer){
     
     isMoved=true;
     points[index]=touch->getLocation();
@@ -59,7 +62,7 @@ void moveListener::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event, La
     index++;
 }
 
-void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, Layer* layer,cocostudio::timeline::ActionTimeline* rootTimeLine){
+void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, Node* layer,cocostudio::timeline::ActionTimeline* rootTimeLine){
     printf("ed");
     auto p=touch->getLocation();
     if (isMoved&&(STOP_SECTION.isInside(touch)||DESTINATION_SECTION.isInside(touch)))
@@ -72,14 +75,14 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, La
                 actionVector.pushBack(MoveTo::create(ccpSub(points[i-1], points[i]).length()/100, points[i]));
             }
         }
-
-        Sprite* protagonist = Sprite_protagonist::create(0);
+        
+        Sprite* protagonist = layer->getChildByName<Sprite*>("Sprite_Protagonist");
+        
         protagonist->setPosition(points[0]);
         
         //layer->addChild(protagonist);
         //s->autorelease();
-        
-        layer->addChild(protagonist);
+        moveLock = false;
         
         
         

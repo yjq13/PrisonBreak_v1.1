@@ -63,6 +63,7 @@ void Game::setUI(){
 //    Size visibleSize = Director::getInstance()->getVisibleSize();
 //    Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
+    
     //rootNodeS->addChild(rootNodeL);
     rootNodeL->setContentSize(VISIBLE_SIZE);
     ui::Helper::doLayout(rootNodeL);
@@ -79,17 +80,22 @@ void Game::setUI(){
     
     auto Button_Back = rootNodeL->getChildByName<ui::Button*>("Button_Back");
     
+    
+    
     Button_Back->addTouchEventListener(this,toucheventselector(Game::menuCloseCallback));
     
-    Sprite* jailer_1_get = Sprite_jailer::create(1,Demo_jailer_1);
+    Sprite* protagonist = Sprite_protagonist::create(0,rootNodeL->getChildByName<Sprite*>("Sprite_Protagonist"));
+
+    
+    Sprite* jailer_1_get = Sprite_jailer::create(0,Demo_jailer_1);
+    
+    rootNodeL->addChild(protagonist);
     
     rootNodeL->addChild(jailer_1_get);
     
     rootNodeL->runAction(rootTimeLine);
     
-    rootTimeLine->gotoFrameAndPlay(0, true);
-    
-    
+    //rootTimeLine->gotoFrameAndPlay(0, true);
     
     CCSize size_start = startPosition->getContentSize();
     Vec2 position_start = startPosition->getPosition();
@@ -103,13 +109,16 @@ void Game::setUI(){
     Vec2 position_destination = destinationPosition->getPosition();
     DESTINATION_SECTION=Section(&size_destination, &position_destination);
     
+    
+    
     moveListener movelistener;
     
-    EventListenerTouchOneByOne* listener = movelistener.create(this,rootTimeLine);
+    EventListenerTouchOneByOne* listener = movelistener.create(rootNodeL,rootTimeLine);
     
     _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     
     
+
 }
 
 
