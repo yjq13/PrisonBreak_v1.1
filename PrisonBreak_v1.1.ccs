@@ -20,12 +20,8 @@
         <Folder Name="Game">
           <Folder Name="Part_1">
             <Project Name="Layer_Game_Level_1.csd" Type="Layer" />
-            <Project Name="Layer_Game_Level_2.csd" Type="Layer" />
-            <Project Name="Layer_Game_Level_3.csd" Type="Layer" />
           </Folder>
-          <Folder Name="Part_2">
-            <Project Name="Layer_Game_Level_1.csd" Type="Layer" />
-          </Folder>
+          <Folder Name="Part_2" />
           <Folder Name="Part_3" />
           <Folder Name="Part_4" />
         </Folder>
@@ -35,15 +31,30 @@
         <Image Name="25.jpg" />
         <Folder Name="Picture">
           <Image Name="Button_About.png" />
-          <Image Name="Button_AddDiamond.png" />
+          <Image Name="Button_About_pushed.png" />
+          <Image Name="Button_Add.png" />
+          <Image Name="Button_Add_pushed.png" />
           <Image Name="Button_Back.png" />
-          <Image Name="Button_Buy.png" />
+          <Image Name="Button_Back_pushed.png" />
           <Image Name="Button_Cancle.png" />
-          <Image Name="Button_Close.png" />
-          <Image Name="Button_Level.png" />
-          <Image Name="Button_Setting.png" />
+          <Image Name="Button_Cancle_pushed.png" />
+          <Image Name="Button_CloseIndaoju.png" />
+          <Image Name="Button_CloseIndaoju_pushed.png" />
+          <Image Name="Button_CloseInDiamond.png" />
+          <Image Name="Button_CloseInDiamond_pushed.png" />
+          <Image Name="Button_five.png" />
+          <Image Name="Button_five_pushed.png" />
+          <Image Name="Button_Go.png" />
+          <Image Name="Button_Go_pushed.png" />
+          <Image Name="Button_Part_1.png" />
           <Image Name="Button_Start.png" />
-          <Image Name="Button_Sure.png" />
+          <Image Name="Button_Start_pushed.png" />
+          <Image Name="Button_ten.png" />
+          <Image Name="Button_ten_pushed.png" />
+          <Image Name="Button_twenty.png" />
+          <Image Name="Button_twenty_pushed.png" />
+          <Image Name="Button_Yes.png" />
+          <Image Name="Button_Yes_pushed.png" />
           <Image Name="Sprite_Jailer.png" />
           <Image Name="Sprite_Mouse.png" />
           <Image Name="Sprite_Protagonist.png" />
