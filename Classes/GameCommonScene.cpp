@@ -104,8 +104,6 @@ void Game::setUI(){
     
     _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     
-    sleep(0.5);
     
-    BUTTON_LOCK=true;
-    CCLOG("GAME:%d",BUTTON_LOCK);
 }
+

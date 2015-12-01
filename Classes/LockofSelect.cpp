@@ -12,5 +12,5 @@ bool LockofSelect::checkLock_outside(int number){
 }
 
 bool LockofSelect::checkLock_inside(int number){
-    
+    return true;
 }

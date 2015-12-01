@@ -146,6 +146,7 @@ void Select_Detail::turnToGame(Ref* pSender,int step)
     //this->removeAllChildren();
     auto transition=createTransition_Page(sceneNew);
     Director::getInstance()->replaceScene(transition);
+        
         }
     
 }

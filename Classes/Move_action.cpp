@@ -21,16 +21,26 @@ EventListenerPhysicsContact* moveAction::createProAction(){
 bool moveAction::switchMoveAction(const cocos2d::PhysicsContact &contact){
     int body_tag = 0;
     //找到碰撞物体
+   
+    
     if(contact.getShapeA()->getBody()->getNode()->getTag()==PROTAGONIST_TAG){
-        body_tag = contact.getShapeB()->getBody()->getNode()->getTag();
-    }else{
-        body_tag = contact.getShapeA()->getBody()->getNode()->getTag();
+        node_Pro = contact.getShapeA()->getBody()->getNode();
+        node_else =contact.getShapeB()->getBody()->getNode();
+        body_tag = node_else->getTag();
+            }else{
+        node_Pro = contact.getShapeB()->getBody()->getNode();
+        node_else =contact.getShapeA()->getBody()->getNode();
+        body_tag = node_else->getTag();
+        
     }
     
     switch((body_tag/1000)*1000){
             
         case JAILER_TAG:{
             moveAction::onContactBeginPro_Jailer();
+            node_Pro->stopAllActions();
+            
+            node_else->setVisible(false);
             break;
         }
         case MOUSE_TAG:{
