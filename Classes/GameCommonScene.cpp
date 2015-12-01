@@ -17,10 +17,10 @@
 #include "Sprite_jailer.h"
 #include <string>
 #include <iostream>
+#include "SelectScene_Detail.h"
 
-
-using namespace std;
 USING_NS_CC;
+using namespace ui;
 
 int i = 0;
 Scene* Game::createScene(){
@@ -44,7 +44,8 @@ bool Game::init(){
     
     string hand = "res/Game/";
     string tail = ".csb";
-    string all = hand+PATH_NOW+tail;
+    string follow = "/Layer_Game_Level_";
+    string all = hand+PATH_PART+follow+PATH_LEVEL+tail;
     cout<<all;
     
     rootNodeL = CSLoader::createNode(all);
@@ -76,6 +77,10 @@ void Game::setUI(){
     
     auto Demo_jailer_1 = rootNodeL->getChildByName<Sprite*>("Sprite_Jailer_1");
     
+    auto Button_Back = rootNodeL->getChildByName<ui::Button*>("Button_Back");
+    
+    Button_Back->addTouchEventListener(this,toucheventselector(Game::menuCloseCallback));
+    
     Sprite* jailer_1_get = Sprite_jailer::create(1,Demo_jailer_1);
     
     rootNodeL->addChild(jailer_1_get);
@@ -105,5 +110,20 @@ void Game::setUI(){
     _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     
     
+}
+
+
+void Game::menuCloseCallback(Ref* pSender)
+{
+    BUTTON_LOCK = true;
+    Select_Detail select_detail;
+    auto Scene = select_detail.createScene();
+    auto transition=TransitionPageTurn::create(0.1f, Scene, false);
+    
+    Director::getInstance()->replaceScene(transition);
+    
+    //#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    //exit(0);
+    //#endif
 }
 

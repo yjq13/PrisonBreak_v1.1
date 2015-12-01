@@ -25,7 +25,9 @@ Section DESTINATION_SECTION = Section();
 
 Section STOP_SECTION = Section();
 
-string PATH_NOW = "";
+string PATH_PART = "";
+
+string PATH_LEVEL = "";
 
 bool BUTTON_LOCK = true;
 

@@ -27,7 +27,9 @@ USING_NS_CC;
     
     extern cocos2d::Size DESIGN_SIZE;
 
-    extern string PATH_NOW;
+    extern string PATH_PART;
+
+    extern string PATH_LEVEL;
 
     extern bool BUTTON_LOCK;
 

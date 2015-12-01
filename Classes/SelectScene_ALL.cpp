@@ -36,7 +36,6 @@ bool Select::init(){
         return false;
     }
     
-    PATH_NOW = "";
     //rootNodeS = CSLoader::createNode("res/Selection_1/Scene_Selection_1.csb");
     
     rootNodeL = CSLoader::createNode("res/Selection_1/Layer_Selection_1.csb");
@@ -112,19 +111,19 @@ void Select::turnToSelect_Detail(Ref* pSender,int number)
         Select_Detail select_detail;
         switch(number){
             case 1:{
-                PATH_NOW = "Part_1";
+                PATH_PART = "Part_1";
                 break;
             }
             case 2:{
-                PATH_NOW = "Part_2";
+                PATH_PART = "Part_2";
                 break;
             }
             case 3:{
-                PATH_NOW = "Part_3";
+                PATH_PART = "Part_3";
                 break;
             }
             case 4:{
-                PATH_NOW = "Part_4";
+                PATH_PART = "Part_4";
                 break;
             }
 

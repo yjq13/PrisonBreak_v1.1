@@ -28,6 +28,8 @@ public:
     void setPhyWorld(PhysicsWorld* world){
     m_world=world;
     };
+    
+    void menuCloseCallback(Ref* pSender);
     // a selector callback
     void setUI();
     

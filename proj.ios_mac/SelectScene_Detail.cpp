@@ -39,7 +39,6 @@ Scene* Select_Detail::createScene(){
 
 bool Select_Detail::init(){
 
-    PATH_NOW = PATH_NOW.substr(0,6);
     //rootNodeS = CSLoader::createNode("res/Selection_2/Scene_Selection_2.csb");
     
     rootNodeL_Basis = CSLoader::createNode("res/Selection_2/Layer_Selection_2.csb");
@@ -132,14 +131,13 @@ void Select_Detail::turnToGame(Ref* pSender,int step)
         printf("hahah,sadiao\n");
     }
     
-    string follow = "/Layer_Game_Level_";
     
     char data[25];
     memset(data,0,sizeof(data));
     sprintf(data,"%d",step);
     string stepSu=data;
     
-    PATH_NOW = PATH_NOW+follow+stepSu;
+        PATH_LEVEL = stepSu;
     
     auto sceneNew = gameScene.createScene();
     //下面搞个翻页效果
