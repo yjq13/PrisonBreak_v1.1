@@ -13,6 +13,8 @@
 #include "SelectScene_Detail.h"
 #include "GameCommonScene.h"
 #include "Constant_Use.h"
+#include "LockofSelect.h"
+
 USING_NS_CC;
 using namespace ui;
 
@@ -25,8 +27,6 @@ Scene* Select_Detail::createScene(){
     
     auto layer = Select_Detail::create();
     
-    init();
-    
     // add layer as a child to scene
     scene->addChild(layer);
    
@@ -38,12 +38,8 @@ Scene* Select_Detail::createScene(){
 
 
 bool Select_Detail::init(){
-    if ( !Layer::init() )
-    {
-        return false;
-    }
-    
-    printf("GGsimida");
+
+    PATH_NOW = PATH_NOW.substr(0,6);
     //rootNodeS = CSLoader::createNode("res/Selection_2/Scene_Selection_2.csb");
     
     rootNodeL_Basis = CSLoader::createNode("res/Selection_2/Layer_Selection_2.csb");
@@ -68,7 +64,7 @@ void Select_Detail::setUI(){
     Button_Close->addTouchEventListener(this, toucheventselector(Select_Detail::closeLayer));
     
     
-    Button_StartGame->addTouchEventListener(CC_CALLBACK_1(Select_Detail::turnToGame,this,"1"));
+    Button_StartGame->addTouchEventListener(CC_CALLBACK_1(Select_Detail::turnToGame,this,1));
     
     //rootNodeS->addChild(rootNodeL_Diamond);
     
@@ -102,7 +98,7 @@ void Select_Detail::setUI(){
     
     Button_Back->addTouchEventListener(this, toucheventselector(Select_Detail::menuCloseCallback));
     
-    Button_GameStep->addTouchEventListener(this, toucheventselector(Select_Detail::show_GameReady));
+    Button_GameStep->addTouchEventListener(CC_CALLBACK_1(Select_Detail::show_GameReady,this));
 }
 
 
@@ -112,6 +108,7 @@ void Select_Detail::menuCloseCallback(Ref* pSender)
     Select select_all;
     auto Scene = select_all.createScene();
     auto transition=TransitionPageTurn::create(1.5f, Scene, false);
+    
     Director::getInstance()->replaceScene(transition);
     
     //#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
@@ -122,19 +119,35 @@ void Select_Detail::menuCloseCallback(Ref* pSender)
 
 
 
-void Select_Detail::turnToGame(Ref* pSender,string step)
+void Select_Detail::turnToGame(Ref* pSender,int step)
 {
+    if(BUTTON_LOCK){
+        BUTTON_LOCK=false;
+        CCLOG("%d",BUTTON_LOCK);
     Game gameScene;
-    if(step=="1"){
-        printf("hahah,sadiao");
+    LockofSelect lock;
+    bool result = lock.checkLock_outside(step);
+
+    if(step==1){
+        printf("hahah,sadiao\n");
     }
+    
     string follow = "/Layer_Game_Level_";
-    PATH_NOW = PATH_NOW+follow+step;
+    
+    char data[25];
+    memset(data,0,sizeof(data));
+    sprintf(data,"%d",step);
+    string stepSu=data;
+    
+    PATH_NOW = PATH_NOW+follow+stepSu;
+    
     auto sceneNew = gameScene.createScene();
     //下面搞个翻页效果
     //this->removeAllChildren();
-    TransitionPageTurn* transition=TransitionPageTurn::create(1.5f, sceneNew, false);
+    auto transition=createTransition_Page(sceneNew);
     Director::getInstance()->replaceScene(transition);
+        }
+    
 }
 
 

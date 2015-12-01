@@ -35,6 +35,8 @@ bool Select::init(){
     {
         return false;
     }
+    
+    PATH_NOW = "";
     //rootNodeS = CSLoader::createNode("res/Selection_1/Scene_Selection_1.csb");
     
     rootNodeL = CSLoader::createNode("res/Selection_1/Layer_Selection_1.csb");
@@ -83,12 +85,14 @@ void Select::setUI(){
 
 void Select::menuCloseCallback(Ref* pSender)
 {
+    
     Start start;
     auto Scene=start.createScene();
 
     auto transition=createTransition_Page(Scene);
     Director::getInstance()->replaceScene(transition);
-
+    
+    
 //#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     //exit(0);
 //#endif
@@ -101,19 +105,38 @@ void Select::menuCloseCallback(Ref* pSender)
 
 void Select::turnToSelect_Detail(Ref* pSender,int number)
 {
-    printf("%d",number);
     
     LockofSelect lock;
     bool result = lock.checkLock_outside(number);
     if(result){
         Select_Detail select_detail;
-        PATH_NOW = "Part_1";
+        switch(number){
+            case 1:{
+                PATH_NOW = "Part_1";
+                break;
+            }
+            case 2:{
+                PATH_NOW = "Part_2";
+                break;
+            }
+            case 3:{
+                PATH_NOW = "Part_3";
+                break;
+            }
+            case 4:{
+                PATH_NOW = "Part_4";
+                break;
+            }
+
+                
+        }
         auto sceneNew= select_detail.createScene();
         
         //下面搞个翻页效果
         //this->removeAllChildren();
         auto transition=createTransition_Page(sceneNew);
         Director::getInstance()->replaceScene(transition);
+        
     }else{
         
     }

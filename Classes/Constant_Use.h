@@ -29,6 +29,8 @@ USING_NS_CC;
 
     extern string PATH_NOW;
 
+    extern bool BUTTON_LOCK;
+
     const int PROTAGONIST_TAG = 1000;
 
     const int MOUSE_TAG = 2000;

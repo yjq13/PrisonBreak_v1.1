@@ -88,11 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/SelectScene_ALL.cpp"
-            timestampString = "470581107.126965"
+            timestampString = "470625281.712943"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "Select::setUI()"
             landmarkType = "5">
          </BreakpointContent>
@@ -118,11 +118,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SelectScene_Detail.cpp"
-            timestampString = "470593560.947962"
+            timestampString = "470629013.182632"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "Select_Detail::setUI()"
             landmarkType = "5">
          </BreakpointContent>
@@ -164,11 +164,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameCommonScene.cpp"
-            timestampString = "470593966.105108"
+            timestampString = "470631028.040813"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "Game::setUI()"
             landmarkType = "5">
          </BreakpointContent>
@@ -196,12 +196,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SelectScene_Detail.cpp"
-            timestampString = "470593560.947962"
+            timestampString = "470629965.928451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "Select_Detail::turnToGame(Ref* pSender,string step)"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "Select_Detail::turnToGame(Ref* pSender,int step)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -17,6 +17,8 @@
 #include "Sprite_jailer.h"
 #include <string>
 #include <iostream>
+
+
 using namespace std;
 USING_NS_CC;
 
@@ -26,15 +28,11 @@ Scene* Game::createScene(){
     //scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     auto layer=Game::create();
     
-    init();
-    //layer->setPhyWorld(scene->getPhysicsWorld());
+    layer->setPhyWorld(scene->getPhysicsWorld());
     scene->addChild(layer);
     return scene;
 }
 bool Game::init(){
-    if(!Layer::init()){
-        return false;
-    }
 
     moveAction moveaction;
     
@@ -47,7 +45,8 @@ bool Game::init(){
     string hand = "res/Game/";
     string tail = ".csb";
     string all = hand+PATH_NOW+tail;
-    cout<<PATH_NOW;
+    cout<<all;
+    
     rootNodeL = CSLoader::createNode(all);
     
     rootTimeLine = CSLoader::createTimeline(all);
@@ -105,5 +104,8 @@ void Game::setUI(){
     
     _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     
+    sleep(0.5);
     
+    BUTTON_LOCK=true;
+    CCLOG("GAME:%d",BUTTON_LOCK);
 }

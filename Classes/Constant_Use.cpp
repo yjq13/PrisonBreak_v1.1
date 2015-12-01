@@ -9,7 +9,7 @@
 #include "Constant_Use.h"
 
 cocos2d::TransitionPageTurn* createTransition_Page(cocos2d::Scene* sceneNew){
-    cocos2d::TransitionPageTurn* transition=cocos2d::TransitionPageTurn::create(1.5f, sceneNew, false);
+    cocos2d::TransitionPageTurn* transition=cocos2d::TransitionPageTurn::create(0.1f, sceneNew, false);
     return transition;
 }
 
@@ -24,5 +24,8 @@ Section START_SECTION = Section();
 Section DESTINATION_SECTION = Section();
 
 Section STOP_SECTION = Section();
+
 string PATH_NOW = "";
+
+bool BUTTON_LOCK = true;
 
