@@ -16,7 +16,7 @@
             <PreSize X="1.3493" Y="1.3333" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_Close" ActionTag="1088402892" Tag="99" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="1682.1790" RightMargin="17.8210" TopMargin="11.7307" BottomMargin="888.2693" TouchEnable="True" FontSize="14" ButtonText="x" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="70" Scale9Height="78" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_Close" ActionTag="1088402892" Tag="99" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1682.1790" RightMargin="17.8210" TopMargin="11.7307" BottomMargin="888.2693" TouchEnable="True" FontSize="14" ButtonText="x" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="70" Scale9Height="78" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="100.0000" Y="100.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="1732.1790" Y="938.2693" />

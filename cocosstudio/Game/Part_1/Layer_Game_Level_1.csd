@@ -26,7 +26,7 @@
           <AbstractNodeData Name="BackGround_Game" ActionTag="-1674459379" Tag="191" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="-4.6365" RightMargin="4.6365" TopMargin="6.3142" BottomMargin="-6.3141" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="2208.0000" Y="1242.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1099.3635" Y="614.6859" />
+            <Position X="1099.3633" Y="614.6658" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.4979" Y="0.4949" />
@@ -75,13 +75,13 @@
             <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-983426302" Tag="172" IconVisible="False" LeftMargin="-34.5235" RightMargin="361.5234" TopMargin="-204.7108" BottomMargin="-38.2892" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-983426302" Tag="172" IconVisible="False" LeftMargin="-104.7922" RightMargin="431.7922" TopMargin="-211.5396" BottomMargin="-31.4604" ctype="SpriteObjectData">
             <Size X="1881.0000" Y="1485.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="905.9765" Y="704.2108" />
+            <Position X="835.7078" Y="711.0396" />
             <Scale ScaleX="0.1000" ScaleY="0.1000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.4103" Y="0.5670" />
+            <PrePosition X="0.3785" Y="0.5725" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="Picture/Sprite_Jailer.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
@@ -96,29 +96,29 @@
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Protagonist" ActionTag="6202671" Tag="70" IconVisible="False" LeftMargin="443.5714" RightMargin="1718.4286" TopMargin="230.4251" BottomMargin="965.5749" ctype="SpriteObjectData">
-            <Size X="46.0000" Y="46.0000" />
+          <AbstractNodeData Name="Sprite_Protagonist" ActionTag="6202671" Tag="70" IconVisible="False" LeftMargin="-1219.0631" RightMargin="570.0631" TopMargin="-373.5576" BottomMargin="199.5577" ctype="SpriteObjectData">
+            <Size X="2857.0000" Y="1416.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="466.5714" Y="988.5749" />
-            <Scale ScaleX="3.5446" ScaleY="2.8506" />
+            <Position X="209.4369" Y="907.5577" />
+            <Scale ScaleX="0.0753" ScaleY="0.1000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.2113" Y="0.7960" />
+            <PrePosition X="0.0949" Y="0.7307" />
             <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
+            <FileData Type="Normal" Path="Picture/Sprite_Protagonist.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_Back" ActionTag="1639506448" Tag="31" IconVisible="False" LeftMargin="147.9917" RightMargin="2014.0083" TopMargin="73.8118" BottomMargin="1132.1882" TouchEnable="True" FontSize="14" ButtonText="back" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="46.0000" Y="36.0000" />
+          <AbstractNodeData Name="Button_Back" ActionTag="1639506448" Tag="31" IconVisible="False" LeftMargin="73.4384" RightMargin="1934.5615" TopMargin="57.1396" BottomMargin="1104.8604" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="170" Scale9Height="58" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="200.0000" Y="80.0000" />
             <AnchorPoint ScaleX="0.4841" ScaleY="0.6211" />
             <Position X="170.2584" Y="1154.5483" />
-            <Scale ScaleX="4.2546" ScaleY="3.1891" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.0771" Y="0.9296" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PreSize X="0.0906" Y="0.0644" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-            <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
-            <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+            <PressedFileData Type="Normal" Path="Picture/Button_Back_pushed.png" Plist="" />
+            <NormalFileData Type="Normal" Path="Picture/Button_Back.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
