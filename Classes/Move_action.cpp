@@ -39,9 +39,9 @@ bool moveAction::switchMoveAction(const cocos2d::PhysicsContact &contact){
             
         case JAILER_TAG:{
             moveAction::onContactBeginPro_Jailer();
-            node_Pro->stopAllActions();
+            //node_Pro->stopAllActions();
             
-            node_else->setVisible(false);
+            //node_else->setVisible(false);
             break;
         }
         case MOUSE_TAG:{

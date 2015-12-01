@@ -89,6 +89,7 @@ void Game::setUI(){
     
     Sprite* jailer_1_get = Sprite_jailer::create(0,Demo_jailer_1);
     
+    jailer_1_get->setVisible(true);
     rootNodeL->addChild(protagonist);
     
     rootNodeL->addChild(jailer_1_get);
