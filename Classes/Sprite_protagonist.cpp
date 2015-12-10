@@ -15,7 +15,7 @@ USING_NS_CC;
 Sprite* Sprite_protagonist::create(int number,cocos2d::Sprite* getSprite){
     auto protagonist=getSprite;
     
-    auto ManBody=PhysicsBody::createBox(protagonist->getContentSize()*0.1);
+    auto ManBody=PhysicsBody::createBox(protagonist->getContentSize());
     
     CCLOG("%f,%f",protagonist->getContentSize().width,protagonist->getContentSize().height);
     

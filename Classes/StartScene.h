@@ -7,7 +7,7 @@ class Start : public MyScene
     //cocos2d::Node* rootNodeS;
     cocos2d::Node* rootNodeL;
 public:
-    virtual cocos2d::Scene* createScene();
+    static cocos2d::Scene* createScene();
 
     virtual bool init();
     

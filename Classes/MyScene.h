@@ -16,7 +16,7 @@ class MyScene : public cocos2d::Layer
 protected:
     //cocos2d::Node* rootNodeS;
 public:
-    virtual cocos2d::Scene* createScene();
+    static cocos2d::Scene* createScene();
     
     virtual bool init();
     

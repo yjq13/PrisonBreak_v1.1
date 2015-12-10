@@ -14,7 +14,7 @@ USING_NS_CC;
 Sprite* Sprite_jailer::create(int number,Sprite* getSprite){
     auto jailer= getSprite;
     
-    auto ManBody=PhysicsBody::createBox(jailer->getContentSize()*0.1);
+    auto ManBody=PhysicsBody::createBox(jailer->getContentSize());
     
     CCLOG("%f,%f",jailer->getContentSize().width,jailer->getContentSize().height);
     

@@ -85,16 +85,11 @@ void Select::setUI(){
 void Select::menuCloseCallback(Ref* pSender)
 {
     
-    Start start;
-    auto Scene=start.createScene();
+    auto Scene=Start::createScene();
 
-    auto transition=createTransition_Page(Scene);
-    Director::getInstance()->replaceScene(transition);
+    //auto transition=createTransition_Page(Scene);
+    Director::getInstance()->replaceScene(Scene);
     
-    
-//#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    //exit(0);
-//#endif
 }
 
 
@@ -108,7 +103,6 @@ void Select::turnToSelect_Detail(Ref* pSender,int number)
     LockofSelect lock;
     bool result = lock.checkLock_outside(number);
     if(result){
-        Select_Detail select_detail;
         switch(number){
             case 1:{
                 PATH_PART = "Part_1";
@@ -129,12 +123,13 @@ void Select::turnToSelect_Detail(Ref* pSender,int number)
 
                 
         }
-        auto sceneNew= select_detail.createScene();
+        
+        auto sceneNew= Select_Detail::createScene();
         
         //下面搞个翻页效果
         //this->removeAllChildren();
-        auto transition=createTransition_Page(sceneNew);
-        Director::getInstance()->replaceScene(transition);
+        //auto transition=createTransition_Page(sceneNew);
+        Director::getInstance()->replaceScene(sceneNew);
         
     }else{
         

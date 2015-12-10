@@ -104,15 +104,10 @@ void Select_Detail::setUI(){
 
 void Select_Detail::menuCloseCallback(Ref* pSender)
 {
-    Select select_all;
-    auto Scene = select_all.createScene();
-    auto transition=TransitionPageTurn::create(1.5f, Scene, false);
+    auto Scene = Select::createScene();
     
-    Director::getInstance()->replaceScene(transition);
-    
-    //#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    //exit(0);
-    //#endif
+    Director::getInstance()->replaceScene(Scene);
+
 }
 
 
@@ -139,11 +134,9 @@ void Select_Detail::turnToGame(Ref* pSender,int step)
     
         PATH_LEVEL = stepSu;
     
-    auto sceneNew = gameScene.createScene();
-    //下面搞个翻页效果
-    //this->removeAllChildren();
-    auto transition=createTransition_Page(sceneNew);
-    Director::getInstance()->replaceScene(transition);
+        auto sceneNew = Game::createScene();
+
+    Director::getInstance()->pushScene(sceneNew);
         
         }
     
@@ -154,13 +147,9 @@ void Select_Detail::turnToGame(Ref* pSender,int step)
 
 void Select_Detail::show_GameReady(Ref* pSender)
 {
-    //scene->getChildByName<cocos2d::Layer*>("layer")->getChildByName<cocos2d::Node*>("rootNodeL_GameStep")-
-    //layer->getChildByName("rootNodeL_GameStep")->setVisible(true);
-    //layer->
     rootNodeL_GameStep->setVisible(true);
 }
 
 void Select_Detail::closeLayer(Ref* pSender){
-    //printf("hahahaha");
     rootNodeL_GameStep->setVisible(false);
 }

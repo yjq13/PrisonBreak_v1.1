@@ -21,8 +21,7 @@ private:
     cocos2d::Node* rootNodeL_Diamond;
     cocos2d::Node* rootNodeL_GameStep;
 public:
-    
-    virtual cocos2d::Scene* createScene();
+    static cocos2d::Scene* createScene();
     
     virtual bool init();
     

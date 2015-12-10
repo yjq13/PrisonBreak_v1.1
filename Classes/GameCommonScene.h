@@ -22,7 +22,7 @@ class Game : public MyScene{
     cocos2d::Node* rootNodeL;
     cocostudio::timeline::ActionTimeline* rootTimeLine;
 public:
-    virtual Scene* createScene();
+    static Scene* createScene();
     PhysicsWorld* m_world;
     virtual bool init();
     void setPhyWorld(PhysicsWorld* world){

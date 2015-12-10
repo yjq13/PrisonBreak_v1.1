@@ -53,7 +53,11 @@ bool Game::init(){
     
     rootTimeLine = CSLoader::createTimeline(all);
     
+    moveListener movelistener;
     
+    EventListenerTouchOneByOne* listener = movelistener.create(rootNodeL,rootTimeLine);
+    
+    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     
     setUI();
     
@@ -83,31 +87,20 @@ void Game::setUI(){
     
     auto Button_Back = rootNodeL->getChildByName<ui::Button*>("Button_Back");
     
-    auto Start = rootNodeL->getChildByName<ui::ImageView*>("Image_Start");
-    
-    auto Back = rootNodeL->getChildByName<ui::ImageView*>("BackGround_Game");
     
     Button_Back->addTouchEventListener(this,toucheventselector(Game::menuCloseCallback));
     
-//    Back->setVisible(false);
-//    Start->setVisible(false);
 
     Sprite_protagonist::setPro(0,Demo_protagonist);
     
     Sprite_jailer::setJailer(0,Demo_jailer_1);
     
-    //rootNodeL->setVisible(false);
-    
-    //addChild(Back);
-//    addChild(Button_Back);
-//    addChild(startPosition);
-//    addChild(Demo_jailer_1);
-//    addChild(Demo_protagonist);
-//    addChild(stopPosition);
     
     CCLOG("%f,%f",Demo_jailer_1->getPositionZ(),Demo_protagonist->getPositionZ());
     
     rootNodeL->runAction(rootTimeLine);
+    
+    
     
     //rootTimeLine->gotoFrameAndPlay(0, true);
     
@@ -125,12 +118,6 @@ void Game::setUI(){
     
     
     
-    moveListener movelistener;
-    
-    //EventListenerTouchOneByOne* listener = movelistener.create(rootNodeL,rootTimeLine);
-    
-    //_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
-    
     
 
 }
@@ -139,8 +126,7 @@ void Game::setUI(){
 void Game::menuCloseCallback(Ref* pSender)
 {
     BUTTON_LOCK = true;
-    Select_Detail select_detail;
-    auto Scene = select_detail.createScene();
+    auto Scene =  Select_Detail::createScene();
     auto transition=TransitionPageTurn::create(0.1f, Scene, false);
     
     Director::getInstance()->replaceScene(transition);
