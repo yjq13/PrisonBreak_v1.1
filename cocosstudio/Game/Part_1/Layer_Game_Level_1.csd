@@ -6,13 +6,13 @@
       <ObjectData Name="Layer" Tag="157" ctype="GameLayerObjectData">
         <Size X="2208.0000" Y="1242.0000" />
         <Children>
-          <AbstractNodeData Name="BackGround_Game" ActionTag="-1674459379" Tag="191" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="16.3633" RightMargin="-16.3633" TopMargin="75.3342" BottomMargin="-75.3342" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="BackGround_Game" ActionTag="-1674459379" Tag="191" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="2208.0000" Y="1242.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1120.3633" Y="545.6658" />
+            <Position X="1104.0000" Y="621.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5074" Y="0.4393" />
+            <PrePosition X="0.5000" Y="0.5000" />
             <PreSize X="1.6552" Y="1.6560" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
@@ -58,13 +58,13 @@
             <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-983426302" Tag="172" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="-104.7922" RightMargin="431.7922" TopMargin="-211.5396" BottomMargin="-31.4604" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-983426302" Tag="172" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="124.8123" RightMargin="202.1877" TopMargin="-215.6401" BottomMargin="-27.3598" ctype="SpriteObjectData">
             <Size X="1881.0000" Y="1485.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="835.7280" Y="711.0396" />
-            <Scale ScaleX="0.1000" ScaleY="0.1000" />
+            <Position X="1065.3600" Y="715.1402" />
+            <Scale ScaleX="0.2000" ScaleY="0.2000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.3785" Y="0.5725" />
+            <PrePosition X="0.4825" Y="0.5758" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="Picture/Sprite_Jailer.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
@@ -79,11 +79,11 @@
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Protagonist" ActionTag="6202671" Tag="70" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="-1219.0631" RightMargin="570.0631" TopMargin="-373.5576" BottomMargin="199.5577" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Sprite_Protagonist" ActionTag="6202671" Tag="70" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="-1218.9607" RightMargin="569.9607" TopMargin="-373.5574" BottomMargin="199.5574" ctype="SpriteObjectData">
             <Size X="2857.0000" Y="1416.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="209.5392" Y="907.5577" />
-            <Scale ScaleX="0.0753" ScaleY="0.1000" />
+            <Position X="209.5392" Y="907.5574" />
+            <Scale ScaleX="0.1455" ScaleY="0.2000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.0949" Y="0.7307" />
             <PreSize X="0.0000" Y="0.0000" />

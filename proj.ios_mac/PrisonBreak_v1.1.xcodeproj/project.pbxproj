@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		04463B3F1C0C95DA00EE6D7C /* LTInfiniteScrollView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 04463B3E1C0C95DA00EE6D7C /* LTInfiniteScrollView.mm */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+=======
+>>>>>>> origin/master
 		049178E21BDBDBB2004AAF5C /* Section.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049178E01BDBDBB2004AAF5C /* Section.cpp */; };
 		04F24EA79E2FEB16726F1559 /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D364C16A410D74FA7F2CF54 /* libcocos2d Mac.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -109,8 +112,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
 		04463B3D1C0C95DA00EE6D7C /* LTInfiniteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTInfiniteScrollView.h; sourceTree = "<group>"; };
 		04463B3E1C0C95DA00EE6D7C /* LTInfiniteScrollView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LTInfiniteScrollView.mm; sourceTree = "<group>"; };
+=======
+>>>>>>> origin/master
 		049178E01BDBDBB2004AAF5C /* Section.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Section.cpp; sourceTree = "<group>"; };
 		049178E11BDBDBB2004AAF5C /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
@@ -286,8 +292,11 @@
 		04463B3C1C0C959900EE6D7C /* LIBS */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				04463B3D1C0C95DA00EE6D7C /* LTInfiniteScrollView.h */,
 				04463B3E1C0C95DA00EE6D7C /* LTInfiniteScrollView.mm */,
+=======
+>>>>>>> origin/master
 			);
 			name = LIBS;
 			sourceTree = "<group>";
@@ -761,7 +770,10 @@
 				E3CB5E801BC9753A005123B8 /* Data_SystemInfo.swift in Sources */,
 				E3CB5E781BC9753A005123B8 /* GameCommonScene.cpp in Sources */,
 				E369982E1C0C24AA007BB3C8 /* LockofSelect.cpp in Sources */,
+<<<<<<< HEAD
 				04463B3F1C0C95DA00EE6D7C /* LTInfiniteScrollView.mm in Sources */,
+=======
+>>>>>>> origin/master
 				E3CB5E821BC9753A005123B8 /* FigurePo.swift in Sources */,
 				E30AC8B51BD93281005B8686 /* Sprite_coin.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
@@ -794,7 +806,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -834,7 +846,7 @@
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
