@@ -15,7 +15,7 @@ USING_NS_CC;
 Sprite* Sprite_protagonist::create(int number,cocos2d::Sprite* getSprite){
     auto protagonist=getSprite;
     
-    auto ManBody=PhysicsBody::createBox(protagonist->getContentSize());
+    auto ManBody=PhysicsBody::createBox(protagonist->getContentSize()*0.1);
     
     CCLOG("%f,%f",protagonist->getContentSize().width,protagonist->getContentSize().height);
     
@@ -26,5 +26,16 @@ Sprite* Sprite_protagonist::create(int number,cocos2d::Sprite* getSprite){
 
     
     return protagonist;
+    
+}
+
+void Sprite_protagonist::setPro(int number,cocos2d::Sprite* getSprite){
+    auto ManBody=PhysicsBody::createBox(getSprite->getContentSize()*0.1);
+     CCLOG("%f,%f",getSprite->getContentSize().width,getSprite->getContentSize().height);
+    
+    ManBody->setGravityEnable(false);
+    ManBody->setContactTestBitmask(0xFFFF);
+    getSprite->setPhysicsBody(ManBody);
+    getSprite->setTag(PROTAGONIST_TAG+number);
     
 }

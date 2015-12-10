@@ -18,6 +18,7 @@
 #include <string>
 #include <iostream>
 #include "SelectScene_Detail.h"
+#include "Sprite_wall.h"
 
 USING_NS_CC;
 using namespace ui;
@@ -25,7 +26,7 @@ using namespace ui;
 int i = 0;
 Scene* Game::createScene(){
     auto scene=Scene::createWithPhysics();
-    //scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+    scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     auto layer=Game::create();
     
     layer->setPhyWorld(scene->getPhysicsWorld());
@@ -78,21 +79,33 @@ void Game::setUI(){
     
     auto Demo_jailer_1 = rootNodeL->getChildByName<Sprite*>("Sprite_Jailer_1");
     
+    auto Demo_protagonist = rootNodeL->getChildByName<Sprite*>("Sprite_Protagonist");
+    
     auto Button_Back = rootNodeL->getChildByName<ui::Button*>("Button_Back");
     
+    auto Start = rootNodeL->getChildByName<ui::ImageView*>("Image_Start");
     
+    auto Back = rootNodeL->getChildByName<ui::ImageView*>("BackGround_Game");
     
     Button_Back->addTouchEventListener(this,toucheventselector(Game::menuCloseCallback));
     
-    Sprite* protagonist = Sprite_protagonist::create(0,rootNodeL->getChildByName<Sprite*>("Sprite_Protagonist"));
+//    Back->setVisible(false);
+//    Start->setVisible(false);
 
+    Sprite_protagonist::setPro(0,Demo_protagonist);
     
-    Sprite* jailer_1_get = Sprite_jailer::create(0,Demo_jailer_1);
+    Sprite_jailer::setJailer(0,Demo_jailer_1);
     
-    jailer_1_get->setVisible(true);
-    rootNodeL->addChild(protagonist);
+    //rootNodeL->setVisible(false);
     
-    rootNodeL->addChild(jailer_1_get);
+    //addChild(Back);
+//    addChild(Button_Back);
+//    addChild(startPosition);
+//    addChild(Demo_jailer_1);
+//    addChild(Demo_protagonist);
+//    addChild(stopPosition);
+    
+    CCLOG("%f,%f",Demo_jailer_1->getPositionZ(),Demo_protagonist->getPositionZ());
     
     rootNodeL->runAction(rootTimeLine);
     
@@ -114,9 +127,9 @@ void Game::setUI(){
     
     moveListener movelistener;
     
-    EventListenerTouchOneByOne* listener = movelistener.create(rootNodeL,rootTimeLine);
+    //EventListenerTouchOneByOne* listener = movelistener.create(rootNodeL,rootTimeLine);
     
-    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
+    //_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     
     
 

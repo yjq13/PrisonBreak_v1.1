@@ -14,7 +14,7 @@ USING_NS_CC;
 Sprite* Sprite_jailer::create(int number,Sprite* getSprite){
     auto jailer= getSprite;
     
-    auto ManBody=PhysicsBody::createBox(jailer->getContentSize());
+    auto ManBody=PhysicsBody::createBox(jailer->getContentSize()*0.1);
     
     CCLOG("%f,%f",jailer->getContentSize().width,jailer->getContentSize().height);
     
@@ -24,5 +24,16 @@ Sprite* Sprite_jailer::create(int number,Sprite* getSprite){
     jailer->setTag(JAILER_TAG+number);
     
     return jailer;
+    
+}
+
+void Sprite_jailer::setJailer(int number,cocos2d::Sprite* getSprite){
+    auto ManBody=PhysicsBody::createBox(getSprite->getContentSize()*0.1);
+    
+     CCLOG("%f,%f",getSprite->getContentSize().width,getSprite->getContentSize().height);
+    ManBody->setGravityEnable(false);
+    ManBody->setContactTestBitmask(0xFFFF);
+    getSprite->setPhysicsBody(ManBody);
+    getSprite->setTag(JAILER_TAG+number);
     
 }
