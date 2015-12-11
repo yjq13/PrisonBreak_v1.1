@@ -16,11 +16,12 @@
 #include "Sprite_wall.h"
 #include "Constant_Use.h"
 #include <iostream>
+#include "Sprite_mouse.h"
 USING_NS_CC;
 using namespace ui;
 
 
-void gameLoad::loadGame(cocos2d::Node* rootNodeL,cocostudio::timeline::ActionTimeline* rootTimeLine){
+void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     //起点加载
     auto startPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Start");
     CCSize size_start = startPosition->getContentSize();
@@ -83,6 +84,27 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL,cocostudio::timeline::ActionTim
     }while(Demo_wall[index]!=NULL);
     
     
+    
+    //老鼠加载
+    Sprite* Demo_Mouse[10];
+    index = 0;
+    do{
+        index++;
+        char number[25];
+        memset(number,0,sizeof(number));
+        sprintf(number,"%d",index);
+        string numberStr=number;
+        
+        string first = "Sprite_Mouse_";
+        string all = first+numberStr;
+        cout<<all;
+        
+        Demo_Mouse[index] = rootNodeL->getChildByName<Sprite*>(all);
+        if(Demo_Mouse[index]!=NULL)
+            Sprite_mouse::setMouse(index,Demo_Mouse[index]);
+    }while(Demo_wall[index]!=NULL);
+
+    
     //主角加载
     auto Demo_protagonist = rootNodeL->getChildByName<Sprite*>("Sprite_Protagonist");
     Sprite_protagonist::setPro(0,Demo_protagonist);
@@ -94,8 +116,6 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL,cocostudio::timeline::ActionTim
     
     
     //CCLOG("%f,%f",Demo_jailer_1->getPositionZ(),Demo_protagonist->getPositionZ());
-    
-    rootNodeL->runAction(rootTimeLine);
-    
+   
     
 }

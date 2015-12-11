@@ -56,7 +56,15 @@ bool Game::init(){
     
     rootTimeLine = CSLoader::createTimeline(all);
     
+    rootTimeLine2 = CSLoader::createTimeline(all);
+    
     moveAction moveaction;
+    
+    rootTimeLine->gotoFrameAndPlay(0,100, true);
+    rootTimeLine2->gotoFrameAndPlay(200,300, true);
+    
+    rootNodeL->runAction(rootTimeLine);
+    rootNodeL->runAction(rootTimeLine2);
     
     EventListenerPhysicsContact* contactListener = moveaction.createProAction(rootNodeL,rootTimeLine);
     
@@ -87,7 +95,12 @@ void Game::setUI(){
     
     Button_Back->addTouchEventListener(this,toucheventselector(Game::menuCloseCallback));
     
-    gameLoad::loadGame(rootNodeL,rootTimeLine);
+    
+    
+    gameLoad::loadGame(rootNodeL);
+    
+    
+    
    }
 
 

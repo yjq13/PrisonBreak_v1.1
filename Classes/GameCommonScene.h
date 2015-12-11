@@ -21,6 +21,7 @@ class Game : public MyScene{
     
     cocos2d::Node* rootNodeL;
     cocostudio::timeline::ActionTimeline* rootTimeLine;
+    cocostudio::timeline::ActionTimeline* rootTimeLine2;
 public:
     static Scene* createScene();
     PhysicsWorld* m_world;

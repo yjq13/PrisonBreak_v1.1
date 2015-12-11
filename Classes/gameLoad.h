@@ -13,7 +13,7 @@
 #include "cocostudio/CocoStudio.h"
 class gameLoad{
 public:    
-    static void loadGame(cocos2d::Node* rootNodeL,cocostudio::timeline::ActionTimeline* rootTimeLine);
+    static void loadGame(cocos2d::Node* rootNodeL);
     
 };
 
