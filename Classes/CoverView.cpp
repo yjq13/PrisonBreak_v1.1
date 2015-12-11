@@ -102,6 +102,7 @@ void CoverView::onTouchMoved(CCTouch* pTouch, CCEvent* pEvent)
         adjustScrollView(adjustPoint);
         adjustCardScale(adjustPoint);
     }
+    CCLOG("asdasd");
 }
 
 void CoverView::onTouchEnded(CCTouch* pTouch, CCEvent* pEvent)

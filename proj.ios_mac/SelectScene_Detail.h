@@ -12,6 +12,7 @@
 #include <string>
 #include "cocos2d.h"
 #include "MyScene.h"
+#include "CoverView.h"
 using namespace std;
 
 class Select_Detail : public MyScene
@@ -20,6 +21,8 @@ private:
     cocos2d::Node* rootNodeL_Basis;
     cocos2d::Node* rootNodeL_Diamond;
     cocos2d::Node* rootNodeL_GameStep;
+    CoverView* levelView;//关卡的coverFlow
+    CoverView* propView;//道具的coverFlow
 public:
     static cocos2d::Scene* createScene();
     
@@ -27,6 +30,7 @@ public:
     
     virtual void setUI();
     
+    void setCoverflow();
     
     
     // a selector callback
@@ -34,7 +38,7 @@ public:
     
     void turnToGame(cocos2d::Ref* pSender,int step);
     
-    void show_GameReady(cocos2d::Ref* pSender);
+    void show_GameReady(cocos2d::Ref* pSender,int level);
     
     void closeLayer(cocos2d::Ref* pSender);
     // implement the "static create()" method manually

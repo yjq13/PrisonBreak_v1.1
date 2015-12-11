@@ -34,7 +34,7 @@
           <AbstractNodeData Name="Image_Gold" ActionTag="-2069983422" Tag="75" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="1677.5804" RightMargin="484.4196" TopMargin="93.7078" BottomMargin="1102.2922" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="46.0000" Y="46.0000" />
             <AnchorPoint ScaleX="0.4742" ScaleY="0.4193" />
-            <Position X="1699.3937" Y="1121.5801" />
+            <Position X="1699.3936" Y="1121.5800" />
             <Scale ScaleX="1.8661" ScaleY="1.1925" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.7697" Y="0.9030" />
@@ -85,21 +85,6 @@
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
             <PressedFileData Type="Normal" Path="Picture/Button_Add_pushed.png" Plist="" />
             <NormalFileData Type="Normal" Path="Picture/Button_Add.png" Plist="" />
-            <OutlineColor A="255" R="255" G="0" B="0" />
-            <ShadowColor A="255" R="110" G="110" B="110" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="Button_Level_1" ActionTag="-1818372507" Tag="19" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="385.9506" RightMargin="1522.0494" TopMargin="491.7742" BottomMargin="450.2258" TouchEnable="True" FontSize="14" ButtonText="第一关" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="270" Scale9Height="278" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="300.0000" Y="300.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="535.9506" Y="600.2258" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.2427" Y="0.4833" />
-            <PreSize X="0.2249" Y="0.4000" />
-            <TextColor A="255" R="65" G="65" B="70" />
-            <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-            <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
-            <NormalFileData Type="Normal" Path="Picture/Button_Part_1.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>

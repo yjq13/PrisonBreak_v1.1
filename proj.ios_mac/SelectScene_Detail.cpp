@@ -49,12 +49,37 @@ bool Select_Detail::init(){
     rootNodeL_GameStep = CSLoader::createNode("res/Selection_2/Layer_Selection_3.csb");
     
     setUI();
-    
+    setCoverflow();
     return true;
 }
 
 
+void Select_Detail::setCoverflow(){
+    //初始化coverflow
+    float winWidth = CCDirector::sharedDirector()->getWinSize().width;
+    float winHeight = CCDirector::sharedDirector()->getWinSize().height;
+    
+    CCRect swRect = CCRectMake(0.01f*winWidth,0.4f*winHeight,0.98f*winWidth,0.33f*winHeight);
+    CCSize slSize = CCSizeMake(2.3f*winWidth,0.33f*winHeight);
+    float disDistance = 0.2f*winWidth;
+    float disScale = 0.25f;
+    levelView = CoverView::create(swRect,slSize,disDistance,disScale);
+    
+    
+    for(int i = 0 ; i< 6 ; i++)
+    {
+        char* url;
+        url="res/Picture/Button_Part_1.png";
+        Button* level=Button::create(url);
+        level->addClickEventListener(CC_CALLBACK_1(Select_Detail::show_GameReady,this,i));
+        levelView->addCard(level,i);
+    }
+    //coverflow1.png默认第一张在coverView的正中间  coverflow2.png改变第一张的位置有卡片初始不一定在最中间 需要手动调整
+    //coverView->setOffsetPosition(ccp(0.1f*winWidth,swRect.size.height/2));
+    levelView->setPosition(swRect.origin);
+    addChild(levelView,2);
 
+}
 
 void Select_Detail::setUI(){
     
@@ -88,64 +113,19 @@ void Select_Detail::setUI(){
     
     addChild(rootNodeL_Basis);
     addChild(rootNodeL_Diamond);
-    addChild(rootNodeL_GameStep);
+    addChild(rootNodeL_GameStep,3);
     
     
     auto Button_Back = rootNodeL_Basis->getChildByName<ui::Button*>("Button_Back");
     
-    auto Button_GameStep = rootNodeL_Basis->getChildByName<ui::Button*>("Button_Level_1");
+   // auto Button_GameStep = rootNodeL_Basis->getChildByName<ui::Button*>("Button_Level_1");
     
     
     Button_Back->addTouchEventListener(this, toucheventselector(Select_Detail::menuCloseCallback));
     
-    Button_GameStep->addTouchEventListener(CC_CALLBACK_1(Select_Detail::show_GameReady,this));
+    //Button_GameStep->addTouchEventListener(CC_CALLBACK_1(Select_Detail::show_GameReady,this));
     
-    
-    //coverflow
-    float winWidth = CCDirector::sharedDirector()->getWinSize().width;
-    float winHeight = CCDirector::sharedDirector()->getWinSize().height;
-    
-    CCRect swRect = CCRectMake(0.01f*winWidth,0.4f*winHeight,0.98f*winWidth,0.33f*winHeight);
-    CCSize slSize = CCSizeMake(2.3f*winWidth,0.33f*winHeight);
-    float disDistance = 0.2f*winWidth;
-    float disScale = 0.25f;
-    CoverView* coverView = CoverView::create(swRect,slSize,disDistance,disScale);
-    for(int i = 0 ; i< 6 ; i++)
-    {
-        char* url;
-        switch (i) {
-            case 0:
-                url="00.jpg";
-                break;
-            case 1:
-                url="01.jpg";
-                break;
-            case 2:
-                url="02.jpg";
-                break;
-            case 3:
-                url="03.jpg";
-                break;
-            case 4:
-                url="04.jpg";
-                break;
-            case 5:
-                url="05.jpg";
-                break;
-                
-                
-            default:
-                url="";
-                break;
-        }
-        Sprite* player = Sprite::create(url);
-        coverView->addCard(player);
-    }
-    //coverflow1.png默认第一张在coverView的正中间  coverflow2.png改变第一张的位置有卡片初始不一定在最中间 需要手动调整
-    //coverView->setOffsetPosition(ccp(0.1f*winWidth,swRect.size.height/2));
-    coverView->setPosition(swRect.origin);
-    addChild(coverView);
-}
+   }
 
 
 
@@ -192,11 +172,17 @@ void Select_Detail::turnToGame(Ref* pSender,int step)
 
 
 
-void Select_Detail::show_GameReady(Ref* pSender)
+void Select_Detail::show_GameReady(Ref* pSender,int level)
 {
-    rootNodeL_GameStep->setVisible(true);
+    if (level==levelView->getCurCardIndex()) {
+        rootNodeL_GameStep->setVisible(true);
+        levelView->setVisible(false);
+    }else{
+        CCLOG("choice is wrong");
+    }
 }
 
 void Select_Detail::closeLayer(Ref* pSender){
     rootNodeL_GameStep->setVisible(false);
+    levelView->setVisible(true);
 }
