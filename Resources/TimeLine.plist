@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Part_1_Level_1</key>
+	<dict>
+		<key>Sprite_Jailer_1</key>
+		<dict>
+			<key>startTime</key>
+			<integer>0</integer>
+			<key>endTime</key>
+			<integer>0</integer>
+			<key>tag</key>
+			<integer>3001</integer>
+		</dict>
+		<key>Sprite_Jailer_2</key>
+		<dict>
+			<key>startTime</key>
+			<integer>0</integer>
+			<key>endTime</key>
+			<integer>0</integer>
+			<key>tag</key>
+			<integer>3002</integer>
+		</dict>
+	</dict>
+</dict>
+</plist>

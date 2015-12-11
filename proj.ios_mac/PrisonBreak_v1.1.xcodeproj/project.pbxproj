@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0408A2D51C1B1326004D5BAC /* TimeLine.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0408A2D41C1B1326004D5BAC /* TimeLine.plist */; };
 		0454C4F51C1AA94E001EC9F7 /* CoverView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0454C4F31C1AA94E001EC9F7 /* CoverView.cpp */; };
 		049178E21BDBDBB2004AAF5C /* Section.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049178E01BDBDBB2004AAF5C /* Section.cpp */; };
 		04F24EA79E2FEB16726F1559 /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D364C16A410D74FA7F2CF54 /* libcocos2d Mac.a */; };
@@ -110,6 +111,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0408A2D41C1B1326004D5BAC /* TimeLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TimeLine.plist; sourceTree = "<group>"; };
 		0454C4F31C1AA94E001EC9F7 /* CoverView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoverView.cpp; sourceTree = "<group>"; };
 		0454C4F41C1AA94E001EC9F7 /* CoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverView.h; sourceTree = "<group>"; };
 		049178E01BDBDBB2004AAF5C /* Section.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Section.cpp; sourceTree = "<group>"; };
@@ -286,6 +288,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0408A2D11C1B1266004D5BAC /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				0408A2D41C1B1326004D5BAC /* TimeLine.plist */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
 		04463B3C1C0C959900EE6D7C /* LIBS */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +373,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0408A2D11C1B1266004D5BAC /* Game */,
 				E3CB5ECE1BC97DF3005123B8 /* MusicFile */,
 				E3CB5ECB1BC97DB4005123B8 /* UIPicture */,
 				E3CB5ECA1BC97D98005123B8 /* ConfigrationFile */,
@@ -685,6 +696,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0408A2D51C1B1326004D5BAC /* TimeLine.plist in Resources */,
 				E3CB5EBB1BC97B39005123B8 /* 05.jpg in Resources */,
 				E3CB5EB91BC97B39005123B8 /* 03.jpg in Resources */,
 				E3CB5EB51BC97B39005123B8 /* FigureInfo.plist in Resources */,

@@ -59,9 +59,8 @@ bool Game::init(){
     rootTimeLine2 = CSLoader::createTimeline(all);
     
     moveAction moveaction;
-    
     rootTimeLine->gotoFrameAndPlay(0,100, true);
-    rootTimeLine2->gotoFrameAndPlay(200,300, true);
+    rootTimeLine2->gotoFrameAndPlay(100,200, true);
     
     rootNodeL->runAction(rootTimeLine);
     rootNodeL->runAction(rootTimeLine2);

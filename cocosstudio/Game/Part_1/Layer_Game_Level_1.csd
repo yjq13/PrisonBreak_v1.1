@@ -125,13 +125,13 @@
             <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-983426302" Tag="172" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="10.5077" RightMargin="316.4923" TopMargin="-238.9723" BottomMargin="-4.0277" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-983426302" Tag="172" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="-55.9323" RightMargin="382.9324" TopMargin="-236.7329" BottomMargin="-6.2671" ctype="SpriteObjectData">
             <Size X="1881.0000" Y="1485.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="951.0077" Y="738.4723" />
+            <Position X="884.5677" Y="736.2329" />
             <Scale ScaleX="0.2000" ScaleY="0.2000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.4307" Y="0.5946" />
+            <PrePosition X="0.4006" Y="0.5928" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="Picture/Sprite_Jailer.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />

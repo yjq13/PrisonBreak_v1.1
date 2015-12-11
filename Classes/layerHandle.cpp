@@ -90,7 +90,7 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, No
             layer->removeChildByTag(i);
         }
     
-    rootTimeLine->gotoFrameAndPlay(0, true);
+    rootTimeLine->resume();
     
     isMoved=false;
     
