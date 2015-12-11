@@ -13,7 +13,7 @@
 class Sprite_wall : public cocos2d::Sprite{
 public:    
     static cocos2d::Sprite* create();
-    
+    static void setWall(int number,cocos2d::Sprite* getSprite);
 };
 
 #endif /* Sprite_wall_hpp */

@@ -11,11 +11,14 @@
 #include "Constant_Use.h"
 USING_NS_CC;
 
-EventListenerPhysicsContact* moveAction::createProAction(){
+EventListenerPhysicsContact* moveAction::createProAction(cocos2d::Node* layer,cocostudio::timeline::ActionTimeline* rootTimeLine){
     
     EventListenerPhysicsContact* contactListener=EventListenerPhysicsContact::create();
     //
     contactListener->onContactBegin=CC_CALLBACK_1(moveAction::switchMoveAction, this);
+    
+    NodeL = layer;
+    TimeLine = rootTimeLine;
     return contactListener;
 }
 
@@ -39,9 +42,6 @@ bool moveAction::switchMoveAction(const cocos2d::PhysicsContact &contact){
             
         case JAILER_TAG:{
             moveAction::onContactBeginPro_Jailer();
-            //node_Pro->stopAllActions();
-            
-            //node_else->setVisible(false);
             break;
         }
         case MOUSE_TAG:{
@@ -60,6 +60,7 @@ bool moveAction::switchMoveAction(const cocos2d::PhysicsContact &contact){
 
 
 bool moveAction::onContactBeginPro_Jailer(){
+
     CCLOG("Pro_Jailer boom!!!!");
     return true;
 }

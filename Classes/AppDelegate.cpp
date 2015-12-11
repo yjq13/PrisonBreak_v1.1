@@ -84,12 +84,13 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
     
     // create a scene. it's an autorelease object
-    Start start;
     
-    auto scene = start.createScene();
+    auto scene = Start::createScene();
     
     // run
     director->runWithScene(scene);
+    
+
     
     return true;
 }

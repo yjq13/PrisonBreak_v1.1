@@ -19,6 +19,7 @@
 #include <iostream>
 #include "SelectScene_Detail.h"
 #include "Sprite_wall.h"
+#include "gameLoad.h"
 
 USING_NS_CC;
 using namespace ui;
@@ -33,13 +34,15 @@ Scene* Game::createScene(){
     scene->addChild(layer);
     return scene;
 }
+
+Game::~Game(){
+    
+    CCLOG("HELLOGAME");
+
+    }
 bool Game::init(){
 
-    moveAction moveaction;
     
-    EventListenerPhysicsContact* contactListener = moveaction.createProAction();
-    
-    _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
     
     //rootNodeS = CSLoader::createNode("res/Game/Scene_Game.csb");
     
@@ -53,11 +56,17 @@ bool Game::init(){
     
     rootTimeLine = CSLoader::createTimeline(all);
     
+    moveAction moveaction;
+    
+    EventListenerPhysicsContact* contactListener = moveaction.createProAction(rootNodeL,rootTimeLine);
+    
+    _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
+    
     moveListener movelistener;
     
     EventListenerTouchOneByOne* listener = movelistener.create(rootNodeL,rootTimeLine);
     
-    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
+    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, rootNodeL);
     
     setUI();
     
@@ -73,63 +82,22 @@ void Game::setUI(){
     rootNodeL->setContentSize(VISIBLE_SIZE);
     ui::Helper::doLayout(rootNodeL);
     addChild(rootNodeL);
-    
-    
-    auto startPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Start");
-    //这里应该加个异常检测，日后再说
-    auto stopPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Stop");
-    
-    auto destinationPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Destination");
-    
-    auto Demo_jailer_1 = rootNodeL->getChildByName<Sprite*>("Sprite_Jailer_1");
-    
-    auto Demo_protagonist = rootNodeL->getChildByName<Sprite*>("Sprite_Protagonist");
-    
     auto Button_Back = rootNodeL->getChildByName<ui::Button*>("Button_Back");
     
     
     Button_Back->addTouchEventListener(this,toucheventselector(Game::menuCloseCallback));
     
-
-    Sprite_protagonist::setPro(0,Demo_protagonist);
-    
-    Sprite_jailer::setJailer(0,Demo_jailer_1);
-    
-    
-    CCLOG("%f,%f",Demo_jailer_1->getPositionZ(),Demo_protagonist->getPositionZ());
-    
-    rootNodeL->runAction(rootTimeLine);
-    
-    
-    
-    //rootTimeLine->gotoFrameAndPlay(0, true);
-    
-    CCSize size_start = startPosition->getContentSize();
-    Vec2 position_start = startPosition->getPosition();
-    START_SECTION=Section(&size_start, &position_start);
-    
-    CCSize size_stop = stopPosition->getContentSize();
-    Vec2 position_stop = stopPosition->getPosition();
-    STOP_SECTION=Section(&size_stop, &position_stop);
-    
-    CCSize size_destination = destinationPosition->getContentSize();
-    Vec2 position_destination = destinationPosition->getPosition();
-    DESTINATION_SECTION=Section(&size_destination, &position_destination);
-    
-    
-    
-    
-
-}
+    gameLoad::loadGame(rootNodeL,rootTimeLine);
+   }
 
 
 void Game::menuCloseCallback(Ref* pSender)
 {
     BUTTON_LOCK = true;
     auto Scene =  Select_Detail::createScene();
-    auto transition=TransitionPageTurn::create(0.1f, Scene, false);
+    //auto transition=TransitionPageTurn::create(0.1f, Scene, false);
     
-    Director::getInstance()->replaceScene(transition);
+    Director::getInstance()->replaceScene(Scene);
     
     //#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     //exit(0);

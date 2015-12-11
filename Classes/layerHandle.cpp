@@ -37,10 +37,6 @@ bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event,coc
     for (int i=0;i<10000;i++){
         points[i]=ccp(0,0);
     }
-    //计算玩家触摸点是否在起始点内
-    //auto p=touch->getLocation();
-    // CCLOG("(%f,%f)",startPosition->getPositionX(),p.y);
-    //注意，下面的调用是个空值，为了不报错加的
     if(START_SECTION.isInside(touch)){
         rootTimeLine->gotoFrameAndPause(0);
     }
@@ -80,8 +76,6 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, No
         
         protagonist->setPosition(points[0]);
         
-        //layer->addChild(protagonist);
-        //s->autorelease();
         moveLock = false;
         
         

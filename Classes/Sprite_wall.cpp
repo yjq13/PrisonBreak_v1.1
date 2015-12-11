@@ -8,6 +8,7 @@
 
 #include "Sprite_wall.h"
 #include "cocos2d.h"
+#include "Constant_Use.h"
 
 USING_NS_CC;
 
@@ -24,5 +25,16 @@ Sprite* Sprite_wall::create(){
     //protagonist->setTag(1);
     
     return wall;
+    
+}
+
+void Sprite_wall::setWall(int number,cocos2d::Sprite* getSprite){
+    auto ManBody=PhysicsBody::createBox(getSprite->getContentSize()*0.1);
+    
+    CCLOG("%f,%f",getSprite->getContentSize().width,getSprite->getContentSize().height);
+    ManBody->setGravityEnable(false);
+    ManBody->setContactTestBitmask(0xFFFF);
+    getSprite->setPhysicsBody(ManBody);
+    getSprite->setTag(WALL_TAG+number);
     
 }

@@ -55,6 +55,7 @@
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
+		E301E4DF1C1AA5D00094884D /* gameLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E301E4DD1C1AA5D00094884D /* gameLoad.cpp */; };
 		E30AC89E1BD5AADB005B8686 /* Constant_Use.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC89C1BD5AADB005B8686 /* Constant_Use.cpp */; };
 		E30AC8A81BD835AD005B8686 /* MyScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8A61BD835AD005B8686 /* MyScene.cpp */; };
 		E30AC8AC1BD92CDF005B8686 /* Sprite_protagonist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8AA1BD92CDF005B8686 /* Sprite_protagonist.cpp */; };
@@ -161,6 +162,8 @@
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		E301E4DD1C1AA5D00094884D /* gameLoad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gameLoad.cpp; sourceTree = "<group>"; };
+		E301E4DE1C1AA5D00094884D /* gameLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameLoad.h; sourceTree = "<group>"; };
 		E30AC89C1BD5AADB005B8686 /* Constant_Use.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Constant_Use.cpp; sourceTree = "<group>"; };
 		E30AC89D1BD5AADB005B8686 /* Constant_Use.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant_Use.h; sourceTree = "<group>"; };
 		E30AC8A61BD835AD005B8686 /* MyScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyScene.cpp; path = ../Classes/MyScene.cpp; sourceTree = "<group>"; };
@@ -455,6 +458,8 @@
 				049178E11BDBDBB2004AAF5C /* Section.h */,
 				E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */,
 				E369982D1C0C24AA007BB3C8 /* LockofSelect.h */,
+				E301E4DD1C1AA5D00094884D /* gameLoad.cpp */,
+				E301E4DE1C1AA5D00094884D /* gameLoad.h */,
 			);
 			name = BL;
 			sourceTree = "<group>";
@@ -738,6 +743,7 @@
 				E30AC8B81BD9329B005B8686 /* Sprite_wall.cpp in Sources */,
 				E3CB5E7F1BC9753A005123B8 /* Data_GameInfo.swift in Sources */,
 				E3CB5E8B1BC9753A005123B8 /* SelectScene_ALL.cpp in Sources */,
+				E301E4DF1C1AA5D00094884D /* gameLoad.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				E347EA9A1C19EA8A0096BC5E /* SelectScene_Detail.cpp in Sources */,
 				E3CB5E7A1BC9753A005123B8 /* initDocuments.swift in Sources */,

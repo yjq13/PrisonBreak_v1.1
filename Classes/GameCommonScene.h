@@ -28,7 +28,7 @@ public:
     void setPhyWorld(PhysicsWorld* world){
     m_world=world;
     };
-    
+    ~Game();
     void menuCloseCallback(Ref* pSender);
     // a selector callback
     void setUI();
