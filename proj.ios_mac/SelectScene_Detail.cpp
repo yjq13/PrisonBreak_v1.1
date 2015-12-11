@@ -14,6 +14,7 @@
 #include "GameCommonScene.h"
 #include "Constant_Use.h"
 #include "LockofSelect.h"
+#include "CoverView.h"
 
 USING_NS_CC;
 using namespace ui;
@@ -98,6 +99,52 @@ void Select_Detail::setUI(){
     Button_Back->addTouchEventListener(this, toucheventselector(Select_Detail::menuCloseCallback));
     
     Button_GameStep->addTouchEventListener(CC_CALLBACK_1(Select_Detail::show_GameReady,this));
+    
+    
+    //coverflow
+    float winWidth = CCDirector::sharedDirector()->getWinSize().width;
+    float winHeight = CCDirector::sharedDirector()->getWinSize().height;
+    
+    CCRect swRect = CCRectMake(0.01f*winWidth,0.4f*winHeight,0.98f*winWidth,0.33f*winHeight);
+    CCSize slSize = CCSizeMake(2.3f*winWidth,0.33f*winHeight);
+    float disDistance = 0.2f*winWidth;
+    float disScale = 0.25f;
+    CoverView* coverView = CoverView::create(swRect,slSize,disDistance,disScale);
+    for(int i = 0 ; i< 6 ; i++)
+    {
+        char* url;
+        switch (i) {
+            case 0:
+                url="00.jpg";
+                break;
+            case 1:
+                url="01.jpg";
+                break;
+            case 2:
+                url="02.jpg";
+                break;
+            case 3:
+                url="03.jpg";
+                break;
+            case 4:
+                url="04.jpg";
+                break;
+            case 5:
+                url="05.jpg";
+                break;
+                
+                
+            default:
+                url="";
+                break;
+        }
+        Sprite* player = Sprite::create(url);
+        coverView->addCard(player);
+    }
+    //coverflow1.png默认第一张在coverView的正中间  coverflow2.png改变第一张的位置有卡片初始不一定在最中间 需要手动调整
+    //coverView->setOffsetPosition(ccp(0.1f*winWidth,swRect.size.height/2));
+    coverView->setPosition(swRect.origin);
+    addChild(coverView);
 }
 
 

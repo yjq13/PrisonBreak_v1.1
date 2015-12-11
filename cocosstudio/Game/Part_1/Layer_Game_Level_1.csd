@@ -2,7 +2,74 @@
   <PropertyGroup Type="Layer" Name="Layer_Game_Level_1" ID="ee805791-65ee-4ac4-a791-96afc34a7ae4" Version="2.3.2.3" />
   <Content ctype="GameProjectContent">
     <Content>
-      <Animation Duration="0" Speed="1.0000" />
+      <Animation Duration="200" Speed="1.0000">
+        <Timeline ActionTag="-983426302" Property="Position">
+          <PointFrame FrameIndex="0" X="884.5677" Y="736.2329">
+            <EasingData Type="0" />
+          </PointFrame>
+          <PointFrame FrameIndex="50" X="1216.7676" Y="747.4297">
+            <EasingData Type="0" />
+          </PointFrame>
+          <PointFrame FrameIndex="100" X="884.5677" Y="736.2329">
+            <EasingData Type="0" />
+          </PointFrame>
+        </Timeline>
+        <Timeline ActionTag="-983426302" Property="Scale">
+          <ScaleFrame FrameIndex="0" X="0.2000" Y="0.2000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+          <ScaleFrame FrameIndex="50" X="0.2000" Y="0.2000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+          <ScaleFrame FrameIndex="100" X="0.2000" Y="0.2000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+        </Timeline>
+        <Timeline ActionTag="-983426302" Property="RotationSkew">
+          <ScaleFrame FrameIndex="0" X="0.0000" Y="0.0000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+          <ScaleFrame FrameIndex="50" X="0.0000" Y="0.0000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+          <ScaleFrame FrameIndex="100" X="0.0000" Y="0.0000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+        </Timeline>
+        <Timeline ActionTag="1493841945" Property="Position">
+          <PointFrame FrameIndex="100" X="1507.3318" Y="354.7964">
+            <EasingData Type="0" />
+          </PointFrame>
+          <PointFrame FrameIndex="150" X="2104.5488" Y="354.7963">
+            <EasingData Type="0" />
+          </PointFrame>
+          <PointFrame FrameIndex="200" X="1507.3318" Y="354.7964">
+            <EasingData Type="0" />
+          </PointFrame>
+        </Timeline>
+        <Timeline ActionTag="1493841945" Property="Scale">
+          <ScaleFrame FrameIndex="100" X="0.1000" Y="0.1000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+          <ScaleFrame FrameIndex="150" X="0.1000" Y="0.1000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+          <ScaleFrame FrameIndex="200" X="0.1000" Y="0.1000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+        </Timeline>
+        <Timeline ActionTag="1493841945" Property="RotationSkew">
+          <ScaleFrame FrameIndex="100" X="0.0000" Y="0.0000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+          <ScaleFrame FrameIndex="150" X="0.0000" Y="0.0000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+          <ScaleFrame FrameIndex="200" X="0.0000" Y="0.0000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+        </Timeline>
+      </Animation>
       <ObjectData Name="Layer" Tag="157" ctype="GameLayerObjectData">
         <Size X="2208.0000" Y="1242.0000" />
         <Children>
@@ -58,13 +125,13 @@
             <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-983426302" Tag="172" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="124.8123" RightMargin="202.1877" TopMargin="-215.6401" BottomMargin="-27.3598" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-983426302" Tag="172" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="-42.6443" RightMargin="369.6443" TopMargin="-237.1808" BottomMargin="-5.8192" ctype="SpriteObjectData">
             <Size X="1881.0000" Y="1485.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1065.3600" Y="715.1402" />
+            <Position X="897.8557" Y="736.6808" />
             <Scale ScaleX="0.2000" ScaleY="0.2000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.4825" Y="0.5758" />
+            <PrePosition X="0.4066" Y="0.5931" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="Picture/Sprite_Jailer.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
@@ -104,6 +171,17 @@
             <NormalFileData Type="Normal" Path="Picture/Button_Back.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Sprite_Mouse_1" ActionTag="1493841945" Tag="11" IconVisible="False" LeftMargin="758.3318" RightMargin="-48.3318" TopMargin="18.7036" BottomMargin="-513.7036" ctype="SpriteObjectData">
+            <Size X="1498.0000" Y="1737.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="1507.3318" Y="354.7964" />
+            <Scale ScaleX="0.1000" ScaleY="0.1000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.6827" Y="0.2857" />
+            <PreSize X="0.0000" Y="0.0000" />
+            <FileData Type="Normal" Path="Picture/Sprite_Mouse.png" Plist="" />
+            <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

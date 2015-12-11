@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0454C4F51C1AA94E001EC9F7 /* CoverView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0454C4F31C1AA94E001EC9F7 /* CoverView.cpp */; };
 		049178E21BDBDBB2004AAF5C /* Section.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049178E01BDBDBB2004AAF5C /* Section.cpp */; };
 		04F24EA79E2FEB16726F1559 /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D364C16A410D74FA7F2CF54 /* libcocos2d Mac.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -109,6 +110,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0454C4F31C1AA94E001EC9F7 /* CoverView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoverView.cpp; sourceTree = "<group>"; };
+		0454C4F41C1AA94E001EC9F7 /* CoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverView.h; sourceTree = "<group>"; };
 		049178E01BDBDBB2004AAF5C /* Section.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Section.cpp; sourceTree = "<group>"; };
 		049178E11BDBDBB2004AAF5C /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
@@ -286,6 +289,8 @@
 		04463B3C1C0C959900EE6D7C /* LIBS */ = {
 			isa = PBXGroup;
 			children = (
+				0454C4F31C1AA94E001EC9F7 /* CoverView.cpp */,
+				0454C4F41C1AA94E001EC9F7 /* CoverView.h */,
 			);
 			name = LIBS;
 			sourceTree = "<group>";
@@ -735,6 +740,7 @@
 			files = (
 				E30AC8BB1BD984AC005B8686 /* layerHandle.cpp in Sources */,
 				E3CB5E8D1BC9753A005123B8 /* SystemPo.swift in Sources */,
+				0454C4F51C1AA94E001EC9F7 /* CoverView.cpp in Sources */,
 				E30AC8AF1BD92F8A005B8686 /* Sprite_mouse.cpp in Sources */,
 				E3CB5E771BC9753A005123B8 /* Data_FigureInfo.swift in Sources */,
 				E3CB5E7B1BC9753A005123B8 /* OC_callSystemInfo.mm in Sources */,
