@@ -116,23 +116,23 @@
             <PreSize X="1.6552" Y="1.6560" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Image_Start" ActionTag="-379596379" Tag="168" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="112.2310" RightMargin="1895.7690" TopMargin="235.2520" BottomMargin="806.7480" Scale9Width="125" Scale9Height="110" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="Image_Start" ActionTag="-379596379" Tag="168" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="112.2310" RightMargin="1895.7690" TopMargin="235.2523" BottomMargin="806.7477" Scale9Width="125" Scale9Height="110" ctype="ImageViewObjectData">
             <Size X="200.0000" Y="200.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="212.2310" Y="906.7480" />
+            <AnchorPoint />
+            <Position X="112.2310" Y="806.7477" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.0961" Y="0.7301" />
+            <PrePosition X="0.0508" Y="0.6496" />
             <PreSize X="0.0906" Y="0.1610" />
             <FileData Type="Normal" Path="12.jpg" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Image_Destination" ActionTag="613995204" Tag="169" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="1894.1078" RightMargin="113.8921" TopMargin="972.2527" BottomMargin="69.7473" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="Image_Destination" ActionTag="613995204" Tag="169" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="1894.1073" RightMargin="113.8926" TopMargin="972.2527" BottomMargin="69.7473" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="200.0000" Y="200.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1994.1078" Y="169.7473" />
+            <AnchorPoint />
+            <Position X="1894.1073" Y="69.7473" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.9031" Y="0.1367" />
+            <PrePosition X="0.8578" Y="0.0562" />
             <PreSize X="0.0906" Y="0.1610" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
@@ -169,13 +169,13 @@
             <FileData Type="Normal" Path="Picture/Sprite_Jailer.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Image_Stop" ActionTag="1455529122" Tag="18" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="677.2357" RightMargin="610.7643" TopMargin="638.0055" BottomMargin="65.9945" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="Image_Stop" ActionTag="1455529122" Tag="18" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="1110.3685" RightMargin="1051.6315" TopMargin="1165.2185" BottomMargin="30.7815" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="46.0000" Y="46.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1158.9792" Y="88.9945" />
+            <AnchorPoint />
+            <Position X="1110.3685" Y="30.7815" />
             <Scale ScaleX="2.1135" ScaleY="2.5310" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5249" Y="0.1187" />
+            <PrePosition X="0.5029" Y="0.0248" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
