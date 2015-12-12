@@ -31,6 +31,8 @@ public:
     virtual void onTouchMoved(CCTouch* pTouch, CCEvent* pEvent);
     virtual void onTouchEnded(CCTouch* pTouch, CCEvent* pEvent);
     void initData();
+    void addListener();
+    void removeListener();
     void scrollViewDidScroll(ScrollView* view);
     void scrollViewDidZoom(ScrollView* view);
     void adjustCardScale(CCPoint adjustPoint);
@@ -52,6 +54,7 @@ public:
     CC_PROPERTY(CCPoint , offsetPosition , OffsetPosition);//card起始位置
     CC_SYNTHESIZE(CCPoint, slayerPosition, SlayerPosition);//sontainLayer的位置
     CC_SYNTHESIZE(bool, isMove, IsMove);//是否发生了移动用于加入菜单的时候能滑动并正确响应事件
+    EventListenerTouchOneByOne* Listener;
 private:
     CCSize wSize;
     CCArray* cardArray;

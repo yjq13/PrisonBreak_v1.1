@@ -39,14 +39,22 @@ bool CoverView::init(CCRect swBox , CCSize slSize , float disDistance , float di
     this->disDistance = disDistance;
     this->disScale = disScale;
     
-    auto Listener=EventListenerTouchOneByOne::create();
+    Listener=EventListenerTouchOneByOne::create();
     Listener->onTouchBegan=CC_CALLBACK_2(CoverView::onTouchBegin, this);
-     Listener->onTouchMoved=CC_CALLBACK_2(CoverView::onTouchMoved, this);
-     Listener->onTouchEnded=CC_CALLBACK_2(CoverView::onTouchEnded, this);
+    Listener->onTouchMoved=CC_CALLBACK_2(CoverView::onTouchMoved, this);
+    Listener->onTouchEnded=CC_CALLBACK_2(CoverView::onTouchEnded, this);
     _eventDispatcher->addEventListenerWithSceneGraphPriority(Listener, this);
     
     initData();
     return true;
+}
+
+void CoverView::addListener(){
+    Listener->setEnabled(true);
+
+}
+void CoverView::removeListener(){
+    Listener->setEnabled(false);
 }
 
 

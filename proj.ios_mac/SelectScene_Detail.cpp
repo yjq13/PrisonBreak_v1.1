@@ -59,14 +59,13 @@ void Select_Detail::setCoverflow(){
     float winWidth = CCDirector::sharedDirector()->getWinSize().width;
     float winHeight = CCDirector::sharedDirector()->getWinSize().height;
     
-    CCRect swRect = CCRectMake(0.01f*winWidth,0.4f*winHeight,0.98f*winWidth,0.33f*winHeight);
-    CCSize slSize = CCSizeMake(2.3f*winWidth,0.33f*winHeight);
+    CCRect swRect_level = CCRectMake(0.01f*winWidth,0.4f*winHeight,0.98f*winWidth,0.33f*winHeight);
+    CCSize slSize_level = CCSizeMake(2.3f*winWidth,0.33f*winHeight);
     float disDistance = 0.2f*winWidth;
     float disScale = 0.25f;
-    levelView = CoverView::create(swRect,slSize,disDistance,disScale);
+    levelView = CoverView::create(swRect_level,slSize_level,disDistance,disScale);
     
-    
-    for(int i = 0 ; i< 6 ; i++)
+    for(int i = 0 ; i< 9 ; i++)
     {
         char* url;
         url="res/Picture/Button_Part_1.png";
@@ -74,10 +73,28 @@ void Select_Detail::setCoverflow(){
         level->addClickEventListener(CC_CALLBACK_1(Select_Detail::show_GameReady,this,i));
         levelView->addCard(level,i);
     }
-    //coverflow1.png默认第一张在coverView的正中间  coverflow2.png改变第一张的位置有卡片初始不一定在最中间 需要手动调整
-    //coverView->setOffsetPosition(ccp(0.1f*winWidth,swRect.size.height/2));
-    levelView->setPosition(swRect.origin);
+    //下面这句话是调整图片位置
+    //levelView->setOffsetPosition(ccp(0.1f*winWidth,swRect.size.height/2));
+    levelView->setPosition(swRect_level.origin);
     addChild(levelView,2);
+    
+    
+//    CCRect swRect_prop = CCRectMake(0.1f*winWidth,0.4f*winHeight,0.8f*winWidth,0.33f*winHeight);
+//    CCSize slSize_prop = CCSizeMake(2.3f*winWidth,0.33f*winHeight);
+//    propView = CoverView::create(swRect_prop,slSize_prop,disDistance,disScale);
+//    
+//    for(int i = 0 ; i< 3 ; i++)
+//    {
+//        char* url;
+//        url="res/Picture/Button_Part_1.png";
+//        Button* prop=Button::create(url);
+//        prop->addClickEventListener(CC_CALLBACK_1(Select_Detail::chooseProp,this,i));
+//        propView->addCard(prop,i);
+//    }
+//    //下面这句话是调整图片位置
+//    //propView->setOffsetPosition(ccp(0.1f*winWidth,swRect.size.height/2));
+//    propView->setPosition(swRect_prop.origin);
+//    rootNodeL_GameStep->addChild(propView);
 
 }
 
@@ -176,13 +193,20 @@ void Select_Detail::show_GameReady(Ref* pSender,int level)
 {
     if (level==levelView->getCurCardIndex()) {
         rootNodeL_GameStep->setVisible(true);
-        levelView->setVisible(false);
+        levelView->removeListener();
+        
     }else{
         CCLOG("choice is wrong");
     }
 }
 
+//void Select_Detail::chooseProp(Ref* pSender,int prop_id)
+//{
+//    CCLOG("choose prop %d",prop_id);
+//}
+
+
 void Select_Detail::closeLayer(Ref* pSender){
     rootNodeL_GameStep->setVisible(false);
-    levelView->setVisible(true);
+     levelView->addListener();
 }

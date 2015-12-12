@@ -40,6 +40,9 @@ public:
     
     void show_GameReady(cocos2d::Ref* pSender,int level);
     
+    //选中道具
+    //void chooseProp(cocos2d::Ref* pSender,int prop_id);
+    
     void closeLayer(cocos2d::Ref* pSender);
     // implement the "static create()" method manually
     CREATE_FUNC(Select_Detail);
