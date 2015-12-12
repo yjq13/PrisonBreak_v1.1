@@ -20,7 +20,7 @@
 #include "SelectScene_Detail.h"
 #include "Sprite_wall.h"
 #include "gameLoad.h"
-
+#include "TimeLineLoad.h"
 USING_NS_CC;
 using namespace ui;
 
@@ -56,14 +56,10 @@ bool Game::init(){
     
     rootTimeLine = CSLoader::createTimeline(all);
     
-    rootTimeLine2 = CSLoader::createTimeline(all);
+    TimeLineLoad::loadTimeLine(rootNodeL);
+
     
     moveAction moveaction;
-    rootTimeLine->gotoFrameAndPlay(0,100, true);
-    rootTimeLine2->gotoFrameAndPlay(100,200, true);
-    
-    rootNodeL->runAction(rootTimeLine);
-    rootNodeL->runAction(rootTimeLine2);
     
     EventListenerPhysicsContact* contactListener = moveaction.createProAction(rootNodeL,rootTimeLine);
     

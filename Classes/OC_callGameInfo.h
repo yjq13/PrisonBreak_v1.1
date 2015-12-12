@@ -10,11 +10,12 @@
 #ifndef PrisonBreak_OC_callGameInfo_h
 #define PrisonBreak_OC_callGameInfo_h
 #include <stdio.h>
-
 class GameVo;
+class TimeLineVo;
 
 GameVo getGameInfo(int);
-    
+
+std::vector<TimeLineVo> getTimeLine(std::string);
 
 #endif
 

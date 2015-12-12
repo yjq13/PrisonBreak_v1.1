@@ -38,7 +38,7 @@ bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event,coc
         points[i]=ccp(0,0);
     }
     if(START_SECTION.isInside(touch)){
-        rootTimeLine->gotoFrameAndPause(0);
+        //rootTimeLine->gotoFrameAndPause(0);
     }
     return START_SECTION.isInside(touch);
     return true;
@@ -90,7 +90,7 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, No
             layer->removeChildByTag(i);
         }
     
-    rootTimeLine->resume();
+    //rootTimeLine->resume();
     
     isMoved=false;
     

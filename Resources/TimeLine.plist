@@ -9,16 +9,16 @@
 			<key>startTime</key>
 			<integer>0</integer>
 			<key>endTime</key>
-			<integer>0</integer>
+			<integer>100</integer>
 			<key>tag</key>
 			<integer>3001</integer>
 		</dict>
 		<key>Sprite_Jailer_2</key>
 		<dict>
 			<key>startTime</key>
-			<integer>0</integer>
+			<integer>100</integer>
 			<key>endTime</key>
-			<integer>0</integer>
+			<integer>200</integer>
 			<key>tag</key>
 			<integer>3002</integer>
 		</dict>

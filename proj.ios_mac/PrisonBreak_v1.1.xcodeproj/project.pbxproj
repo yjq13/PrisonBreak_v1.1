@@ -68,6 +68,9 @@
 		E30AC8BB1BD984AC005B8686 /* layerHandle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8B91BD984AB005B8686 /* layerHandle.cpp */; };
 		E30AC8BE1BD98B94005B8686 /* Move_action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8BC1BD98B94005B8686 /* Move_action.cpp */; };
 		E30E77811BCAD7DE0053F4B1 /* CacheData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30E777F1BCAD7DE0053F4B1 /* CacheData.cpp */; };
+		E347D4251C1C0AE4009ECC95 /* TimeLinePo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347D4241C1C0AE4009ECC95 /* TimeLinePo.swift */; };
+		E347D4281C1C45E2009ECC95 /* TimeLineVo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E347D4261C1C45E2009ECC95 /* TimeLineVo.cpp */; };
+		E347D42B1C1C6C26009ECC95 /* TimeLineLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E347D4291C1C6C26009ECC95 /* TimeLineLoad.cpp */; };
 		E347EA9A1C19EA8A0096BC5E /* SelectScene_Detail.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E347EA981C19EA8A0096BC5E /* SelectScene_Detail.cpp */; };
 		E369982E1C0C24AA007BB3C8 /* LockofSelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */; };
 		E3CB5E761BC9753A005123B8 /* Constant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4A1BC9753A005123B8 /* Constant.cpp */; };
@@ -189,6 +192,11 @@
 		E30AC8BD1BD98B94005B8686 /* Move_action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Move_action.h; sourceTree = "<group>"; };
 		E30E777F1BCAD7DE0053F4B1 /* CacheData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CacheData.cpp; sourceTree = "<group>"; };
 		E30E77801BCAD7DE0053F4B1 /* CacheData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheData.h; sourceTree = "<group>"; };
+		E347D4241C1C0AE4009ECC95 /* TimeLinePo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLinePo.swift; sourceTree = "<group>"; };
+		E347D4261C1C45E2009ECC95 /* TimeLineVo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeLineVo.cpp; sourceTree = "<group>"; };
+		E347D4271C1C45E2009ECC95 /* TimeLineVo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineVo.h; sourceTree = "<group>"; };
+		E347D4291C1C6C26009ECC95 /* TimeLineLoad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeLineLoad.cpp; sourceTree = "<group>"; };
+		E347D42A1C1C6C26009ECC95 /* TimeLineLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineLoad.h; sourceTree = "<group>"; };
 		E347EA981C19EA8A0096BC5E /* SelectScene_Detail.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SelectScene_Detail.cpp; sourceTree = "<group>"; };
 		E347EA991C19EA8A0096BC5E /* SelectScene_Detail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectScene_Detail.h; sourceTree = "<group>"; };
 		E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LockofSelect.cpp; sourceTree = "<group>"; };
@@ -476,6 +484,8 @@
 				E369982D1C0C24AA007BB3C8 /* LockofSelect.h */,
 				E301E4DD1C1AA5D00094884D /* gameLoad.cpp */,
 				E301E4DE1C1AA5D00094884D /* gameLoad.h */,
+				E347D4291C1C6C26009ECC95 /* TimeLineLoad.cpp */,
+				E347D42A1C1C6C26009ECC95 /* TimeLineLoad.h */,
 			);
 			name = BL;
 			sourceTree = "<group>";
@@ -503,6 +513,7 @@
 				E3CB5E631BC9753A005123B8 /* GamePo.swift */,
 				E3CB5E731BC9753A005123B8 /* SystemPo.swift */,
 				E3CB5E5C1BC9753A005123B8 /* FigurePo.swift */,
+				E347D4241C1C0AE4009ECC95 /* TimeLinePo.swift */,
 			);
 			name = PO;
 			sourceTree = "<group>";
@@ -516,6 +527,8 @@
 				E3CB5E651BC9753A005123B8 /* GameVo.h */,
 				E3CB5E741BC9753A005123B8 /* SystemVo.cpp */,
 				E3CB5E751BC9753A005123B8 /* SystemVo.h */,
+				E347D4261C1C45E2009ECC95 /* TimeLineVo.cpp */,
+				E347D4271C1C45E2009ECC95 /* TimeLineVo.h */,
 			);
 			name = VO;
 			sourceTree = "<group>";
@@ -755,6 +768,7 @@
 				0454C4F51C1AA94E001EC9F7 /* CoverView.cpp in Sources */,
 				E30AC8AF1BD92F8A005B8686 /* Sprite_mouse.cpp in Sources */,
 				E3CB5E771BC9753A005123B8 /* Data_FigureInfo.swift in Sources */,
+				E347D4251C1C0AE4009ECC95 /* TimeLinePo.swift in Sources */,
 				E3CB5E7B1BC9753A005123B8 /* OC_callSystemInfo.mm in Sources */,
 				E30AC8BE1BD98B94005B8686 /* Move_action.cpp in Sources */,
 				E3CB5E8A1BC9753A005123B8 /* OC_callGameInfo.mm in Sources */,
@@ -765,6 +779,7 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				E347EA9A1C19EA8A0096BC5E /* SelectScene_Detail.cpp in Sources */,
 				E3CB5E7A1BC9753A005123B8 /* initDocuments.swift in Sources */,
+				E347D42B1C1C6C26009ECC95 /* TimeLineLoad.cpp in Sources */,
 				E3CB5E831BC9753A005123B8 /* FigureVo.cpp in Sources */,
 				E30AC89E1BD5AADB005B8686 /* Constant_Use.cpp in Sources */,
 				E3CB5E791BC9753A005123B8 /* StartScene.cpp in Sources */,
@@ -784,6 +799,7 @@
 				E30AC8B51BD93281005B8686 /* Sprite_coin.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				E3CB5E861BC9753A005123B8 /* GamePo.swift in Sources */,
+				E347D4281C1C45E2009ECC95 /* TimeLineVo.cpp in Sources */,
 				E3CB5E891BC9753A005123B8 /* OC_callFigureInfo.mm in Sources */,
 				E30AC8A81BD835AD005B8686 /* MyScene.cpp in Sources */,
 				E3CB5E8C1BC9753A005123B8 /* setScene.cpp in Sources */,
