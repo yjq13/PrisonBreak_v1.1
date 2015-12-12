@@ -50,7 +50,6 @@ bool Game::init(){
     string tail = ".csb";
     string follow = "/Layer_Game_Level_";
     string all = hand+PATH_PART+follow+PATH_LEVEL+tail;
-    cout<<all;
     
     rootNodeL = CSLoader::createNode(all);
     
@@ -76,12 +75,7 @@ bool Game::init(){
     return true;
 }
 void Game::setUI(){
-    //测试在界面上放置组件
-//    Size visibleSize = Director::getInstance()->getVisibleSize();
-//    Vec2 origin = Director::getInstance()->getVisibleOrigin();
-    
-    
-    //rootNodeS->addChild(rootNodeL);
+   
     rootNodeL->setContentSize(VISIBLE_SIZE);
     ui::Helper::doLayout(rootNodeL);
     addChild(rootNodeL);
@@ -89,8 +83,6 @@ void Game::setUI(){
     
     
     Button_Back->addTouchEventListener(this,toucheventselector(Game::menuCloseCallback));
-    
-    
     
     gameLoad::loadGame(rootNodeL);
     
