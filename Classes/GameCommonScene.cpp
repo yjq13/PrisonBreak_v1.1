@@ -67,7 +67,7 @@ bool Game::init(){
     
     moveListener movelistener;
     
-    EventListenerTouchOneByOne* listener = movelistener.create(rootNodeL,rootTimeLine);
+    EventListenerTouchOneByOne* listener = movelistener.create(rootNodeL);
     
     _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, rootNodeL);
     
