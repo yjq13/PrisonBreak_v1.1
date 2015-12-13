@@ -40,6 +40,11 @@ public:
     
     void show_GameReady(cocos2d::Ref* pSender,int level);
     
+    //屏蔽返回等按钮
+    void shieldButton();
+    //恢复
+    void resumeButton();
+    
     //选中道具
     //void chooseProp(cocos2d::Ref* pSender,int prop_id);
     

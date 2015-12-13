@@ -30,7 +30,7 @@ Scene* Select_Detail::createScene(){
     
     // add layer as a child to scene
     scene->addChild(layer);
-   
+    
     // return the scene
     
     return scene;
@@ -39,7 +39,7 @@ Scene* Select_Detail::createScene(){
 
 
 bool Select_Detail::init(){
-
+    
     //rootNodeS = CSLoader::createNode("res/Selection_2/Scene_Selection_2.csb");
     
     rootNodeL_Basis = CSLoader::createNode("res/Selection_2/Layer_Selection_2.csb");
@@ -78,24 +78,24 @@ void Select_Detail::setCoverflow(){
     levelView->setPosition(swRect_level.origin);
     addChild(levelView,2);
     
+    //下面是道具的coverflow，感觉没有必要
+    //    CCRect swRect_prop = CCRectMake(0.1f*winWidth,0.4f*winHeight,0.8f*winWidth,0.33f*winHeight);
+    //    CCSize slSize_prop = CCSizeMake(2.3f*winWidth,0.33f*winHeight);
+    //    propView = CoverView::create(swRect_prop,slSize_prop,disDistance,disScale);
+    //
+    //    for(int i = 0 ; i< 3 ; i++)
+    //    {
+    //        char* url;
+    //        url="res/Picture/Button_Part_1.png";
+    //        Button* prop=Button::create(url);
+    //        prop->addClickEventListener(CC_CALLBACK_1(Select_Detail::chooseProp,this,i));
+    //        propView->addCard(prop,i);
+    //    }
+    //    //下面这句话是调整图片位置
+    //    //propView->setOffsetPosition(ccp(0.1f*winWidth,swRect.size.height/2));
+    //    propView->setPosition(swRect_prop.origin);
+    //    rootNodeL_GameStep->addChild(propView);
     
-//    CCRect swRect_prop = CCRectMake(0.1f*winWidth,0.4f*winHeight,0.8f*winWidth,0.33f*winHeight);
-//    CCSize slSize_prop = CCSizeMake(2.3f*winWidth,0.33f*winHeight);
-//    propView = CoverView::create(swRect_prop,slSize_prop,disDistance,disScale);
-//    
-//    for(int i = 0 ; i< 3 ; i++)
-//    {
-//        char* url;
-//        url="res/Picture/Button_Part_1.png";
-//        Button* prop=Button::create(url);
-//        prop->addClickEventListener(CC_CALLBACK_1(Select_Detail::chooseProp,this,i));
-//        propView->addCard(prop,i);
-//    }
-//    //下面这句话是调整图片位置
-//    //propView->setOffsetPosition(ccp(0.1f*winWidth,swRect.size.height/2));
-//    propView->setPosition(swRect_prop.origin);
-//    rootNodeL_GameStep->addChild(propView);
-
 }
 
 void Select_Detail::setUI(){
@@ -135,14 +135,14 @@ void Select_Detail::setUI(){
     
     auto Button_Back = rootNodeL_Basis->getChildByName<ui::Button*>("Button_Back");
     
-   // auto Button_GameStep = rootNodeL_Basis->getChildByName<ui::Button*>("Button_Level_1");
+    // auto Button_GameStep = rootNodeL_Basis->getChildByName<ui::Button*>("Button_Level_1");
     
     
     Button_Back->addTouchEventListener(this, toucheventselector(Select_Detail::menuCloseCallback));
     
     //Button_GameStep->addTouchEventListener(CC_CALLBACK_1(Select_Detail::show_GameReady,this));
     
-   }
+}
 
 
 
@@ -151,10 +151,18 @@ void Select_Detail::menuCloseCallback(Ref* pSender)
     auto Scene = Select::createScene();
     
     Director::getInstance()->replaceScene(Scene);
-
+    
 }
 
+void Select_Detail::shieldButton(){
+    auto Button_Back = rootNodeL_Basis->getChildByName<ui::Button*>("Button_Back");
+    Button_Back->setEnabled(false);
+}
 
+void Select_Detail::resumeButton(){
+    auto Button_Back = rootNodeL_Basis->getChildByName<ui::Button*>("Button_Back");
+    Button_Back->setEnabled(true);
+}
 
 
 void Select_Detail::turnToGame(Ref* pSender,int step)
@@ -162,29 +170,30 @@ void Select_Detail::turnToGame(Ref* pSender,int step)
     if(BUTTON_LOCK){
         BUTTON_LOCK=false;
         CCLOG("%d",BUTTON_LOCK);
-    Game gameScene;
-    LockofSelect lock;
-    bool result = lock.checkLock_outside(step);
-
-    if(step==1){
-        printf("hahah,sadiao\n");
+        Game gameScene;
+        LockofSelect lock;
+        bool result = lock.checkLock_outside(step);
+        
+        if(step==1){
+            printf("hahah,sadiao\n");
+        }
+        
+        
+        char data[25];
+        memset(data,0,sizeof(data));
+        sprintf(data,"%d",step);
+        string stepSu=data;
+        
+        PATH_LEVEL = stepSu;
+        
+        auto sceneNew = Game::createScene();
+        
+        Director::getInstance()->pushScene(sceneNew);
+        
     }
     
-    
-    char data[25];
-    memset(data,0,sizeof(data));
-    sprintf(data,"%d",step);
-    string stepSu=data;
-    
-        PATH_LEVEL = stepSu;
-    
-        auto sceneNew = Game::createScene();
-
-    Director::getInstance()->pushScene(sceneNew);
-        
-        }
-    
 }
+
 
 
 
@@ -194,7 +203,7 @@ void Select_Detail::show_GameReady(Ref* pSender,int level)
     if (level==levelView->getCurCardIndex()) {
         rootNodeL_GameStep->setVisible(true);
         levelView->removeListener();
-        
+        shieldButton();
     }else{
         CCLOG("choice is wrong");
     }
@@ -208,5 +217,6 @@ void Select_Detail::show_GameReady(Ref* pSender,int level)
 
 void Select_Detail::closeLayer(Ref* pSender){
     rootNodeL_GameStep->setVisible(false);
-     levelView->addListener();
+    levelView->addListener();
+    resumeButton();
 }

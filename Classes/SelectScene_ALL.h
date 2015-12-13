@@ -26,6 +26,8 @@ public:
     void menuCloseCallback(cocos2d::Ref* pSender);
     
     void turnToSelect_Detail(cocos2d::Ref* pSender,int number);
+    
+    void turnToShop(cocos2d::Ref* pSender);
     // implement the "static create()" method manually
     CREATE_FUNC(Select);
 };

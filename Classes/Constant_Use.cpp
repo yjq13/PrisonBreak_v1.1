@@ -31,3 +31,5 @@ string PATH_LEVEL = "";
 
 bool BUTTON_LOCK = true;
 
+stack<Scene*> SCENE_STACK=stack<Scene*>();
+

@@ -90,7 +90,7 @@
 		E3CB5E891BC9753A005123B8 /* OC_callFigureInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E681BC9753A005123B8 /* OC_callFigureInfo.mm */; };
 		E3CB5E8A1BC9753A005123B8 /* OC_callGameInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E6A1BC9753A005123B8 /* OC_callGameInfo.mm */; };
 		E3CB5E8B1BC9753A005123B8 /* SelectScene_ALL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E6E1BC9753A005123B8 /* SelectScene_ALL.cpp */; };
-		E3CB5E8C1BC9753A005123B8 /* setScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E701BC9753A005123B8 /* setScene.cpp */; };
+		E3CB5E8C1BC9753A005123B8 /* aboutScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E701BC9753A005123B8 /* aboutScene.cpp */; };
 		E3CB5E8D1BC9753A005123B8 /* SystemPo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E731BC9753A005123B8 /* SystemPo.swift */; };
 		E3CB5E8E1BC9753A005123B8 /* SystemVo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E741BC9753A005123B8 /* SystemVo.cpp */; };
 		E3CB5EB51BC97B39005123B8 /* FigureInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3CB5EA61BC97B39005123B8 /* FigureInfo.plist */; };
@@ -228,8 +228,8 @@
 		E3CB5E6B1BC9753A005123B8 /* OC_callSystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OC_callSystemInfo.h; sourceTree = "<group>"; };
 		E3CB5E6E1BC9753A005123B8 /* SelectScene_ALL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SelectScene_ALL.cpp; path = ../Classes/SelectScene_ALL.cpp; sourceTree = "<group>"; };
 		E3CB5E6F1BC9753A005123B8 /* SelectScene_ALL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectScene_ALL.h; path = ../Classes/SelectScene_ALL.h; sourceTree = "<group>"; };
-		E3CB5E701BC9753A005123B8 /* setScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = setScene.cpp; path = ../Classes/setScene.cpp; sourceTree = "<group>"; };
-		E3CB5E711BC9753A005123B8 /* setScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = setScene.h; path = ../Classes/setScene.h; sourceTree = "<group>"; };
+		E3CB5E701BC9753A005123B8 /* aboutScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = aboutScene.cpp; path = ../Classes/aboutScene.cpp; sourceTree = "<group>"; };
+		E3CB5E711BC9753A005123B8 /* aboutScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aboutScene.h; path = ../Classes/aboutScene.h; sourceTree = "<group>"; };
 		E3CB5E721BC9753A005123B8 /* StartScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartScene.h; path = ../Classes/StartScene.h; sourceTree = "<group>"; };
 		E3CB5E731BC9753A005123B8 /* SystemPo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemPo.swift; sourceTree = "<group>"; };
 		E3CB5E741BC9753A005123B8 /* SystemVo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SystemVo.cpp; sourceTree = "<group>"; };
@@ -581,8 +581,8 @@
 				E3CB5E541BC9753A005123B8 /* AppDelegate.h */,
 				E3CB5E6E1BC9753A005123B8 /* SelectScene_ALL.cpp */,
 				E3CB5E6F1BC9753A005123B8 /* SelectScene_ALL.h */,
-				E3CB5E701BC9753A005123B8 /* setScene.cpp */,
-				E3CB5E711BC9753A005123B8 /* setScene.h */,
+				E3CB5E701BC9753A005123B8 /* aboutScene.cpp */,
+				E3CB5E711BC9753A005123B8 /* aboutScene.h */,
 				E3CB5E4C1BC9753A005123B8 /* GameCommonScene.cpp */,
 				E3CB5E4D1BC9753A005123B8 /* GameCommonScene.h */,
 				E347EA981C19EA8A0096BC5E /* SelectScene_Detail.cpp */,
@@ -802,7 +802,7 @@
 				E347D4281C1C45E2009ECC95 /* TimeLineVo.cpp in Sources */,
 				E3CB5E891BC9753A005123B8 /* OC_callFigureInfo.mm in Sources */,
 				E30AC8A81BD835AD005B8686 /* MyScene.cpp in Sources */,
-				E3CB5E8C1BC9753A005123B8 /* setScene.cpp in Sources */,
+				E3CB5E8C1BC9753A005123B8 /* aboutScene.cpp in Sources */,
 				E30AC8B21BD930FE005B8686 /* Sprite_jailer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

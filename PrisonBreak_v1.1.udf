@@ -30,8 +30,10 @@
         <OpenedDocuments>
           <FilePathData Path="Game/Part_1/Layer_Game_Level_1.csd" />
           <FilePathData Path="Selection_2/Layer_Selection_2.csd" />
+          <FilePathData Path="Selection_1/Layer_Selection_1.csd" />
+          <FilePathData Path="DiamondShop/Layer_DiamondShop.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="Game/Part_1/Layer_Game_Level_1.csd" />
+        <ActiveDocument Path="DiamondShop/Layer_DiamondShop.csd" />
       </Value>
     </Item>
   </Properties>

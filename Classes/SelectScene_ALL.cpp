@@ -11,6 +11,7 @@
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
 #include "SelectScene_Detail.h"
+#include "ShopScene.h"
 #include "Constant_Use.h"
 #include "LockofSelect.h"
 USING_NS_CC;
@@ -68,6 +69,8 @@ void Select::setUI(){
     
     auto Button_Back = rootNodeL->getChildByName<ui::Button*>("Button_Back");
     
+    auto Button_AddDiamond=rootNodeL->getChildByName<ui::Button*>("Button_AddDiamond");
+    
     
     Button_Part_1->addTouchEventListener(CC_CALLBACK_1(Select::turnToSelect_Detail,this,1));
     
@@ -78,6 +81,8 @@ void Select::setUI(){
     Button_Part_4->addTouchEventListener(CC_CALLBACK_1(Select::turnToSelect_Detail,this,4));
     
     Button_Back->addTouchEventListener(this, toucheventselector(Select::menuCloseCallback));
+    
+    Button_AddDiamond->addTouchEventListener(this, toucheventselector(Select::turnToShop));
 
 }
 
@@ -136,3 +141,11 @@ void Select::turnToSelect_Detail(Ref* pSender,int number)
     }
 }
 
+void Select::turnToShop(Ref* pSender){
+    auto sceneNew=Shop::createScene();
+    //下面搞个翻页效果
+    //this->removeAllChildren();
+    //auto transition=createTransition_Page(sceneNew);
+    SCENE_STACK.push(this->getScene());
+    Director::getInstance()->replaceScene(sceneNew);
+}
