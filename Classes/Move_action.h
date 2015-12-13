@@ -18,11 +18,11 @@ private:
     cocos2d::Node* node_Pro;
     cocos2d::Node* node_else;
     cocos2d::Node* NodeL;
-    cocostudio::timeline::ActionTimeline* TimeLine;
+    cocostudio::timeline::ActionTimeline* TimeLine[];
 
 
 public:
-    virtual EventListenerPhysicsContact* createProAction(cocos2d::Node* layer,cocostudio::timeline::ActionTimeline* rootTimeLine);
+    virtual EventListenerPhysicsContact* createProAction(cocos2d::Node* layer,cocostudio::timeline::ActionTimeline* rootTimeLine[]);
     
     bool onContactBeginPro_Jailer();
     

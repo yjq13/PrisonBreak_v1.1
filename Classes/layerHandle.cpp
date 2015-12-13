@@ -14,20 +14,20 @@
 #include "Constant_Use.h"
 USING_NS_CC;
 
-EventListenerTouchOneByOne* moveListener::create(Node* layer,cocostudio::timeline::ActionTimeline* rootTimeLine){
+EventListenerTouchOneByOne* moveListener::create(Node* layer){
     
     auto listener=EventListenerTouchOneByOne::create();
     
     listener->onTouchMoved=CC_CALLBACK_2(moveListener::onTouchMoved, this,layer);
-    listener->onTouchBegan=CC_CALLBACK_2(moveListener::onTouchBegan, this,rootTimeLine);
-    listener->onTouchEnded=CC_CALLBACK_2(moveListener::onTouchEnded, this, layer,rootTimeLine);
+    listener->onTouchBegan=CC_CALLBACK_2(moveListener::onTouchBegan, this);
+    listener->onTouchEnded=CC_CALLBACK_2(moveListener::onTouchEnded, this, layer);
     
    
     return listener;
 }
 
 
-bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event,cocostudio::timeline::ActionTimeline* rootTimeLine){
+bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
     if(!moveLock){
         return false;
     }
@@ -58,7 +58,7 @@ void moveListener::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event, No
     index++;
 }
 
-void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, Node* layer,cocostudio::timeline::ActionTimeline* rootTimeLine){
+void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, Node* layer){
     printf("ed");
     auto p=touch->getLocation();
     if (isMoved&&(STOP_SECTION.isInside(touch)||DESTINATION_SECTION.isInside(touch)))

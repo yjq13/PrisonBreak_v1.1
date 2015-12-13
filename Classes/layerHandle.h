@@ -21,13 +21,13 @@ private:
     bool moveLock=true;
    
 public:
-    virtual EventListenerTouchOneByOne* create(cocos2d::Node* layer,cocostudio::timeline::ActionTimeline* rootTimeLine);
+    virtual EventListenerTouchOneByOne* create(cocos2d::Node* layer);
     
-    bool onTouchBegan(cocos2d::Touch* touch,cocos2d::Event* event,cocostudio::timeline::ActionTimeline* rootTimeLine);
+    bool onTouchBegan(cocos2d::Touch* touch,cocos2d::Event* event);
     
     void onTouchMoved(cocos2d::Touch* touch,cocos2d::Event* event, cocos2d::Node* layer);
     
-    void onTouchEnded(cocos2d::Touch* touch,cocos2d::Event* event, cocos2d::Node* layer,cocostudio::timeline::ActionTimeline* rootTimeLine);
+    void onTouchEnded(cocos2d::Touch* touch,cocos2d::Event* event, cocos2d::Node* layer);
 
     //bool isMoveValid();
 };
