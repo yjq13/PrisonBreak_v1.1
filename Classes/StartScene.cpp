@@ -41,8 +41,11 @@ bool Start::init()
     ORIGIN = cocos2d::Director::getInstance()->getVisibleOrigin();
     
     initDocuments();
+    
     setConstant();
+    
     printf("%d\n", GOLD_COIN);
+    
     rootNodeL = CSLoader::createNode("res/Start/Layer_Start.csb");
     
     setUI();
@@ -54,8 +57,11 @@ void Start::setUI(){
     auto button_Start = rootNodeL->getChildByName<ui::Button*>("Button_Start");
     
     button_Start->addTouchEventListener(this, toucheventselector(Start::turnToSelect));
+    
     rootNodeL->setContentSize(VISIBLE_SIZE);
+    
     ui::Helper::doLayout(rootNodeL);
+    
     addChild(rootNodeL);
     
 

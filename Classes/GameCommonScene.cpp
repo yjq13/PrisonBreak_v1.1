@@ -21,6 +21,8 @@
 #include "Sprite_wall.h"
 #include "gameLoad.h"
 #include "TimeLineLoad.h"
+#include "TimeLineVo.h"
+#include "OC_callGameInfo.h"
 USING_NS_CC;
 using namespace ui;
 
@@ -56,7 +58,21 @@ bool Game::init(){
     
     rootTimeLine = CSLoader::createTimeline(all);
     
+    
     TimeLineLoad::loadTimeLine(rootNodeL);
+
+//    string path = PATH_PART+"_Level_"+PATH_LEVEL;
+//    cocostudio::timeline::ActionTimeline* TimeLine[20];
+//    
+//    
+//    vector<TimeLineVo> volist = getTimeLine(path);
+//    for(int i=0;i<volist.size();i++){
+//        TimeLineVo vo = volist[volist.size()-i-1];
+//        TimeLine[i] = CSLoader::createTimeline(all);
+//        TimeLine[i]->setTag(vo.tag);
+//        TimeLine[i]->gotoFrameAndPlay(vo.startTime,vo.endTime, true);
+//        rootNodeL->runAction(TimeLine[i]);
+//    }
 
     
     moveAction moveaction;

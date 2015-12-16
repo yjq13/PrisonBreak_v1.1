@@ -11,8 +11,15 @@
 #include <string>
 #include <stdio.h>
 #include "Section.h"
+#include "cocostudio/CocoStudio.h"
+
 using namespace std;
 USING_NS_CC;
+
+    typedef struct TIMELINE{
+        cocostudio::timeline::ActionTimeline* TimeLine[20];
+    }TIMELINE;
+
     extern Section START_SECTION;
 
     extern Section DESTINATION_SECTION;
@@ -42,4 +49,6 @@ USING_NS_CC;
     const int COIN_TAG = 4000;
 
     const int WALL_TAG = 5000;
+
+
 #endif /* Constant_Use_h*/
