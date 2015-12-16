@@ -91,6 +91,9 @@
           <PointFrame FrameIndex="100" X="1572.5537" Y="702.1777">
             <EasingData Type="0" />
           </PointFrame>
+          <PointFrame FrameIndex="195" X="2054.7090" Y="707.3340">
+            <EasingData Type="0" />
+          </PointFrame>
         </Timeline>
         <Timeline ActionTag="-2113337950" Property="FileData">
           <TextureFrame FrameIndex="100" Tween="False">
@@ -275,13 +278,13 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-1967013240" Tag="25" IconVisible="False" LeftMargin="1000.9109" RightMargin="778.0891" TopMargin="415.1179" BottomMargin="455.8821" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-1967013240" Tag="25" IconVisible="False" LeftMargin="371.4628" RightMargin="1407.5372" TopMargin="666.8876" BottomMargin="204.1124" ctype="SpriteObjectData">
             <Size X="429.0000" Y="371.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1215.4109" Y="641.3821" />
+            <Position X="585.9628" Y="389.6124" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5505" Y="0.5164" />
+            <PrePosition X="0.2654" Y="0.3137" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="Picture/Jailer_4.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
@@ -297,26 +300,26 @@
             <FileData Type="Normal" Path="Picture/Protagonist_4.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Jailer_2" ActionTag="-2113337950" Tag="28" IconVisible="False" LeftMargin="1358.0537" RightMargin="420.9463" TopMargin="354.3223" BottomMargin="516.6777" ctype="SpriteObjectData">
-            <Size X="429.0000" Y="371.0000" />
+          <AbstractNodeData Name="Sprite_Jailer_2" ActionTag="-2113337950" Tag="28" IconVisible="False" LeftMargin="1329.5537" RightMargin="392.4463" TopMargin="353.8223" BottomMargin="516.1777" ctype="SpriteObjectData">
+            <Size X="486.0000" Y="372.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="1572.5537" Y="702.1777" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.7122" Y="0.5654" />
             <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="Normal" Path="Picture/Jailer_4.png" Plist="" />
+            <FileData Type="Normal" Path="Picture/Jailer_1.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Mouse_1" ActionTag="415871291" Tag="29" IconVisible="False" LeftMargin="1786.6113" RightMargin="-86.6113" TopMargin="657.0594" BottomMargin="28.9405" ctype="SpriteObjectData">
-            <Size X="508.0000" Y="556.0000" />
+          <AbstractNodeData Name="Sprite_Mouse_1" ActionTag="415871291" Tag="29" IconVisible="False" LeftMargin="1386.5978" RightMargin="293.4022" TopMargin="652.8203" BottomMargin="33.1797" ctype="SpriteObjectData">
+            <Size X="528.0000" Y="556.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="2040.6113" Y="306.9405" />
+            <Position X="1650.5978" Y="311.1797" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.9242" Y="0.2471" />
+            <PrePosition X="0.7476" Y="0.2505" />
             <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="Normal" Path="Picture/Mouse_4.png" Plist="" />
+            <FileData Type="Normal" Path="Picture/Mouse_1.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
         </Children>
