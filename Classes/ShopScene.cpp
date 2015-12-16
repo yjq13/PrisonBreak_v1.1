@@ -66,9 +66,7 @@ void Shop::setUI(){
 
 
 void Shop::menuCloseCallback(cocos2d::Ref *pSender){
-    Scene* nextScene=SCENE_STACK.top();
-    SCENE_STACK.pop();
-    Director::getInstance()->replaceScene(nextScene);
+    Director::getInstance()->popScene();
     
 }
 

@@ -22,7 +22,7 @@ private:
     cocos2d::Node* rootNodeL_Diamond;
     cocos2d::Node* rootNodeL_GameStep;
     CoverView* levelView;//关卡的coverFlow
-    CoverView* propView;//道具的coverFlow
+    //CoverView* propView;//道具的coverFlow
 public:
     static cocos2d::Scene* createScene();
     
@@ -37,6 +37,8 @@ public:
     void menuCloseCallback(cocos2d::Ref* pSender);
     
     void turnToGame(cocos2d::Ref* pSender,int step);
+    
+    void turnToShop(cocos2d::Ref* pSender);
     
     void show_GameReady(cocos2d::Ref* pSender,int level);
     

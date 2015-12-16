@@ -15,6 +15,7 @@
 #include "Constant_Use.h"
 #include "LockofSelect.h"
 #include "CoverView.h"
+#include "ShopScene.h"
 
 USING_NS_CC;
 using namespace ui;
@@ -76,7 +77,7 @@ void Select_Detail::setCoverflow(){
     //下面这句话是调整图片位置
     //levelView->setOffsetPosition(ccp(0.1f*winWidth,swRect.size.height/2));
     levelView->setPosition(swRect_level.origin);
-    addChild(levelView,2);
+   this->addChild(levelView);
     
     //下面是道具的coverflow，感觉没有必要
     //    CCRect swRect_prop = CCRectMake(0.1f*winWidth,0.4f*winHeight,0.8f*winWidth,0.33f*winHeight);
@@ -141,6 +142,10 @@ void Select_Detail::setUI(){
     Button_Back->addTouchEventListener(this, toucheventselector(Select_Detail::menuCloseCallback));
     
     //Button_GameStep->addTouchEventListener(CC_CALLBACK_1(Select_Detail::show_GameReady,this));
+    
+    auto Button_AddDiamond=rootNodeL_Basis->getChildByName<ui::Button*>("Button_AddDiamond");
+    
+    Button_AddDiamond->addTouchEventListener(this, toucheventselector(Select::turnToShop));
     
 }
 
@@ -213,6 +218,17 @@ void Select_Detail::show_GameReady(Ref* pSender,int level)
 //{
 //    CCLOG("choose prop %d",prop_id);
 //}
+
+void Select_Detail::turnToShop(Ref* pSender){
+    auto sceneNew=Shop::createScene();
+    //下面搞个翻页效果
+    //this->removeAllChildren();
+    //auto transition=createTransition_Page(sceneNew);
+    auto curScene= Director::getInstance()->getRunningScene();
+    Director::getInstance()->pushScene(curScene);
+    Director::getInstance()->pushScene(sceneNew);
+   
+}
 
 
 void Select_Detail::closeLayer(Ref* pSender){

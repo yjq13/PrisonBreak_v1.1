@@ -16,20 +16,20 @@
 		<key>Sprite_Jailer_2</key>
 		<dict>
 			<key>startTime</key>
-			<integer>200</integer>
+			<integer>100</integer>
 			<key>endTime</key>
-			<integer>300</integer>
+			<integer>200</integer>
 			<key>tag</key>
 			<real>3002</real>
 		</dict>
 		<key>Sprite_Mouse_1</key>
 		<dict>
 			<key>startTime</key>
-			<integer>100</integer>
-			<key>endTime</key>
 			<integer>200</integer>
+			<key>endTime</key>
+			<integer>250</integer>
 			<key>tag</key>
-			<integer>2001</integer>
+			<real>2001</real>
 		</dict>
 	</dict>
 </dict>

@@ -33,8 +33,6 @@ USING_NS_CC;
 
     extern bool BUTTON_LOCK;
 
-extern stack<Scene*> SCENE_STACK;
-
     const int PROTAGONIST_TAG = 1000;
 
     const int MOUSE_TAG = 2000;

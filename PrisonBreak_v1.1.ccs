@@ -58,7 +58,23 @@
           <Image Name="Sprite_Jailer.png" />
           <Image Name="Sprite_Mouse.png" />
           <Image Name="Sprite_Protagonist.png" />
+          <Image Name="Jailer_1.png" />
+          <Image Name="Jailer_2.png" />
+          <Image Name="Jailer_3.png" />
+          <Image Name="Jailer_4.png" />
+          <Image Name="Mouse_1.png" />
+          <Image Name="Mouse_2.png" />
+          <Image Name="Mouse_3.png" />
+          <Image Name="Mouse_4.png" />
+          <Image Name="Protagonist_1.png" />
+          <Image Name="Protagonist_2.png" />
+          <Image Name="Protagonist_3.png" />
+          <Image Name="Protagonist_4.png" />
         </Folder>
+        <Image Name="Protagonist_1.png" />
+        <Image Name="Protagonist_2.png" />
+        <Image Name="Protagonist_3.png" />
+        <Image Name="Protagonist_4.png" />
       </RootFolder>
     </Group>
   </SolutionFolder>

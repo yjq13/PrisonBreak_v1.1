@@ -146,6 +146,7 @@ void Select::turnToShop(Ref* pSender){
     //下面搞个翻页效果
     //this->removeAllChildren();
     //auto transition=createTransition_Page(sceneNew);
-    SCENE_STACK.push(this->getScene());
-    Director::getInstance()->replaceScene(sceneNew);
+    
+    Director::getInstance()->pushScene(this->getScene());
+    Director::getInstance()->pushScene(sceneNew);
 }
