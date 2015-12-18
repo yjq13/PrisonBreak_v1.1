@@ -10,6 +10,7 @@
 #define LockofSelect_h
 
 #include <stdio.h>
+#include "Constant.h"
 class LockofSelect{
     public:
         bool checkLock_outside(int number);

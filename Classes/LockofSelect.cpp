@@ -8,9 +8,17 @@
 
 #include "LockofSelect.h"
 bool LockofSelect::checkLock_outside(int number){
-    return true;
+    if(number<=STEP){
+        return true;
+    }else{
+        return false;
+    }
 }
 
 bool LockofSelect::checkLock_inside(int number){
-    return true;
+    if(number<=STEP){
+        return true;
+    }else{
+        return false;
+    }
 }

@@ -8,12 +8,12 @@
 
 #ifndef TimeLineLoad_hpp
 #define TimeLineLoad_hpp
-
+#include "Constant_Use.h"
 #include <stdio.h>
 #include "cocostudio/CocoStudio.h"
 class TimeLineLoad{
 public:
-    static void loadTimeLine(cocos2d::Node* rootNodeL);
+    static TIMELINE loadTimeLine(cocos2d::Node* rootNodeL);
     
 };
 #endif /* TimeLineLoad_hpp */

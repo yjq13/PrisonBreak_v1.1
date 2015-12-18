@@ -107,7 +107,7 @@ void Select_Detail::setUI(){
     Button_Close->addTouchEventListener(this, toucheventselector(Select_Detail::closeLayer));
     
     
-    Button_StartGame->addTouchEventListener(CC_CALLBACK_1(Select_Detail::turnToGame,this,1));
+    Button_StartGame->addTouchEventListener(CC_CALLBACK_1(Select_Detail::turnToGame,this));
     
     //rootNodeS->addChild(rootNodeL_Diamond);
     
@@ -170,26 +170,12 @@ void Select_Detail::resumeButton(){
 }
 
 
-void Select_Detail::turnToGame(Ref* pSender,int step)
+void Select_Detail::turnToGame(Ref* pSender)
 {
     if(BUTTON_LOCK){
         BUTTON_LOCK=false;
         CCLOG("%d",BUTTON_LOCK);
         Game gameScene;
-        LockofSelect lock;
-        bool result = lock.checkLock_outside(step);
-        
-        if(step==1){
-            printf("hahah,sadiao\n");
-        }
-        
-        
-        char data[25];
-        memset(data,0,sizeof(data));
-        sprintf(data,"%d",step);
-        string stepSu=data;
-        
-        PATH_LEVEL = stepSu;
         
         auto sceneNew = Game::createScene();
         
@@ -205,7 +191,22 @@ void Select_Detail::turnToGame(Ref* pSender,int step)
 
 void Select_Detail::show_GameReady(Ref* pSender,int level)
 {
-    if (level==levelView->getCurCardIndex()) {
+    LockofSelect lock;
+    bool result = lock.checkLock_outside(level);
+    
+    if(level!=0){
+        printf("%d",level);
+    }
+    
+
+    char data[25];
+    memset(data,0,sizeof(data));
+    sprintf(data,"%d",level+1);
+    string stepSu=data;
+    
+    PATH_LEVEL = stepSu;
+
+    if (result&&level==levelView->getCurCardIndex()) {
         rootNodeL_GameStep->setVisible(true);
         levelView->removeListener();
         shieldButton();

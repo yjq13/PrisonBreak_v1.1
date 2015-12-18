@@ -11,14 +11,14 @@
 #include "Constant_Use.h"
 USING_NS_CC;
 
-EventListenerPhysicsContact* moveAction::createProAction(cocos2d::Node* layer,cocostudio::timeline::ActionTimeline* rootTimeLine){
+EventListenerPhysicsContact* moveAction::createProAction(cocos2d::Node* layer,TIMELINE rootTimeLine){
     
     EventListenerPhysicsContact* contactListener=EventListenerPhysicsContact::create();
     //
     contactListener->onContactBegin=CC_CALLBACK_1(moveAction::switchMoveAction, this);
     
     NodeL = layer;
-    TimeLine = rootTimeLine;
+    //TimeLine = rootTimeLine;
    
     return contactListener;
 }

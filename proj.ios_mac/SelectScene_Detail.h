@@ -36,7 +36,7 @@ public:
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
     
-    void turnToGame(cocos2d::Ref* pSender,int step);
+    void turnToGame(cocos2d::Ref* pSender);
     
     void turnToShop(cocos2d::Ref* pSender);
     

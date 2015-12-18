@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "cocos2d.h"
+#include "Constant_Use.h"
 #include "cocostudio/CocoStudio.h"
 
 class moveAction : public cocos2d::EventListenerPhysicsContact{
@@ -22,7 +23,7 @@ private:
 
 
 public:
-    virtual EventListenerPhysicsContact* createProAction(cocos2d::Node* layer,cocostudio::timeline::ActionTimeline* rootTimeLine);
+    virtual EventListenerPhysicsContact* createProAction(cocos2d::Node* layer,TIMELINE rootTimeLine);
     
     bool onContactBeginPro_Jailer();
     

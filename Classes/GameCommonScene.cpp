@@ -59,25 +59,11 @@ bool Game::init(){
     rootTimeLine = CSLoader::createTimeline(all);
     
     
-    TimeLineLoad::loadTimeLine(rootNodeL);
+    TIMELINE timeline = TimeLineLoad::loadTimeLine(rootNodeL);
 
-//    string path = PATH_PART+"_Level_"+PATH_LEVEL;
-//    cocostudio::timeline::ActionTimeline* TimeLine[20];
-//    
-//    
-//    vector<TimeLineVo> volist = getTimeLine(path);
-//    for(int i=0;i<volist.size();i++){
-//        TimeLineVo vo = volist[volist.size()-i-1];
-//        TimeLine[i] = CSLoader::createTimeline(all);
-//        TimeLine[i]->setTag(vo.tag);
-//        TimeLine[i]->gotoFrameAndPlay(vo.startTime,vo.endTime, true);
-//        rootNodeL->runAction(TimeLine[i]);
-//    }
-
-    
     moveAction moveaction;
     
-    EventListenerPhysicsContact* contactListener = moveaction.createProAction(rootNodeL,rootTimeLine);
+    EventListenerPhysicsContact* contactListener = moveaction.createProAction(rootNodeL,timeline);
     
     _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
     
