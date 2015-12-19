@@ -82,19 +82,6 @@ void CoverView::initData()
     addChild(scrollView,1);
 }
 
-void CoverView::onEnter()
-{
-    Node::onEnter();
-    //Director::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this, 0 , false);
-}
-
-void CoverView::onExit()
-{
-    //Director::sharedDirector()->getTouchDispatcher()->removeDelegate(this);
-    removeAllChildren();
-    Node::onExit();
-}
-
 bool CoverView::onTouchBegin(Touch* pTouch, Event* pEvent)
 {
     return true;

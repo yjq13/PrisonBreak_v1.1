@@ -25,8 +25,6 @@ public:
      */
     static CoverView* create(Rect swBox, Size slSize ,float disDistance , float disScale );
     virtual bool init(Rect swBox , Size slSize , float disDistance , float disScale);
-    virtual void onEnter();
-    virtual void onExit();
     virtual bool onTouchBegin(Touch* pTouch, Event* pEvent);
     virtual void onTouchMoved(Touch* pTouch, Event* pEvent);
     virtual void onTouchEnded(Touch* pTouch, Event* pEvent);
