@@ -53,8 +53,8 @@ void Shop::setUI(){
     auto Button_manyDiamonds=rootNodeL->getChildByName<ui::Button*>("Button_manyDiamonds");
     
     Button_fewDiamonds->addClickEventListener(CC_CALLBACK_1(Shop::buyfew, this));
-     Button_fewDiamonds->addClickEventListener(CC_CALLBACK_1(Shop::buysome, this));
-     Button_fewDiamonds->addClickEventListener(CC_CALLBACK_1(Shop::buymany, this));
+     Button_someDiamonds->addClickEventListener(CC_CALLBACK_1(Shop::buysome, this));
+     Button_manyDiamonds->addClickEventListener(CC_CALLBACK_1(Shop::buymany, this));
     
     
     auto Button_Back=rootNodeL->getChildByName<ui::Button*>("Button_Back");

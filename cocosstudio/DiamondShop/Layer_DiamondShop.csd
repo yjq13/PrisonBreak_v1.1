@@ -69,7 +69,7 @@
           <AbstractNodeData Name="Image_Diamond" ActionTag="-2141617553" Tag="128" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="1950.5199" RightMargin="211.4801" TopMargin="88.9199" BottomMargin="1107.0801" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="46.0000" Y="46.0000" />
             <AnchorPoint ScaleX="0.5224" ScaleY="0.4519" />
-            <Position X="1974.5503" Y="1127.8674" />
+            <Position X="1974.5503" Y="1127.8676" />
             <Scale ScaleX="1.9533" ScaleY="1.1065" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.8943" Y="0.9081" />
@@ -98,13 +98,13 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_fewDiamonds" ActionTag="-1558454323" Tag="132" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="652.8126" RightMargin="1509.1875" TopMargin="597.9528" BottomMargin="608.0472" TouchEnable="True" FontSize="14" ButtonText="10个" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_fewDiamonds" ActionTag="-1558454323" Tag="132" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="365.6080" RightMargin="1796.3920" TopMargin="589.9590" BottomMargin="616.0410" TouchEnable="True" FontSize="14" ButtonText="10个" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="675.8126" Y="626.0472" />
+            <Position X="388.6080" Y="634.0410" />
             <Scale ScaleX="3.3512" ScaleY="4.3798" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.3061" Y="0.5041" />
+            <PrePosition X="0.1760" Y="0.5105" />
             <PreSize X="0.0000" Y="0.0000" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
@@ -113,14 +113,14 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_someDiamonds" ActionTag="-2113511531" Tag="136" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="470.4531" RightMargin="443.5469" TopMargin="295.2853" BottomMargin="308.7147" TouchEnable="True" FontSize="14" ButtonText="25个" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_someDiamonds" ActionTag="-2113511531" Tag="136" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1073.2017" RightMargin="1088.7983" TopMargin="610.0576" BottomMargin="595.9424" TouchEnable="True" FontSize="14" ButtonText="25个" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1134.9120" Y="634.0410" />
+            <Position X="1096.2017" Y="613.9424" />
             <Scale ScaleX="3.3512" ScaleY="4.3798" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5140" Y="0.5105" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PrePosition X="0.4965" Y="0.4943" />
+            <PreSize X="0.0208" Y="0.0290" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
             <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
@@ -128,13 +128,13 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_manyDiamonds" ActionTag="1517486531" Tag="137" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="801.6754" RightMargin="112.3246" TopMargin="295.2859" BottomMargin="308.7141" TouchEnable="True" FontSize="14" ButtonText="70个" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_manyDiamonds" ActionTag="1517486531" Tag="137" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1787.5977" RightMargin="374.4023" TopMargin="610.0579" BottomMargin="595.9421" TouchEnable="True" FontSize="14" ButtonText="70个" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1896.6721" Y="634.0410" />
+            <Position X="1810.5977" Y="613.9421" />
             <Scale ScaleX="3.3512" ScaleY="4.3798" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.8590" Y="0.5105" />
+            <PrePosition X="0.8200" Y="0.4943" />
             <PreSize X="0.0000" Y="0.0000" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
