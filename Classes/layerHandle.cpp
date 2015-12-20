@@ -22,7 +22,7 @@ EventListenerTouchOneByOne* moveListener::create(Node* layer){
     listener->onTouchBegan=CC_CALLBACK_2(moveListener::onTouchBegan, this);
     listener->onTouchEnded=CC_CALLBACK_2(moveListener::onTouchEnded, this, layer);
     
-   
+    CCLOG("Listener is OK!!!!!");
     return listener;
 }
 
@@ -68,7 +68,7 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, No
         Vector<FiniteTimeAction*> actionVector;
         for (int i=0;i<10000;i++){
             if (i!=0&&points[i].x!=0) {
-                actionVector.pushBack(MoveTo::create(ccpSub(points[i-1], points[i]).length()/100, points[i]));
+                actionVector.pushBack(MoveTo::create(ccpSub(points[i-1], points[i]).length()/SPEED_PRO, points[i]));
             }
         }
         

@@ -17,7 +17,7 @@ Sprite* Sprite_protagonist::create(int number,cocos2d::Sprite* getSprite){
     
     auto ManBody=PhysicsBody::createBox(protagonist->getContentSize());
     
-    CCLOG("%f,%f",protagonist->getContentSize().width,protagonist->getContentSize().height);
+    //CCLOG("%f,%f",protagonist->getContentSize().width,protagonist->getContentSize().height);
     
     ManBody->setGravityEnable(false);
     ManBody->setContactTestBitmask(0xFFFF);
@@ -30,8 +30,8 @@ Sprite* Sprite_protagonist::create(int number,cocos2d::Sprite* getSprite){
 }
 
 void Sprite_protagonist::setPro(int number,cocos2d::Sprite* getSprite){
-    auto ManBody=PhysicsBody::createBox(getSprite->getContentSize()*0.1);
-     CCLOG("%f,%f",getSprite->getContentSize().width,getSprite->getContentSize().height);
+    auto ManBody=PhysicsBody::createBox(getSprite->getContentSize());
+     //CCLOG("%f,%f",getSprite->getContentSize().width,getSprite->getContentSize().height);
     
     ManBody->setGravityEnable(false);
     ManBody->setContactTestBitmask(0xFFFF);

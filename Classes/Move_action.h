@@ -18,12 +18,13 @@ class moveAction : public cocos2d::EventListenerPhysicsContact{
 private:
     cocos2d::Node* node_Pro;
     cocos2d::Node* node_else;
-    cocos2d::Node* NodeL;
-    cocostudio::timeline::ActionTimeline* TimeLine;
-
+    TIMELINE timeLine;
+    
 
 public:
-    virtual EventListenerPhysicsContact* createProAction(cocos2d::Node* layer,TIMELINE rootTimeLine);
+    virtual EventListenerPhysicsContact* createProAction(TIMELINE rootTimeLine);
+    
+    ~moveAction();
     
     bool onContactBeginPro_Jailer();
     

@@ -31,7 +31,7 @@ Sprite* Sprite_wall::create(){
 void Sprite_wall::setWall(int number,cocos2d::Sprite* getSprite){
     auto ManBody=PhysicsBody::createBox(getSprite->getContentSize());
     
-    CCLOG("%f,%f",getSprite->getContentSize().width,getSprite->getContentSize().height);
+    //CCLOG("%f,%f",getSprite->getContentSize().width,getSprite->getContentSize().height);
     ManBody->setGravityEnable(false);
     ManBody->setContactTestBitmask(0xFFFF);
     getSprite->setPhysicsBody(ManBody);

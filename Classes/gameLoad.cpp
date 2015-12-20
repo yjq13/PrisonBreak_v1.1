@@ -56,7 +56,6 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
         
         string first = "Sprite_Jailer_";
         string all = first+numberStr;
-        cout<<all;
         
     Demo_jailer[index] = rootNodeL->getChildByName<Sprite*>(all);
     if(Demo_jailer[index]!=NULL)
@@ -76,7 +75,6 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
         
         string first = "Sprite_Wall_";
         string all = first+numberStr;
-        cout<<all;
         
         Demo_wall[index] = rootNodeL->getChildByName<Sprite*>(all);
         if(Demo_wall[index]!=NULL)
@@ -97,7 +95,6 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
         
         string first = "Sprite_Mouse_";
         string all = first+numberStr;
-        cout<<all;
         
         Demo_Mouse[index] = rootNodeL->getChildByName<Sprite*>(all);
         if(Demo_Mouse[index]!=NULL)
@@ -111,11 +108,7 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     
     
     
-    
-    
-    
-    
-    //CCLOG("%f,%f",Demo_jailer_1->getPositionZ(),Demo_protagonist->getPositionZ());
+    CCLOG("GAMELOAD is OK!!!!");
    
     
 }

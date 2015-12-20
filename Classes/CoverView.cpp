@@ -104,7 +104,7 @@ void CoverView::onTouchEnded(Touch* pTouch, Event* pEvent)
 {
     Point scroll_prepoint = pTouch->getPreviousLocation();
     Point scroll_endpoint = pTouch->getLocation();
-    float disX = scroll_endpoint.x - scroll_endpoint.x;
+    //float disX = scroll_endpoint.x - scroll_endpoint.x;
     adjusetEndScrollView();
     Point curPosition = scrollLayer->getPosition();
     float distance = ccpDistance(slayerPosition, curPosition);
@@ -113,7 +113,7 @@ void CoverView::onTouchEnded(Touch* pTouch, Event* pEvent)
 
 void CoverView::adjustCardScale(Point adjustPoint)
 {
-    float disX = adjustPoint.x;
+    //float disX = adjustPoint.x;
     Object* obj = NULL;
     CCARRAY_FOREACH(cardArray,obj)
     {

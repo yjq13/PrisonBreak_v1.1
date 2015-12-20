@@ -8,7 +8,7 @@
 
 #include "GameCommonScene.h"
 #include "Sprite_protagonist.h"
-#include "layerHandle.h"
+
 #include "Move_action.h"
 #include "cocostudio/CocoStudio.h"
 #include "Constant_Use.h"
@@ -52,7 +52,6 @@ bool Game::init(){
     string tail = ".csb";
     string follow = "/Layer_Game_Level_";
     string all = hand+PATH_PART+follow+PATH_LEVEL+tail;
-    cout<<all;
     
     rootNodeL = CSLoader::createNode(all);
     
@@ -61,13 +60,10 @@ bool Game::init(){
     
     TIMELINE timeline = TimeLineLoad::loadTimeLine(rootNodeL);
 
-    moveAction moveaction;
     
-    EventListenerPhysicsContact* contactListener = moveaction.createProAction(rootNodeL,timeline);
+    EventListenerPhysicsContact* contactListener = moveaction.createProAction(timeline);
     
     _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
-    
-    moveListener movelistener;
     
     EventListenerTouchOneByOne* listener = movelistener.create(rootNodeL);
     

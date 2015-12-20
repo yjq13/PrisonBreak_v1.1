@@ -28,9 +28,9 @@ Sprite* Sprite_jailer::create(int number,Sprite* getSprite){
 }
 
 void Sprite_jailer::setJailer(int number,cocos2d::Sprite* getSprite){
-    auto ManBody=PhysicsBody::createBox(getSprite->getContentSize()*0.1);
+    auto ManBody=PhysicsBody::createBox(getSprite->getContentSize());
     
-     CCLOG("%f,%f",getSprite->getContentSize().width,getSprite->getContentSize().height);
+     //CCLOG("%f,%f",getSprite->getContentSize().width,getSprite->getContentSize().height);
     ManBody->setGravityEnable(false);
     ManBody->setContactTestBitmask(0xFFFF);
     getSprite->setPhysicsBody(ManBody);

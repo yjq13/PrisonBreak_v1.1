@@ -16,7 +16,7 @@ Sprite* Sprite_coin::create(int number,Sprite* getSprite){
     
     auto ManBody=PhysicsBody::createBox(coin->getContentSize());
     
-    CCLOG("%f,%f",coin->getContentSize().width,coin->getContentSize().height);
+    //CCLOG("%f,%f",coin->getContentSize().width,coin->getContentSize().height);
     
     ManBody->setGravityEnable(false);
     ManBody->setContactTestBitmask(0xFFFF);

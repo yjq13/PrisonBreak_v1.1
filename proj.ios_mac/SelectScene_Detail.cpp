@@ -192,13 +192,8 @@ void Select_Detail::turnToGame(Ref* pSender)
 void Select_Detail::show_GameReady(Ref* pSender,int level)
 {
     LockofSelect lock;
-    bool result = lock.checkLock_outside(level);
+    bool result = lock.checkLock_outside(level+1);
     
-    if(level!=0){
-        printf("%d",level);
-    }
-    
-
     char data[25];
     memset(data,0,sizeof(data));
     sprintf(data,"%d",level+1);

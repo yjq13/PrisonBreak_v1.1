@@ -20,6 +20,8 @@ USING_NS_CC;
         cocostudio::timeline::ActionTimeline* TimeLine[20];
     }TIMELINE;
 
+    extern int SPEED_PRO;
+
     extern Section START_SECTION;
 
     extern Section DESTINATION_SECTION;

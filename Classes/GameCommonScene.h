@@ -8,17 +8,20 @@
 
 #ifndef __PrisonBreak__GameCommonScene__
 #define __PrisonBreak__GameCommonScene__
-
+#include "Move_action.h"
 #include "cocos2d.h"
 #include "MyScene.h"
 #include "Section.h"
+#include "ui/CocosGUI.h"
 #include "cocostudio/CocoStudio.h"
+#include "layerHandle.h"
 #include <string>
 using namespace std;
 
 USING_NS_CC;
 class Game : public MyScene{
-    
+    moveListener movelistener;
+    moveAction moveaction;
     cocos2d::Node* rootNodeL;
     cocostudio::timeline::ActionTimeline* rootTimeLine;
     cocostudio::timeline::ActionTimeline* rootTimeLine2;

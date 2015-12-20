@@ -25,6 +25,8 @@ Section DESTINATION_SECTION = Section();
 
 Section STOP_SECTION = Section();
 
+int SPEED_PRO = 500;
+
 string PATH_PART = "";
 
 string PATH_LEVEL = "";
