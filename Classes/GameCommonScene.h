@@ -53,8 +53,10 @@ public:
     
     //下面获取游戏地图上的起点和终点区域
     
-    Sprite* protagonist;
-    Sprite* ballTwo;
+//    Sprite* protagonist;
+//    Sprite* ballTwo;
+    
+    virtual void onExit();
     // implement the "static create()" method manually
     CREATE_FUNC(Game);
 };

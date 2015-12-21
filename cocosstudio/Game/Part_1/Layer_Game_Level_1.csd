@@ -2,7 +2,7 @@
   <PropertyGroup Type="Layer" Name="Layer_Game_Level_1" ID="ee805791-65ee-4ac4-a791-96afc34a7ae4" Version="2.3.2.3" />
   <Content ctype="GameProjectContent">
     <Content>
-      <Animation Duration="250" Speed="1.0000">
+      <Animation Duration="195" Speed="1.0000">
         <Timeline ActionTag="-1967013240" Property="Position">
           <PointFrame FrameIndex="0" X="183.5287" Y="228.6449">
             <EasingData Type="0" />
@@ -157,46 +157,6 @@
             <TextureFile Type="Normal" Path="Picture/Jailer_4.png" Plist="" />
           </TextureFrame>
         </Timeline>
-        <Timeline ActionTag="415871291" Property="Position">
-          <PointFrame FrameIndex="200" X="1650.5978" Y="311.1797">
-            <EasingData Type="0" />
-          </PointFrame>
-          <PointFrame FrameIndex="250" X="2065.5059" Y="306.6700">
-            <EasingData Type="0" />
-          </PointFrame>
-        </Timeline>
-        <Timeline ActionTag="415871291" Property="FileData">
-          <TextureFrame FrameIndex="200" Tween="False">
-            <TextureFile Type="Normal" Path="Picture/Mouse_1.png" Plist="" />
-          </TextureFrame>
-          <TextureFrame FrameIndex="205" Tween="False">
-            <TextureFile Type="Normal" Path="Picture/Mouse_2.png" Plist="" />
-          </TextureFrame>
-          <TextureFrame FrameIndex="210" Tween="False">
-            <TextureFile Type="Normal" Path="Picture/Mouse_3.png" Plist="" />
-          </TextureFrame>
-          <TextureFrame FrameIndex="215" Tween="False">
-            <TextureFile Type="Normal" Path="Picture/Mouse_4.png" Plist="" />
-          </TextureFrame>
-          <TextureFrame FrameIndex="220" Tween="False">
-            <TextureFile Type="Normal" Path="Picture/Mouse_3.png" Plist="" />
-          </TextureFrame>
-          <TextureFrame FrameIndex="225" Tween="False">
-            <TextureFile Type="Normal" Path="Picture/Mouse_4.png" Plist="" />
-          </TextureFrame>
-          <TextureFrame FrameIndex="230" Tween="False">
-            <TextureFile Type="Normal" Path="Picture/Mouse_3.png" Plist="" />
-          </TextureFrame>
-          <TextureFrame FrameIndex="235" Tween="False">
-            <TextureFile Type="Normal" Path="Picture/Mouse_4.png" Plist="" />
-          </TextureFrame>
-          <TextureFrame FrameIndex="240" Tween="False">
-            <TextureFile Type="Normal" Path="Picture/Mouse_3.png" Plist="" />
-          </TextureFrame>
-          <TextureFrame FrameIndex="245" Tween="False">
-            <TextureFile Type="Normal" Path="Picture/Mouse_4.png" Plist="" />
-          </TextureFrame>
-        </Timeline>
       </Animation>
       <ObjectData Name="Layer" Tag="157" ctype="GameLayerObjectData">
         <Size X="2208.0000" Y="1242.0000" />
@@ -278,7 +238,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-1967013240" Tag="25" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="-50.9761" RightMargin="1829.9761" TopMargin="876.0834" BottomMargin="-5.0834" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-1967013240" Tag="25" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="-79.7269" RightMargin="1801.7269" TopMargin="875.5860" BottomMargin="-5.5860" ctype="SpriteObjectData">
             <Size X="429.0000" Y="371.0000" />
             <AnchorPoint ScaleX="0.5044" ScaleY="0.5026" />
             <Position X="165.4115" Y="181.3812" />
@@ -300,7 +260,7 @@
             <FileData Type="Normal" Path="Picture/Protagonist_4.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Jailer_2" ActionTag="-2113337950" Tag="28" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1840.2090" RightMargin="-61.2090" TopMargin="349.1660" BottomMargin="521.8340" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Sprite_Jailer_2" ActionTag="-2113337950" Tag="28" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1811.7090" RightMargin="-89.7090" TopMargin="348.6660" BottomMargin="521.3340" ctype="SpriteObjectData">
             <Size X="429.0000" Y="371.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="2054.7090" Y="707.3340" />
@@ -311,13 +271,13 @@
             <FileData Type="Normal" Path="Picture/Jailer_4.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Mouse_1" ActionTag="415871291" Tag="29" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1628.9463" RightMargin="71.0537" TopMargin="655.3457" BottomMargin="30.6543" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Sprite_Mouse_1" ActionTag="415871291" Tag="29" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1811.5059" RightMargin="-111.5059" TopMargin="657.3300" BottomMargin="28.6700" ctype="SpriteObjectData">
             <Size X="508.0000" Y="556.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1882.9463" Y="308.6543" />
+            <Position X="2065.5059" Y="306.6700" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.8528" Y="0.2485" />
+            <PrePosition X="0.9355" Y="0.2469" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="Picture/Mouse_4.png" Plist="" />
             <BlendFunc Src="1" Dst="771" />

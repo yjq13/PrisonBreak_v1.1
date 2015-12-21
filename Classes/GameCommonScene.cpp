@@ -43,8 +43,6 @@ Game::~Game(){
 
     }
 bool Game::init(){
-
-    
     
     //rootNodeS = CSLoader::createNode("res/Game/Scene_Game.csb");
     
@@ -78,7 +76,6 @@ void Game::setUI(){
 //    Size visibleSize = Director::getInstance()->getVisibleSize();
 //    Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
-    //_director->getOpenGLView()->setDesignResolutionSize(960, 640,ResolutionPolicy::EXACT_FIT);
     //rootNodeS->addChild(rootNodeL);
     rootNodeL->setContentSize(VISIBLE_SIZE);
     ui::Helper::doLayout(rootNodeL);
@@ -109,5 +106,8 @@ void Game::menuCloseCallback(Ref* pSender)
     //#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     //exit(0);
     //#endif
+}
+void Game::onExit(){
+    
 }
 

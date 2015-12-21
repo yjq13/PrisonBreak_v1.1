@@ -50,7 +50,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     }
     
     
-    director->getOpenGLView()->setDesignResolutionSize(DESIGN_SIZE.width,DESIGN_SIZE.height, ResolutionPolicy::FIXED_HEIGHT);
+    director->getOpenGLView()->setDesignResolutionSize(DESIGN_SIZE.width,DESIGN_SIZE.height, ResolutionPolicy::FIXED_HEIGHT );
    //添加二级目录
     FileUtils::getInstance()->addSearchPath("res");
     
