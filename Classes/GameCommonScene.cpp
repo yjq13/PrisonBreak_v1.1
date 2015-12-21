@@ -78,10 +78,11 @@ void Game::setUI(){
 //    Size visibleSize = Director::getInstance()->getVisibleSize();
 //    Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
-    
+    //_director->getOpenGLView()->setDesignResolutionSize(960, 640,ResolutionPolicy::EXACT_FIT);
     //rootNodeS->addChild(rootNodeL);
     rootNodeL->setContentSize(VISIBLE_SIZE);
     ui::Helper::doLayout(rootNodeL);
+    
     addChild(rootNodeL);
     auto Button_Back = rootNodeL->getChildByName<ui::Button*>("Button_Back");
     
