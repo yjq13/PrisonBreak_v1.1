@@ -19,10 +19,10 @@ TIMELINE TimeLineLoad::loadTimeLine(cocos2d::Node* rootNodeL){
     for(int i=0;i<volist.size();i++){
         TimeLineVo vo = volist[volist.size()-i-1];
         _timeline.TimeLine[i] = CSLoader::createTimeline(allPath);
-        _timeline.TimeLine[i]->setTag(vo.tag);
+        _timeline.TimeLine[i]->setFlags(vo.tag);
         _timeline.TimeLine[i]->gotoFrameAndPlay(vo.startTime,vo.endTime, true);
         rootNodeL->runAction(_timeline.TimeLine[i]);
-        CCLOG("timelineTag:%d",_timeline.TimeLine[i]->getTag());
+        //CCLOG("timelineTag:%d",_timeline.TimeLine[i]->getTag());
     }
     
     CCLOG("TIMELINE is OK!!!!!");

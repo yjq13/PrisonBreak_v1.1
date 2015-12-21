@@ -59,7 +59,7 @@ bool moveAction::switchMoveAction(const cocos2d::PhysicsContact &contact){
     }
     
     
-    return true;
+    return false;
 }
 
 
@@ -70,30 +70,36 @@ moveAction::~moveAction(){
 bool moveAction::onContactBeginPro_Jailer(){
 
     CCLOG("Pro_Jailer boom!!!!");
-    return true;
+    return false;
 }
 
 bool moveAction::onContactBeginPro_Mouse(){
     if(node_else->isVisible()){
-    for(int i = 0;i<3;i++){
-        CCLOG("timeline:%d",timeLine.TimeLine[i]->getTag());
-        if(i==1){
-            timeLine.TimeLine[i]->gotoFrameAndPause(0);
+    for(int i = 0;i<20;i++){
+        //CCLOG("timeline:%d",timeLine.TimeLine[i]->getTag());
+        if(timeLine.TimeLine[i]->getTag()!=157)
+            break;
+        CCLOG("timeline:%d",timeLine.TimeLine[i]->getFlags());
+        if((signed)timeLine.TimeLine[i]->getFlags()==node_else->getTag()){
+            
+            timeLine.TimeLine[i]->pause();
+            break;
+            //timeLine.TimeLine[i]->release();
         }
     }
     std::cout<<node_else->getName();
-        node_else->resume();
-    node_else->setVisible(false);
+        node_else->setVisible(false);
+        //node_else->removeFromParent();
     }
     CCLOG("Pro_Mouse boom!!!!");
-    return true;
+    return false;
 }
 
 
 bool moveAction::onContactBeginPro_Coin(){
     CCLOG("Pro_coin boom!!!!");
     //    removeChild(protagonist);
-    return true;
+    return false;
 }
 
 
