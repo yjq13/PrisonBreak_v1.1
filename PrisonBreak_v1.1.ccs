@@ -20,6 +20,7 @@
         <Folder Name="Game">
           <Folder Name="Part_1">
             <Project Name="Layer_Game_Level_1.csd" Type="Layer" />
+            <Project Name="Layer_Game_Level_2.csd" Type="Layer" />
           </Folder>
           <Folder Name="Part_2" />
           <Folder Name="Part_3" />
@@ -71,6 +72,7 @@
           <Image Name="Protagonist_3.png" />
           <Image Name="Protagonist_4.png" />
           <Image Name="Sprite_Wall.jpg" />
+          <Image Name="Sprite_Special_Section.png" />
         </Folder>
         <Image Name="Protagonist_1.png" />
         <Image Name="Protagonist_2.png" />
