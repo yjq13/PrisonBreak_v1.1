@@ -70,6 +70,7 @@
           <Image Name="Protagonist_2.png" />
           <Image Name="Protagonist_3.png" />
           <Image Name="Protagonist_4.png" />
+          <Image Name="Sprite_Wall.jpg" />
         </Folder>
         <Image Name="Protagonist_1.png" />
         <Image Name="Protagonist_2.png" />
