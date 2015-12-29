@@ -132,30 +132,7 @@ bool moveAction::onContactBeginPro_Coin(){
 }
 
 bool moveAction::onContactBeginPro_Section(){
-    //FiniteTimeAction* action =(FiniteTimeAction*)node_Pro->getActionByTag(70000);
-    //auto s = action->getTarget();
-        //node_Pro->pause();
-//    
-//    action->startWithTarget(s);
-    //auto s = action->getTarget();
-    
 
-    
-    
-    //defaultScheduler->setTimeScale(0.2f);
-    // Create a new scheduler, and link it to the main scheduler
-    
-    
-   
-    
-    //sched1->setTimeScale(0.5f);
-    
-    //defaultScheduler->setTimeScale(0.2f);
-    // Create a new ActionManager, and link it to the new scheudler
-    
-    
-
-    // Replace the default ActionManager with the new one.
     Scheduler* sched1 = node_Pro->getScheduler();
     
     sched1->setTimeScale(0.2f);
@@ -171,10 +148,6 @@ bool moveAction::onContactSeparatePro_Section(){
     Scheduler* sched1 = node_Pro->getScheduler();
     
     sched1->setTimeScale(1.0f);
-    //    auto s = action->getTarget();
-    //    CCLOG("mcsSADIAO:%d",s->getTag());
-    //    action->startWithTarget(s);
-    //action->setDuration(10);
 
     CCLOG("王宁是水杯!!!!");
     return false;
