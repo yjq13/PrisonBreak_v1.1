@@ -100,7 +100,7 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
         Demo_Mouse[index] = rootNodeL->getChildByName<Sprite*>(all);
         if(Demo_Mouse[index]!=NULL)
             Sprite_mouse::setMouse(index,Demo_Mouse[index]);
-    }while(Demo_wall[index]!=NULL);
+    }while(Demo_Mouse[index]!=NULL);
 
     
     //主角加载

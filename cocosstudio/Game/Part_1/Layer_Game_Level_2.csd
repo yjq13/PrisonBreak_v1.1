@@ -1,5 +1,5 @@
-<GameProjectFile>
-  <PropertyGroup Type="Layer" Name="Layer_Game_Level_2" ID="8d42ab52-b4ce-46a8-a56e-30e26c8aaa1b" Version="2.3.2.3" />
+<GameFile>
+  <PropertyGroup Name="Layer_Game_Level_2" Type="Layer" ID="8d42ab52-b4ce-46a8-a56e-30e26c8aaa1b" Version="2.3.3.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="195" Speed="1.0000">
@@ -191,28 +191,6 @@
             <PreSize X="0.0906" Y="0.1610" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Wall_1" ActionTag="-276085424" Tag="170" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="708.7225" RightMargin="1449.2775" TopMargin="8.7251" BottomMargin="433.2749" ctype="SpriteObjectData">
-            <Size X="50.0000" Y="800.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="733.7184" Y="833.2578" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.3323" Y="0.6709" />
-            <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="Normal" Path="Picture/Sprite_Wall.jpg" Plist="" />
-            <BlendFunc Src="770" Dst="771" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Wall_2" ActionTag="-1876796632" Tag="171" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1364.6416" RightMargin="793.3584" TopMargin="441.8001" BottomMargin="0.1999" ctype="SpriteObjectData">
-            <Size X="50.0000" Y="800.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1389.7152" Y="400.1724" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.6294" Y="0.3222" />
-            <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="Normal" Path="Picture/Sprite_Wall.jpg" Plist="" />
-            <BlendFunc Src="770" Dst="771" />
-          </AbstractNodeData>
           <AbstractNodeData Name="Image_Stop" ActionTag="1455529122" Tag="18" IconVisible="False" LeftMargin="1110.4032" RightMargin="1051.5968" TopMargin="1165.1984" BottomMargin="30.8016" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="46.0000" Y="46.0000" />
             <AnchorPoint />
@@ -271,19 +249,37 @@
             <FileData Type="Normal" Path="Picture/Jailer_1.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Special_Section_1" ActionTag="-243259879" Tag="25" IconVisible="False" LeftMargin="854.8616" RightMargin="953.1384" TopMargin="112.1761" BottomMargin="729.8239" ctype="SpriteObjectData">
             <Size X="400.0000" Y="400.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1054.8616" Y="929.8239" />
+            <Position X="1112.1514" Y="784.5405" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.4777" Y="0.7487" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PrePosition X="0.5037" Y="0.6317" />
+            <PreSize X="0.1812" Y="0.3221" />
             <FileData Type="Normal" Path="Picture/Sprite_Special_Section.png" Plist="" />
-            <BlendFunc Src="770" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Image_Wall_2" ActionTag="701225633" Tag="37" IconVisible="False" LeftMargin="1363.0347" RightMargin="794.9653" TopMargin="419.5551" BottomMargin="22.4449" Scale9Width="50" Scale9Height="800" ctype="ImageViewObjectData">
+            <Size X="50.0000" Y="800.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="1388.0347" Y="422.4449" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.6286" Y="0.3401" />
+            <PreSize X="0.0226" Y="0.6441" />
+            <FileData Type="Normal" Path="Picture/Sprite_Wall.jpg" Plist="" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Image_Wall_1" ActionTag="-314259766" Tag="38" IconVisible="False" LeftMargin="802.6484" RightMargin="1355.3516" TopMargin="5.7305" BottomMargin="436.2696" Scale9Width="50" Scale9Height="800" ctype="ImageViewObjectData">
+            <Size X="50.0000" Y="800.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="827.6484" Y="836.2696" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.3748" Y="0.6733" />
+            <PreSize X="0.0226" Y="0.6441" />
+            <FileData Type="Normal" Path="Picture/Sprite_Wall.jpg" Plist="" />
           </AbstractNodeData>
         </Children>
       </ObjectData>
     </Content>
   </Content>
-</GameProjectFile>
+</GameFile>

@@ -44,6 +44,8 @@ Game::~Game(){
     }
 bool Game::init(){
     
+    scheduleUpdate();
+    
     //rootNodeS = CSLoader::createNode("res/Game/Scene_Game.csb");
     
     string hand = "res/Game/";
@@ -93,6 +95,69 @@ void Game::setUI(){
     
     
    }
+void Game::update(float dt){
+    auto scale=VISIBLE_SIZE.width/DESIGN_SIZE.width;
+    
+    //坐标重绘
+    Sprite* Demo_jailer[10];
+    int index = 0;
+    do{
+        index++;
+        char number[25];
+        memset(number,0,sizeof(number));
+        sprintf(number,"%d",index);
+        string numberStr=number;
+        
+        string first = "Sprite_Jailer_";
+        string all = first+numberStr;
+        
+        Demo_jailer[index] = rootNodeL->getChildByName<Sprite*>(all);
+        if(Demo_jailer[index]!=NULL){
+            auto position_Before=Demo_jailer[index]->getPosition();
+            Demo_jailer[index]->setPositionX(position_Before.x*scale);
+        }
+    }while(Demo_jailer[index]!=NULL);
+    
+    Sprite* Demo_wall[10];
+    index = 0;
+    do{
+        index++;
+        char number[25];
+        memset(number,0,sizeof(number));
+        sprintf(number,"%d",index);
+        string numberStr=number;
+        
+        string first = "Sprite_Wall_";
+        string all = first+numberStr;
+        
+        Demo_wall[index] = rootNodeL->getChildByName<Sprite*>(all);
+        if(Demo_wall[index]!=NULL){
+            auto position_Before=Demo_wall[index]->getPosition();
+            Demo_wall[index]->setPositionX(position_Before.x*scale);
+        }
+    }while(Demo_wall[index]!=NULL);
+    
+    
+    Sprite* Demo_Mouse[10];
+    index = 0;
+    do{
+        index++;
+        char number[25];
+        memset(number,0,sizeof(number));
+        sprintf(number,"%d",index);
+        string numberStr=number;
+        
+        string first = "Sprite_Mouse_";
+        string all = first+numberStr;
+        
+        Demo_Mouse[index] = rootNodeL->getChildByName<Sprite*>(all);
+        if(Demo_Mouse[index]!=NULL)
+        {
+            auto position_Before=Demo_Mouse[index]->getPosition();
+            Demo_Mouse[index]->setPositionX(position_Before.x*scale);
+        }
+    }while(Demo_Mouse[index]!=NULL);
+}
 
 
 void Game::menuCloseCallback(Ref* pSender)

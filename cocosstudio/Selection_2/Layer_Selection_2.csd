@@ -1,5 +1,5 @@
-<GameProjectFile>
-  <PropertyGroup Type="Layer" Name="Layer_Selection_2" ID="87bcdab8-3411-4e83-a62e-41913441c69e" Version="2.3.2.3" />
+<GameFile>
+  <PropertyGroup Name="Layer_Selection_2" Type="Layer" ID="87bcdab8-3411-4e83-a62e-41913441c69e" Version="2.3.3.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
@@ -92,4 +92,4 @@
       </ObjectData>
     </Content>
   </Content>
-</GameProjectFile>
+</GameFile>
