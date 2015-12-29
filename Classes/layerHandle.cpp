@@ -67,7 +67,7 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, No
         //下面是主角跟随路线移动
         //下面是填装动作的容器
         Sprite* protagonist = layer->getChildByName<Sprite*>("Sprite_Protagonist");
-
+        
         protagonist->setPosition(points[0]);
         
         moveLock = false;

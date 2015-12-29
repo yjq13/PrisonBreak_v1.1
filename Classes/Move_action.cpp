@@ -138,32 +138,27 @@ bool moveAction::onContactBeginPro_Section(){
 //    
 //    action->startWithTarget(s);
     //auto s = action->getTarget();
-    Scheduler* sched1;
     
-    ActionManager* actionManager1;
 
-    Scheduler* defaultScheduler = Director::getInstance()->getScheduler();
+    
     
     //defaultScheduler->setTimeScale(0.2f);
     // Create a new scheduler, and link it to the main scheduler
-    sched1 = new Scheduler();
     
-    actionManager1 = new ActionManager();
     
-    sched1->scheduleUpdateForTarget(actionManager1, 0, false);
-
-    sched1->setTimeScale(0.5f);
+   
     
-    defaultScheduler->scheduleUpdateForTarget(sched1, 0, false);
+    //sched1->setTimeScale(0.5f);
     
-    defaultScheduler->setTimeScale(0.2f);
+    //defaultScheduler->setTimeScale(0.2f);
     // Create a new ActionManager, and link it to the new scheudler
     
+    
+
     // Replace the default ActionManager with the new one.
-    node_Pro->setScheduler(sched1);
-//    node_Pro->setActionManager(actionManager1);
+    Scheduler* sched1 = node_Pro->getScheduler();
     
-    
+    sched1->setTimeScale(0.2f);
     
     //node_Pro->runAction(action);
         CCLOG("Pro_Section boom!!!!");
@@ -173,6 +168,9 @@ bool moveAction::onContactBeginPro_Section(){
 
 bool moveAction::onContactSeparatePro_Section(){
     
+    Scheduler* sched1 = node_Pro->getScheduler();
+    
+    sched1->setTimeScale(1.0f);
     //    auto s = action->getTarget();
     //    CCLOG("mcsSADIAO:%d",s->getTag());
     //    action->startWithTarget(s);

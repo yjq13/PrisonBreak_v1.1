@@ -106,6 +106,25 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     //主角加载
     auto Demo_protagonist = rootNodeL->getChildByName<Sprite*>("Sprite_Protagonist");
     Sprite_protagonist::setPro(0,Demo_protagonist);
+    
+    Scheduler* sched1;
+    
+    ActionManager* actionManager1;
+    
+    Scheduler* defaultScheduler = Director::getInstance()->getScheduler();
+    
+    sched1 = new Scheduler();
+    
+    defaultScheduler->scheduleUpdate(sched1, 0, false);
+    
+    actionManager1 = new ActionManager();
+    
+    sched1->scheduleUpdate(actionManager1, 0, false);
+    
+    Demo_protagonist->setActionManager(actionManager1);
+    
+    Demo_protagonist->setScheduler(sched1);
+
     //特殊区域加载
     Sprite* Demo_Section[10];
     index = 0;
