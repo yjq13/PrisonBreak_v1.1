@@ -14,6 +14,7 @@
 #include "Sprite_protagonist.h"
 #include "Sprite_jailer.h"
 #include "Sprite_wall.h"
+#include "Special_Section.h"
 #include "Constant_Use.h"
 #include <iostream>
 #include "Sprite_mouse.h"
@@ -105,8 +106,23 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     //主角加载
     auto Demo_protagonist = rootNodeL->getChildByName<Sprite*>("Sprite_Protagonist");
     Sprite_protagonist::setPro(0,Demo_protagonist);
-    
-    
+    //特殊区域加载
+    Sprite* Demo_Section[10];
+    index = 0;
+    do{
+        index++;
+        char number[25];
+        memset(number,0,sizeof(number));
+        sprintf(number,"%d",index);
+        string numberStr=number;
+        
+        string first = "Sprite_Special_Section_";
+        string all = first+numberStr;
+        cout<<all;
+        Demo_Section[index] = rootNodeL->getChildByName<Sprite*>(all);
+        if(Demo_Section[index]!=NULL)
+            Sprite_SpecialSection::setSpecialSection(index,Demo_Section[index]);
+    }while(Demo_Section[index]!=NULL);
     
     CCLOG("GAMELOAD is OK!!!!");
    

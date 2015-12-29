@@ -19,7 +19,10 @@ private:
     int index = 0;//计数器
     bool isMoved=false;
     bool moveLock=true;
-   
+    int index_target = 1;
+    cocos2d::Node* target[10000];
+    cocos2d::Sequence* allAction;
+    cocos2d::MoveTo* action[10000];
 public:
     virtual EventListenerTouchOneByOne* create(cocos2d::Node* layer);
     

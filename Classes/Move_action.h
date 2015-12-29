@@ -32,7 +32,13 @@ public:
 
     bool onContactBeginPro_Coin();
     
+    bool onContactBeginPro_Section();
+    
+    bool onContactSeparatePro_Section();
+    
     bool switchMoveAction(const cocos2d::PhysicsContact &contact);
+    
+    bool switchMoveActionAfter(const cocos2d::PhysicsContact &contact);
 };
 
 #endif /* Move_action_hpp */

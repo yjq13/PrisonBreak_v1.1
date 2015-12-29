@@ -73,6 +73,7 @@
 		E347D4281C1C45E2009ECC95 /* TimeLineVo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E347D4261C1C45E2009ECC95 /* TimeLineVo.cpp */; };
 		E347EA9A1C19EA8A0096BC5E /* SelectScene_Detail.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E347EA981C19EA8A0096BC5E /* SelectScene_Detail.cpp */; };
 		E369982E1C0C24AA007BB3C8 /* LockofSelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */; };
+		E3910A221C27AEA6008F65A6 /* Special_Section.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3910A201C27AEA6008F65A6 /* Special_Section.cpp */; };
 		E3CB5E761BC9753A005123B8 /* Constant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4A1BC9753A005123B8 /* Constant.cpp */; };
 		E3CB5E771BC9753A005123B8 /* Data_FigureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4B1BC9753A005123B8 /* Data_FigureInfo.swift */; };
 		E3CB5E781BC9753A005123B8 /* GameCommonScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4C1BC9753A005123B8 /* GameCommonScene.cpp */; };
@@ -117,8 +118,8 @@
 		0408A2D41C1B1326004D5BAC /* TimeLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TimeLine.plist; sourceTree = "<group>"; };
 		0454C4F31C1AA94E001EC9F7 /* CoverView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoverView.cpp; sourceTree = "<group>"; };
 		0454C4F41C1AA94E001EC9F7 /* CoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverView.h; sourceTree = "<group>"; };
-		049178E01BDBDBB2004AAF5C /* Section.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Section.cpp; sourceTree = "<group>"; };
-		049178E11BDBDBB2004AAF5C /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
+		049178E01BDBDBB2004AAF5C /* Section.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Section.cpp; path = ../Classes/Section.cpp; sourceTree = "<group>"; };
+		049178E11BDBDBB2004AAF5C /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Section.h; path = ../Classes/Section.h; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D364C16A410D74FA7F2CF54 /* libcocos2d Mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcocos2d Mac.a"; path = "/Applications/Cocos/frameworks/cocos2d-x-3.8/prebuilt/mac/libcocos2d Mac.a"; sourceTree = "<absolute>"; };
@@ -201,6 +202,8 @@
 		E347EA991C19EA8A0096BC5E /* SelectScene_Detail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectScene_Detail.h; sourceTree = "<group>"; };
 		E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LockofSelect.cpp; sourceTree = "<group>"; };
 		E369982D1C0C24AA007BB3C8 /* LockofSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockofSelect.h; sourceTree = "<group>"; };
+		E3910A201C27AEA6008F65A6 /* Special_Section.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Special_Section.cpp; path = ../Classes/Special_Section.cpp; sourceTree = "<group>"; };
+		E3910A211C27AEA6008F65A6 /* Special_Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Special_Section.h; path = ../Classes/Special_Section.h; sourceTree = "<group>"; };
 		E3CB5E4A1BC9753A005123B8 /* Constant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Constant.cpp; sourceTree = "<group>"; };
 		E3CB5E4B1BC9753A005123B8 /* Data_FigureInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data_FigureInfo.swift; sourceTree = "<group>"; };
 		E3CB5E4C1BC9753A005123B8 /* GameCommonScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameCommonScene.cpp; path = ../Classes/GameCommonScene.cpp; sourceTree = "<group>"; };
@@ -478,8 +481,6 @@
 				E30AC8BA1BD984AC005B8686 /* layerHandle.h */,
 				E30AC8BC1BD98B94005B8686 /* Move_action.cpp */,
 				E30AC8BD1BD98B94005B8686 /* Move_action.h */,
-				049178E01BDBDBB2004AAF5C /* Section.cpp */,
-				049178E11BDBDBB2004AAF5C /* Section.h */,
 				E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */,
 				E369982D1C0C24AA007BB3C8 /* LockofSelect.h */,
 				E301E4DD1C1AA5D00094884D /* gameLoad.cpp */,
@@ -493,6 +494,8 @@
 		E30AC8A91BD92C61005B8686 /* Game_Component */ = {
 			isa = PBXGroup;
 			children = (
+				049178E01BDBDBB2004AAF5C /* Section.cpp */,
+				049178E11BDBDBB2004AAF5C /* Section.h */,
 				E30AC8AA1BD92CDF005B8686 /* Sprite_protagonist.cpp */,
 				E30AC8AB1BD92CDF005B8686 /* Sprite_protagonist.h */,
 				E30AC8AD1BD92F8A005B8686 /* Sprite_mouse.cpp */,
@@ -503,6 +506,8 @@
 				E30AC8B41BD93281005B8686 /* Sprite_coin.h */,
 				E30AC8B61BD9329B005B8686 /* Sprite_wall.cpp */,
 				E30AC8B71BD9329B005B8686 /* Sprite_wall.h */,
+				E3910A201C27AEA6008F65A6 /* Special_Section.cpp */,
+				E3910A211C27AEA6008F65A6 /* Special_Section.h */,
 			);
 			name = Game_Component;
 			sourceTree = "<group>";
@@ -800,6 +805,7 @@
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				E3CB5E861BC9753A005123B8 /* GamePo.swift in Sources */,
 				E347D4281C1C45E2009ECC95 /* TimeLineVo.cpp in Sources */,
+				E3910A221C27AEA6008F65A6 /* Special_Section.cpp in Sources */,
 				E3CB5E891BC9753A005123B8 /* OC_callFigureInfo.mm in Sources */,
 				E30AC8A81BD835AD005B8686 /* MyScene.cpp in Sources */,
 				E3CB5E8C1BC9753A005123B8 /* aboutScene.cpp in Sources */,

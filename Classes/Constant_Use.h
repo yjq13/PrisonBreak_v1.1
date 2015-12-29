@@ -22,6 +22,8 @@ USING_NS_CC;
 
     extern int SPEED_PRO;
 
+    extern int ACTION_TAG;
+
     extern Section START_SECTION;
 
     extern Section DESTINATION_SECTION;
@@ -52,5 +54,6 @@ USING_NS_CC;
 
     const int WALL_TAG = 5000;
 
+    const int SECTION_TAG = 6000;
 
 #endif /* Constant_Use_h*/

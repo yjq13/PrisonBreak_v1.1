@@ -63,29 +63,38 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, No
     auto p=touch->getLocation();
     if (isMoved&&(STOP_SECTION.isInside(touch)||DESTINATION_SECTION.isInside(touch)))
     {
+        int TAG = 0;
         //下面是主角跟随路线移动
         //下面是填装动作的容器
-        Vector<FiniteTimeAction*> actionVector;
-        for (int i=0;i<10000;i++){
-            if (i!=0&&points[i].x!=0) {
-                actionVector.pushBack(MoveTo::create(ccpSub(points[i-1], points[i]).length()/SPEED_PRO, points[i]));
-            }
-        }
-        
         Sprite* protagonist = layer->getChildByName<Sprite*>("Sprite_Protagonist");
-        
+
         protagonist->setPosition(points[0]);
         
         moveLock = false;
         
+        Vector<FiniteTimeAction*> actionVector;
         
+        for (int i=0;i<10000;i++){
+            if (i!=0&&points[i].x!=0) {
+                action[i] = MoveTo::create(ccpSub(points[i-1], points[i]).length()/SPEED_PRO, points[i]);
+                
+                //action->setTag(index);
+//                auto callfun = CallFunc::create([&]{target[index_target] = action[index_target]->getTarget();allAction->setTarget(target[index_target]);index_target++;});
+                actionVector.pushBack(action[i]);
+                //actionVector.pushBack(callfun);
+               // protagonist->runAction(action);
+            }
+        }
         
-        
-        auto allAction=Sequence::create(actionVector);
+    
+        allAction=Sequence::create(actionVector);
+        allAction->setTag(70000);
+        //allAction->setTarget(target);
         protagonist->runAction(allAction);
         
-        
     }
+    
+    //删除所画线路
         for(int i = 10000; i<=index+10000;i++){
             layer->removeChildByTag(i);
         }

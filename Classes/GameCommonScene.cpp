@@ -29,7 +29,7 @@ using namespace ui;
 int i = 0;
 Scene* Game::createScene(){
     auto scene=Scene::createWithPhysics();
-    //scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+    scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     auto layer=Game::create();
     
     layer->setPhyWorld(scene->getPhysicsWorld());

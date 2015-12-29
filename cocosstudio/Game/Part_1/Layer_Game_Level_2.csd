@@ -238,26 +238,26 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-1967013240" Tag="25" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="215.7585" RightMargin="1519.2415" TopMargin="865.9081" BottomMargin="14.0919" FlipX="True" ctype="SpriteObjectData">
-            <Size X="473.0000" Y="362.0000" />
+          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-1967013240" Tag="25" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="852.2996" RightMargin="869.7004" TopMargin="828.3218" BottomMargin="41.6782" FlipX="True" ctype="SpriteObjectData">
+            <Size X="486.0000" Y="372.0000" />
             <AnchorPoint ScaleX="0.5044" ScaleY="0.5026" />
-            <Position X="454.3397" Y="196.0331" />
+            <Position X="1097.4380" Y="228.6454" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.2058" Y="0.1578" />
+            <PrePosition X="0.4970" Y="0.1841" />
             <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="Normal" Path="Picture/Jailer_2.png" Plist="" />
+            <FileData Type="Normal" Path="Picture/Jailer_1.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
           <AbstractNodeData Name="Sprite_Protagonist" ActionTag="1558405148" Tag="27" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="38.2065" RightMargin="1813.7935" TopMargin="220.9047" BottomMargin="798.0953" ctype="SpriteObjectData">
-            <Size X="356.0000" Y="223.0000" />
+            <Size X="310.0000" Y="203.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="216.1632" Y="909.6408" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.0979" Y="0.7324" />
             <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="Normal" Path="Picture/Protagonist_4.png" Plist="" />
+            <FileData Type="Normal" Path="Picture/Protagonist_1.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
           <AbstractNodeData Name="Sprite_Jailer_2" ActionTag="-2113337950" Tag="28" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1329.5537" RightMargin="392.4463" TopMargin="353.8223" BottomMargin="516.1777" ctype="SpriteObjectData">
@@ -271,7 +271,7 @@
             <FileData Type="Normal" Path="Picture/Jailer_1.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Special_Section" ActionTag="-243259879" Tag="25" IconVisible="False" LeftMargin="854.8616" RightMargin="953.1384" TopMargin="112.1761" BottomMargin="729.8239" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Sprite_Special_Section_1" ActionTag="-243259879" Tag="25" IconVisible="False" LeftMargin="854.8616" RightMargin="953.1384" TopMargin="112.1761" BottomMargin="729.8239" ctype="SpriteObjectData">
             <Size X="400.0000" Y="400.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="1054.8616" Y="929.8239" />
