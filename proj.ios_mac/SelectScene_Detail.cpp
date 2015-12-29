@@ -13,6 +13,7 @@
 #include "SelectScene_Detail.h"
 #include "GameCommonScene.h"
 #include "Constant_Use.h"
+#include "Constant.h"
 #include "LockofSelect.h"
 #include "CoverView.h"
 #include "ShopScene.h"
@@ -74,8 +75,9 @@ void Select_Detail::setCoverflow(){
         level->addClickEventListener(CC_CALLBACK_1(Select_Detail::show_GameReady,this,i));
         levelView->addCard(level,i);
     }
-    //下面这句话是调整图片位置
-    //levelView->setOffsetPosition(ccp(0.1f*winWidth,swRect.size.height/2));
+    //下面是调整图片位置
+    auto offset=(7-2*STEP)*0.1*winWidth;
+    levelView->setOffsetPosition(ccp(offset,swRect_level.size.height/2));
     levelView->setPosition(swRect_level.origin);
    this->addChild(levelView);
     
