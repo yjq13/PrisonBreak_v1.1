@@ -202,12 +202,18 @@ void Select_Detail::show_GameReady(Ref* pSender,int level)
     string stepSu=data;
     
     PATH_LEVEL = stepSu;
-
-    if (result&&level==levelView->getCurCardIndex()) {
+    CCLOG("asasd%d  %d",level,levelView->getCurCardIndex());
+    bool iscur=false;//是否未滑动
+    if(levelView->getCurCardIndex()==999999&&level+1==STEP){
+         //999999表示未滑动，即选择当前关
+        iscur=true;
+    }
+    if (result&&(level==levelView->getCurCardIndex()||iscur)) {
         rootNodeL_GameStep->setVisible(true);
         levelView->removeListener();
         shieldButton();
-    }else{
+    }else {
+        
         CCLOG("choice is wrong");
     }
 }

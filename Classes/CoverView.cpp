@@ -220,10 +220,16 @@ int CoverView::getCurCardIndex()
 {
     float distance1 = - scrollLayer->getPositionX();
     float distance2 = swSize.width/2 - offsetPosition.x;
+    //CCLOG("%f,%f, offset: %f",distance1,distance2,offsetPosition.x);
     //+5 浮点数误差
     int index = (distance1 + distance2 + 5) / (disDistance);
     //CCLog("card index:%d  distance1:%f",index,distance1);
+    if(scrollLayer->getPositionX()!=0){
     return index;
+    }else{
+        //表示未滑动
+        return 999999;
+    }
 }
 
 void CoverView::setOffsetPosition(Point var)
