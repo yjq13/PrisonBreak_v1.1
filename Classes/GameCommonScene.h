@@ -57,6 +57,7 @@ public:
 //    Sprite* ballTwo;
     
     virtual void onExit();
+    virtual void update(float dt);
     // implement the "static create()" method manually
     CREATE_FUNC(Game);
 };
