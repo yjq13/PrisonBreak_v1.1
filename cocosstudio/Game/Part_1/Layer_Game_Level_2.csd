@@ -1,13 +1,13 @@
 <GameFile>
-  <PropertyGroup Name="Layer_Game_Level_2" Type="Layer" ID="8d42ab52-b4ce-46a8-a56e-30e26c8aaa1b" Version="2.3.3.0" />
+  <PropertyGroup Name="Layer_Game_Level_2" Type="Layer" ID="5b004ef2-4572-4977-95cb-f6d4ef51527c" Version="2.3.3.0" />
   <Content ctype="GameProjectContent">
     <Content>
-      <Animation Duration="195" Speed="1.0000">
+      <Animation Duration="250" Speed="1.0000">
         <Timeline ActionTag="-1967013240" Property="Position">
-          <PointFrame FrameIndex="0" X="1097.4380" Y="228.6454">
+          <PointFrame FrameIndex="0" X="183.5287" Y="228.6449">
             <EasingData Type="0" />
           </PointFrame>
-          <PointFrame FrameIndex="100" X="165.4115" Y="181.3812">
+          <PointFrame FrameIndex="100" X="1178.4426" Y="266.1534">
             <EasingData Type="0" />
           </PointFrame>
         </Timeline>
@@ -157,6 +157,34 @@
             <TextureFile Type="Normal" Path="Picture/Jailer_4.png" Plist="" />
           </TextureFrame>
         </Timeline>
+        <Timeline ActionTag="866520979" Property="Position">
+          <PointFrame FrameIndex="200" X="1894.6586" Y="1059.6558">
+            <EasingData Type="0" />
+          </PointFrame>
+          <PointFrame FrameIndex="250" X="945.2042" Y="1029.9810">
+            <EasingData Type="0" />
+          </PointFrame>
+        </Timeline>
+        <Timeline ActionTag="866520979" Property="FileData">
+          <TextureFrame FrameIndex="200" Tween="False">
+            <TextureFile Type="Normal" Path="Picture/Mouse_1.png" Plist="" />
+          </TextureFrame>
+          <TextureFrame FrameIndex="210" Tween="False">
+            <TextureFile Type="Normal" Path="Picture/Mouse_2.png" Plist="" />
+          </TextureFrame>
+          <TextureFrame FrameIndex="220" Tween="False">
+            <TextureFile Type="Normal" Path="Picture/Mouse_3.png" Plist="" />
+          </TextureFrame>
+          <TextureFrame FrameIndex="230" Tween="False">
+            <TextureFile Type="Normal" Path="Picture/Mouse_4.png" Plist="" />
+          </TextureFrame>
+          <TextureFrame FrameIndex="240" Tween="False">
+            <TextureFile Type="Normal" Path="Picture/Mouse_3.png" Plist="" />
+          </TextureFrame>
+          <TextureFrame FrameIndex="250" Tween="False">
+            <TextureFile Type="Normal" Path="Picture/Mouse_4.png" Plist="" />
+          </TextureFrame>
+        </Timeline>
       </Animation>
       <ObjectData Name="Layer" Tag="157" ctype="GameLayerObjectData">
         <Size X="2208.0000" Y="1242.0000" />
@@ -216,25 +244,25 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-1967013240" Tag="25" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="852.2996" RightMargin="869.7004" TopMargin="828.3218" BottomMargin="41.6782" FlipX="True" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-1967013240" Tag="25" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="-61.6097" RightMargin="1783.6097" TopMargin="828.3223" BottomMargin="41.6777" ctype="SpriteObjectData">
             <Size X="486.0000" Y="372.0000" />
             <AnchorPoint ScaleX="0.5044" ScaleY="0.5026" />
-            <Position X="1097.4380" Y="228.6454" />
+            <Position X="183.5287" Y="228.6449" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.4970" Y="0.1841" />
-            <PreSize X="0.2201" Y="0.2995" />
+            <PrePosition X="0.0831" Y="0.1841" />
+            <PreSize X="0.1943" Y="0.2987" />
             <FileData Type="Normal" Path="Picture/Jailer_1.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Protagonist" ActionTag="1558405148" Tag="27" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="61.1632" RightMargin="1836.8368" TopMargin="230.8592" BottomMargin="808.1408" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Sprite_Protagonist" ActionTag="1558405148" Tag="27" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="38.1632" RightMargin="1813.8368" TopMargin="220.8592" BottomMargin="798.1408" ctype="SpriteObjectData">
             <Size X="310.0000" Y="203.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="216.1632" Y="909.6408" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.0979" Y="0.7324" />
-            <PreSize X="0.1404" Y="0.1634" />
+            <PreSize X="0.1612" Y="0.1795" />
             <FileData Type="Normal" Path="Picture/Protagonist_1.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
@@ -249,34 +277,47 @@
             <FileData Type="Normal" Path="Picture/Jailer_1.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
+          <AbstractNodeData Name="Image_Wall_1" ActionTag="1607510901" Tag="21" IconVisible="False" LeftMargin="742.2993" RightMargin="1415.7007" TopMargin="5.7314" BottomMargin="436.2685" Scale9Width="50" Scale9Height="800" ctype="ImageViewObjectData">
+            <Size X="50.0000" Y="800.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="767.2993" Y="836.2685" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.3475" Y="0.6733" />
+            <PreSize X="0.0226" Y="0.6441" />
+            <FileData Type="Normal" Path="Picture/Sprite_Wall.jpg" Plist="" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Image_Wall_2" ActionTag="774889352" Tag="23" IconVisible="False" LeftMargin="1345.7920" RightMargin="812.2080" TopMargin="428.1779" BottomMargin="13.8221" Scale9Width="50" Scale9Height="800" ctype="ImageViewObjectData">
+            <Size X="50.0000" Y="800.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="1370.7920" Y="413.8221" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.6208" Y="0.3332" />
+            <PreSize X="0.0226" Y="0.6441" />
+            <FileData Type="Normal" Path="Picture/Sprite_Wall.jpg" Plist="" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Sprite_Mouse_1" ActionTag="866520979" Tag="18" IconVisible="False" LeftMargin="1630.6586" RightMargin="49.3413" TopMargin="-95.6558" BottomMargin="781.6558" FlipX="True" ctype="SpriteObjectData">
+            <Size X="528.0000" Y="556.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="1894.6586" Y="1059.6558" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.8581" Y="0.8532" />
+            <PreSize X="0.2301" Y="0.4477" />
+            <FileData Type="Normal" Path="Picture/Mouse_1.png" Plist="" />
+            <BlendFunc Src="770" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Sprite_Special_Section_1" ActionTag="-8519406" Tag="25" IconVisible="False" LeftMargin="874.1057" RightMargin="933.8943" TopMargin="148.7164" BottomMargin="693.2836" ctype="SpriteObjectData">
             <Size X="400.0000" Y="400.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1112.1514" Y="784.5405" />
+            <Position X="1074.1057" Y="893.2836" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5037" Y="0.6317" />
+            <PrePosition X="0.4865" Y="0.7192" />
             <PreSize X="0.1812" Y="0.3221" />
             <FileData Type="Normal" Path="Picture/Sprite_Special_Section.png" Plist="" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="Image_Wall_2" ActionTag="701225633" Tag="37" IconVisible="False" LeftMargin="1363.0347" RightMargin="794.9653" TopMargin="419.5551" BottomMargin="22.4449" Scale9Width="50" Scale9Height="800" ctype="ImageViewObjectData">
-            <Size X="50.0000" Y="800.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1388.0347" Y="422.4449" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.6286" Y="0.3401" />
-            <PreSize X="0.0226" Y="0.6441" />
-            <FileData Type="Normal" Path="Picture/Sprite_Wall.jpg" Plist="" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="Image_Wall_1" ActionTag="-314259766" Tag="38" IconVisible="False" LeftMargin="802.6484" RightMargin="1355.3516" TopMargin="5.7305" BottomMargin="436.2696" Scale9Width="50" Scale9Height="800" ctype="ImageViewObjectData">
-            <Size X="50.0000" Y="800.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="827.6484" Y="836.2696" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.3748" Y="0.6733" />
-            <PreSize X="0.0226" Y="0.6441" />
-            <FileData Type="Normal" Path="Picture/Sprite_Wall.jpg" Plist="" />
+            <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

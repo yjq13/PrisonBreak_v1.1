@@ -25,6 +25,10 @@
           <Folder Name="Part_2" />
           <Folder Name="Part_3" />
           <Folder Name="Part_4" />
+          <Folder Name="Other">
+            <Project Name="Layer_Success.csd" Type="Layer" />
+            <Project Name="Layer_Fail.csd" Type="Layer" />
+          </Folder>
         </Folder>
         <Image Name="P1.jpg" />
         <Image Name="P2.jpg" />
