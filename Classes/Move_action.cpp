@@ -60,6 +60,10 @@ bool moveAction::switchMoveAction(const cocos2d::PhysicsContact &contact){
             moveAction::onContactBeginPro_Coin();
             break;
         }
+        case WALL_TAG:{
+            moveAction::onContactBeginPro_Wall();
+            break;
+        }
     }
     
     
@@ -99,7 +103,8 @@ moveAction::~moveAction(){
 }
 
 bool moveAction::onContactBeginPro_Jailer(){
-
+//    Scheduler* sched = Director::getInstance()->getScheduler();
+//    sched->setTimeScale(0.0f);
     CCLOG("Pro_Jailer boom!!!!");
     return false;
 }
@@ -124,6 +129,13 @@ bool moveAction::onContactBeginPro_Mouse(){
     return false;
 }
 
+bool moveAction::onContactBeginPro_Wall(){
+    
+    CCLOG("Pro_Wall boom!!!!");
+    //    removeChild(protagonist);
+    return false;
+}
+
 
 bool moveAction::onContactBeginPro_Coin(){
     CCLOG("Pro_coin boom!!!!");
@@ -133,9 +145,9 @@ bool moveAction::onContactBeginPro_Coin(){
 
 bool moveAction::onContactBeginPro_Section(){
 
-    Scheduler* sched1 = node_Pro->getScheduler();
+    Scheduler* sched = node_Pro->getScheduler();
     
-    sched1->setTimeScale(0.2f);
+    sched->setTimeScale(0.2f);
     
     //node_Pro->runAction(action);
         CCLOG("Pro_Section boom!!!!");
@@ -145,11 +157,10 @@ bool moveAction::onContactBeginPro_Section(){
 
 bool moveAction::onContactSeparatePro_Section(){
     
-    Scheduler* sched1 = node_Pro->getScheduler();
+    Scheduler* sched = node_Pro->getScheduler();
     
-    sched1->setTimeScale(1.0f);
+    sched->setTimeScale(1.0f);
 
-    CCLOG("王宁是水杯!!!!");
     return false;
 }
 

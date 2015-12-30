@@ -34,6 +34,8 @@ public:
     
     bool onContactBeginPro_Section();
     
+    bool onContactBeginPro_Wall();
+    
     bool onContactSeparatePro_Section();
     
     bool switchMoveAction(const cocos2d::PhysicsContact &contact);
