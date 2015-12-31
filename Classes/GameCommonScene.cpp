@@ -53,8 +53,10 @@ bool Game::init(){
     string follow = "/Layer_Game_Level_";
     string all = hand+PATH_PART+follow+PATH_LEVEL+tail;
     
+    failNodeL = CSLoader::createNode("res/Game/Other/Layer_Fail.csb");
+    successNodeL = CSLoader::createNode("res/Game/Other/Layer_Success.csb");
     rootNodeL = CSLoader::createNode(all);
-    
+    //failNodeL->setTag(131250077);
     rootTimeLine = CSLoader::createTimeline(all);
     
     
@@ -67,7 +69,7 @@ bool Game::init(){
     
     EventListenerTouchOneByOne* listener = movelistener.create(rootNodeL);
     
-    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, rootNodeL);
+    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     
     setUI();
     
@@ -81,7 +83,12 @@ void Game::setUI(){
     //rootNodeS->addChild(rootNodeL);
     rootNodeL->setContentSize(VISIBLE_SIZE);
     ui::Helper::doLayout(rootNodeL);
-    
+    failNodeL->setTag(131250077);
+    successNodeL->setTag(131250057);
+    rootNodeL->addChild(successNodeL);
+    rootNodeL->addChild(failNodeL);
+    successNodeL->setVisible(false);
+    failNodeL->setVisible(false);
     addChild(rootNodeL);
     auto Button_Back = rootNodeL->getChildByName<ui::Button*>("Button_Back");
     
@@ -163,6 +170,7 @@ void Game::update(float dt){
 void Game::menuCloseCallback(Ref* pSender)
 {
     BUTTON_LOCK = true;
+        
     auto Scene =  Select_Detail::createScene();
     //auto transition=TransitionPageTurn::create(0.1f, Scene, false);
     

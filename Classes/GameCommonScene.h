@@ -23,6 +23,8 @@ class Game : public MyScene{
     moveListener movelistener;
     moveAction moveaction;
     cocos2d::Node* rootNodeL;
+    cocos2d::Node* failNodeL;
+    cocos2d::Node* successNodeL;
     cocostudio::timeline::ActionTimeline* rootTimeLine;
     cocostudio::timeline::ActionTimeline* rootTimeLine2;
 public:

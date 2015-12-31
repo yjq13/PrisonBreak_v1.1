@@ -102,12 +102,17 @@ moveAction::~moveAction(){
     CCLOG("GOODBYE MOVEACTION");
 }
 
+
+
 bool moveAction::onContactBeginPro_Jailer(){
-//    Scheduler* sched = Director::getInstance()->getScheduler();
-//    sched->setTimeScale(0.0f);
+    node_Pro->getScheduler()->setTimeScale(0.0f);
+    Node* layer =node_Pro->getParent()->getChildByTag(131250077);
+    layer->setVisible(true);
     CCLOG("Pro_Jailer boom!!!!");
     return false;
 }
+
+
 
 bool moveAction::onContactBeginPro_Mouse(){
     if(node_else->isVisible()){
@@ -129,6 +134,8 @@ bool moveAction::onContactBeginPro_Mouse(){
     return false;
 }
 
+
+
 bool moveAction::onContactBeginPro_Wall(){
     
     CCLOG("Pro_Wall boom!!!!");
@@ -137,11 +144,16 @@ bool moveAction::onContactBeginPro_Wall(){
 }
 
 
+
+
 bool moveAction::onContactBeginPro_Coin(){
     CCLOG("Pro_coin boom!!!!");
     //    removeChild(protagonist);
     return false;
 }
+
+
+
 
 bool moveAction::onContactBeginPro_Section(){
 
@@ -153,6 +165,8 @@ bool moveAction::onContactBeginPro_Section(){
         CCLOG("Pro_Section boom!!!!");
     return true;
 }
+
+
 
 
 bool moveAction::onContactSeparatePro_Section(){
