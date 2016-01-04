@@ -23,6 +23,7 @@
 #include "TimeLineLoad.h"
 #include "TimeLineVo.h"
 #include "OC_callGameInfo.h"
+#include "CacheData.h"
 USING_NS_CC;
 using namespace ui;
 
@@ -31,7 +32,7 @@ Scene* Game::createScene(){
     auto scene=Scene::createWithPhysics();
     scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     auto layer=Game::create();
-    
+    CCLOG("HELLO GAME");
     layer->setPhyWorld(scene->getPhysicsWorld());
     scene->addChild(layer);
     return scene;
@@ -39,13 +40,14 @@ Scene* Game::createScene(){
 
 Game::~Game(){
     
-    CCLOG("HELLOGAME");
+    CCLOG("GOODBYE GAME");
 
     }
 bool Game::init(){
     
     scheduleUpdate();
     
+    initCacheData();
     //rootNodeS = CSLoader::createNode("res/Game/Scene_Game.csb");
     
     string hand = "res/Game/";
@@ -90,12 +92,46 @@ void Game::setUI(){
     successNodeL->setVisible(false);
     failNodeL->setVisible(false);
     addChild(rootNodeL);
-    auto Button_Back = rootNodeL->getChildByName<ui::Button*>("Button_Back");
     
+    auto Button_Close_Fail = failNodeL->getChildByName<ui::Button*>("Button_Close");
+    
+    Button_Close_Fail->addTouchEventListener(this, toucheventselector(Game::failCloseCallback));
+    
+    auto Button_Close_Success = successNodeL->getChildByName<ui::Button*>("Button_Close");
+    
+    Button_Close_Success->addTouchEventListener(this, toucheventselector(Game::successCloseCallback));
+    
+    
+    
+    
+    
+    auto Button_Back = rootNodeL->getChildByName<ui::Button*>("Button_Back");
     
     Button_Back->addTouchEventListener(this,toucheventselector(Game::menuCloseCallback));
     
+    auto Button_Back_Fail = failNodeL->getChildByName<ui::Button*>("Button_Back");
     
+    Button_Back_Fail->addTouchEventListener(this, toucheventselector(Game::menuCloseCallback));
+    
+    auto Button_Back_Success = successNodeL->getChildByName<ui::Button*>("Button_Back");
+    
+    Button_Back_Success->addTouchEventListener(this, toucheventselector(Game::menuCloseCallback));
+    
+    
+    
+    auto Button_Retry_Fail = failNodeL->getChildByName<ui::Button*>("Button_Retry");
+    
+    Button_Retry_Fail->addTouchEventListener(this,toucheventselector(Game::Callrestart));
+    
+    auto Button_Retry_Success = successNodeL->getChildByName<ui::Button*>("Button_Retry");
+    
+    Button_Retry_Success->addTouchEventListener(this,toucheventselector(Game::Callrestart));
+
+    
+    //未完成部分
+    auto Button_Next_Success = successNodeL->getChildByName<ui::Button*>("Button_Next");
+    
+    Button_Next_Success->addTouchEventListener(this,toucheventselector(Game::Callrestart));
     
     gameLoad::loadGame(rootNodeL);
     
@@ -166,6 +202,25 @@ void Game::update(float dt){
     }while(Demo_Mouse[index]!=NULL);
 }
 
+void Game::failCloseCallback(Ref* pSender){
+    failNodeL->setVisible(false);
+}
+
+
+void Game::successCloseCallback(Ref* pSender){
+    successNodeL->setVisible(false);
+}
+
+
+void Game::Callrestart(Ref *pSender){
+    if(BUTTON_LOCK==false){
+        BUTTON_LOCK= true;
+    //menuCloseCallback(pSender);
+    Director::getInstance()->popScene();
+    
+    CCLOG("pop GAME");
+    }
+}
 
 void Game::menuCloseCallback(Ref* pSender)
 {

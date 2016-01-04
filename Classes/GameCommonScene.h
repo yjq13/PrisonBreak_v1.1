@@ -36,27 +36,18 @@ public:
     };
     ~Game();
     void menuCloseCallback(Ref* pSender);
+    
+    void failCloseCallback(Ref* pSender);
+    
+    void successCloseCallback(Ref* pSender);
+    
+    void Callrestart(Ref* pSender);
     // a selector callback
     void setUI();
-    
-    //触屏测试
-    CCSprite* sprite;
-    //重载触控函数
-    CCPoint points[10000];//手指画出来的点集
+
     int index;//计数器
-//    bool onTouchBegan(Touch* touch,Event* event);
-//    void onTouchMoved(Touch* touch,Event* event);
-//    void onTouchEnded(Touch* touch,Event* event);
-   // void onTouchCancel(Touch* touch,Event* event);
     
     bool isMoved;//用于判断是否画完线路
-    //下面是检测碰撞的方法
-   // bool onContactBegin(const PhysicsContact& contact);
-    
-    //下面获取游戏地图上的起点和终点区域
-    
-//    Sprite* protagonist;
-//    Sprite* ballTwo;
     
     virtual void onExit();
     virtual void update(float dt);

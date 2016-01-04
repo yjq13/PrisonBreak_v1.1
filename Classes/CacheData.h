@@ -11,13 +11,12 @@
 
 #include <stdio.h>
 
-class CacheData{
-public:
-    int GOLD_COIN_GET = 0;
-    int DIAMOND_GET = 0;
-    int TIME_GET = 0;
-};
+   extern int GOLD_COIN_GET;
 
-static CacheData CACHEINFO;
+   extern int DIAMOND_GET;
+
+   extern int TIME_GET;
+
+extern void initCacheData();
 
 #endif /* CacheData_h*/

@@ -39,7 +39,6 @@ class GameInfo_deal: NSObject {
             polist.append(po)
             
         }
-        print(polist)
         return polist
     }
  

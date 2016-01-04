@@ -10,6 +10,7 @@
 #include "cocos2d.h"
 #include <iostream>
 #include "Constant_Use.h"
+#include "CacheData.h"
 USING_NS_CC;
 
 EventListenerPhysicsContact* moveAction::createProAction(TIMELINE rootTimeLine){
@@ -117,10 +118,8 @@ bool moveAction::onContactBeginPro_Jailer(){
 bool moveAction::onContactBeginPro_Mouse(){
     if(node_else->isVisible()){
     for(int i = 0;i<20;i++){
-        //CCLOG("timeline:%d",timeLine.TimeLine[i]->getTag());
         if(timeLine.TimeLine[i]->getTag()!=157)
             break;
-        CCLOG("timeline:%d",timeLine.TimeLine[i]->getFlags());
         if((signed)timeLine.TimeLine[i]->getFlags()==node_else->getTag()){
             
             timeLine.TimeLine[i]->pause();
@@ -128,9 +127,9 @@ bool moveAction::onContactBeginPro_Mouse(){
         }
     }
         node_else->setVisible(false);
-
+        DIAMOND_GET++;
     }
-    CCLOG("Pro_Mouse boom!!!!");
+    CCLOG("Pro_Mouse boom and diamond = %d!!!!",DIAMOND_GET);
     return false;
 }
 

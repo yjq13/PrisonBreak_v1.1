@@ -40,12 +40,6 @@ bool Start::init()
     
     ORIGIN = cocos2d::Director::getInstance()->getVisibleOrigin();
     
-    initDocuments();
-    
-    setConstant();
-    
-    printf("%d\n", GOLD_COIN);
-    
     rootNodeL = CSLoader::createNode("res/Start/Layer_Start.csb");
     
     setUI();

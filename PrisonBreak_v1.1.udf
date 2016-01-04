@@ -25,5 +25,14 @@
         <EnableHTML5Advanced Value="False" />
       </Value>
     </Item>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="Game/Other/Layer_Fail.csd" />
+          <FilePathData Path="Game/Other/Layer_Success.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="Game/Other/Layer_Success.csd" />
+      </Value>
+    </Item>
   </Properties>
 </UserData>
