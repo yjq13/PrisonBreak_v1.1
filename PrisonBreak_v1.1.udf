@@ -28,8 +28,6 @@
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
         <OpenedDocuments>
-          <FilePathData Path="Game/Other/Layer_Success.csd" />
-          <FilePathData Path="Game/Other/Layer_Fail.csd" />
         </OpenedDocuments>
         <ActiveDocument Path="Game/Other/Layer_Success.csd" />
       </Value>

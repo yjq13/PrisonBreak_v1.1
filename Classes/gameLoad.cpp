@@ -137,7 +137,6 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
         
         string first = "Sprite_Special_Section_";
         string all = first+numberStr;
-        cout<<all;
         Demo_Section[index] = rootNodeL->getChildByName<Sprite*>(all);
         if(Demo_Section[index]!=NULL)
             Sprite_SpecialSection::setSpecialSection(index,Demo_Section[index]);

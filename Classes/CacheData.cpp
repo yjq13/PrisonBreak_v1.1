@@ -7,3 +7,15 @@
 //
 
 #include "CacheData.h"
+
+int GOLD_COIN_GET = 0;
+
+int DIAMOND_GET = 0;
+
+int TIME_GET = 0;
+
+void initCacheData(){
+    GOLD_COIN_GET = 0;
+    DIAMOND_GET = 0;
+    TIME_GET = 0;
+}

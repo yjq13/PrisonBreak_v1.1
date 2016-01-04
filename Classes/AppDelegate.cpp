@@ -1,5 +1,8 @@
 #include "AppDelegate.h"
 #include "StartScene.h"
+#include "Constant.h"
+#include "OC_callFigureInfo.h"
+#include "OC_callSystemInfo.h"
 #include "Constant_Use.h"
 
 USING_NS_CC;
@@ -37,6 +40,10 @@ static int register_all_packages()
 
 bool AppDelegate::applicationDidFinishLaunching() {
     // initialize director
+    initDocuments();
+    
+    setConstant();
+    
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {

@@ -22,8 +22,6 @@ TIMELINE TimeLineLoad::loadTimeLine(cocos2d::Node* rootNodeL){
         _timeline.TimeLine[i]->setFlags(vo.tag);
         _timeline.TimeLine[i]->gotoFrameAndPlay(vo.startTime,vo.endTime, true);
         rootNodeL->runAction(_timeline.TimeLine[i]);
-         
-        //CCLOG("timelineTag:%d",_timeline.TimeLine[i]->getTag());
     }
     
     CCLOG("TIMELINE is OK!!!!!");
