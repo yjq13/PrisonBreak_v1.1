@@ -106,7 +106,7 @@ void Select_Detail::setUI(){
     auto Button_Close   =  rootNodeL_GameStep->getChildByName<ui::Button*>("Button_Close");
     auto Button_StartGame = rootNodeL_GameStep->getChildByName<ui::Button*>("Button_StartGame");
     
-    Button_Close->addTouchEventListener(this, toucheventselector(Select_Detail::closeLayer));
+    Button_Close->addTouchEventListener(CC_CALLBACK_1(Select_Detail::closeLayer,this));
     
     
     Button_StartGame->addTouchEventListener(CC_CALLBACK_1(Select_Detail::turnToGame,this));
@@ -141,13 +141,13 @@ void Select_Detail::setUI(){
     // auto Button_GameStep = rootNodeL_Basis->getChildByName<ui::Button*>("Button_Level_1");
     
     
-    Button_Back->addTouchEventListener(this, toucheventselector(Select_Detail::menuCloseCallback));
+    Button_Back->addTouchEventListener(CC_CALLBACK_1(Select_Detail::menuCloseCallback,this));
     
     //Button_GameStep->addTouchEventListener(CC_CALLBACK_1(Select_Detail::show_GameReady,this));
     
     auto Button_AddDiamond=rootNodeL_Basis->getChildByName<ui::Button*>("Button_AddDiamond");
     
-    Button_AddDiamond->addTouchEventListener(this, toucheventselector(Select::turnToShop));
+    Button_AddDiamond->addTouchEventListener(CC_CALLBACK_1(Select_Detail::turnToShop,this));
     
 }
 
@@ -182,7 +182,8 @@ void Select_Detail::turnToGame(Ref* pSender)
         auto sceneNew = Game::createScene();
         
         Director::getInstance()->pushScene(sceneNew);
-        
+        rootNodeL_GameStep->setVisible(false);
+        resumeButton();
     }
     
 }
@@ -226,8 +227,6 @@ void Select_Detail::show_GameReady(Ref* pSender,int level)
 void Select_Detail::turnToShop(Ref* pSender){
     auto sceneNew=Shop::createScene();
     //下面搞个翻页效果
-    //this->removeAllChildren();
-    //auto transition=createTransition_Page(sceneNew);
     auto curScene= Director::getInstance()->getRunningScene();
     Director::getInstance()->pushScene(curScene);
     Director::getInstance()->pushScene(sceneNew);

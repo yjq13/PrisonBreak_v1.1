@@ -224,13 +224,14 @@ void Game::Callrestart(Ref *pSender){
 
 void Game::menuCloseCallback(Ref* pSender)
 {
-    BUTTON_LOCK = true;
+    if(BUTTON_LOCK==false){
+        BUTTON_LOCK= true;
         
     auto Scene =  Select_Detail::createScene();
     //auto transition=TransitionPageTurn::create(0.1f, Scene, false);
     
-    Director::getInstance()->replaceScene(Scene);
-    
+    Director::getInstance()->popScene();
+    }
     //#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     //exit(0);
     //#endif

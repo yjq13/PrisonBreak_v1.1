@@ -80,9 +80,9 @@ void Select::setUI(){
     
     Button_Part_4->addTouchEventListener(CC_CALLBACK_1(Select::turnToSelect_Detail,this,4));
     
-    Button_Back->addTouchEventListener(this, toucheventselector(Select::menuCloseCallback));
+    Button_Back->addTouchEventListener(CC_CALLBACK_1(Select::menuCloseCallback,this));
     
-    Button_AddDiamond->addTouchEventListener(this, toucheventselector(Select::turnToShop));
+    Button_AddDiamond->addTouchEventListener(CC_CALLBACK_1(Select::turnToShop,this));
 
 }
 
