@@ -124,6 +124,7 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     Demo_protagonist->setActionManager(actionManager1);
     
     Demo_protagonist->setScheduler(sched1);
+    
 
     //特殊区域加载
     Sprite* Demo_Section[10];

@@ -31,7 +31,7 @@ bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
     if(!moveLock){
         return false;
     }
-    CCLOG("begin with (%f,%f)",touch->getLocation().x,touch->getLocation().y);
+    //CCLOG("begin with (%f,%f)",touch->getLocation().x,touch->getLocation().y);
     //计数器归零,数组清空
     index=0;
     for (int i=0;i<10000;i++){
@@ -59,11 +59,10 @@ void moveListener::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event, No
 }
 
 void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, Node* layer){
-    printf("ed");
+    //printf("ed");
     auto p=touch->getLocation();
     if (isMoved&&(STOP_SECTION.isInside(touch)||DESTINATION_SECTION.isInside(touch)))
     {
-        int TAG = 0;
         //下面是主角跟随路线移动
         //下面是填装动作的容器
         protagonist = layer->getChildByName<Sprite*>("Sprite_Protagonist");

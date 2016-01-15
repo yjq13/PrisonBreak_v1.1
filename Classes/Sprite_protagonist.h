@@ -8,12 +8,12 @@
 
 #ifndef Sprite_Component_protagonist_h
 #define Sprite_Component_protagonist_h
-
+#include "SpriteListener.h"
 #include <cocos2d.h>
 class Sprite_protagonist : public cocos2d::Sprite{
+    
 public:
     //Sprite_protagonist();
-    
     static cocos2d::Sprite* create(int number,cocos2d::Sprite* getSprite);
     
     static void setPro(int number,cocos2d::Sprite* getSprite);

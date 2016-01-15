@@ -69,6 +69,7 @@
 		E30AC8BB1BD984AC005B8686 /* layerHandle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8B91BD984AB005B8686 /* layerHandle.cpp */; };
 		E30AC8BE1BD98B94005B8686 /* Move_action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8BC1BD98B94005B8686 /* Move_action.cpp */; };
 		E30E77811BCAD7DE0053F4B1 /* CacheData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30E777F1BCAD7DE0053F4B1 /* CacheData.cpp */; };
+		E312DDA81C4875BC0062A35A /* SpriteListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E312DDA61C4875BC0062A35A /* SpriteListener.cpp */; };
 		E3463CCA1C1D148A003057AA /* TimeLineLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3463CC81C1D148A003057AA /* TimeLineLoad.cpp */; };
 		E347D4251C1C0AE4009ECC95 /* TimeLinePo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347D4241C1C0AE4009ECC95 /* TimeLinePo.swift */; };
 		E347D4281C1C45E2009ECC95 /* TimeLineVo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E347D4261C1C45E2009ECC95 /* TimeLineVo.cpp */; };
@@ -196,6 +197,8 @@
 		E30AC8BD1BD98B94005B8686 /* Move_action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Move_action.h; sourceTree = "<group>"; };
 		E30E777F1BCAD7DE0053F4B1 /* CacheData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CacheData.cpp; sourceTree = "<group>"; };
 		E30E77801BCAD7DE0053F4B1 /* CacheData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheData.h; sourceTree = "<group>"; };
+		E312DDA61C4875BC0062A35A /* SpriteListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteListener.cpp; sourceTree = "<group>"; };
+		E312DDA71C4875BC0062A35A /* SpriteListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteListener.h; sourceTree = "<group>"; };
 		E3463CC81C1D148A003057AA /* TimeLineLoad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeLineLoad.cpp; sourceTree = "<group>"; };
 		E3463CC91C1D148A003057AA /* TimeLineLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineLoad.h; sourceTree = "<group>"; };
 		E347D4241C1C0AE4009ECC95 /* TimeLinePo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLinePo.swift; sourceTree = "<group>"; };
@@ -492,6 +495,8 @@
 				E301E4DE1C1AA5D00094884D /* gameLoad.h */,
 				E3463CC81C1D148A003057AA /* TimeLineLoad.cpp */,
 				E3463CC91C1D148A003057AA /* TimeLineLoad.h */,
+				E312DDA61C4875BC0062A35A /* SpriteListener.cpp */,
+				E312DDA71C4875BC0062A35A /* SpriteListener.h */,
 			);
 			name = BL;
 			sourceTree = "<group>";
@@ -773,6 +778,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E312DDA81C4875BC0062A35A /* SpriteListener.cpp in Sources */,
 				E30AC8BB1BD984AC005B8686 /* layerHandle.cpp in Sources */,
 				E3CB5E8D1BC9753A005123B8 /* SystemPo.swift in Sources */,
 				0454C4F51C1AA94E001EC9F7 /* CoverView.cpp in Sources */,
