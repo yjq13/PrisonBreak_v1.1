@@ -50,7 +50,7 @@ void Start::setUI(){
 
     auto button_Start = rootNodeL->getChildByName<ui::Button*>("Button_Start");
     
-    button_Start->addTouchEventListener(this, toucheventselector(Start::turnToSelect));
+    button_Start->addTouchEventListener(CC_CALLBACK_1(Start::turnToSelect,this));
     
     rootNodeL->setContentSize(VISIBLE_SIZE);
     

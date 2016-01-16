@@ -58,18 +58,18 @@ bool Select_Detail::init(){
 
 void Select_Detail::setCoverflow(){
     //初始化coverflow
-    float winWidth = CCDirector::sharedDirector()->getWinSize().width;
-    float winHeight = CCDirector::sharedDirector()->getWinSize().height;
+    float winWidth = Director::getInstance()->getWinSize().width;
+    float winHeight = Director::getInstance()->getWinSize().height;
     
-    CCRect swRect_level = CCRectMake(0.01f*winWidth,0.4f*winHeight,0.98f*winWidth,0.33f*winHeight);
-    CCSize slSize_level = CCSizeMake(2.3f*winWidth,0.33f*winHeight);
+    Rect swRect_level = Rect(0.01f*winWidth,0.4f*winHeight,0.98f*winWidth,0.33f*winHeight);
+    Size slSize_level = Size(2.3f*winWidth,0.33f*winHeight);
     float disDistance = 0.2f*winWidth;
     float disScale = 0.25f;
     levelView = CoverView::create(swRect_level,slSize_level,disDistance,disScale);
     
     for(int i = 0 ; i< 9 ; i++)
     {
-        char* url;
+        string url;
         url="res/Picture/Button_Part_1.png";
         Button* level=Button::create(url);
         level->addClickEventListener(CC_CALLBACK_1(Select_Detail::show_GameReady,this,i));
@@ -77,7 +77,7 @@ void Select_Detail::setCoverflow(){
     }
     //下面是调整图片位置
     auto offset=(7-2*STEP)*0.1*winWidth;
-    levelView->setOffsetPosition(ccp(offset,swRect_level.size.height/2));
+    levelView->setOffsetPosition(Point(offset,swRect_level.size.height/2));
     levelView->setPosition(swRect_level.origin);
    this->addChild(levelView);
     
@@ -183,6 +183,7 @@ void Select_Detail::turnToGame(Ref* pSender)
         
         Director::getInstance()->pushScene(sceneNew);
         rootNodeL_GameStep->setVisible(false);
+        levelView->addListener();
         resumeButton();
     }
     

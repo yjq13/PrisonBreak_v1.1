@@ -29,7 +29,7 @@ EventListenerTouchOneByOne* SpriteListener::create(cocos2d::Sprite* getSprite){
 //获取精灵的位置
 Rect  SpriteListener::getRect()
 {
-    return CCRectMake(protagonist->getPositionX() - protagonist->getContentSize().width * protagonist->getAnchorPoint().x,
+    return Rect(protagonist->getPositionX() - protagonist->getContentSize().width * protagonist->getAnchorPoint().x,
                       protagonist->getPositionY() - protagonist->getContentSize().height * protagonist->getAnchorPoint().y,
                       protagonist->getContentSize().width, protagonist->getContentSize().height);
     // 为了能够自定义自己的位置大小采用了低效的函数而不是直接用成员变量
@@ -46,7 +46,7 @@ bool SpriteListener::onTouchBegan(Touch* touch, Event* event)
     Point touchLocation = touch->getLocation(); // 返回GL坐标
     Point localPos = protagonist->convertToNodeSpace(touchLocation);
     Rect rc = getRect();
-    rc.origin = CCPointZero;
+    rc.origin = Point::ZERO;
     bool isTouched = rc.containsPoint(localPos);
     if(isTouched)
     {

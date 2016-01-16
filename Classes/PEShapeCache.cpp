@@ -11,7 +11,7 @@
 //#include "chipmunk/CCPhysicsHelper_chipmunk.h"
 using namespace cocos2d;
 static PEShapeCache *_instance = nullptr;
-static float area(CCPoint *vertices, int numVertices)
+static float area(Vec2 *vertices, int numVertices)
 {
     float area = 0.0f;
     int r = (numVertices - 1);
@@ -91,7 +91,7 @@ void PEShapeCache::addBodysWithFile(const std::string &plist)
                     Polygon *poly = new Polygon();
                     fd->polygons.pushBack(poly);
                     auto &polygonArray = polygonitem.asValueVector();
-                    poly->numVertices = polygonArray.size();
+                    poly->numVertices = (int)polygonArray.size();
                     Point *vertices = poly->vertices = new Point[poly->numVertices];
                     int vindex = 0;
                     for (auto &pointString : polygonArray)

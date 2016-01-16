@@ -66,7 +66,7 @@
 		E30AC8B21BD930FE005B8686 /* Sprite_jailer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8B01BD930FE005B8686 /* Sprite_jailer.cpp */; };
 		E30AC8B51BD93281005B8686 /* Sprite_coin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8B31BD93281005B8686 /* Sprite_coin.cpp */; };
 		E30AC8B81BD9329B005B8686 /* Sprite_wall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8B61BD9329B005B8686 /* Sprite_wall.cpp */; };
-		E30AC8BB1BD984AC005B8686 /* layerHandle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8B91BD984AB005B8686 /* layerHandle.cpp */; };
+		E30AC8BB1BD984AC005B8686 /* moveListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8B91BD984AB005B8686 /* moveListener.cpp */; };
 		E30AC8BE1BD98B94005B8686 /* Move_action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8BC1BD98B94005B8686 /* Move_action.cpp */; };
 		E30E77811BCAD7DE0053F4B1 /* CacheData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30E777F1BCAD7DE0053F4B1 /* CacheData.cpp */; };
 		E312DDA81C4875BC0062A35A /* SpriteListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E312DDA61C4875BC0062A35A /* SpriteListener.cpp */; };
@@ -191,8 +191,8 @@
 		E30AC8B41BD93281005B8686 /* Sprite_coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sprite_coin.h; path = ../Classes/Sprite_coin.h; sourceTree = "<group>"; };
 		E30AC8B61BD9329B005B8686 /* Sprite_wall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Sprite_wall.cpp; path = ../Classes/Sprite_wall.cpp; sourceTree = "<group>"; };
 		E30AC8B71BD9329B005B8686 /* Sprite_wall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sprite_wall.h; path = ../Classes/Sprite_wall.h; sourceTree = "<group>"; };
-		E30AC8B91BD984AB005B8686 /* layerHandle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = layerHandle.cpp; sourceTree = "<group>"; };
-		E30AC8BA1BD984AC005B8686 /* layerHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = layerHandle.h; sourceTree = "<group>"; };
+		E30AC8B91BD984AB005B8686 /* moveListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = moveListener.cpp; sourceTree = "<group>"; };
+		E30AC8BA1BD984AC005B8686 /* moveListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moveListener.h; sourceTree = "<group>"; };
 		E30AC8BC1BD98B94005B8686 /* Move_action.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Move_action.cpp; sourceTree = "<group>"; };
 		E30AC8BD1BD98B94005B8686 /* Move_action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Move_action.h; sourceTree = "<group>"; };
 		E30E777F1BCAD7DE0053F4B1 /* CacheData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CacheData.cpp; sourceTree = "<group>"; };
@@ -485,8 +485,8 @@
 		E30AC8A21BD79D7D005B8686 /* BL */ = {
 			isa = PBXGroup;
 			children = (
-				E30AC8B91BD984AB005B8686 /* layerHandle.cpp */,
-				E30AC8BA1BD984AC005B8686 /* layerHandle.h */,
+				E30AC8B91BD984AB005B8686 /* moveListener.cpp */,
+				E30AC8BA1BD984AC005B8686 /* moveListener.h */,
 				E30AC8BC1BD98B94005B8686 /* Move_action.cpp */,
 				E30AC8BD1BD98B94005B8686 /* Move_action.h */,
 				E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */,
@@ -779,7 +779,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E312DDA81C4875BC0062A35A /* SpriteListener.cpp in Sources */,
-				E30AC8BB1BD984AC005B8686 /* layerHandle.cpp in Sources */,
+				E30AC8BB1BD984AC005B8686 /* moveListener.cpp in Sources */,
 				E3CB5E8D1BC9753A005123B8 /* SystemPo.swift in Sources */,
 				0454C4F51C1AA94E001EC9F7 /* CoverView.cpp in Sources */,
 				E30AC8AF1BD92F8A005B8686 /* Sprite_mouse.cpp in Sources */,

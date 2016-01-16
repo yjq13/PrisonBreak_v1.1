@@ -17,7 +17,7 @@ cocos2d::Size VISIBLE_SIZE = cocos2d::Director::getInstance()->getVisibleSize();
 
 cocos2d::Vec2 ORIGIN = cocos2d::Director::getInstance()->getVisibleOrigin();
 
-cocos2d::Size DESIGN_SIZE = CCSize(2208.0,1242.0);
+cocos2d::Size DESIGN_SIZE = Size(2208.0,1242.0);
 
 Section START_SECTION = Section();
 

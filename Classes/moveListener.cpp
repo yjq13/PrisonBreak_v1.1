@@ -6,7 +6,7 @@
 //
 //
 
-#include "layerHandle.h"
+#include "moveListener.h"
 #include "Sprite_protagonist.h"
 #include "cocos2d.h"
 #include "Section.h"
@@ -35,7 +35,7 @@ bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
     //计数器归零,数组清空
     index=0;
     for (int i=0;i<10000;i++){
-        points[i]=ccp(0,0);
+        points[i]=Point(0,0);
     }
     if(START_SECTION.isInside(touch)){
         //rootTimeLine->gotoFrameAndPause(0);
@@ -75,7 +75,7 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, No
         
         for (int i=0;i<10000;i++){
             if (i!=0&&points[i].x!=0) {
-                action[i] = MoveTo::create(ccpSub(points[i-1], points[i]).length()/SPEED_PRO, points[i]);
+                action[i] = MoveTo::create((points[i-1]-points[i]).length()/SPEED_PRO, points[i]);
                 
                 //action->setTag(index);
                 

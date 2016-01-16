@@ -71,7 +71,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     
     // Set the design resolution
     
-    CCSize frameSize = glview->getFrameSize();
+    Size frameSize = glview->getFrameSize();
     // if the frame's height is larger than the height of medium size.
     if (frameSize.height > mediumResolutionSize.height)
     {

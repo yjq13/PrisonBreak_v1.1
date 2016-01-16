@@ -6,7 +6,7 @@
 //
 //
 #include "CoverView.h"
-
+using namespace std;
 CoverView::CoverView()
 {
     
@@ -60,22 +60,22 @@ void CoverView::removeListener(){
 
 void CoverView::initData()
 {
-    wSize = Director::sharedDirector()->getWinSize();
+    wSize = Director::getInstance()->getWinSize();
     cardArray = Array::create();
     cardArray->retain();
     cardNum = 0;
     
-    offsetPosition = ccp(swSize.width/2,swSize.height/2);
+    offsetPosition = Point(swSize.width/2,swSize.height/2);
     
     scrollLayer = Layer::create();
-    scrollLayer->setAnchorPoint(CCPointZero);
-    scrollLayer->setPosition(CCPointZero);
+    scrollLayer->setAnchorPoint(Point::ZERO);
+    scrollLayer->setPosition(Point::ZERO);
     scrollLayer->setContentSize(slSize);
-    slayerPosition = CCPointZero;
+    slayerPosition = Point::ZERO;
     isMove = true;
     scrollView = ScrollView::create(swSize,scrollLayer);
-    scrollView->setAnchorPoint(CCPointZero);
-    scrollView->setContentOffset(ccp(0,0));
+    scrollView->setAnchorPoint(Point::ZERO);
+    scrollView->setContentOffset(Point(0,0));
     scrollView->setTouchEnabled(false);
     scrollView->setDelegate(this);
     //scrollView->ScrollView::setDirection();
@@ -107,14 +107,15 @@ void CoverView::onTouchEnded(Touch* pTouch, Event* pEvent)
     //float disX = scroll_endpoint.x - scroll_endpoint.x;
     adjusetEndScrollView();
     Point curPosition = scrollLayer->getPosition();
-    float distance = ccpDistance(slayerPosition, curPosition);
+    float distance = slayerPosition.getDistance(curPosition);
+    //ccpDistance(slayerPosition, curPosition);
     if (distance < 5.0f) isMove = false;
     }
 
 void CoverView::adjustCardScale(Point adjustPoint)
 {
     //float disX = adjustPoint.x;
-    Object* obj = NULL;
+    Ref* obj = NULL;
     CCARRAY_FOREACH(cardArray,obj)
     {
         Node* card = (Node*) obj;
@@ -130,14 +131,14 @@ void CoverView::adjustCardScale(Point adjustPoint)
 
 void CoverView::adjustScrollView(Point adjustPoint)
 {
-    Point endPoint = ccpAdd(scrollView->getContentOffset(),ccp(adjustPoint.x,0));
-    scrollView->unscheduleAllSelectors();
+    Point endPoint =scrollView->getContentOffset()+Point(adjustPoint.x,0);
+    scrollView->unscheduleAllCallbacks();
     scrollView->setContentOffset(endPoint,false);
 }
 
 void CoverView::adjusetEndScrollView()
 {
-    Object* obj = NULL;
+    Ref* obj = NULL;
     float minX = wSize.width;
     float midX = swSize.width/2;
     //获取距离中间最小值的card
@@ -167,8 +168,9 @@ void CoverView::adjusetEndScrollView()
         item->setZOrder(zOr);
     }
     Layer* scrollLayer = (Layer*)scrollView->getContainer();
-    MoveBy* moveBy = MoveBy::create(0.2f,ccp(minX,0));
-    CallFuncN* callFuncN = CallFuncN::create(this,callfuncN_selector(CoverView::cardViewEnd_callBack));
+    MoveBy* moveBy = MoveBy::create(0.2f,Point(minX,0));
+    CallFuncN* callFuncN = CallFuncN::create(CC_CALLBACK_1(CoverView::cardViewEnd_callBack, this));
+    //this,callfuncN_selector(CoverView::cardViewEnd_callBack));
     Sequence* seq = Sequence::create(moveBy,callFuncN,NULL);
     scrollLayer->runAction(seq);
     //scrollLayer->runAction(moveBy);
@@ -208,7 +210,7 @@ void CoverView::addCard(Node* card, int zOrder, int tag)
 {
     float positionX = offsetPosition.x + disDistance*cardNum;
     float scale = 1 - disScale*cardNum;
-    card->setPosition(ccp(positionX,offsetPosition.y));
+    card->setPosition(Point(positionX,offsetPosition.y));
     card->setScale(scale);
     cardArray->addObject(card);
     scrollLayer->addChild(card , zOrder,tag);
@@ -235,16 +237,16 @@ int CoverView::getCurCardIndex()
 void CoverView::setOffsetPosition(Point var)
 {
     offsetPosition = var;
-    Object* obj = NULL;
+    Ref* obj = NULL;
     cardNum = 0;
     CCARRAY_FOREACH(cardArray,obj)
     {
         Node* card = (Node*) obj;
         float positionX = offsetPosition.x + disDistance*cardNum;
-        card->setPosition(ccp(positionX,offsetPosition.y));
+        card->setPosition(Point(positionX,offsetPosition.y));
         cardNum++;
     }
-    adjustCardScale(CCPointZero);
+    adjustCardScale(Point::ZERO);
 }
 
 Point CoverView::getOffsetPosition()
