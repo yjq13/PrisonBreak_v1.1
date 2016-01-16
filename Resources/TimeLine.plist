@@ -4,6 +4,15 @@
 <dict>
 	<key>Part_1_Level_2</key>
 	<dict>
+		<key>Sprite_Mouse_1</key>
+		<dict>
+			<key>startTime</key>
+			<integer>200</integer>
+			<key>endTime</key>
+			<integer>250</integer>
+			<key>tag</key>
+			<real>2001</real>
+		</dict>
 		<key>Sprite_Jailer_1</key>
 		<dict>
 			<key>startTime</key>
