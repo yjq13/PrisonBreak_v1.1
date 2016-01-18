@@ -14,7 +14,7 @@
 #include "Constant_Use.h"
 #include "cocostudio/CocoStudio.h"
 
-class moveAction : public cocos2d::EventListenerPhysicsContact{
+class ContactManager : public cocos2d::EventListenerPhysicsContact{
 private:
     cocos2d::Node* node_Pro;
     cocos2d::Node* node_else;
@@ -24,7 +24,7 @@ private:
 public:
     virtual EventListenerPhysicsContact* createProAction(TIMELINE rootTimeLine);
     
-    ~moveAction();
+    ~ContactManager();
     
     bool onContactBeginPro_Jailer();
     

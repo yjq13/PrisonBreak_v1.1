@@ -8,7 +8,7 @@
 
 #ifndef __PrisonBreak__GameCommonScene__
 #define __PrisonBreak__GameCommonScene__
-#include "Move_action.h"
+#include "ContactManager.h"
 #include "cocos2d.h"
 #include "MyScene.h"
 #include "Section.h"
@@ -20,8 +20,9 @@ using namespace std;
 
 USING_NS_CC;
 class Game : public MyScene{
+    int toolMark;
     moveListener movelistener;
-    moveAction moveaction;
+    ContactManager moveaction;
     cocos2d::Node* rootNodeL;
     cocos2d::Node* failNodeL;
     cocos2d::Node* successNodeL;
@@ -42,6 +43,8 @@ public:
     void successCloseCallback(Ref* pSender);
     
     void Callrestart(Ref* pSender);
+    
+    void toolCallback(Ref* pSender);
     // a selector callback
     void setUI();
 

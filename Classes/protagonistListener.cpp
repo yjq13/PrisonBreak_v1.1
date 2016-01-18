@@ -6,20 +6,21 @@
 //
 //
 
-#include "SpriteListener.h"
+#include "protagonistListener.h"
 #include "cocos2d.h"
 #include "GameCommonScene.h"
 #include "Constant_Use.h"
 USING_NS_CC;
 
-EventListenerTouchOneByOne* SpriteListener::create(cocos2d::Sprite* getSprite){
+EventListenerTouchOneByOne* protagonistListener::create(cocos2d::Sprite* getSprite){
     
     auto listener=EventListenerTouchOneByOne::create();
     
-    listener->onTouchMoved =CC_CALLBACK_2(SpriteListener::onTouchMoved,this);
-    listener->onTouchBegan =CC_CALLBACK_2(SpriteListener::onTouchBegan,this);
-    listener->onTouchEnded =CC_CALLBACK_2(SpriteListener::onTouchEnded,this);
+    listener->onTouchMoved =CC_CALLBACK_2(protagonistListener::onTouchMoved,this);
+    listener->onTouchBegan =CC_CALLBACK_2(protagonistListener::onTouchBegan,this);
+    listener->onTouchEnded =CC_CALLBACK_2(protagonistListener::onTouchEnded,this);
     protagonist = getSprite;
+    CCLOG("%d",protagonist->getTag());
     CCLOG("SpriteListener is OK!!!!!");
     return listener;
 }
@@ -27,7 +28,7 @@ EventListenerTouchOneByOne* SpriteListener::create(cocos2d::Sprite* getSprite){
 
 
 //获取精灵的位置
-Rect  SpriteListener::getRect()
+Rect  protagonistListener::getRect()
 {
     return Rect(protagonist->getPositionX() - protagonist->getContentSize().width * protagonist->getAnchorPoint().x,
                       protagonist->getPositionY() - protagonist->getContentSize().height * protagonist->getAnchorPoint().y,
@@ -35,12 +36,12 @@ Rect  SpriteListener::getRect()
     // 为了能够自定义自己的位置大小采用了低效的函数而不是直接用成员变量
 }
 
-void SpriteListener::onTouchEnded(Touch* pTouch, Event* event)
+void protagonistListener::onTouchEnded(Touch* pTouch, Event* event)
 {
 }
 
 //点击事件，开始点击，判断点击on坐标是在精灵的区域内
-bool SpriteListener::onTouchBegan(Touch* touch, Event* event)
+bool protagonistListener::onTouchBegan(Touch* touch, Event* event)
 {
     
     Point touchLocation = touch->getLocation(); // 返回GL坐标
@@ -61,7 +62,11 @@ bool SpriteListener::onTouchBegan(Touch* touch, Event* event)
     
 }
 
-void SpriteListener::onTouchMoved(Touch* touch, Event* event)
+void protagonistListener::onTouchMoved(Touch* touch, Event* event)
 {
     
+}
+
+protagonistListener::~protagonistListener(){
+    CCLOG("SYE GOODBYE! LISTENER");
 }

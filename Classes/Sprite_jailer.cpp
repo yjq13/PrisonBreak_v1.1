@@ -6,7 +6,8 @@
 //
 //
 
-#include "Sprite_jailer.h"
+#include "JailerListener.h"
+#include   "Sprite_jailer.h"
 #include "cocos2d.h"
 #include "Constant_Use.h"
 USING_NS_CC;
@@ -29,7 +30,16 @@ Sprite* Sprite_jailer::create(int number,Sprite* getSprite){
 
 void Sprite_jailer::setJailer(int number,cocos2d::Sprite* getSprite){
     auto ManBody=PhysicsBody::createBox(getSprite->getContentSize());
+    //Director* pDirector = Director::getInstance();
     
+        //JailerListener spritelistener;
+        //EventListenerTouchOneByOne* listener = spritelistener.create(getSprite);
+    //listener->setEnabled(false);
+    //_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, getSprite);
+    //添加一个触摸委托给dispatcher的列表,委托对象this,
+    
+    //pDirector->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, getSprite);
+
      //CCLOG("%f,%f",getSprite->getContentSize().width,getSprite->getContentSize().height);
     ManBody->setGravityEnable(false);
     ManBody->setContactTestBitmask(0xFFFF);

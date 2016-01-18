@@ -9,7 +9,7 @@
 #include "GameCommonScene.h"
 #include "Sprite_protagonist.h"
 
-#include "Move_action.h"
+#include "ContactManager.h"
 #include "cocostudio/CocoStudio.h"
 #include "Constant_Use.h"
 #include "ui/CocosGUI.h"
@@ -236,7 +236,15 @@ void Game::menuCloseCallback(Ref* pSender)
     //exit(0);
     //#endif
 }
+
 void Game::onExit(){
     
 }
+
+void Game::toolCallback(Ref* pSender){
+    switch(toolMark){
+        
+    };
+}
+
 

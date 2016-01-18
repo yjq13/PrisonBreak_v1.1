@@ -8,7 +8,6 @@
 
 #ifndef Sprite_Component_protagonist_h
 #define Sprite_Component_protagonist_h
-#include "SpriteListener.h"
 #include <cocos2d.h>
 class Sprite_protagonist : public cocos2d::Sprite{
     

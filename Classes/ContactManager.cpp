@@ -6,20 +6,20 @@
 //
 //
 
-#include "Move_action.h"
+#include "ContactManager.h"
 #include "cocos2d.h"
 #include <iostream>
 #include "Constant_Use.h"
 #include "CacheData.h"
 USING_NS_CC;
 
-EventListenerPhysicsContact* moveAction::createProAction(TIMELINE rootTimeLine){
+EventListenerPhysicsContact* ContactManager::createProAction(TIMELINE rootTimeLine){
     
     EventListenerPhysicsContact* contactListener=EventListenerPhysicsContact::create();
     
-    contactListener->onContactBegin=CC_CALLBACK_1(moveAction::switchMoveAction, this);
+    contactListener->onContactBegin=CC_CALLBACK_1(ContactManager::switchMoveAction, this);
     //contactListener->onContactPreSlove=CC_CALLBACK_1(moveAction::switchMoveAction, this);
-    contactListener->onContactSeparate=CC_CALLBACK_1(moveAction::switchMoveActionAfter, this);
+    contactListener->onContactSeparate=CC_CALLBACK_1(ContactManager::switchMoveActionAfter, this);
     timeLine = rootTimeLine;
     
     //Sprite* node  = NodeL->getChildByName<Sprite*>("Sprite_Mouse_1");
@@ -30,7 +30,7 @@ EventListenerPhysicsContact* moveAction::createProAction(TIMELINE rootTimeLine){
     
 }
 
-bool moveAction::switchMoveAction(const cocos2d::PhysicsContact &contact){
+bool ContactManager::switchMoveAction(const cocos2d::PhysicsContact &contact){
     int body_tag = 0;
     //找到碰撞物体
    
@@ -46,23 +46,23 @@ bool moveAction::switchMoveAction(const cocos2d::PhysicsContact &contact){
     
     switch((body_tag/1000)*1000){
         case SECTION_TAG:{
-            moveAction::onContactBeginPro_Section();
+            ContactManager::onContactBeginPro_Section();
             break;
         }
         case JAILER_TAG:{
-            moveAction::onContactBeginPro_Jailer();
+            ContactManager::onContactBeginPro_Jailer();
             break;
         }
         case MOUSE_TAG:{
-            moveAction::onContactBeginPro_Mouse();
+            ContactManager::onContactBeginPro_Mouse();
             break;
         }
         case COIN_TAG:{
-            moveAction::onContactBeginPro_Coin();
+            ContactManager::onContactBeginPro_Coin();
             break;
         }
         case WALL_TAG:{
-            moveAction::onContactBeginPro_Wall();
+            ContactManager::onContactBeginPro_Wall();
             break;
         }
     }
@@ -73,7 +73,7 @@ bool moveAction::switchMoveAction(const cocos2d::PhysicsContact &contact){
 
 
 
-bool moveAction::switchMoveActionAfter(const cocos2d::PhysicsContact &contact){
+bool ContactManager::switchMoveActionAfter(const cocos2d::PhysicsContact &contact){
     int body_tag = 0;
     //找到碰撞物体
     
@@ -90,7 +90,7 @@ bool moveAction::switchMoveActionAfter(const cocos2d::PhysicsContact &contact){
     switch((body_tag/1000)*1000){
             
         case SECTION_TAG:{
-            moveAction::onContactSeparatePro_Section();
+            ContactManager::onContactSeparatePro_Section();
             break;
         }
     }
@@ -99,14 +99,15 @@ bool moveAction::switchMoveActionAfter(const cocos2d::PhysicsContact &contact){
     return false;
 }
 
-moveAction::~moveAction(){
+ContactManager::~ContactManager(){
     CCLOG("GOODBYE MOVEACTION");
 }
 
 
 
-bool moveAction::onContactBeginPro_Jailer(){
-    node_Pro->getScheduler()->setTimeScale(0.0f);
+bool ContactManager::onContactBeginPro_Jailer(){
+    //node_Pro->getScheduler()->setTimeScale(0.0f);
+    Director::getInstance()->getScheduler()->pauseAllTargets();
     Node* layer =node_Pro->getParent()->getChildByTag(131250077);
     layer->setVisible(true);
     CCLOG("Pro_Jailer boom!!!!");
@@ -115,7 +116,7 @@ bool moveAction::onContactBeginPro_Jailer(){
 
 
 
-bool moveAction::onContactBeginPro_Mouse(){
+bool ContactManager::onContactBeginPro_Mouse(){
     if(node_else->isVisible()){
     for(int i = 0;i<20;i++){
         if(timeLine.TimeLine[i]->getTag()!=157)
@@ -135,7 +136,7 @@ bool moveAction::onContactBeginPro_Mouse(){
 
 
 
-bool moveAction::onContactBeginPro_Wall(){
+bool ContactManager::onContactBeginPro_Wall(){
     
     CCLOG("Pro_Wall boom!!!!");
     //    removeChild(protagonist);
@@ -145,7 +146,7 @@ bool moveAction::onContactBeginPro_Wall(){
 
 
 
-bool moveAction::onContactBeginPro_Coin(){
+bool ContactManager::onContactBeginPro_Coin(){
     CCLOG("Pro_coin boom!!!!");
     //    removeChild(protagonist);
     return false;
@@ -154,7 +155,7 @@ bool moveAction::onContactBeginPro_Coin(){
 
 
 
-bool moveAction::onContactBeginPro_Section(){
+bool ContactManager::onContactBeginPro_Section(){
 
     Scheduler* sched = node_Pro->getScheduler();
     
@@ -168,7 +169,7 @@ bool moveAction::onContactBeginPro_Section(){
 
 
 
-bool moveAction::onContactSeparatePro_Section(){
+bool ContactManager::onContactSeparatePro_Section(){
     
     Scheduler* sched = node_Pro->getScheduler();
     
