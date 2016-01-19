@@ -57,6 +57,7 @@ bool Game::init(){
     
     failNodeL = CSLoader::createNode("res/Game/Other/Layer_Fail.csb");
     successNodeL = CSLoader::createNode("res/Game/Other/Layer_Success.csb");
+    stopNodeL = CSLoader::createNode("res/Game/Other/Layer_Success.csb");
     rootNodeL = CSLoader::createNode(all);
     //failNodeL->setTag(131250077);
     rootTimeLine = CSLoader::createTimeline(all);
@@ -87,27 +88,26 @@ void Game::setUI(){
     ui::Helper::doLayout(rootNodeL);
     failNodeL->setTag(131250077);
     successNodeL->setTag(131250057);
+    rootNodeL->addChild(stopNodeL);
     rootNodeL->addChild(successNodeL);
     rootNodeL->addChild(failNodeL);
     successNodeL->setVisible(false);
     failNodeL->setVisible(false);
+    stopNodeL->setVisible(false);
     addChild(rootNodeL);
     
-    auto Button_Close_Fail = failNodeL->getChildByName<ui::Button*>("Button_Close");
-    
-    Button_Close_Fail->addTouchEventListener(CC_CALLBACK_1(Game::failCloseCallback,this));
-    
-    auto Button_Close_Success = successNodeL->getChildByName<ui::Button*>("Button_Close");
-    
-    Button_Close_Success->addTouchEventListener(CC_CALLBACK_1(Game::successCloseCallback,this));
     
     
     
     
     
-    auto Button_Back = rootNodeL->getChildByName<ui::Button*>("Button_Back");
+    auto Button_Back = rootNodeL->getChildByName<ui::Button*>("Button_Stop");
     
-    Button_Back->addTouchEventListener(CC_CALLBACK_1(Game::menuCloseCallback,this));
+    Button_Back->addTouchEventListener(CC_CALLBACK_1(Game::stopCallback,this));
+    
+    
+    
+    
     
     auto Button_Back_Fail = failNodeL->getChildByName<ui::Button*>("Button_Back");
     
@@ -116,6 +116,10 @@ void Game::setUI(){
     auto Button_Back_Success = successNodeL->getChildByName<ui::Button*>("Button_Back");
     
     Button_Back_Success->addTouchEventListener(CC_CALLBACK_1(Game::menuCloseCallback,this));
+    
+    auto Button_Back_Stop = stopNodeL->getChildByName<ui::Button*>("Button_Back");
+    
+    Button_Back_Stop->addTouchEventListener(CC_CALLBACK_1(Game::menuCloseCallback,this));
     
     
     
@@ -126,6 +130,10 @@ void Game::setUI(){
     auto Button_Retry_Success = successNodeL->getChildByName<ui::Button*>("Button_Retry");
     
     Button_Retry_Success->addTouchEventListener(CC_CALLBACK_1(Game::Callrestart,this));
+    
+    auto Button_Retry_Stop = stopNodeL->getChildByName<ui::Button*>("Button_Retry");
+    
+    Button_Retry_Stop->addTouchEventListener(CC_CALLBACK_1(Game::Callrestart,this));
 
     
     //未完成部分
@@ -183,13 +191,9 @@ void Game::update(float dt){
     }while(Demo_Mouse[index]!=NULL);
 }
 
-void Game::failCloseCallback(Ref* pSender){
-    failNodeL->setVisible(false);
-}
 
-
-void Game::successCloseCallback(Ref* pSender){
-    successNodeL->setVisible(false);
+void Game::stopCallback(Ref* pSender){
+    stopNodeL->setVisible(true);
 }
 
 

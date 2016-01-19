@@ -26,6 +26,7 @@ class Game : public MyScene{
     cocos2d::Node* rootNodeL;
     cocos2d::Node* failNodeL;
     cocos2d::Node* successNodeL;
+    cocos2d::Node* stopNodeL;
     cocostudio::timeline::ActionTimeline* rootTimeLine;
     cocostudio::timeline::ActionTimeline* rootTimeLine2;
 public:
@@ -38,9 +39,7 @@ public:
     ~Game();
     void menuCloseCallback(Ref* pSender);
     
-    void failCloseCallback(Ref* pSender);
-    
-    void successCloseCallback(Ref* pSender);
+    void stopCallback(Ref* pSender);
     
     void Callrestart(Ref* pSender);
     
