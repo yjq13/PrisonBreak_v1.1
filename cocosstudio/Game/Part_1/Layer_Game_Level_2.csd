@@ -229,7 +229,7 @@
             <PreSize X="0.0208" Y="0.0370" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_Back" ActionTag="1639506448" Tag="31" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="65.2472" RightMargin="1942.7528" TopMargin="36.6403" BottomMargin="1125.3597" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="170" Scale9Height="58" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_Stop" ActionTag="1639506448" Tag="31" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="65.2472" RightMargin="1942.7528" TopMargin="36.6403" BottomMargin="1125.3597" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="170" Scale9Height="58" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="200.0000" Y="80.0000" />
             <AnchorPoint ScaleX="0.4841" ScaleY="0.6211" />
             <Position X="162.0672" Y="1175.0477" />
@@ -244,48 +244,48 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-1967013240" Tag="25" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="962.0551" RightMargin="816.9449" TopMargin="791.3112" BottomMargin="79.6888" ctype="SpriteObjectData">
-            <Size X="429.0000" Y="371.0000" />
+          <AbstractNodeData Name="Sprite_Jailer_1" ActionTag="-1967013240" Tag="25" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="-61.6097" RightMargin="1783.6097" TopMargin="828.3223" BottomMargin="41.6777" ctype="SpriteObjectData">
+            <Size X="486.0000" Y="372.0000" />
             <AnchorPoint ScaleX="0.5044" ScaleY="0.5026" />
-            <Position X="1178.4426" Y="266.1534" />
+            <Position X="183.5287" Y="228.6449" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5337" Y="0.2143" />
+            <PrePosition X="0.0831" Y="0.1841" />
             <PreSize X="0.1943" Y="0.2987" />
-            <FileData Type="Normal" Path="Picture/Jailer_4.png" Plist="" />
+            <FileData Type="Normal" Path="Picture/Jailer_1.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
           <AbstractNodeData Name="Sprite_Protagonist" ActionTag="1558405148" Tag="27" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="38.1632" RightMargin="1813.8368" TopMargin="220.8592" BottomMargin="798.1408" ctype="SpriteObjectData">
-            <Size X="356.0000" Y="223.0000" />
+            <Size X="310.0000" Y="203.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="216.1632" Y="909.6408" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.0979" Y="0.7324" />
             <PreSize X="0.1612" Y="0.1795" />
-            <FileData Type="Normal" Path="Picture/Protagonist_4.png" Plist="" />
+            <FileData Type="Normal" Path="Picture/Protagonist_1.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Jailer_2" ActionTag="-2113337950" Tag="28" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1834.6426" RightMargin="-55.6426" TopMargin="543.6584" BottomMargin="327.3416" ctype="SpriteObjectData">
-            <Size X="429.0000" Y="371.0000" />
+          <AbstractNodeData Name="Sprite_Jailer_2" ActionTag="-2113337950" Tag="28" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1329.5452" RightMargin="392.4548" TopMargin="681.6804" BottomMargin="188.3196" ctype="SpriteObjectData">
+            <Size X="486.0000" Y="372.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="2049.1426" Y="512.8416" />
+            <Position X="1572.5452" Y="374.3196" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.9281" Y="0.4129" />
+            <PrePosition X="0.7122" Y="0.3014" />
             <PreSize X="0.1943" Y="0.2987" />
-            <FileData Type="Normal" Path="Picture/Jailer_4.png" Plist="" />
+            <FileData Type="Normal" Path="Picture/Jailer_1.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Mouse_1" ActionTag="866520979" Tag="18" IconVisible="False" LeftMargin="1286.4053" RightMargin="413.5947" TopMargin="-17.5880" BottomMargin="703.5880" FlipX="True" ctype="SpriteObjectData">
-            <Size X="508.0000" Y="556.0000" />
+          <AbstractNodeData Name="Sprite_Mouse_1" ActionTag="866520979" Tag="18" IconVisible="False" LeftMargin="1647.0576" RightMargin="32.9424" TopMargin="39.6338" BottomMargin="646.3663" FlipX="True" ctype="SpriteObjectData">
+            <Size X="528.0000" Y="556.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1540.4053" Y="981.5880" />
+            <Position X="1911.0576" Y="924.3663" />
             <Scale ScaleX="0.6894" ScaleY="0.6461" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.6976" Y="0.7903" />
+            <PrePosition X="0.8655" Y="0.7443" />
             <PreSize X="0.2301" Y="0.4477" />
-            <FileData Type="Normal" Path="Picture/Mouse_4.png" Plist="" />
+            <FileData Type="Normal" Path="Picture/Mouse_1.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
           <AbstractNodeData Name="Sprite_Special_Section_1" ActionTag="-8519406" Tag="25" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="857.6320" RightMargin="950.3680" TopMargin="193.8381" BottomMargin="648.1618" ctype="SpriteObjectData">
