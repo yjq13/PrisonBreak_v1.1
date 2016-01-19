@@ -161,25 +161,6 @@ void Game::update(float dt){
         }
     }while(Demo_jailer[index]!=NULL);
     
-    Sprite* Demo_wall[10];
-    index = 0;
-    do{
-        index++;
-        char number[25];
-        memset(number,0,sizeof(number));
-        sprintf(number,"%d",index);
-        string numberStr=number;
-        
-        string first = "Sprite_Wall_";
-        string all = first+numberStr;
-        
-        Demo_wall[index] = rootNodeL->getChildByName<Sprite*>(all);
-        if(Demo_wall[index]!=NULL){
-            auto position_Before=Demo_wall[index]->getPosition();
-            Demo_wall[index]->setPositionX(position_Before.x*scale);
-        }
-    }while(Demo_wall[index]!=NULL);
-    
     
     Sprite* Demo_Mouse[10];
     index = 0;
