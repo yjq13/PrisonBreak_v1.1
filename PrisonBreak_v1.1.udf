@@ -7,17 +7,5 @@
         <LastRunType Value="Mac" />
       </Value>
     </Item>
-<<<<<<< Updated upstream
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="DiamondShop/Layer_DiamondShop.csd" />
-          <FilePathData Path="Game/Part_1/Layer_Game_Level_1.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="Game/Part_1/Layer_Game_Level_1.csd" />
-      </Value>
-    </Item>
-=======
->>>>>>> Stashed changes
   </Properties>
 </UserData>
