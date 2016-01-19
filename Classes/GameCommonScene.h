@@ -30,6 +30,7 @@ class Game : public MyScene{
     cocostudio::timeline::ActionTimeline* rootTimeLine;
     cocostudio::timeline::ActionTimeline* rootTimeLine2;
 public:
+    set<void *> target;
     static Scene* createScene();
     PhysicsWorld* m_world;
     virtual bool init();
@@ -42,6 +43,8 @@ public:
     void stopCallback(Ref* pSender);
     
     void Callrestart(Ref* pSender);
+    
+    void Callresume(Ref* pSender);
     
     void toolCallback(Ref* pSender);
     // a selector callback

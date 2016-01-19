@@ -16,12 +16,15 @@
 
 class ContactManager : public cocos2d::EventListenerPhysicsContact{
 private:
+    
     cocos2d::Node* node_Pro;
     cocos2d::Node* node_else;
     TIMELINE timeLine;
     
 
 public:
+    std::set<void *> target;
+    
     virtual EventListenerPhysicsContact* createProAction(TIMELINE rootTimeLine);
     
     ~ContactManager();

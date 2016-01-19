@@ -57,7 +57,7 @@ bool Game::init(){
     
     failNodeL = CSLoader::createNode("res/Game/Other/Layer_Fail.csb");
     successNodeL = CSLoader::createNode("res/Game/Other/Layer_Success.csb");
-    stopNodeL = CSLoader::createNode("res/Game/Other/Layer_Success.csb");
+    stopNodeL = CSLoader::createNode("res/Game/Other/Layer_Stop.csb");
     rootNodeL = CSLoader::createNode(all);
     //failNodeL->setTag(131250077);
     rootTimeLine = CSLoader::createTimeline(all);
@@ -136,6 +136,11 @@ void Game::setUI(){
     Button_Retry_Stop->addTouchEventListener(CC_CALLBACK_1(Game::Callrestart,this));
 
     
+    
+    auto Button_Resume_Stop = stopNodeL->getChildByName<ui::Button*>("Button_Resume");
+    
+    Button_Resume_Stop->addTouchEventListener(CC_CALLBACK_1(Game::Callresume,this));
+    
     //未完成部分
     auto Button_Next_Success = successNodeL->getChildByName<ui::Button*>("Button_Next");
     
@@ -193,6 +198,7 @@ void Game::update(float dt){
 
 
 void Game::stopCallback(Ref* pSender){
+    target = Director::getInstance()->getScheduler()->pauseAllTargets();
     stopNodeL->setVisible(true);
 }
 
@@ -201,6 +207,8 @@ void Game::Callrestart(Ref *pSender){
     if(BUTTON_LOCK==false){
         BUTTON_LOCK= true;
     //menuCloseCallback(pSender);
+        Director::getInstance()->getScheduler()->resumeTargets(target);
+    Director::getInstance()->getScheduler()->resumeTargets(moveaction.target);
     Director::getInstance()->popScene();
     
     CCLOG("pop GAME");
@@ -214,7 +222,9 @@ void Game::menuCloseCallback(Ref* pSender)
         
     //auto Scene =  Select_Detail::createScene();
     //auto transition=TransitionPageTurn::create(0.1f, Scene, false);
-    
+    Director::getInstance()->getScheduler()->resumeTargets(target);
+        Director::getInstance()->getScheduler()->resumeTargets(moveaction.target);
+        // moveaction->target
     Director::getInstance()->popScene();
     }
     //#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
@@ -224,6 +234,11 @@ void Game::menuCloseCallback(Ref* pSender)
 
 void Game::onExit(){
     
+}
+
+void Game::Callresume(Ref* pSender){
+    Director::getInstance()->getScheduler()->resumeTargets(target);
+    stopNodeL->setVisible(false);
 }
 
 void Game::toolCallback(Ref* pSender){

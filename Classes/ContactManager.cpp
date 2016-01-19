@@ -107,7 +107,7 @@ ContactManager::~ContactManager(){
 
 bool ContactManager::onContactBeginPro_Jailer(){
     //node_Pro->getScheduler()->setTimeScale(0.0f);
-    Director::getInstance()->getScheduler()->pauseAllTargets();
+    target = Director::getInstance()->getScheduler()->pauseAllTargets();
     Node* layer =node_Pro->getParent()->getChildByTag(131250077);
     layer->setVisible(true);
     CCLOG("Pro_Jailer boom!!!!");
