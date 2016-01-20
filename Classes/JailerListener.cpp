@@ -20,7 +20,7 @@ EventListenerTouchOneByOne* JailerListener::create(cocos2d::Sprite* getSprite){
     listener->onTouchBegan =CC_CALLBACK_2(JailerListener::onTouchBegan,this);
     listener->onTouchEnded =CC_CALLBACK_2(JailerListener::onTouchEnded,this);
     jailer = getSprite;
-    CCLOG("SpriteListener is OK!!!!!");
+    CCLOG("JailerListener is OK!!!!!");
     return listener;
 }
 

@@ -19,7 +19,7 @@ EventListenerTouchOneByOne* wallListener::create(cocos2d::Sprite* getSprite){
     listener->onTouchBegan =CC_CALLBACK_2(wallListener::onTouchBegan,this);
     listener->onTouchEnded =CC_CALLBACK_2(wallListener::onTouchEnded,this);
     wall = getSprite;
-    CCLOG("SpriteListener is OK!!!!!");
+    CCLOG("WallListener is OK!!!!!");
     return listener;
 }
 

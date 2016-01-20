@@ -20,7 +20,6 @@ using namespace std;
 
 USING_NS_CC;
 class Game : public MyScene{
-    int toolMark;
     moveListener movelistener;
     ContactManager moveaction;
     cocos2d::Node* rootNodeL;
@@ -31,6 +30,7 @@ class Game : public MyScene{
     cocostudio::timeline::ActionTimeline* rootTimeLine2;
 public:
     set<void *> target;
+    bool toolLock = false;
     static Scene* createScene();
     PhysicsWorld* m_world;
     virtual bool init();
@@ -46,7 +46,7 @@ public:
     
     void Callresume(Ref* pSender);
     
-    void toolCallback(Ref* pSender);
+    void toolCallback(Ref* pSender,int toolMark);
     // a selector callback
     void setUI();
 

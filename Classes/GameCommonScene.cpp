@@ -8,7 +8,8 @@
 
 #include "GameCommonScene.h"
 #include "Sprite_protagonist.h"
-
+#include "JailerListener.h"
+#include "WallListener.h"
 #include "ContactManager.h"
 #include "cocostudio/CocoStudio.h"
 #include "Constant_Use.h"
@@ -35,6 +36,7 @@ Scene* Game::createScene(){
     CCLOG("HELLO GAME");
     layer->setPhyWorld(scene->getPhysicsWorld());
     scene->addChild(layer);
+    scene->setTag(131250077);
     return scene;
 }
 
@@ -108,6 +110,16 @@ void Game::setUI(){
     
     
     
+    auto Button_Tool_1 = rootNodeL->getChildByName<ui::Button*>("Button_Tool_1");
+    
+    Button_Tool_1->addClickEventListener(CC_CALLBACK_1(Game::toolCallback,this,1));
+    
+    auto Button_Tool_2 = rootNodeL->getChildByName<ui::Button*>("Button_Tool_2");
+    
+    Button_Tool_2->addClickEventListener(CC_CALLBACK_1(Game::toolCallback,this,2));
+    
+    
+    
     
     auto Button_Back_Fail = failNodeL->getChildByName<ui::Button*>("Button_Back");
     
@@ -147,10 +159,9 @@ void Game::setUI(){
     Button_Next_Success->addTouchEventListener(CC_CALLBACK_1(Game::Callrestart,this));
     
     gameLoad::loadGame(rootNodeL);
-    
-    
-    
    }
+
+
 void Game::update(float dt){
     auto scale=VISIBLE_SIZE.width/DESIGN_SIZE.width;
     
@@ -204,14 +215,14 @@ void Game::stopCallback(Ref* pSender){
 
 
 void Game::Callrestart(Ref *pSender){
+     CCLOG("pop GAME");
     if(BUTTON_LOCK==false){
         BUTTON_LOCK= true;
     //menuCloseCallback(pSender);
         Director::getInstance()->getScheduler()->resumeTargets(target);
     Director::getInstance()->getScheduler()->resumeTargets(moveaction.target);
     Director::getInstance()->popScene();
-    
-    CCLOG("pop GAME");
+   
     }
 }
 
@@ -219,13 +230,12 @@ void Game::menuCloseCallback(Ref* pSender)
 {
     if(BUTTON_LOCK==false){
         BUTTON_LOCK= true;
-        
     //auto Scene =  Select_Detail::createScene();
     //auto transition=TransitionPageTurn::create(0.1f, Scene, false);
-    Director::getInstance()->getScheduler()->resumeTargets(target);
+        Director::getInstance()->getScheduler()->resumeTargets(target);
         Director::getInstance()->getScheduler()->resumeTargets(moveaction.target);
         // moveaction->target
-    Director::getInstance()->popScene();
+        Director::getInstance()->popScene();
     }
     //#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     //exit(0);
@@ -241,9 +251,16 @@ void Game::Callresume(Ref* pSender){
     stopNodeL->setVisible(false);
 }
 
-void Game::toolCallback(Ref* pSender){
-    switch(toolMark){
-        
+void Game::toolCallback(Ref* pSender,int toolMark){
+        switch(toolMark){
+        case 1:{
+           CCLOG("!!!!!%d",toolMark);
+            break;
+        }
+        case 2:{
+            CCLOG("!!!!!%d",toolMark);
+            break;
+        }
     };
 }
 

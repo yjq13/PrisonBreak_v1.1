@@ -105,7 +105,11 @@ bool AppDelegate::applicationDidFinishLaunching() {
 // This function will be called when the app is inactive. When comes a phone call,it's be invoked too
 void AppDelegate::applicationDidEnterBackground() {
     Director::getInstance()->stopAnimation();
-    
+    Scene* s = Director::getInstance()->getRunningScene();
+    if(s->getTag()==131250077){
+        CCLOG("I need release!!!");
+      //  s->getChildByName("rootNodeL")->getChildByName("stopNodeL")->setVisible(true);//stopNodeL->setVisible(true);
+    }
     // if you use SimpleAudioEngine, it must be pause
     // SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
 }
