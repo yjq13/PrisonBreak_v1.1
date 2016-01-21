@@ -20,7 +20,7 @@
 #include <iostream>
 #include "SelectScene_Detail.h"
 #include "Sprite_wall.h"
-#include "gameLoad.h"
+
 #include "TimeLineLoad.h"
 #include "TimeLineVo.h"
 #include "OC_callGameInfo.h"
@@ -158,7 +158,7 @@ void Game::setUI(){
     
     Button_Next_Success->addTouchEventListener(CC_CALLBACK_1(Game::Callrestart,this));
     
-    gameLoad::loadGame(rootNodeL);
+    gameload.loadGame(rootNodeL);
    }
 
 
@@ -254,10 +254,22 @@ void Game::Callresume(Ref* pSender){
 void Game::toolCallback(Ref* pSender,int toolMark){
         switch(toolMark){
         case 1:{
+            CCLOG("警卫数量%lu",gameload.JailerlistenerList.size());
+            for(int i = 0;i<gameload.JailerlistenerList.size();i++){
+                CCLOG("我设置好一个警卫啦");
+                EventListenerTouchOneByOne* listener = gameload.JailerlistenerList[i];
+                listener->setEnabled(true);
+            }
            CCLOG("!!!!!%d",toolMark);
             break;
         }
         case 2:{
+            for(int i = 0;i<gameload.WalllistenerList.size();i++){
+                CCLOG("我设置好一个墙啦");
+                EventListenerTouchOneByOne* listener = gameload.WalllistenerList[i];
+                listener->setEnabled(true);
+            }
+
             CCLOG("!!!!!%d",toolMark);
             break;
         }

@@ -7,5 +7,15 @@
         <LastRunType Value="Mac" />
       </Value>
     </Item>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="Game/Other/Layer_Stop.csd" />
+          <FilePathData Path="Game/Part_1/Layer_Game_Level_1.csd" />
+          <FilePathData Path="Game/Part_1/Layer_Game_Level_2.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="Game/Part_1/Layer_Game_Level_2.csd" />
+      </Value>
+    </Item>
   </Properties>
 </UserData>

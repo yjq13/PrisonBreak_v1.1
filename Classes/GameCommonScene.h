@@ -15,11 +15,13 @@
 #include "ui/CocosGUI.h"
 #include "cocostudio/CocoStudio.h"
 #include "moveListener.h"
+#include "gameLoad.h"
 #include <string>
 using namespace std;
 
 USING_NS_CC;
 class Game : public MyScene{
+    gameLoad gameload;
     moveListener movelistener;
     ContactManager moveaction;
     cocos2d::Node* rootNodeL;

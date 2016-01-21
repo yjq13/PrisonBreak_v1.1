@@ -41,21 +41,21 @@ void wallListener::onTouchEnded(Touch* pTouch, Event* event)
 //点击事件，开始点击，判断点击on坐标是在精灵的区域内
 bool wallListener::onTouchBegan(Touch* touch, Event* event)
 {
-    
     Point touchLocation = touch->getLocation(); // 返回GL坐标
     Point localPos = wall->convertToNodeSpace(touchLocation);
     Rect rc = getRect();
     rc.origin = Point::ZERO;
     bool isTouched = rc.containsPoint(localPos);
-    if(isTouched)
+    if(isTouched&&wall->isVisible())
     {
+        CCLOG("我不见啦！！！");
         wall->setVisible(false);
         wall->getPhysicsBody()->setEnable(false);
         
-        return true;
+        return false;
         
     }else{
-        
+        CCLOG("你点偏啦！！！！！");
     }
     return false;
 }

@@ -12,8 +12,13 @@
 #include <stdio.h>
 #include "cocostudio/CocoStudio.h"
 class gameLoad{
-public:    
-    static void loadGame(cocos2d::Node* rootNodeL);
+public:
+    
+    std::vector<cocos2d::EventListenerTouchOneByOne*> JailerlistenerList;
+    
+    std::vector<cocos2d::EventListenerTouchOneByOne*> WalllistenerList;
+
+    void loadGame(cocos2d::Node* rootNodeL);
     
 };
 

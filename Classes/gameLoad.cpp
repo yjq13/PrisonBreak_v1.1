@@ -18,6 +18,8 @@
 #include "Constant_Use.h"
 #include <iostream>
 #include "Sprite_mouse.h"
+#include "JailerListener.h"
+#include "WallListener.h"
 USING_NS_CC;
 using namespace ui;
 
@@ -59,8 +61,17 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
         string all = first+numberStr;
         
     Demo_jailer[index] = rootNodeL->getChildByName<Sprite*>(all);
-    if(Demo_jailer[index]!=NULL)
-    Sprite_jailer::setJailer(index,Demo_jailer[index]);
+        JailerListener spritelistener[10];
+        if(Demo_jailer[index]!=NULL){
+            Sprite_jailer::setJailer(index,Demo_jailer[index]);
+            
+            EventListenerTouchOneByOne* listener = spritelistener[index].create(Demo_jailer[index]);
+            listener->setEnabled(false);
+            JailerlistenerList.push_back(listener);
+            //_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, getSprite);
+            //添加一个触摸委托给dispatcher的列表,委托对象this,
+            Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, Demo_jailer[index]);
+        }
     }while(Demo_jailer[index]!=NULL);
     
     
@@ -77,9 +88,18 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
         string first = "Sprite_Wall_";
         string all = first+numberStr;
         
+        wallListener spritelistener[10];
         Demo_wall[index] = rootNodeL->getChildByName<Sprite*>(all);
-        if(Demo_wall[index]!=NULL)
+        if(Demo_wall[index]!=NULL){
             Sprite_wall::setWall(index,Demo_wall[index]);
+            
+            EventListenerTouchOneByOne* listener = spritelistener[index].create(Demo_wall[index]);
+            listener->setEnabled(false);
+            WalllistenerList.push_back(listener);
+            //_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, getSprite);
+            //添加一个触摸委托给dispatcher的列表,委托对象this,
+            Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, Demo_wall[index]);
+        }
     }while(Demo_wall[index]!=NULL);
     
     

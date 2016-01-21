@@ -48,12 +48,15 @@ bool JailerListener::onTouchBegan(Touch* touch, Event* event)
     Rect rc = getRect();
     rc.origin = Point::ZERO;
     bool isTouched = rc.containsPoint(localPos);
+    //CCLOG("我被点啦！！！！");
     if(isTouched)
     {
         jailer->pause();
-        sleep(1000);
+        //CCLOG("我开始睡觉啦！！！！");
+        sleep(2.5);
+        //CCLOG("我睡醒啦！！！");
         jailer->resume();
-        return true;
+        return false;
         
     }else{
         
