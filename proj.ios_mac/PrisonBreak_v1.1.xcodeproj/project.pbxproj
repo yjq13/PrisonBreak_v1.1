@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0408A2D51C1B1326004D5BAC /* TimeLine.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0408A2D41C1B1326004D5BAC /* TimeLine.plist */; };
+		0417FE551C54E0B4007D96EF /* Menu_Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0417FE531C54E0B4007D96EF /* Menu_Action.cpp */; };
 		0454C4F51C1AA94E001EC9F7 /* CoverView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0454C4F31C1AA94E001EC9F7 /* CoverView.cpp */; };
 		049178E21BDBDBB2004AAF5C /* Section.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049178E01BDBDBB2004AAF5C /* Section.cpp */; };
 		04BA48D01C3A8A220078D849 /* PEShapeCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BA48CE1C3A8A220078D849 /* PEShapeCache.cpp */; };
@@ -120,6 +121,8 @@
 
 /* Begin PBXFileReference section */
 		0408A2D41C1B1326004D5BAC /* TimeLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TimeLine.plist; sourceTree = "<group>"; };
+		0417FE531C54E0B4007D96EF /* Menu_Action.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Menu_Action.cpp; sourceTree = "<group>"; };
+		0417FE541C54E0B4007D96EF /* Menu_Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu_Action.h; sourceTree = "<group>"; };
 		0454C4F31C1AA94E001EC9F7 /* CoverView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoverView.cpp; sourceTree = "<group>"; };
 		0454C4F41C1AA94E001EC9F7 /* CoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverView.h; sourceTree = "<group>"; };
 		049178E01BDBDBB2004AAF5C /* Section.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Section.cpp; path = ../Classes/Section.cpp; sourceTree = "<group>"; };
@@ -330,6 +333,25 @@
 			name = LIBS;
 			sourceTree = "<group>";
 		};
+		04D20CD91C52706700D4C35F /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				E3CB5E511BC9753A005123B8 /* ShopScene.cpp */,
+				E3CB5E521BC9753A005123B8 /* ShopScene.h */,
+				E3CB5E6E1BC9753A005123B8 /* SelectScene_ALL.cpp */,
+				E3CB5E6F1BC9753A005123B8 /* SelectScene_ALL.h */,
+				E3CB5E701BC9753A005123B8 /* aboutScene.cpp */,
+				E3CB5E711BC9753A005123B8 /* aboutScene.h */,
+				E3CB5E4C1BC9753A005123B8 /* GameCommonScene.cpp */,
+				E3CB5E4D1BC9753A005123B8 /* GameCommonScene.h */,
+				E347EA981C19EA8A0096BC5E /* SelectScene_Detail.cpp */,
+				E347EA991C19EA8A0096BC5E /* SelectScene_Detail.h */,
+				E3CB5E4E1BC9753A005123B8 /* StartScene.cpp */,
+				E3CB5E721BC9753A005123B8 /* StartScene.h */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* ios */ = {
 			isa = PBXGroup;
 			children = (
@@ -507,6 +529,8 @@
 				E349DB0E1C4C67DA00DF7E66 /* JailerListener.h */,
 				E349DB101C4C731000DF7E66 /* WallListener.cpp */,
 				E349DB111C4C731000DF7E66 /* WallListener.h */,
+				0417FE531C54E0B4007D96EF /* Menu_Action.cpp */,
+				0417FE541C54E0B4007D96EF /* Menu_Action.h */,
 			);
 			name = BL;
 			sourceTree = "<group>";
@@ -600,20 +624,9 @@
 			children = (
 				E3EF16481BDA3BEC001E3EA3 /* Game_Map */,
 				E30AC8A91BD92C61005B8686 /* Game_Component */,
-				E3CB5E511BC9753A005123B8 /* ShopScene.cpp */,
-				E3CB5E521BC9753A005123B8 /* ShopScene.h */,
+				04D20CD91C52706700D4C35F /* Scene */,
 				E3CB5E531BC9753A005123B8 /* AppDelegate.cpp */,
 				E3CB5E541BC9753A005123B8 /* AppDelegate.h */,
-				E3CB5E6E1BC9753A005123B8 /* SelectScene_ALL.cpp */,
-				E3CB5E6F1BC9753A005123B8 /* SelectScene_ALL.h */,
-				E3CB5E701BC9753A005123B8 /* aboutScene.cpp */,
-				E3CB5E711BC9753A005123B8 /* aboutScene.h */,
-				E3CB5E4C1BC9753A005123B8 /* GameCommonScene.cpp */,
-				E3CB5E4D1BC9753A005123B8 /* GameCommonScene.h */,
-				E347EA981C19EA8A0096BC5E /* SelectScene_Detail.cpp */,
-				E347EA991C19EA8A0096BC5E /* SelectScene_Detail.h */,
-				E3CB5E4E1BC9753A005123B8 /* StartScene.cpp */,
-				E3CB5E721BC9753A005123B8 /* StartScene.h */,
 				E30AC8A61BD835AD005B8686 /* MyScene.cpp */,
 				E30AC8A71BD835AD005B8686 /* MyScene.h */,
 			);
@@ -791,6 +804,7 @@
 				E312DDA81C4875BC0062A35A /* protagonistListener.cpp in Sources */,
 				E30AC8BB1BD984AC005B8686 /* moveListener.cpp in Sources */,
 				E3CB5E8D1BC9753A005123B8 /* SystemPo.swift in Sources */,
+				0417FE551C54E0B4007D96EF /* Menu_Action.cpp in Sources */,
 				0454C4F51C1AA94E001EC9F7 /* CoverView.cpp in Sources */,
 				E349DB0F1C4C67DA00DF7E66 /* JailerListener.cpp in Sources */,
 				E30AC8AF1BD92F8A005B8686 /* Sprite_mouse.cpp in Sources */,

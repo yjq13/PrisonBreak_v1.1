@@ -20,7 +20,7 @@
 #include <iostream>
 #include "SelectScene_Detail.h"
 #include "Sprite_wall.h"
-
+#include "Menu_Action.h"
 #include "TimeLineLoad.h"
 #include "TimeLineVo.h"
 #include "OC_callGameInfo.h"
@@ -93,9 +93,9 @@ void Game::setUI(){
     rootNodeL->addChild(stopNodeL);
     rootNodeL->addChild(successNodeL);
     rootNodeL->addChild(failNodeL);
-    successNodeL->setVisible(false);
-    failNodeL->setVisible(false);
-    stopNodeL->setVisible(false);
+    successNodeL->setPositionY(VISIBLE_SIZE.height);
+    failNodeL->setPositionY(VISIBLE_SIZE.height);
+    stopNodeL->setPositionY(VISIBLE_SIZE.height);
     addChild(rootNodeL);
     
     
@@ -210,7 +210,7 @@ void Game::update(float dt){
 
 void Game::stopCallback(Ref* pSender){
     target = Director::getInstance()->getScheduler()->pauseAllTargets();
-    stopNodeL->setVisible(true);
+    MenuAction::move_in(stopNodeL);
 }
 
 
@@ -247,8 +247,8 @@ void Game::onExit(){
 }
 
 void Game::Callresume(Ref* pSender){
+    MenuAction::move_out(stopNodeL);
     Director::getInstance()->getScheduler()->resumeTargets(target);
-    stopNodeL->setVisible(false);
 }
 
 void Game::toolCallback(Ref* pSender,int toolMark){

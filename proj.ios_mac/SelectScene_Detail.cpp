@@ -17,6 +17,7 @@
 #include "LockofSelect.h"
 #include "CoverView.h"
 #include "ShopScene.h"
+#include "Menu_Action.h"
 
 USING_NS_CC;
 using namespace ui;
@@ -46,9 +47,8 @@ bool Select_Detail::init(){
     
     rootNodeL_Basis = CSLoader::createNode("res/Selection_2/Layer_Selection_2.csb");
     
-    rootNodeL_Diamond = CSLoader::createNode("res/Selection_2/Layer_Selection_3.csb");
-    
     rootNodeL_GameStep = CSLoader::createNode("res/Selection_2/Layer_Selection_3.csb");
+    
     
     setUI();
     setCoverflow();
@@ -79,7 +79,7 @@ void Select_Detail::setCoverflow(){
     auto offset=(7-2*STEP)*0.1*winWidth;
     levelView->setOffsetPosition(Point(offset,swRect_level.size.height/2));
     levelView->setPosition(swRect_level.origin);
-   this->addChild(levelView);
+    this->addChild(levelView);
     
     //下面是道具的coverflow，感觉没有必要
     //    CCRect swRect_prop = CCRectMake(0.1f*winWidth,0.4f*winHeight,0.8f*winWidth,0.33f*winHeight);
@@ -113,26 +113,22 @@ void Select_Detail::setUI(){
     
     //rootNodeS->addChild(rootNodeL_Diamond);
     
-    rootNodeL_Diamond->setVisible(false);
-    
     //rootNodeS->addChild(rootNodeL_GameStep);
     
-    rootNodeL_GameStep->setVisible(false);
+    //rootNodeL_GameStep->setVisible(false);
     
     
     //rootNodeS->addChild(rootNodeL_Basis);
     rootNodeL_Basis->setContentSize(VISIBLE_SIZE);
     ui::Helper::doLayout(rootNodeL_Basis);
     
-    rootNodeL_Diamond->setContentSize(VISIBLE_SIZE);
-    ui::Helper::doLayout(rootNodeL_Diamond);
     
     rootNodeL_GameStep->setContentSize(VISIBLE_SIZE);
     ui::Helper::doLayout(rootNodeL_GameStep);
+    rootNodeL_GameStep->setPositionY(VISIBLE_SIZE.height);
     
     
     addChild(rootNodeL_Basis);
-    addChild(rootNodeL_Diamond);
     addChild(rootNodeL_GameStep,3);
     
     
@@ -182,7 +178,8 @@ void Select_Detail::turnToGame(Ref* pSender)
         auto sceneNew = Game::createScene();
         
         Director::getInstance()->pushScene(sceneNew);
-        rootNodeL_GameStep->setVisible(false);
+        //rootNodeL_GameStep->setVisible(false);
+        rootNodeL_GameStep->setPositionY(VISIBLE_SIZE.height);
         levelView->addListener();
         resumeButton();
     }
@@ -207,11 +204,14 @@ void Select_Detail::show_GameReady(Ref* pSender,int level)
     CCLOG("asasd%d  %d",level,levelView->getCurCardIndex());
     bool iscur=false;//是否未滑动
     if(levelView->getCurCardIndex()==999999&&level+1==STEP){
-         //999999表示未滑动，即选择当前关
+        //999999表示未滑动，即选择当前关
         iscur=true;
     }
     if (result&&(level==levelView->getCurCardIndex()||iscur)) {
-        rootNodeL_GameStep->setVisible(true);
+        
+        //Menu Movein
+        MenuAction::move_in(rootNodeL_GameStep);
+        //rootNodeL_GameStep->setVisible(true);
         levelView->removeListener();
         shieldButton();
     }else {
@@ -227,16 +227,16 @@ void Select_Detail::show_GameReady(Ref* pSender,int level)
 
 void Select_Detail::turnToShop(Ref* pSender){
     auto sceneNew=Shop::createScene();
-    //下面搞个翻页效果
     auto curScene= Director::getInstance()->getRunningScene();
     Director::getInstance()->pushScene(curScene);
     Director::getInstance()->pushScene(sceneNew);
-   
+    
 }
 
 
 void Select_Detail::closeLayer(Ref* pSender){
-    rootNodeL_GameStep->setVisible(false);
+    //rootNodeL_GameStep->setVisible(false);
+    MenuAction::move_out(rootNodeL_GameStep);
     levelView->addListener();
     resumeButton();
 }
