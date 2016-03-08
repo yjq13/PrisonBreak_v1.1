@@ -11,16 +11,17 @@
 #include <iostream>
 #include "Constant_Use.h"
 #include "CacheData.h"
+#include "Menu_Action.h"
 USING_NS_CC;
 
-EventListenerPhysicsContact* ContactManager::createProAction(TIMELINE rootTimeLine){
+EventListenerPhysicsContact* ContactManager::createProAction(){
     
     EventListenerPhysicsContact* contactListener=EventListenerPhysicsContact::create();
     
     contactListener->onContactBegin=CC_CALLBACK_1(ContactManager::switchMoveAction, this);
     //contactListener->onContactPreSlove=CC_CALLBACK_1(moveAction::switchMoveAction, this);
     contactListener->onContactSeparate=CC_CALLBACK_1(ContactManager::switchMoveActionAfter, this);
-    timeLine = rootTimeLine;
+    timeLine = _TIMELINE;
     
     //Sprite* node  = NodeL->getChildByName<Sprite*>("Sprite_Mouse_1");
     
@@ -107,9 +108,17 @@ ContactManager::~ContactManager(){
 
 bool ContactManager::onContactBeginPro_Jailer(){
     //node_Pro->getScheduler()->setTimeScale(0.0f);
-    target = Director::getInstance()->getScheduler()->pauseAllTargets();
-    Node* layer =node_Pro->getParent()->getChildByTag(131250077);
-    layer->setVisible(true);
+    if(node_else->isVisible()){
+        cocostudio::timeline::ActionTimeline* timelineNew = getTimeLine();
+        timelineNew->setTimeSpeed(0);
+        node_else->setVisible(false);
+        target_pro = node_Pro->getScheduler()->pauseAllTargets();
+        Node* layer =node_Pro->getParent()->getChildByTag(131250077);
+        
+        MenuAction::move_in(layer);
+    }
+    
+    //layer->setVisible(true);
     CCLOG("Pro_Jailer boom!!!!");
     return false;
 }
@@ -118,15 +127,9 @@ bool ContactManager::onContactBeginPro_Jailer(){
 
 bool ContactManager::onContactBeginPro_Mouse(){
     if(node_else->isVisible()){
-    for(int i = 0;i<20;i++){
-        if(timeLine.TimeLine[i]->getTag()!=157)
-            break;
-        if((signed)timeLine.TimeLine[i]->getFlags()==node_else->getTag()){
-            
-            timeLine.TimeLine[i]->pause();
-            break;
-        }
-    }
+        
+        cocostudio::timeline::ActionTimeline* timelineNew = getTimeLine();
+        timelineNew->setTimeSpeed(0);
         node_else->setVisible(false);
         DIAMOND_GET++;
     }
@@ -156,8 +159,10 @@ bool ContactManager::onContactBeginPro_Coin(){
 
 
 bool ContactManager::onContactBeginPro_Section(){
-
+    
     Scheduler* sched = node_Pro->getScheduler();
+    
+    //sched->pauseAllTargets();
     
     sched->setTimeScale(0.2f);
     
@@ -178,4 +183,11 @@ bool ContactManager::onContactSeparatePro_Section(){
     return false;
 }
 
-
+cocostudio::timeline::ActionTimeline* ContactManager::getTimeLine(){
+    for(int i = 0;i<20;i++){
+        if((signed)timeLine.TimeLine[i]->getFlags()==node_else->getTag()){
+            return timeLine.TimeLine[i];
+        }
+    }
+    return NULL;
+}

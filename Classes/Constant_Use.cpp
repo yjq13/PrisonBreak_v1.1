@@ -25,15 +25,20 @@ Section DESTINATION_SECTION = Section();
 
 Section STOP_SECTION = Section();
 
+TIMELINE _TIMELINE = *new TIMELINE();
+
 int SPEED_PRO = 500;
 
 int ACTION_TAG = 0;
+
+int TIMELINE_NUM = 0;
 
 string PATH_PART = "";
 
 string PATH_LEVEL = "";
 
 bool BUTTON_LOCK = true;
+
 
 
 

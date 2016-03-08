@@ -9,41 +9,37 @@
 #include "JailerListener.h"
 #include   "Sprite_jailer.h"
 #include "cocos2d.h"
-#include "Constant_Use.h"
 USING_NS_CC;
-
-Sprite* Sprite_jailer::create(int number,Sprite* getSprite){
-    auto jailer= getSprite;
-    
-    auto ManBody=PhysicsBody::createBox(jailer->getContentSize());
-    
-    CCLOG("%f,%f",jailer->getContentSize().width,jailer->getContentSize().height);
-    
-    ManBody->setGravityEnable(false);
-    ManBody->setContactTestBitmask(0xFFFF);
-    jailer->setPhysicsBody(ManBody);
-    jailer->setTag(JAILER_TAG+number);
-    
-    return jailer;
-    
-}
 
 void Sprite_jailer::setJailer(int number,cocos2d::Sprite* getSprite){
     auto ManBody=PhysicsBody::createBox(getSprite->getContentSize());
-    //Director* pDirector = Director::getInstance();
-    
-        //JailerListener spritelistener;
-        //EventListenerTouchOneByOne* listener = spritelistener.create(getSprite);
-    //listener->setEnabled(false);
-    //_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, getSprite);
-    //添加一个触摸委托给dispatcher的列表,委托对象this,
-    
-    //pDirector->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, getSprite);
-
-     //CCLOG("%f,%f",getSprite->getContentSize().width,getSprite->getContentSize().height);
     ManBody->setGravityEnable(false);
     ManBody->setContactTestBitmask(0xFFFF);
     getSprite->setPhysicsBody(ManBody);
     getSprite->setTag(JAILER_TAG+number);
-    
+    sprite = getSprite;
+    CCLOG("精灵设置");
+}
+
+void Sprite_jailer::setTimeline(TIMELINE timeLine){
+    for(int i = 0;i<20;i++){
+        if(timeLine.TimeLine[i]->getTag()!=157)
+            break;
+        if((signed)timeLine.TimeLine[i]->getFlags()==sprite->getTag()){
+            
+            timeline = timeLine.TimeLine[i];
+            
+            break;
+        }
+    }
+
+}
+
+cocostudio::timeline::ActionTimeline* Sprite_jailer::getTimeLine(){
+    return timeline;
+}
+
+
+void Sprite_jailer::setListener(JailerListener* listener){
+    Listener = listener;
 }

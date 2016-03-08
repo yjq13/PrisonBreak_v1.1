@@ -12,6 +12,7 @@
 #include "Section.h"
 #include "GameCommonScene.h"
 #include "Constant_Use.h"
+#include "Menu_Action.h"
 USING_NS_CC;
 
 EventListenerTouchOneByOne* moveListener::create(Node* layer){
@@ -45,7 +46,6 @@ bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
 }
 
 void moveListener::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event, Node* layer){
-    
     isMoved=true;
     points[index]=touch->getLocation();
     auto p=touch->getLocation();
@@ -84,7 +84,7 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, No
                // protagonist->runAction(action);
             }
         }
-        auto callfun = CallFunc::create([&]{protagonist->getParent()->getChildByTag(131250057)->setVisible(true);});
+        auto callfun = CallFunc::create([&]{MenuAction::move_in(protagonist->getParent()->getChildByTag(131250057));});
         
         actionVector.pushBack(callfun);
         

@@ -75,6 +75,7 @@
 		E347D4251C1C0AE4009ECC95 /* TimeLinePo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347D4241C1C0AE4009ECC95 /* TimeLinePo.swift */; };
 		E347D4281C1C45E2009ECC95 /* TimeLineVo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E347D4261C1C45E2009ECC95 /* TimeLineVo.cpp */; };
 		E347EA9A1C19EA8A0096BC5E /* SelectScene_Detail.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E347EA981C19EA8A0096BC5E /* SelectScene_Detail.cpp */; };
+		E348B54C1C64823F004200F8 /* pauseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E348B54A1C64823F004200F8 /* pauseScene.cpp */; };
 		E349DB0F1C4C67DA00DF7E66 /* JailerListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E349DB0D1C4C67DA00DF7E66 /* JailerListener.cpp */; };
 		E349DB121C4C731000DF7E66 /* WallListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E349DB101C4C731000DF7E66 /* WallListener.cpp */; };
 		E369982E1C0C24AA007BB3C8 /* LockofSelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */; };
@@ -211,6 +212,8 @@
 		E347D4271C1C45E2009ECC95 /* TimeLineVo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineVo.h; sourceTree = "<group>"; };
 		E347EA981C19EA8A0096BC5E /* SelectScene_Detail.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SelectScene_Detail.cpp; sourceTree = "<group>"; };
 		E347EA991C19EA8A0096BC5E /* SelectScene_Detail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectScene_Detail.h; sourceTree = "<group>"; };
+		E348B54A1C64823F004200F8 /* pauseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pauseScene.cpp; path = ../Classes/pauseScene.cpp; sourceTree = "<group>"; };
+		E348B54B1C64823F004200F8 /* pauseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pauseScene.h; path = ../Classes/pauseScene.h; sourceTree = "<group>"; };
 		E349DB0D1C4C67DA00DF7E66 /* JailerListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JailerListener.cpp; sourceTree = "<group>"; };
 		E349DB0E1C4C67DA00DF7E66 /* JailerListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JailerListener.h; sourceTree = "<group>"; };
 		E349DB101C4C731000DF7E66 /* WallListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WallListener.cpp; sourceTree = "<group>"; };
@@ -348,6 +351,8 @@
 				E347EA991C19EA8A0096BC5E /* SelectScene_Detail.h */,
 				E3CB5E4E1BC9753A005123B8 /* StartScene.cpp */,
 				E3CB5E721BC9753A005123B8 /* StartScene.h */,
+				E348B54A1C64823F004200F8 /* pauseScene.cpp */,
+				E348B54B1C64823F004200F8 /* pauseScene.h */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -828,6 +833,7 @@
 				E30E77811BCAD7DE0053F4B1 /* CacheData.cpp in Sources */,
 				E3CB5E7C1BC9753A005123B8 /* ShopScene.cpp in Sources */,
 				049178E21BDBDBB2004AAF5C /* Section.cpp in Sources */,
+				E348B54C1C64823F004200F8 /* pauseScene.cpp in Sources */,
 				E3CB5E761BC9753A005123B8 /* Constant.cpp in Sources */,
 				E3CB5E7D1BC9753A005123B8 /* AppDelegate.cpp in Sources */,
 				E3CB5E871BC9753A005123B8 /* GameVo.cpp in Sources */,

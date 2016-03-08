@@ -20,6 +20,9 @@ USING_NS_CC;
         cocostudio::timeline::ActionTimeline* TimeLine[20];
     }TIMELINE;
 
+
+    extern TIMELINE _TIMELINE;
+    
     extern int SPEED_PRO;
 
     extern int ACTION_TAG;
@@ -43,6 +46,8 @@ USING_NS_CC;
     extern string PATH_LEVEL;
 
     extern bool BUTTON_LOCK;
+
+    extern int TIMELINE_NUM;
 
     const int PROTAGONIST_TAG = 1000;
 

@@ -23,9 +23,14 @@ private:
     
 
 public:
-    std::set<void *> target;
+    std::set<void *> target_else;
     
-    virtual EventListenerPhysicsContact* createProAction(TIMELINE rootTimeLine);
+    std::set<void *> target_pro;
+    ContactManager(){
+        CCLOG("hello contactmanager");
+    }
+    
+    virtual EventListenerPhysicsContact* createProAction();
     
     ~ContactManager();
     
@@ -44,6 +49,8 @@ public:
     bool switchMoveAction(const cocos2d::PhysicsContact &contact);
     
     bool switchMoveActionAfter(const cocos2d::PhysicsContact &contact);
+    
+    cocostudio::timeline::ActionTimeline* getTimeLine();
 };
 
 #endif /* Move_action_hpp */

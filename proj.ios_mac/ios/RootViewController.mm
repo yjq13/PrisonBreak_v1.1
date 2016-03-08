@@ -110,5 +110,15 @@
     [super dealloc];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    cocos2d::Application::sharedApplication()->applicationDidEnterBackground();
+}
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    cocos2d::Application::sharedApplication()->applicationWillEnterForeground();
+}
 @end

@@ -25,6 +25,7 @@
 #include "TimeLineVo.h"
 #include "OC_callGameInfo.h"
 #include "CacheData.h"
+#include "pauseScene.h"
 USING_NS_CC;
 using namespace ui;
 
@@ -33,7 +34,7 @@ Scene* Game::createScene(){
     auto scene=Scene::createWithPhysics();
     scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     auto layer=Game::create();
-    CCLOG("HELLO GAME");
+    
     layer->setPhyWorld(scene->getPhysicsWorld());
     scene->addChild(layer);
     scene->setTag(131250077);
@@ -42,7 +43,7 @@ Scene* Game::createScene(){
 
 Game::~Game(){
     
-    CCLOG("GOODBYE GAME");
+    CCLOG("goodbye game");
 
     }
 bool Game::init(){
@@ -64,38 +65,44 @@ bool Game::init(){
     //failNodeL->setTag(131250077);
     rootTimeLine = CSLoader::createTimeline(all);
     
+    //rootNodeL->setTag(131250081);
     
-    TIMELINE timeline = TimeLineLoad::loadTimeLine(rootNodeL);
+    _TIMELINE = TimeLineLoad::loadTimeLine(rootNodeL);
+    
+    EventListenerPhysicsContact* contactListener = moveaction.createProAction();
+    
+   // _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(contactListener,this);
 
-    
-    EventListenerPhysicsContact* contactListener = moveaction.createProAction(timeline);
-    
-    _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
-    
     EventListenerTouchOneByOne* listener = movelistener.create(rootNodeL);
     
-    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
+    //_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener,this);
     
     setUI();
+
     
     return true;
 }
 void Game::setUI(){
     //测试在界面上放置组件
-//    Size visibleSize = Director::getInstance()->getVisibleSize();
-//    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    //Size visibleSize = Director::getInstance()->getVisibleSize();
+//  Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     //rootNodeS->addChild(rootNodeL);
     rootNodeL->setContentSize(VISIBLE_SIZE);
-    ui::Helper::doLayout(rootNodeL);
+    ui::Helper::doLayout(this);
     failNodeL->setTag(131250077);
     successNodeL->setTag(131250057);
-    rootNodeL->addChild(stopNodeL);
-    rootNodeL->addChild(successNodeL);
-    rootNodeL->addChild(failNodeL);
+    
+    
+    
+    ////addChild(failNodeL);
     successNodeL->setPositionY(VISIBLE_SIZE.height);
     failNodeL->setPositionY(VISIBLE_SIZE.height);
-    stopNodeL->setPositionY(VISIBLE_SIZE.height);
+    
+    
+    
     addChild(rootNodeL);
     
     
@@ -157,14 +164,14 @@ void Game::setUI(){
     auto Button_Next_Success = successNodeL->getChildByName<ui::Button*>("Button_Next");
     
     Button_Next_Success->addTouchEventListener(CC_CALLBACK_1(Game::Callrestart,this));
-    
+        
     gameload.loadGame(rootNodeL);
    }
 
 
 void Game::update(float dt){
     auto scale=VISIBLE_SIZE.width/DESIGN_SIZE.width;
-    
+    if(!isStop){
     //坐标重绘
     Sprite* Demo_jailer[10];
     int index = 0;
@@ -205,12 +212,17 @@ void Game::update(float dt){
             Demo_Mouse[index]->setPositionX(position_Before.x*scale);
         }
     }while(Demo_Mouse[index]!=NULL);
+    }
 }
 
 
 void Game::stopCallback(Ref* pSender){
-    target = Director::getInstance()->getScheduler()->pauseAllTargets();
-    MenuAction::move_in(stopNodeL);
+    isStop = true;
+    TimeLineLoad::pauseTimeLine();
+    doPasue();
+    //addChild(stopNodeL);
+    //target = Director::getInstance()->getScheduler()->pauseAllTargets();
+    //MenuAction::move_in(stopNodeL);
 }
 
 
@@ -220,9 +232,8 @@ void Game::Callrestart(Ref *pSender){
         BUTTON_LOCK= true;
     //menuCloseCallback(pSender);
         Director::getInstance()->getScheduler()->resumeTargets(target);
-    Director::getInstance()->getScheduler()->resumeTargets(moveaction.target);
+    Director::getInstance()->getScheduler()->resumeTargets(moveaction.target_pro);
     Director::getInstance()->popScene();
-   
     }
 }
 
@@ -233,7 +244,8 @@ void Game::menuCloseCallback(Ref* pSender)
     //auto Scene =  Select_Detail::createScene();
     //auto transition=TransitionPageTurn::create(0.1f, Scene, false);
         Director::getInstance()->getScheduler()->resumeTargets(target);
-        Director::getInstance()->getScheduler()->resumeTargets(moveaction.target);
+        Director::getInstance()->getScheduler()->resumeTargets(moveaction.target_pro);
+        
         // moveaction->target
         Director::getInstance()->popScene();
     }
@@ -249,6 +261,22 @@ void Game::onExit(){
 void Game::Callresume(Ref* pSender){
     MenuAction::move_out(stopNodeL);
     Director::getInstance()->getScheduler()->resumeTargets(target);
+}
+
+
+
+void Game::doPasue(){
+    
+    
+//        Size visibleSize = Director::getInstance()->getVisibleSize();
+//    
+//        RenderTexture *renderTexture = RenderTexture::create(visibleSize.width,visibleSize.height);
+//        renderTexture->begin();
+//        this->getParent()->visit();
+//        renderTexture->end();
+    
+        Director::getInstance()->pushScene(pauseScene::createScene());
+
 }
 
 void Game::toolCallback(Ref* pSender,int toolMark){

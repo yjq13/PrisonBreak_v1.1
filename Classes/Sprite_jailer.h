@@ -9,12 +9,34 @@
 #ifndef Sprite_jailer_h
 #define Sprite_jailer_h
 #include <cocos2d.h>
-
-class Sprite_jailer : public cocos2d::Sprite{
-public:    
-    static cocos2d::Sprite* create(int number,cocos2d::Sprite* getSprite);
+#include "JailerListener.h"
+#include "Constant_Use.h"
+class Sprite_jailer{
+    cocostudio::timeline::ActionTimeline* timeline;
     
-    static void setJailer(int number,cocos2d::Sprite* getSprite);
+    Sprite* sprite;
+    
+    JailerListener* Listener;
+    
+public:    
+    JailerListener* getlistener();
+    
+    Sprite_jailer(){
+        CCLOG("我是精灵警察！我被创造啦！！！");
+    }
+    
+    ~Sprite_jailer(){
+        CCLOG("我是精灵警察！我被删掉啦！！！");
+    }
+
+    
+    cocostudio::timeline::ActionTimeline* getTimeLine();
+    
+    void setJailer(int number,cocos2d::Sprite* getSprite);
+    
+    void setTimeline(TIMELINE timeline);
+    
+    void setListener(JailerListener* listener);
 };
 
 

@@ -7,6 +7,7 @@
 //
 #include "cocos2d.h"
 #include "Constant_Use.h"
+#include "TimeLineLoad.h"
 #include "Menu_Action.h"
 USING_NS_CC;
 void MenuAction::move_in(cocos2d::Node *menu){
@@ -19,9 +20,14 @@ void MenuAction::move_in(cocos2d::Node *menu){
     EaseExponentialIn* moveIn_3 = EaseExponentialIn::create(Movein_3);
     auto ac=Sequence::create(moveIn_1,moveIn_2,moveIn_3, NULL);
     menu->runAction(ac);
+    
 }
 void MenuAction::move_out(cocos2d::Node *menu){
     MoveTo* Moveout=MoveTo::create(0.3f,Point(0,VISIBLE_SIZE.height));
     EaseExponentialOut* moveOut = EaseExponentialOut::create(Moveout);
-    menu->runAction(moveOut);
+    auto callfun = CallFunc::create([&]{Director::getInstance()->popScene();TimeLineLoad::resumeTimeLine();});
+    auto ac = Sequence::create(moveOut,callfun, NULL);
+    menu->runAction(ac);
+    
+
 }

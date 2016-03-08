@@ -17,10 +17,12 @@
 #include "moveListener.h"
 #include "gameLoad.h"
 #include <string>
+#include "Constant_Use.h"
 using namespace std;
 
 USING_NS_CC;
 class Game : public MyScene{
+    
     gameLoad gameload;
     moveListener movelistener;
     ContactManager moveaction;
@@ -39,7 +41,15 @@ public:
     void setPhyWorld(PhysicsWorld* world){
     m_world=world;
     };
+    Game(){
+        CCLOG("hello game");
+    }
+    
     ~Game();
+    bool isStop = false;
+    
+    void doPasue();
+    
     void menuCloseCallback(Ref* pSender);
     
     void stopCallback(Ref* pSender);

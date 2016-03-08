@@ -25,6 +25,7 @@ using namespace ui;
 
 
 void gameLoad::loadGame(cocos2d::Node* rootNodeL){
+    
     //起点加载
     auto startPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Start");
     Size size_start = startPosition->getContentSize();
@@ -48,7 +49,9 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     
     
     //警卫加载
+
     Sprite* Demo_jailer[10];
+
     int index = 0;
     do{
     index++;
@@ -61,16 +64,17 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
         string all = first+numberStr;
         
     Demo_jailer[index] = rootNodeL->getChildByName<Sprite*>(all);
-        JailerListener spritelistener[10];
         if(Demo_jailer[index]!=NULL){
-            Sprite_jailer::setJailer(index,Demo_jailer[index]);
-            
-            EventListenerTouchOneByOne* listener = spritelistener[index].create(Demo_jailer[index]);
+            jailer[index].setJailer(index,Demo_jailer[index]);
+            jailer[index].setTimeline(_TIMELINE);
+            EventListenerTouchOneByOne* listener = jailerlistener[index].create(Demo_jailer[index],jailer[index].getTimeLine());
+            jailer[index].setListener(&jailerlistener[index]);
             listener->setEnabled(false);
             JailerlistenerList.push_back(listener);
             //_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, getSprite);
             //添加一个触摸委托给dispatcher的列表,委托对象this,
             Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, Demo_jailer[index]);
+            
         }
     }while(Demo_jailer[index]!=NULL);
     
@@ -94,6 +98,7 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
             Sprite_wall::setWall(index,Demo_wall[index]);
             
             EventListenerTouchOneByOne* listener = spritelistener[index].create(Demo_wall[index]);
+            
             listener->setEnabled(false);
             WalllistenerList.push_back(listener);
             //_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, getSprite);
@@ -118,8 +123,9 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
         string all = first+numberStr;
         
         Demo_Mouse[index] = rootNodeL->getChildByName<Sprite*>(all);
-        if(Demo_Mouse[index]!=NULL)
+        if(Demo_Mouse[index]!=NULL){
             Sprite_mouse::setMouse(index,Demo_Mouse[index]);
+        }
     }while(Demo_Mouse[index]!=NULL);
 
     

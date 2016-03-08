@@ -14,6 +14,15 @@
 class TimeLineLoad{
 public:
     static TIMELINE loadTimeLine(cocos2d::Node* rootNodeL);
+        
+    static void pauseTimeLine();
     
+    static void resumeTimeLine();
+    TimeLineLoad(){
+        CCLOG("hello TimeLineLoad");
+    }
+    ~TimeLineLoad(){
+        CCLOG("goodbye TimeLineLoad");
+    }
 };
 #endif /* TimeLineLoad_hpp */
