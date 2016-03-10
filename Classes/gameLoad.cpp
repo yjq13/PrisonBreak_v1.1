@@ -33,13 +33,6 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     START_SECTION=Section(&size_start, &position_start);
     
     
-    //暂停点加载
-    auto stopPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Stop");
-    if(stopPosition!=NULL){
-        Size size_stop = stopPosition->getContentSize();
-        Vec2 position_stop = stopPosition->getPosition();
-        STOP_SECTION=Section(&size_stop, &position_stop);
-    }
     
     //终点加载
     auto destinationPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Destination");
@@ -47,6 +40,15 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     Vec2 position_destination = destinationPosition->getPosition();
     DESTINATION_SECTION=Section(&size_destination, &position_destination);
     
+    
+    //暂停点加载
+    auto stopPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Stop");
+    if(stopPosition!=NULL){
+        Size size_stop = stopPosition->getContentSize();
+        Vec2 position_stop = stopPosition->getPosition();
+        STOP_SECTION=Section(&size_stop, &position_stop);
+    }
+
     
     //警卫加载
 
