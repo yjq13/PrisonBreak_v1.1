@@ -9,6 +9,7 @@
 #include "Constant_Use.h"
 #include "TimeLineLoad.h"
 #include "Menu_Action.h"
+#include "GameCommonScene.h"
 USING_NS_CC;
 
 Node* MenuAction::create_Menu(int MenuNumber){
@@ -16,10 +17,12 @@ Node* MenuAction::create_Menu(int MenuNumber){
     switch(MenuNumber){
         case FAIL_LAYER:{
             Menu = CSLoader::createNode("res/Game/Other/Layer_Fail.csb");
+            setFailConfig(Menu);
             break;
         }
         case SUCCESS_LAYER:{
             Menu = CSLoader::createNode("res/Game/Other/Layer_Success.csb");
+            setSuccessConfig(Menu);
             break;
         }
         case STOP_LAYER:{
@@ -56,16 +59,57 @@ void MenuAction::setPauseConfig(Node* menu){
     
     auto Button_Resume_pause = menu->getChildByName<ui::Button*>("Button_Resume");
     
-    Button_Resume_pause->addTouchEventListener(CC_CALLBACK_1(MenuAction::pauseCallresume,this,menu));
+    Button_Resume_pause->addClickEventListener(CC_CALLBACK_1(MenuAction::pauseCallresume,this,menu));
     
     auto Button_Retry_pause = menu->getChildByName<ui::Button*>("Button_Retry");
     
-    Button_Retry_pause->addTouchEventListener(CC_CALLBACK_1(MenuAction::Callrestart,this,menu));
+    Button_Retry_pause->addClickEventListener(CC_CALLBACK_1(MenuAction::Callrestart,this,menu));
     
     auto Button_Back_pause = menu->getChildByName<ui::Button*>("Button_Back");
     
-    Button_Back_pause->addTouchEventListener(CC_CALLBACK_1(MenuAction::menuCloseCallback,this,menu));
+    Button_Back_pause->addClickEventListener(CC_CALLBACK_1(MenuAction::menuCloseCallback,this,menu));
     
+    menu->setContentSize(VISIBLE_SIZE);
+    
+    ui::Helper::doLayout(menu);
+    
+    menu->setPositionY(VISIBLE_SIZE.height);
+    
+}
+
+
+void MenuAction::setFailConfig(Node* menu){    
+    
+    auto Button_Back_Fail = menu->getChildByName<ui::Button*>("Button_Back");
+    
+    Button_Back_Fail->addClickEventListener(CC_CALLBACK_1(MenuAction::menuCloseCallback,this,menu));
+
+    auto Button_Retry_Fail = menu->getChildByName<ui::Button*>("Button_Retry");
+    
+    Button_Retry_Fail->addClickEventListener(CC_CALLBACK_1(MenuAction::Callrestart,this,menu));
+
+    menu->setContentSize(VISIBLE_SIZE);
+    
+    ui::Helper::doLayout(menu);
+    
+    menu->setPositionY(VISIBLE_SIZE.height);
+    
+}
+
+void MenuAction::setSuccessConfig(Node* menu){
+    
+    auto Button_Back_Success = menu->getChildByName<ui::Button*>("Button_Back");
+    
+    Button_Back_Success->addClickEventListener(CC_CALLBACK_1(MenuAction::menuCloseCallback,this,menu));
+    
+    auto Button_Retry_Success = menu->getChildByName<ui::Button*>("Button_Retry");
+    
+    Button_Retry_Success->addClickEventListener(CC_CALLBACK_1(MenuAction::Callrestart,this,menu));
+    
+    auto Button_Next_Success = menu->getChildByName<ui::Button*>("Button_Next");
+    
+    Button_Next_Success->addClickEventListener(CC_CALLBACK_1(MenuAction::Callrestart,this,menu));//下一关还没实现，之后搞定
+        
     menu->setContentSize(VISIBLE_SIZE);
     
     ui::Helper::doLayout(menu);
@@ -87,6 +131,9 @@ void MenuAction::Callrestart(Ref *pSender,Node* layer){
         //menuCloseCallback(pSender);
         MenuAction::move_out(layer);
         Director::getInstance()->popScene();
+        auto sceneNew = Game::createScene();        
+        Director::getInstance()->pushScene(sceneNew);
+        BUTTON_LOCK = false;
     }
 }
 

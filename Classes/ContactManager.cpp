@@ -113,8 +113,10 @@ bool ContactManager::onContactBeginPro_Jailer(){
         timelineNew->setTimeSpeed(0);
         node_else->setVisible(false);
         target_pro = node_Pro->getScheduler()->pauseAllTargets();
-        Node* layer =node_Pro->getParent()->getChildByTag(131250077);
+        MenuAction menuManager;
         
+        Node* layer =menuManager.create_Menu(FAIL_LAYER);
+        node_else->getParent()->addChild(layer);
         MenuAction::move_in(layer);
     }
     

@@ -88,7 +88,12 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, No
                // protagonist->runAction(action);
             }
         }
-        auto callfun = CallFunc::create([&]{MenuAction::move_in(protagonist->getParent()->getChildByTag(131250057));});
+        auto callfun = CallFunc::create([&]{
+            MenuAction menuManager;
+            auto layer =menuManager.create_Menu(SUCCESS_LAYER);
+            protagonist->getParent()->addChild(layer);
+            MenuAction::move_in(layer);
+        });
         
         actionVector.pushBack(callfun);
         

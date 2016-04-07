@@ -91,17 +91,6 @@ void Game::setUI(){
     
     //rootNodeS->addChild(rootNodeL);
     rootNodeL->setContentSize(VISIBLE_SIZE);
-    ui::Helper::doLayout(this);
-    failNodeL->setTag(131250077);
-    successNodeL->setTag(131250057);
-    
-    
-    
-    ////addChild(failNodeL);
-    successNodeL->setPositionY(VISIBLE_SIZE.height);
-    failNodeL->setPositionY(VISIBLE_SIZE.height);
-    
-    
     
     addChild(rootNodeL);
     
