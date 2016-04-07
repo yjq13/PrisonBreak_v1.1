@@ -78,6 +78,7 @@
 		E348B54C1C64823F004200F8 /* pauseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E348B54A1C64823F004200F8 /* pauseScene.cpp */; };
 		E349DB0F1C4C67DA00DF7E66 /* JailerListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E349DB0D1C4C67DA00DF7E66 /* JailerListener.cpp */; };
 		E349DB121C4C731000DF7E66 /* WallListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E349DB101C4C731000DF7E66 /* WallListener.cpp */; };
+		E35AFADF1CB644A100D2BCE4 /* Constant_Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E35AFADD1CB644A100D2BCE4 /* Constant_Game.cpp */; };
 		E369982E1C0C24AA007BB3C8 /* LockofSelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */; };
 		E3910A221C27AEA6008F65A6 /* Special_Section.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3910A201C27AEA6008F65A6 /* Special_Section.cpp */; };
 		E3CB5E761BC9753A005123B8 /* Constant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CB5E4A1BC9753A005123B8 /* Constant.cpp */; };
@@ -218,6 +219,8 @@
 		E349DB0E1C4C67DA00DF7E66 /* JailerListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JailerListener.h; sourceTree = "<group>"; };
 		E349DB101C4C731000DF7E66 /* WallListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WallListener.cpp; sourceTree = "<group>"; };
 		E349DB111C4C731000DF7E66 /* WallListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallListener.h; sourceTree = "<group>"; };
+		E35AFADD1CB644A100D2BCE4 /* Constant_Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Constant_Game.cpp; sourceTree = "<group>"; };
+		E35AFADE1CB644A100D2BCE4 /* Constant_Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant_Game.h; sourceTree = "<group>"; };
 		E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LockofSelect.cpp; sourceTree = "<group>"; };
 		E369982D1C0C24AA007BB3C8 /* LockofSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockofSelect.h; sourceTree = "<group>"; };
 		E3910A201C27AEA6008F65A6 /* Special_Section.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Special_Section.cpp; path = ../Classes/Special_Section.cpp; sourceTree = "<group>"; };
@@ -561,6 +564,13 @@
 			name = Game_Component;
 			sourceTree = "<group>";
 		};
+		E35AFADC1CB6394200D2BCE4 /* Game_Layer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Game_Layer;
+			sourceTree = "<group>";
+		};
 		E3CB5EC41BC97B70005123B8 /* PO */ = {
 			isa = PBXGroup;
 			children = (
@@ -596,6 +606,8 @@
 				E3CB5E551BC9753A005123B8 /* Constant.h */,
 				E30AC89C1BD5AADB005B8686 /* Constant_Use.cpp */,
 				E30AC89D1BD5AADB005B8686 /* Constant_Use.h */,
+				E35AFADD1CB644A100D2BCE4 /* Constant_Game.cpp */,
+				E35AFADE1CB644A100D2BCE4 /* Constant_Game.h */,
 			);
 			name = UTIL;
 			sourceTree = "<group>";
@@ -627,6 +639,7 @@
 		E3CB5EC91BC97BCE005123B8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E35AFADC1CB6394200D2BCE4 /* Game_Layer */,
 				E3EF16481BDA3BEC001E3EA3 /* Game_Map */,
 				E30AC8A91BD92C61005B8686 /* Game_Component */,
 				04D20CD91C52706700D4C35F /* Scene */,
@@ -816,6 +829,7 @@
 				E3CB5E771BC9753A005123B8 /* Data_FigureInfo.swift in Sources */,
 				E347D4251C1C0AE4009ECC95 /* TimeLinePo.swift in Sources */,
 				E3CB5E7B1BC9753A005123B8 /* OC_callSystemInfo.mm in Sources */,
+				E35AFADF1CB644A100D2BCE4 /* Constant_Game.cpp in Sources */,
 				E30AC8BE1BD98B94005B8686 /* ContactManager.cpp in Sources */,
 				E3CB5E8A1BC9753A005123B8 /* OC_callGameInfo.mm in Sources */,
 				E30AC8B81BD9329B005B8686 /* Sprite_wall.cpp in Sources */,

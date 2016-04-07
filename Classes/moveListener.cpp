@@ -12,6 +12,7 @@
 #include "Section.h"
 #include "GameCommonScene.h"
 #include "Constant_Use.h"
+#include "Constant_Game.h"
 #include "Menu_Action.h"
 USING_NS_CC;
 

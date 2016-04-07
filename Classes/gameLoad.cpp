@@ -16,11 +16,13 @@
 #include "Sprite_wall.h"
 #include "Special_Section.h"
 #include "Constant_Use.h"
+#include "Constant_Game.h"
 #include <iostream>
 #include "Sprite_mouse.h"
 #include "JailerListener.h"
 #include "WallListener.h"
 USING_NS_CC;
+
 using namespace ui;
 
 

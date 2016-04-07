@@ -112,7 +112,7 @@ void Game::setUI(){
     
     auto Button_Back = rootNodeL->getChildByName<ui::Button*>("Button_Stop");
     
-    Button_Back->addTouchEventListener(CC_CALLBACK_1(Game::stopCallback,this));
+    Button_Back->addClickEventListener(CC_CALLBACK_1(Game::stopCallback,this));
     
     
     
@@ -219,6 +219,8 @@ void Game::update(float dt){
 void Game::stopCallback(Ref* pSender){
     isStop = true;
     TimeLineLoad::pauseTimeLine();
+    auto pro = rootNodeL->getChildByName<Sprite*>("Sprite_Protagonist");
+    pro->getScheduler()->setTimeScale(0.0f);
     doPasue();
     //addChild(stopNodeL);
     //target = Director::getInstance()->getScheduler()->pauseAllTargets();
@@ -275,8 +277,11 @@ void Game::doPasue(){
 //        this->getParent()->visit();
 //        renderTexture->end();
     
-        Director::getInstance()->pushScene(pauseScene::createScene());
-
+//        Director::getInstance()->pushScene(pauseScene::createScene());
+    MenuAction menuManager;
+    Node* stopNode = menuManager.create_Menu(STOP_LAYER);
+    rootNodeL->addChild(stopNode);
+    MenuAction::move_in(stopNode);
 }
 
 void Game::toolCallback(Ref* pSender,int toolMark){

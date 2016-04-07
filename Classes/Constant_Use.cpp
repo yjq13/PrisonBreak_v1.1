@@ -19,13 +19,13 @@ cocos2d::Vec2 ORIGIN = cocos2d::Director::getInstance()->getVisibleOrigin();
 
 cocos2d::Size DESIGN_SIZE = Size(2208.0,1242.0);
 
-Section START_SECTION = Section();
+/*Section START_SECTION = Section();
 
 Section DESTINATION_SECTION = Section();
 
 Section STOP_SECTION = Section();
 
-TIMELINE _TIMELINE = *new TIMELINE();
+TIMELINE _TIMELINE = *new TIMELINE();*/
 
 int SPEED_PRO = 500;
 

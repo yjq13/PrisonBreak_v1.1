@@ -10,6 +10,28 @@
 #include "TimeLineLoad.h"
 #include "Menu_Action.h"
 USING_NS_CC;
+
+Node* MenuAction::create_Menu(int MenuNumber){
+    Node* Menu;
+    switch(MenuNumber){
+        case FAIL_LAYER:{
+            Menu = CSLoader::createNode("res/Game/Other/Layer_Fail.csb");
+            break;
+        }
+        case SUCCESS_LAYER:{
+            Menu = CSLoader::createNode("res/Game/Other/Layer_Success.csb");
+            break;
+        }
+        case STOP_LAYER:{
+            Menu = CSLoader::createNode("res/Game/Other/Layer_Stop.csb");
+            setPauseConfig(Menu);
+            break;
+        }
+    }
+        return Menu;
+}
+
+
 void MenuAction::move_in(cocos2d::Node *menu){
   //Movein
     MoveTo* Movein_1=MoveTo::create(0.3f,Point(0,0));
@@ -20,14 +42,65 @@ void MenuAction::move_in(cocos2d::Node *menu){
     EaseExponentialIn* moveIn_3 = EaseExponentialIn::create(Movein_3);
     auto ac=Sequence::create(moveIn_1,moveIn_2,moveIn_3, NULL);
     menu->runAction(ac);
-    
 }
+
 void MenuAction::move_out(cocos2d::Node *menu){
     MoveTo* Moveout=MoveTo::create(0.3f,Point(0,VISIBLE_SIZE.height));
     EaseExponentialOut* moveOut = EaseExponentialOut::create(Moveout);
-    auto callfun = CallFunc::create([&]{Director::getInstance()->popScene();TimeLineLoad::resumeTimeLine();});
-    auto ac = Sequence::create(moveOut,callfun, NULL);
-    menu->runAction(ac);
     
+    auto ac = Sequence::create(moveOut, NULL);
+    menu->runAction(ac);
+}
 
+void MenuAction::setPauseConfig(Node* menu){
+    
+    auto Button_Resume_pause = menu->getChildByName<ui::Button*>("Button_Resume");
+    
+    Button_Resume_pause->addTouchEventListener(CC_CALLBACK_1(MenuAction::pauseCallresume,this,menu));
+    
+    auto Button_Retry_pause = menu->getChildByName<ui::Button*>("Button_Retry");
+    
+    Button_Retry_pause->addTouchEventListener(CC_CALLBACK_1(MenuAction::Callrestart,this,menu));
+    
+    auto Button_Back_pause = menu->getChildByName<ui::Button*>("Button_Back");
+    
+    Button_Back_pause->addTouchEventListener(CC_CALLBACK_1(MenuAction::menuCloseCallback,this,menu));
+    
+    menu->setContentSize(VISIBLE_SIZE);
+    
+    ui::Helper::doLayout(menu);
+    
+    menu->setPositionY(VISIBLE_SIZE.height);
+    
+}
+
+
+void MenuAction::pauseCallresume(Ref* pSender,Node* layer){
+    MenuAction::move_out(layer);
+    TimeLineLoad::resumeTimeLine();
+}
+
+void MenuAction::Callrestart(Ref *pSender,Node* layer){
+    CCLOG("pop GAME");
+    if(BUTTON_LOCK==false){
+        BUTTON_LOCK= true;
+        //menuCloseCallback(pSender);
+        MenuAction::move_out(layer);
+        Director::getInstance()->popScene();
+    }
+}
+
+void MenuAction::menuCloseCallback(Ref* pSender,Node* layer)
+{
+    if(BUTTON_LOCK==false){
+        BUTTON_LOCK= true;
+        //auto Scene =  Select_Detail::createScene();
+        //auto transition=TransitionPageTurn::create(0.1f, Scene, false);
+        MenuAction::move_out(layer);
+        // moveaction->target
+        Director::getInstance()->popScene();
+    }
+    //#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    //exit(0);
+    //#endif
 }
