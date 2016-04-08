@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0408A2D51C1B1326004D5BAC /* TimeLine.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0408A2D41C1B1326004D5BAC /* TimeLine.plist */; };
 		0417FE551C54E0B4007D96EF /* Menu_Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0417FE531C54E0B4007D96EF /* Menu_Action.cpp */; };
+		044B42C91C93C96100EE9983 /* 白色方块.png in Resources */ = {isa = PBXBuildFile; fileRef = 044B42C81C93C96100EE9983 /* 白色方块.png */; };
 		0454C4F51C1AA94E001EC9F7 /* CoverView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0454C4F31C1AA94E001EC9F7 /* CoverView.cpp */; };
 		049178E21BDBDBB2004AAF5C /* Section.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049178E01BDBDBB2004AAF5C /* Section.cpp */; };
 		04BA48D01C3A8A220078D849 /* PEShapeCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BA48CE1C3A8A220078D849 /* PEShapeCache.cpp */; };
@@ -124,6 +125,7 @@
 		0408A2D41C1B1326004D5BAC /* TimeLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TimeLine.plist; sourceTree = "<group>"; };
 		0417FE531C54E0B4007D96EF /* Menu_Action.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Menu_Action.cpp; sourceTree = "<group>"; };
 		0417FE541C54E0B4007D96EF /* Menu_Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu_Action.h; sourceTree = "<group>"; };
+		044B42C81C93C96100EE9983 /* 白色方块.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "白色方块.png"; sourceTree = "<group>"; };
 		0454C4F31C1AA94E001EC9F7 /* CoverView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoverView.cpp; sourceTree = "<group>"; };
 		0454C4F41C1AA94E001EC9F7 /* CoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverView.h; sourceTree = "<group>"; };
 		049178E01BDBDBB2004AAF5C /* Section.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Section.cpp; path = ../Classes/Section.cpp; sourceTree = "<group>"; };
@@ -652,6 +654,7 @@
 		E3CB5ECB1BC97DB4005123B8 /* UIPicture */ = {
 			isa = PBXGroup;
 			children = (
+				044B42C81C93C96100EE9983 /* 白色方块.png */,
 				E3CB5ECC1BC97DE4005123B8 /* HelloWorld.png */,
 				E3CB5EA71BC97B39005123B8 /* 00.jpg */,
 				E3CB5EA81BC97B39005123B8 /* 01.jpg */,
@@ -762,6 +765,7 @@
 				E3CB5EBA1BC97B39005123B8 /* 04.jpg in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				E3CB5EC01BC97B39005123B8 /* fonts in Resources */,
+				044B42C91C93C96100EE9983 /* 白色方块.png in Resources */,
 				E3CB5EB81BC97B39005123B8 /* 02.jpg in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,

@@ -6,6 +6,7 @@
 //
 //
 #include "CoverView.h"
+#define PI 3.14159
 using namespace std;
 CoverView::CoverView()
 {
@@ -14,7 +15,7 @@ CoverView::CoverView()
 
 CoverView::~CoverView()
 {
-    CC_SAFE_RELEASE_NULL(cardArray);
+    CC_SAFE_RELEASE_NULL(levelArray);
 }
 
 CoverView* CoverView::create(Rect swBox, Size slSize , float disDistance , float disScale)
@@ -46,24 +47,110 @@ bool CoverView::init(Rect swBox , Size slSize , float disDistance , float disSca
     _eventDispatcher->addEventListenerWithSceneGraphPriority(Listener, this);
     
     initData();
+    
+    scheduleUpdate();
     return true;
 }
-
-void CoverView::addListener(){
-    Listener->setEnabled(true);
-
+void CoverView::update(float dt){
+    //调整angle数值
+    if(angle>360){
+        angle-=360;
+    }
+    if(angle<-360){
+        angle+=360;
+    }
+    if (isHandOff&&!isShiftDone) {
+        Node* card;
+        bool hasValue=true;
+        if(isRight&&!card_right.empty()){
+            card=card_right.top();
+        }else if(!isRight&&!card_left.empty()){
+            card=card_left.top();
+        }else{
+            CCLOG("未初始化");
+            hasValue=false;
+        }
+        if(hasValue){
+            thisLevel=(Node*)levelArray->getObjectAtIndex(whichLevel+isRight);
+            lastLevel=(Node*)levelArray->getObjectAtIndex(whichLevel-1+isRight);
+            if(angle>=-90&&angle<=-30){
+                //合于右侧
+                //合并动画
+                angle+=dt*100;
+                card->setRotationSkewY(angle);
+                thisLevel->setScaleX(-sin((-angle-30)/2*PI/180)/sin(PI/3));
+                thisLevel->setRotationSkewY(-(90+(-angle-30)/2+30));
+                lastLevel->setScaleX((sin((angle+150)/2*PI/180)/sin(PI/3)));
+                lastLevel->setRotationSkewY(-(90-(150+angle)/2-30));
+            }else if(angle>=-150&&angle<90){
+                //合于左侧
+                //合并动画
+                angle-=dt*100;
+                card->setRotationSkewY(angle);
+                thisLevel->setScaleX(-sin((-angle-30)/2*PI/180)/sin(PI/3));
+                thisLevel->setRotationSkewY(-(90+(-angle-30)/2+30));
+                lastLevel->setScaleX((sin((angle+150)/2*PI/180)/sin(PI/3)));
+                lastLevel->setRotationSkewY(-(90-(150+angle)/2-30));
+            }
+            if (angle>=-30) {
+                isShiftDone=true;
+                card->setRotationSkewY(-30);
+                thisLevel->setScaleX(-0/sin(PI/3));
+                thisLevel->setRotationSkewY(-(90+0/2+30));
+                lastLevel->setScaleX((sin((120)/2*PI/180)/sin(PI/3)));
+                lastLevel->setRotationSkewY(-(90-(120)/2-30));
+                if(!isRight&&!card_left.empty()){
+                    whichLevel--;
+                    thisLevel->setZOrder(-1000);
+                    //左侧的书出栈一页进入右侧栈
+                    CCLOG("左侧的书出栈一页进入右侧栈");
+                    card->setZOrder(0);
+                    card_left.pop();
+                    card_right.push(card);
+                }
+            }
+            if (angle<=-150) {
+                isShiftDone=true;
+                card->setRotationSkewY(-150);
+                thisLevel->setScaleX(-sin((150-30)/2*PI/180)/sin(PI/3));
+                thisLevel->setRotationSkewY(-(90+(150-30)/2+30));
+                lastLevel->setScaleX((sin((-150+150)/2*PI/180)/sin(PI/3)));
+                lastLevel->setRotationSkewY(-(90-(150-150)/2-30));
+                if(isRight&&!card_right.empty()){
+                    whichLevel++;
+                    lastLevel->setZOrder(-1000);
+                    //右侧的书出栈一页进入左侧栈
+                    CCLOG("右侧的书出栈一页进入左侧栈");
+                    card->setZOrder(0);
+                    card_right.pop();
+                    card_left.push(card);
+                }
+            }
+        }
+    }
+    
+    
 }
-void CoverView::removeListener(){
-    Listener->setEnabled(false);
+void CoverView::initCard(int cardNum){
+    char* url="白色方块.png";
+    
+    for(int i = 0 ; i< cardNum ; i++)
+    {Sprite* player = Sprite::create(url);
+        this->addCard(player);
+    }
+    
 }
-
-
 void CoverView::initData()
 {
     wSize = Director::getInstance()->getWinSize();
-    cardArray = Array::create();
-    cardArray->retain();
+    levelArray = Array::create();
+    levelArray->retain();
     cardNum = 0;
+    isRight=true;
+    isHandOff=true;
+    isShiftDone=true;
+    whichLevel=0;
+    
     
     offsetPosition = Point(swSize.width/2,swSize.height/2);
     
@@ -72,19 +159,41 @@ void CoverView::initData()
     scrollLayer->setPosition(Point::ZERO);
     scrollLayer->setContentSize(slSize);
     slayerPosition = Point::ZERO;
-    isMove = true;
     scrollView = ScrollView::create(swSize,scrollLayer);
     scrollView->setAnchorPoint(Point::ZERO);
     scrollView->setContentOffset(Point(0,0));
     scrollView->setTouchEnabled(false);
-    scrollView->setDelegate(this);
-    //scrollView->ScrollView::setDirection();
     addChild(scrollView,1);
 }
 
 bool CoverView::onTouchBegin(Touch* pTouch, Event* pEvent)
 {
-    return true;
+    if(isShiftDone){
+        isHandOff=false;
+        Point curPoint = pTouch->getLocation();
+        if(curPoint.x<wSize.width/2){
+            isRight=false;
+            angle=-150;
+        }else{
+            isRight=true;
+            angle=-30;
+        }
+        if(whichLevel+isRight>0&&whichLevel+isRight<cardNum+1){
+            thisLevel=(Node*)levelArray->getObjectAtIndex(whichLevel+isRight);
+            lastLevel=(Node*)levelArray->getObjectAtIndex(whichLevel-1+isRight);
+            thisLevel->setPosition(offsetPosition.x+170, offsetPosition.y-200);
+            thisLevel->setAnchorPoint(Point(1,0));
+            thisLevel->setScaleX(!isRight);
+            thisLevel->setRotationSkewY(0);
+            
+            lastLevel->setPosition(offsetPosition.x-170, offsetPosition.y-200);
+            lastLevel->setAnchorPoint(Point(0,0));
+            lastLevel->setScaleX(isRight);
+            lastLevel->setRotationSkewY(0);
+            return true;
+        }
+    }
+    return false;
 }
 
 void CoverView::onTouchMoved(Touch* pTouch, Event* pEvent)
@@ -94,110 +203,81 @@ void CoverView::onTouchMoved(Touch* pTouch, Event* pEvent)
     if(swBox.containsPoint(scroll_movepoint))
     {
         Point adjustPoint = scroll_movepoint-scroll_prepoint;
-        adjustScrollView(adjustPoint);
         adjustCardScale(adjustPoint);
     }
-    CCLOG("move");
 }
 
 void CoverView::onTouchEnded(Touch* pTouch, Event* pEvent)
 {
-    Point scroll_prepoint = pTouch->getPreviousLocation();
-    Point scroll_endpoint = pTouch->getLocation();
-    //float disX = scroll_endpoint.x - scroll_endpoint.x;
-    adjusetEndScrollView();
-    Point curPosition = scrollLayer->getPosition();
-    float distance = slayerPosition.getDistance(curPosition);
-    //ccpDistance(slayerPosition, curPosition);
-    if (distance < 5.0f) isMove = false;
-    }
+    isShiftDone=false;
+    isHandOff=true;
+}
 
 void CoverView::adjustCardScale(Point adjustPoint)
 {
-    //float disX = adjustPoint.x;
-    Ref* obj = NULL;
-    CCARRAY_FOREACH(cardArray,obj)
-    {
-        Node* card = (Node*) obj;
-        float offset = scrollView->getContentOffset().x;
-        float posX = card->getPositionX() + offset;
-        float disMid = abs(swSize.width/2-posX);
-        float scale = 1- disMid/disDistance*disScale;
-        card->setScale(scale);
-        int zOr = (int) (1000-disMid*0.1);
-        card->setZOrder(zOr);
+    float scale = adjustPoint.x/swSize.width*360;
+    thisLevel=(Node*)levelArray->getObjectAtIndex(whichLevel+isRight);
+    lastLevel=(Node*)levelArray->getObjectAtIndex(whichLevel-1+isRight);
+    if(isRight&&!card_right.empty()){
+        Node* card = card_right.top();
+        card->setZOrder(1000);
+        angle+=scale;
+        //固定角度内才可以旋转
+        if(angle<=-30&&angle>=-150){
+            card->setRotationSkewY(angle);
+            if(angle>-90){
+                thisLevel->setZOrder(500);
+                lastLevel->setZOrder(2000);
+            }else{
+                thisLevel->setZOrder(2000);
+                lastLevel->setZOrder(500);
+                
+            }
+            thisLevel->setScaleX(-sin((-angle-30)/2*PI/180)/sin(PI/3));
+            thisLevel->setRotationSkewY(-(90+(-angle-30)/2+30));
+            lastLevel->setScaleX((sin((angle+150)/2*PI/180)/sin(PI/3)));
+            lastLevel->setRotationSkewY(-(90-(150+angle)/2-30));
+        }
+    }else if(!isRight&&!card_left.empty()){
+        Node* card = card_left.top();
+        card->setZOrder(1000);
+        angle+=scale;
+        //固定角度内才可以旋转
+        if(angle<=-30&&angle>=-150){
+            card->setRotationSkewY(angle);
+            if(angle>-90){
+                thisLevel->setZOrder(500);
+                lastLevel->setZOrder(2000);
+            }else{
+                thisLevel->setZOrder(2000);
+                lastLevel->setZOrder(500);
+            }
+            thisLevel->setScaleX(-sin((-angle-30)/2*PI/180)/sin(PI/3));
+            thisLevel->setRotationSkewY(-(90+(-angle-30)/2+30));
+            lastLevel->setScaleX((sin((angle+150)/2*PI/180)/sin(PI/3)));
+            lastLevel->setRotationSkewY(-(90-(150+angle)/2-30));
+        }
+        
     }
 }
 
-void CoverView::adjustScrollView(Point adjustPoint)
-{
-    Point endPoint =scrollView->getContentOffset()+Point(adjustPoint.x,0);
-    scrollView->unscheduleAllCallbacks();
-    scrollView->setContentOffset(endPoint,false);
-}
 
-void CoverView::adjusetEndScrollView()
+void CoverView::turnToLevel(int whichLevel)
 {
-    Ref* obj = NULL;
-    float minX = wSize.width;
-    float midX = swSize.width/2;
-    //获取距离中间最小值的card
-    CCARRAY_FOREACH(cardArray,obj)
-    {
-        Node* card = (Node*) obj;
-        float offset = scrollView->getContentOffset().x;
-        //转化父类坐标
-        float posX = card->getPositionX() + offset;
-        float disMid = midX-posX;
-        if(abs(disMid) < abs(minX)) minX = disMid;
+    this->whichLevel=whichLevel-1;
+    for (int i=0; i<whichLevel; i++) {
+        Node* card=card_right.top();
+        card_right.pop();
+        card_left.push(card);
     }
-    
-    CCARRAY_FOREACH(cardArray,obj)
-    {
-        Node* item = (Node*) obj;
-        //转化父类坐标
-        float offset = scrollView->getContentOffset().x;
-        float posX = item->getPositionX() + offset ;
-        //距离中间长度
-        float disMid = abs(midX - posX - minX);
-        //目标scale
-        float scale = 1- disMid/disDistance*disScale;
-        ScaleTo* scaleBy = ScaleTo::create(0.2f,scale);
-        item->runAction(scaleBy);
-        int zOr = (int) (1000-disMid*0.1);
-        item->setZOrder(zOr);
-    }
-    Layer* scrollLayer = (Layer*)scrollView->getContainer();
-    MoveBy* moveBy = MoveBy::create(0.2f,Point(minX,0));
-    CallFuncN* callFuncN = CallFuncN::create(CC_CALLBACK_1(CoverView::cardViewEnd_callBack, this));
-    //this,callfuncN_selector(CoverView::cardViewEnd_callBack));
-    Sequence* seq = Sequence::create(moveBy,callFuncN,NULL);
-    scrollLayer->runAction(seq);
-    //scrollLayer->runAction(moveBy);
 }
 
-void CoverView::cardViewEnd_callBack(Node* pSender)
-{
-    //NotificationCenter::sharedNotificationCenter()->postNotification(ROOMSELECT,cardArray);
-    slayerPosition = scrollLayer->getPosition();
-    isMove = true;
-}
-
-void CoverView::scrollViewDidScroll(ScrollView* view)
-{
-    
-}
-
-void CoverView::scrollViewDidZoom(ScrollView* view)
-{
-    
-}
 
 
 
 void CoverView::addCard(Node * card)
 {
-    int zOrder = 1000 - cardNum;
+    int zOrder = cardNum;
     this->addCard(card, zOrder, 0);
 }
 
@@ -208,45 +288,60 @@ void CoverView::addCard(Node * card, int zOrder)
 
 void CoverView::addCard(Node* card, int zOrder, int tag)
 {
-    float positionX = offsetPosition.x + disDistance*cardNum;
-    float scale = 1 - disScale*cardNum;
-    card->setPosition(Point(positionX,offsetPosition.y));
-    card->setScale(scale);
-    cardArray->addObject(card);
+    float positionX = offsetPosition.x;
+    //float scale = 1 - disScale*cardNum;
+    card->setAnchorPoint(Point(0,0));
+    card->setPosition(Point(positionX,offsetPosition.y-300));
+    card->setRotationSkewY(-30);
+    //card->setScale(scale);
     scrollLayer->addChild(card , zOrder,tag);
     cardNum++;
+    card_right.push(card);
     //CCLog("crad%d:[%f , %f]",cardNum,card->getPositionX(),card->getPositionY());
 }
 
-int CoverView::getCurCardIndex()
+void CoverView::addLevel(Node * level)
 {
-    float distance1 = - scrollLayer->getPositionX();
-    float distance2 = swSize.width/2 - offsetPosition.x;
-    //CCLOG("%f,%f, offset: %f",distance1,distance2,offsetPosition.x);
-    //+5 浮点数误差
-    int index = (distance1 + distance2 + 5) / (disDistance);
-    //CCLog("card index:%d  distance1:%f",index,distance1);
-    if(scrollLayer->getPositionX()!=0){
-    return index;
-    }else{
-        //表示未滑动
-        return 999999;
-    }
+    int zOrder = -1000;
+    this->addLevel(level, zOrder, 0);
+}
+
+void CoverView::addLevel(Node * level, int zOrder)
+{
+    this->addLevel(level, zOrder,0);
+}
+
+void CoverView::addLevel(Node* level, int zOrder, int tag)
+{
+    float positionX = offsetPosition.x;
+    //float scale = 1 - disScale*cardNum;
+    level->setPosition(offsetPosition.x-170, offsetPosition.y-200);
+    level->setAnchorPoint(Point(0,0));
+    level->setScaleX(1);
+    levelArray->addObject(level);
+    scrollLayer->addChild(level , zOrder,tag);
+    //CCLog("crad%d:[%f , %f]",cardNum,card->getPositionX(),card->getPositionY());
+}
+
+
+int CoverView::getCurLevel()
+{
+    return whichLevel;
 }
 
 void CoverView::setOffsetPosition(Point var)
 {
-    offsetPosition = var;
-    Ref* obj = NULL;
-    cardNum = 0;
-    CCARRAY_FOREACH(cardArray,obj)
-    {
-        Node* card = (Node*) obj;
-        float positionX = offsetPosition.x + disDistance*cardNum;
-        card->setPosition(Point(positionX,offsetPosition.y));
-        cardNum++;
-    }
-    adjustCardScale(Point::ZERO);
+    //    offsetPosition = var;
+    //    Ref* obj = NULL;
+    //    cardNum = 0;
+    //    CCARRAY_FOREACH(cardArray,obj)
+    //    {
+    //        Node* card = (Node*) obj;
+    //        float positionX = offsetPosition.x + disDistance*cardNum;
+    //        card->setPosition(Point(positionX,offsetPosition.y));
+    //        cardNum++;
+    //    }
+    //    adjustCardScale(Point::ZERO);
 }
 
 Point CoverView::getOffsetPosition()

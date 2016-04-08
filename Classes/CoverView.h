@@ -12,7 +12,24 @@
 #include "cocos-ext.h"
 USING_NS_CC;
 USING_NS_CC_EXT;
-class CoverView : public Node , public ScrollViewDelegate{
+class CoverView : public Node{
+private:
+    //书的左右边
+    std::stack<Node* > card_left;
+    std::stack<Node* > card_right;
+    //上一关与下一关
+    Node* lastLevel;
+    Node* thisLevel;
+    //已旋转的角度
+    float angle;
+    //是左滑还是右滑
+    bool isRight;
+    //是否松手
+    bool isHandOff;
+    //是否结束动画
+    bool isShiftDone;
+    //到哪一关了
+    int whichLevel;
 public:
     CoverView();
     ~CoverView();
@@ -28,34 +45,32 @@ public:
     virtual bool onTouchBegin(Touch* pTouch, Event* pEvent);
     virtual void onTouchMoved(Touch* pTouch, Event* pEvent);
     virtual void onTouchEnded(Touch* pTouch, Event* pEvent);
+    void update(float dt);
     void initData();
-    void addListener();
-    void removeListener();
-    void scrollViewDidScroll(ScrollView* view);
-    void scrollViewDidZoom(ScrollView* view);
+    void initCard(int cardNum);
     void adjustCardScale(Point adjustPoint);
-    void adjustScrollView(Point adjustPoint);
-    void adjusetEndScrollView();
-    void cardViewEnd_callBack(Node* pSender);
-    int getCurCardIndex();//当前中间card索引 从0开始
+    int getCurLevel();
     void addCard(Node * card);
     void addCard(Node * card, int zOrder);
     void addCard(Node* card, int zOrder, int tag);
+    void addLevel(Node * level);
+    void addLevel(Node * level, int zOrder);
+    void addLevel(Node* level, int zOrder, int tag);
+    void turnToLevel(int whichLevel);
     CC_SYNTHESIZE(Point , swPosition , SwPosition);//scrollView 位置
     CC_SYNTHESIZE(Size , swSize , SwSize);//scrollView大小
     CC_SYNTHESIZE(Size , slSize , SlSize);//scrollLayer 大小
     CC_SYNTHESIZE(float , disDistance , DisDistance);//card距离间隔
-    CC_SYNTHESIZE(float , disScale , DisScale);//crad缩放间隔
+    CC_SYNTHESIZE(float , disScale , DisScale);//card缩放间隔
     CC_SYNTHESIZE(Rect , swBox , SwBox);//scrollview 边框
     CC_SYNTHESIZE(Layer* , scrollLayer , scrollLayer);//scrollView的containLayer
     CC_SYNTHESIZE(int , cardNum , CardNum);//card索引
     CC_PROPERTY(Point , offsetPosition , OffsetPosition);//card起始位置
     CC_SYNTHESIZE(Point, slayerPosition, SlayerPosition);//sontainLayer的位置
-    CC_SYNTHESIZE(bool, isMove, IsMove);//是否发生了移动用于加入菜单的时候能滑动并正确响应事件
     EventListenerTouchOneByOne* Listener;
 private:
     Size wSize;
-    Array* cardArray;
+    Array* levelArray;
     ScrollView* scrollView;
 };
 #endif

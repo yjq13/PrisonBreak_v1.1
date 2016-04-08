@@ -61,11 +61,12 @@ void Select_Detail::setCoverflow(){
     float winWidth = Director::getInstance()->getWinSize().width;
     float winHeight = Director::getInstance()->getWinSize().height;
     
-    Rect swRect_level = Rect(0.01f*winWidth,0.4f*winHeight,0.98f*winWidth,0.33f*winHeight);
-    Size slSize_level = Size(2.3f*winWidth,0.33f*winHeight);
-    float disDistance = 0.2f*winWidth;
+    CCRect swRect_level = CCRectMake(0.01f*winWidth,0.0f*winHeight,0.98f*winWidth,1.0f*winHeight);
+    CCSize slSize_level = CCSizeMake(2.3f*winWidth,1.0f*winHeight);
+    float disDistance = 0.1f*winWidth;
     float disScale = 0.25f;
     levelView = CoverView::create(swRect_level,slSize_level,disDistance,disScale);
+    levelView->initCard(9);
     
     for(int i = 0 ; i< 9 ; i++)
     {
@@ -73,12 +74,10 @@ void Select_Detail::setCoverflow(){
         url="res/Picture/Button_Part_1.png";
         Button* level=Button::create(url);
         level->addClickEventListener(CC_CALLBACK_1(Select_Detail::show_GameReady,this,i));
-        levelView->addCard(level,i);
+        levelView->addLevel(level);
     }
     //下面是调整图片位置
-    auto offset=(7-2*STEP)*0.1*winWidth;
-    levelView->setOffsetPosition(Point(offset,swRect_level.size.height/2));
-    levelView->setPosition(swRect_level.origin);
+    levelView->turnToLevel(STEP);
     this->addChild(levelView);
     
     //下面是道具的coverflow，感觉没有必要
@@ -181,7 +180,7 @@ void Select_Detail::turnToGame(Ref* pSender)
         Director::getInstance()->pushScene(sceneNew);
         //rootNodeL_GameStep->setVisible(false);
         rootNodeL_GameStep->setPositionY(VISIBLE_SIZE.height);
-        levelView->addListener();
+        //levelView->addListener();
         resumeButton();
     }
     
@@ -202,18 +201,19 @@ void Select_Detail::show_GameReady(Ref* pSender,int level)
     string stepSu=data;
     
     PATH_LEVEL = stepSu;
-    CCLOG("asasd%d  %d",level,levelView->getCurCardIndex());
+    //CCLOG("asasd%d  %d",level,levelView->getCurCardIndex());
     bool iscur=false;//是否未滑动
-    if(levelView->getCurCardIndex()==999999&&level+1==STEP){
+    if(level+1==STEP){
         //999999表示未滑动，即选择当前关
         iscur=true;
     }
-    if (result&&(level==levelView->getCurCardIndex()||iscur)) {
+    CCLOG("step:%d,level:%d,view:%d",STEP,level,levelView->getCurLevel());
+    if (result&&(level==levelView->getCurLevel()||iscur)) {
         
         //Menu Movein
         MenuAction::move_in(rootNodeL_GameStep);
         //rootNodeL_GameStep->setVisible(true);
-        levelView->removeListener();
+        //levelView->removeListener();
         shieldButton();
     }else {
         
@@ -238,6 +238,6 @@ void Select_Detail::turnToShop(Ref* pSender){
 void Select_Detail::closeLayer(Ref* pSender){
     //rootNodeL_GameStep->setVisible(false);
     MenuAction::move_out(rootNodeL_GameStep);
-    levelView->addListener();
+   // levelView->addListener();
     resumeButton();
 }
