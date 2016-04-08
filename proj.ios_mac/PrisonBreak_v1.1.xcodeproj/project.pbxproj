@@ -77,6 +77,7 @@
 		E348B54C1C64823F004200F8 /* pauseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E348B54A1C64823F004200F8 /* pauseScene.cpp */; };
 		E349DB0F1C4C67DA00DF7E66 /* JailerListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E349DB0D1C4C67DA00DF7E66 /* JailerListener.cpp */; };
 		E349DB121C4C731000DF7E66 /* WallListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E349DB101C4C731000DF7E66 /* WallListener.cpp */; };
+		E34E6FBD1CB80A5E0026E129 /* MenuManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E34E6FBB1CB80A5E0026E129 /* MenuManager.cpp */; };
 		E35AFADF1CB644A100D2BCE4 /* Constant_Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E35AFADD1CB644A100D2BCE4 /* Constant_Game.cpp */; };
 		E369982E1C0C24AA007BB3C8 /* LockofSelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */; };
 		E3910A221C27AEA6008F65A6 /* Special_Section.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3910A201C27AEA6008F65A6 /* Special_Section.cpp */; };
@@ -216,6 +217,8 @@
 		E349DB0E1C4C67DA00DF7E66 /* JailerListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JailerListener.h; sourceTree = "<group>"; };
 		E349DB101C4C731000DF7E66 /* WallListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WallListener.cpp; sourceTree = "<group>"; };
 		E349DB111C4C731000DF7E66 /* WallListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallListener.h; sourceTree = "<group>"; };
+		E34E6FBB1CB80A5E0026E129 /* MenuManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuManager.cpp; sourceTree = "<group>"; };
+		E34E6FBC1CB80A5E0026E129 /* MenuManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuManager.h; sourceTree = "<group>"; };
 		E35AFADD1CB644A100D2BCE4 /* Constant_Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Constant_Game.cpp; sourceTree = "<group>"; };
 		E35AFADE1CB644A100D2BCE4 /* Constant_Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant_Game.h; sourceTree = "<group>"; };
 		E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LockofSelect.cpp; sourceTree = "<group>"; };
@@ -534,8 +537,8 @@
 				E349DB0E1C4C67DA00DF7E66 /* JailerListener.h */,
 				E349DB101C4C731000DF7E66 /* WallListener.cpp */,
 				E349DB111C4C731000DF7E66 /* WallListener.h */,
-				0417FE531C54E0B4007D96EF /* MenuManager.cpp */,
-				0417FE541C54E0B4007D96EF /* MenuManager.h */,
+				E34E6FBB1CB80A5E0026E129 /* MenuManager.cpp */,
+				E34E6FBC1CB80A5E0026E129 /* MenuManager.h */,
 			);
 			name = BL;
 			sourceTree = "<group>";
@@ -662,7 +665,6 @@
 		E3CB5ECB1BC97DB4005123B8 /* UIPicture */ = {
 			isa = PBXGroup;
 			children = (
-				044B42C81C93C96100EE9983 /* 白色方块.png */,
 				E3CB5ECC1BC97DE4005123B8 /* HelloWorld.png */,
 				E3CB5EA71BC97B39005123B8 /* 00.jpg */,
 				E3CB5EA81BC97B39005123B8 /* 01.jpg */,
@@ -773,7 +775,6 @@
 				E3CB5EBA1BC97B39005123B8 /* 04.jpg in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				E3CB5EC01BC97B39005123B8 /* fonts in Resources */,
-				044B42C91C93C96100EE9983 /* 白色方块.png in Resources */,
 				E3CB5EB81BC97B39005123B8 /* 02.jpg in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
@@ -821,7 +822,6 @@
 				E312DDA81C4875BC0062A35A /* protagonistListener.cpp in Sources */,
 				E30AC8BB1BD984AC005B8686 /* moveListener.cpp in Sources */,
 				E3CB5E8D1BC9753A005123B8 /* SystemPo.swift in Sources */,
-				0417FE551C54E0B4007D96EF /* MenuManager.cpp in Sources */,
 				0454C4F51C1AA94E001EC9F7 /* CoverView.cpp in Sources */,
 				E349DB0F1C4C67DA00DF7E66 /* JailerListener.cpp in Sources */,
 				E30AC8AF1BD92F8A005B8686 /* Sprite_mouse.cpp in Sources */,
@@ -838,6 +838,7 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				E347EA9A1C19EA8A0096BC5E /* SelectScene_Detail.cpp in Sources */,
 				E3CB5E7A1BC9753A005123B8 /* initDocuments.swift in Sources */,
+				E34E6FBD1CB80A5E0026E129 /* MenuManager.cpp in Sources */,
 				E3463CCA1C1D148A003057AA /* SchedulerManager.cpp in Sources */,
 				E3CB5E831BC9753A005123B8 /* FigureVo.cpp in Sources */,
 				E30AC89E1BD5AADB005B8686 /* Constant_Use.cpp in Sources */,
