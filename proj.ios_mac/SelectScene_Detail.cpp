@@ -71,7 +71,7 @@ void Select_Detail::setCoverflow(){
     for(int i = 0 ; i< 9 ; i++)
     {
         string url;
-        url="res/Picture/Button_Part_1.png";
+        url="绿色方块.png";
         Button* level=Button::create(url);
         level->addClickEventListener(CC_CALLBACK_1(Select_Detail::show_GameReady,this,i));
         levelView->addLevel(level);
