@@ -27,11 +27,11 @@ USING_NS_CC;
 
     extern int ACTION_TAG;
 
-    extern Section START_SECTION;
+    /*extern Section START_SECTION;
 
     extern Section DESTINATION_SECTION;
 
-    extern Section STOP_SECTION;
+    extern Section STOP_SECTION;*/
 
     extern cocos2d::Size VISIBLE_SIZE;
     
@@ -60,5 +60,11 @@ USING_NS_CC;
     const int WALL_TAG = 5000;
 
     const int SECTION_TAG = 6000;
+
+    const int STOP_LAYER = 1;
+
+    const int FAIL_LAYER = 2;
+
+    const int SUCCESS_LAYER = 3;
 
 #endif /* Constant_Use_h*/

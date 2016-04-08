@@ -16,11 +16,14 @@
 #include "Sprite_wall.h"
 #include "Special_Section.h"
 #include "Constant_Use.h"
+#include "Constant_Game.h"
 #include <iostream>
 #include "Sprite_mouse.h"
 #include "JailerListener.h"
 #include "WallListener.h"
+#include "SchedulerManager.h"
 USING_NS_CC;
+
 using namespace ui;
 
 
@@ -33,13 +36,6 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     START_SECTION=Section(&size_start, &position_start);
     
     
-    //暂停点加载
-    auto stopPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Stop");
-    if(stopPosition!=NULL){
-        Size size_stop = stopPosition->getContentSize();
-        Vec2 position_stop = stopPosition->getPosition();
-        STOP_SECTION=Section(&size_stop, &position_stop);
-    }
     
     //终点加载
     auto destinationPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Destination");
@@ -47,6 +43,15 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     Vec2 position_destination = destinationPosition->getPosition();
     DESTINATION_SECTION=Section(&size_destination, &position_destination);
     
+    
+    //暂停点加载
+    auto stopPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Stop");
+    if(stopPosition!=NULL){
+        Size size_stop = stopPosition->getContentSize();
+        Vec2 position_stop = stopPosition->getPosition();
+        STOP_SECTION=Section(&size_stop, &position_stop);
+    }
+
     
     //警卫加载
 
@@ -151,8 +156,10 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     
     Demo_protagonist->setScheduler(sched1);
     
-
-    //特殊区域加载
+    SchedulerManager::setProScheduler(sched1);
+    
+    
+    
     Sprite* Demo_Section[10];
     index = 0;
     do{

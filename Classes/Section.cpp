@@ -16,8 +16,8 @@ bool Section::isInside(cocos2d::Touch* touch){
         //CCLOG("inside");
         return true;
     } else {
-       // CCLOG("position:%f,%f————size::%f,%f",position->x,position->y,size->width,size->height);
-        //CCLOG("outside");
+       CCLOG("position:%f,%f————size::%f,%f",position->x,position->y,size->width,size->height);
+       CCLOG("outside");
         return false;
     }
 }

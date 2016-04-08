@@ -11,9 +11,9 @@
 #include <stdio.h>
 #include "ui/CocosGUI.h"
 class Section{
-public:
     cocos2d::Size* size;
     cocos2d::Vec2* position;
+public:
     Section(cocos2d::Size* size,cocos2d::Vec2* position);
     Section();
     bool isInside(cocos2d::Touch* touch);

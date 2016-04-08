@@ -31,7 +31,7 @@ class Game : public MyScene{
     cocos2d::Node* successNodeL;
     cocos2d::Node* stopNodeL;
     cocostudio::timeline::ActionTimeline* rootTimeLine;
-    cocostudio::timeline::ActionTimeline* rootTimeLine2;
+    //cocostudio::timeline::ActionTimeline* rootTimeLine2;
 public:
     set<void *> target;
     bool toolLock = false;

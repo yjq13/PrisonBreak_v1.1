@@ -12,7 +12,8 @@
 #include "Section.h"
 #include "GameCommonScene.h"
 #include "Constant_Use.h"
-#include "Menu_Action.h"
+#include "Constant_Game.h"
+#include "MenuManager.h"
 USING_NS_CC;
 
 EventListenerTouchOneByOne* moveListener::create(Node* layer){
@@ -47,6 +48,7 @@ bool moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
 
 void moveListener::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event, Node* layer){
     isMoved=true;
+    //CCLOG("start!!ing");
     points[index]=touch->getLocation();
     auto p=touch->getLocation();
     auto r=DrawNode::create();
@@ -61,12 +63,14 @@ void moveListener::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event, No
 void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, Node* layer){
     //printf("ed");
     auto p=touch->getLocation();
+    //CCLOG("end with (%f,%f)",touch->getLocation().x,touch->getLocation().y);
+    //CCLOG("%f,%f",DESTINATION_SECTION.position->x,DESTINATION_SECTION.position->y);
     if (isMoved&&(STOP_SECTION.isInside(touch)||DESTINATION_SECTION.isInside(touch)))
     {
         //下面是主角跟随路线移动
         //下面是填装动作的容器
         protagonist = layer->getChildByName<Sprite*>("Sprite_Protagonist");
-        
+        //CCLOG("hello moveStart!!!!");
         protagonist->setPosition(points[0]);
         
         moveLock = false;
@@ -84,7 +88,12 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, No
                // protagonist->runAction(action);
             }
         }
-        auto callfun = CallFunc::create([&]{MenuAction::move_in(protagonist->getParent()->getChildByTag(131250057));});
+        auto callfun = CallFunc::create([&]{
+            MenuManager menuManager;
+            auto layer =menuManager.create_Menu(SUCCESS_LAYER);
+            protagonist->getParent()->addChild(layer);
+            MenuManager::move_in(layer);
+        });
         
         actionVector.pushBack(callfun);
         
