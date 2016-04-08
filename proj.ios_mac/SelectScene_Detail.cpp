@@ -237,6 +237,6 @@ void Select_Detail::turnToShop(Ref* pSender){
 
 void Select_Detail::closeLayer(Ref* pSender){
     //rootNodeL_GameStep->setVisible(false);
-
+    MenuManager::move_out(rootNodeL_GameStep);
     resumeButton();
 }
