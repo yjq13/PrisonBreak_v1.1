@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0408A2D51C1B1326004D5BAC /* TimeLine.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0408A2D41C1B1326004D5BAC /* TimeLine.plist */; };
-		0417FE551C54E0B4007D96EF /* Menu_Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0417FE531C54E0B4007D96EF /* Menu_Action.cpp */; };
+		0417FE551C54E0B4007D96EF /* MenuManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0417FE531C54E0B4007D96EF /* MenuManager.cpp */; };
 		0454C4F51C1AA94E001EC9F7 /* CoverView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0454C4F31C1AA94E001EC9F7 /* CoverView.cpp */; };
 		049178E21BDBDBB2004AAF5C /* Section.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049178E01BDBDBB2004AAF5C /* Section.cpp */; };
 		04BA48D01C3A8A220078D849 /* PEShapeCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BA48CE1C3A8A220078D849 /* PEShapeCache.cpp */; };
@@ -71,7 +71,7 @@
 		E30AC8BE1BD98B94005B8686 /* ContactManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8BC1BD98B94005B8686 /* ContactManager.cpp */; };
 		E30E77811BCAD7DE0053F4B1 /* CacheData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30E777F1BCAD7DE0053F4B1 /* CacheData.cpp */; };
 		E312DDA81C4875BC0062A35A /* protagonistListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E312DDA61C4875BC0062A35A /* protagonistListener.cpp */; };
-		E3463CCA1C1D148A003057AA /* TimeLineLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3463CC81C1D148A003057AA /* TimeLineLoad.cpp */; };
+		E3463CCA1C1D148A003057AA /* SchedulerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3463CC81C1D148A003057AA /* SchedulerManager.cpp */; };
 		E347D4251C1C0AE4009ECC95 /* TimeLinePo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347D4241C1C0AE4009ECC95 /* TimeLinePo.swift */; };
 		E347D4281C1C45E2009ECC95 /* TimeLineVo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E347D4261C1C45E2009ECC95 /* TimeLineVo.cpp */; };
 		E347EA9A1C19EA8A0096BC5E /* SelectScene_Detail.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E347EA981C19EA8A0096BC5E /* SelectScene_Detail.cpp */; };
@@ -123,8 +123,8 @@
 
 /* Begin PBXFileReference section */
 		0408A2D41C1B1326004D5BAC /* TimeLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TimeLine.plist; sourceTree = "<group>"; };
-		0417FE531C54E0B4007D96EF /* Menu_Action.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Menu_Action.cpp; sourceTree = "<group>"; };
-		0417FE541C54E0B4007D96EF /* Menu_Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu_Action.h; sourceTree = "<group>"; };
+		0417FE531C54E0B4007D96EF /* MenuManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuManager.cpp; sourceTree = "<group>"; };
+		0417FE541C54E0B4007D96EF /* MenuManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuManager.h; sourceTree = "<group>"; };
 		0454C4F31C1AA94E001EC9F7 /* CoverView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoverView.cpp; sourceTree = "<group>"; };
 		0454C4F41C1AA94E001EC9F7 /* CoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverView.h; sourceTree = "<group>"; };
 		049178E01BDBDBB2004AAF5C /* Section.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Section.cpp; path = ../Classes/Section.cpp; sourceTree = "<group>"; };
@@ -206,8 +206,8 @@
 		E30E77801BCAD7DE0053F4B1 /* CacheData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheData.h; sourceTree = "<group>"; };
 		E312DDA61C4875BC0062A35A /* protagonistListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = protagonistListener.cpp; sourceTree = "<group>"; };
 		E312DDA71C4875BC0062A35A /* protagonistListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = protagonistListener.h; sourceTree = "<group>"; };
-		E3463CC81C1D148A003057AA /* TimeLineLoad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeLineLoad.cpp; sourceTree = "<group>"; };
-		E3463CC91C1D148A003057AA /* TimeLineLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineLoad.h; sourceTree = "<group>"; };
+		E3463CC81C1D148A003057AA /* SchedulerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SchedulerManager.cpp; sourceTree = "<group>"; };
+		E3463CC91C1D148A003057AA /* SchedulerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchedulerManager.h; sourceTree = "<group>"; };
 		E347D4241C1C0AE4009ECC95 /* TimeLinePo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLinePo.swift; sourceTree = "<group>"; };
 		E347D4261C1C45E2009ECC95 /* TimeLineVo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeLineVo.cpp; sourceTree = "<group>"; };
 		E347D4271C1C45E2009ECC95 /* TimeLineVo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineVo.h; sourceTree = "<group>"; };
@@ -529,16 +529,16 @@
 				E369982D1C0C24AA007BB3C8 /* LockofSelect.h */,
 				E301E4DD1C1AA5D00094884D /* gameLoad.cpp */,
 				E301E4DE1C1AA5D00094884D /* gameLoad.h */,
-				E3463CC81C1D148A003057AA /* TimeLineLoad.cpp */,
-				E3463CC91C1D148A003057AA /* TimeLineLoad.h */,
+				E3463CC81C1D148A003057AA /* SchedulerManager.cpp */,
+				E3463CC91C1D148A003057AA /* SchedulerManager.h */,
 				E312DDA61C4875BC0062A35A /* protagonistListener.cpp */,
 				E312DDA71C4875BC0062A35A /* protagonistListener.h */,
 				E349DB0D1C4C67DA00DF7E66 /* JailerListener.cpp */,
 				E349DB0E1C4C67DA00DF7E66 /* JailerListener.h */,
 				E349DB101C4C731000DF7E66 /* WallListener.cpp */,
 				E349DB111C4C731000DF7E66 /* WallListener.h */,
-				0417FE531C54E0B4007D96EF /* Menu_Action.cpp */,
-				0417FE541C54E0B4007D96EF /* Menu_Action.h */,
+				0417FE531C54E0B4007D96EF /* MenuManager.cpp */,
+				0417FE541C54E0B4007D96EF /* MenuManager.h */,
 			);
 			name = BL;
 			sourceTree = "<group>";
@@ -822,7 +822,7 @@
 				E312DDA81C4875BC0062A35A /* protagonistListener.cpp in Sources */,
 				E30AC8BB1BD984AC005B8686 /* moveListener.cpp in Sources */,
 				E3CB5E8D1BC9753A005123B8 /* SystemPo.swift in Sources */,
-				0417FE551C54E0B4007D96EF /* Menu_Action.cpp in Sources */,
+				0417FE551C54E0B4007D96EF /* MenuManager.cpp in Sources */,
 				0454C4F51C1AA94E001EC9F7 /* CoverView.cpp in Sources */,
 				E349DB0F1C4C67DA00DF7E66 /* JailerListener.cpp in Sources */,
 				E30AC8AF1BD92F8A005B8686 /* Sprite_mouse.cpp in Sources */,
@@ -839,7 +839,7 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				E347EA9A1C19EA8A0096BC5E /* SelectScene_Detail.cpp in Sources */,
 				E3CB5E7A1BC9753A005123B8 /* initDocuments.swift in Sources */,
-				E3463CCA1C1D148A003057AA /* TimeLineLoad.cpp in Sources */,
+				E3463CCA1C1D148A003057AA /* SchedulerManager.cpp in Sources */,
 				E3CB5E831BC9753A005123B8 /* FigureVo.cpp in Sources */,
 				E30AC89E1BD5AADB005B8686 /* Constant_Use.cpp in Sources */,
 				E3CB5E791BC9753A005123B8 /* StartScene.cpp in Sources */,

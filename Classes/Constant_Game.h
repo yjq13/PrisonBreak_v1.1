@@ -20,4 +20,9 @@ extern Section DESTINATION_SECTION;
 
 extern Section STOP_SECTION;
 
+extern Scheduler* PRO_SCHEDULER;
+
+extern set<void *> target_else;
+
+extern set<void *> target_pro;
 #endif /* Constant_Game_hpp */

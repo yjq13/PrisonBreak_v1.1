@@ -15,3 +15,9 @@ Section DESTINATION_SECTION = Section();
 Section STOP_SECTION = Section();
 
 TIMELINE _TIMELINE = *new TIMELINE();
+
+Scheduler* PRO_SCHEDULER = new Scheduler();
+
+set<void *> target_else = *new set<void *>();
+
+set<void *> target_pro = *new set<void *>(); 

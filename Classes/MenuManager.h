@@ -11,9 +11,10 @@
 
 #include <stdio.h>
 #include "cocos2d.h"
-class MenuAction{
-    
+class MenuManager{
 public:
+    bool isPause;
+    
     void setPauseConfig(Node* menu);
     void setFailConfig(Node* menu);
     void setSuccessConfig(Node* menu);

@@ -13,7 +13,7 @@
 #include "GameCommonScene.h"
 #include "Constant_Use.h"
 #include "Constant_Game.h"
-#include "Menu_Action.h"
+#include "MenuManager.h"
 USING_NS_CC;
 
 EventListenerTouchOneByOne* moveListener::create(Node* layer){
@@ -89,10 +89,10 @@ void moveListener::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event, No
             }
         }
         auto callfun = CallFunc::create([&]{
-            MenuAction menuManager;
+            MenuManager menuManager;
             auto layer =menuManager.create_Menu(SUCCESS_LAYER);
             protagonist->getParent()->addChild(layer);
-            MenuAction::move_in(layer);
+            MenuManager::move_in(layer);
         });
         
         actionVector.pushBack(callfun);

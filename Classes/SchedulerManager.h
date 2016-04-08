@@ -11,17 +11,27 @@
 #include "Constant_Use.h"
 #include <stdio.h>
 #include "cocostudio/CocoStudio.h"
-class TimeLineLoad{
+using namespace std;
+class SchedulerManager{
 public:
+    
+    static void setProScheduler(Scheduler* sch);
+    
     static TIMELINE loadTimeLine(cocos2d::Node* rootNodeL);
+    
+    static void stopTimeLine(int Tag);
         
     static void pauseTimeLine();
     
+    static void pausePro();
+    
+    static void resumePro();
+    
     static void resumeTimeLine();
-    TimeLineLoad(){
+    SchedulerManager(){
         CCLOG("hello TimeLineLoad");
     }
-    ~TimeLineLoad(){
+    ~SchedulerManager(){
         CCLOG("goodbye TimeLineLoad");
     }
 };

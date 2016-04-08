@@ -21,6 +21,7 @@
 #include "Sprite_mouse.h"
 #include "JailerListener.h"
 #include "WallListener.h"
+#include "SchedulerManager.h"
 USING_NS_CC;
 
 using namespace ui;
@@ -155,8 +156,10 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     
     Demo_protagonist->setScheduler(sched1);
     
-
-    //特殊区域加载
+    SchedulerManager::setProScheduler(sched1);
+    
+    
+    
     Sprite* Demo_Section[10];
     index = 0;
     do{

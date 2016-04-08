@@ -20,8 +20,8 @@
 #include <iostream>
 #include "SelectScene_Detail.h"
 #include "Sprite_wall.h"
-#include "Menu_Action.h"
-#include "TimeLineLoad.h"
+#include "MenuManager.h"
+#include "SchedulerManager.h"
 #include "TimeLineVo.h"
 #include "OC_callGameInfo.h"
 #include "CacheData.h"
@@ -67,7 +67,7 @@ bool Game::init(){
     
     //rootNodeL->setTag(131250081);
     
-    _TIMELINE = TimeLineLoad::loadTimeLine(rootNodeL);
+    _TIMELINE = SchedulerManager::loadTimeLine(rootNodeL);
     
     EventListenerPhysicsContact* contactListener = moveaction.createProAction();
     
@@ -207,9 +207,8 @@ void Game::update(float dt){
 
 void Game::stopCallback(Ref* pSender){
     isStop = true;
-    TimeLineLoad::pauseTimeLine();
-    auto pro = rootNodeL->getChildByName<Sprite*>("Sprite_Protagonist");
-    pro->getScheduler()->setTimeScale(0.0f);
+    SchedulerManager::pauseTimeLine();
+    SchedulerManager::pausePro();
     doPasue();
     //addChild(stopNodeL);
     //target = Director::getInstance()->getScheduler()->pauseAllTargets();
@@ -250,7 +249,7 @@ void Game::onExit(){
 }
 
 void Game::Callresume(Ref* pSender){
-    MenuAction::move_out(stopNodeL);
+    MenuManager::move_out(stopNodeL);
     Director::getInstance()->getScheduler()->resumeTargets(target);
 }
 
@@ -267,10 +266,10 @@ void Game::doPasue(){
 //        renderTexture->end();
     
 //        Director::getInstance()->pushScene(pauseScene::createScene());
-    MenuAction menuManager;
+    MenuManager menuManager;
     Node* stopNode = menuManager.create_Menu(STOP_LAYER);
     rootNodeL->addChild(stopNode);
-    MenuAction::move_in(stopNode);
+    MenuManager::move_in(stopNode);
 }
 
 void Game::toolCallback(Ref* pSender,int toolMark){

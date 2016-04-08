@@ -17,7 +17,7 @@
 #include "LockofSelect.h"
 #include "CoverView.h"
 #include "ShopScene.h"
-#include "Menu_Action.h"
+#include "MenuManager.h"
 
 USING_NS_CC;
 using namespace ui;
@@ -211,7 +211,7 @@ void Select_Detail::show_GameReady(Ref* pSender,int level)
     if (result&&(level==levelView->getCurCardIndex()||iscur)) {
         
         //Menu Movein
-        MenuAction::move_in(rootNodeL_GameStep);
+        MenuManager::move_in(rootNodeL_GameStep);
         //rootNodeL_GameStep->setVisible(true);
         levelView->removeListener();
         shieldButton();
@@ -237,7 +237,7 @@ void Select_Detail::turnToShop(Ref* pSender){
 
 void Select_Detail::closeLayer(Ref* pSender){
     //rootNodeL_GameStep->setVisible(false);
-    MenuAction::move_out(rootNodeL_GameStep);
+    MenuManager::move_out(rootNodeL_GameStep);
     levelView->addListener();
     resumeButton();
 }

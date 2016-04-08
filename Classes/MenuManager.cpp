@@ -7,26 +7,29 @@
 //
 #include "cocos2d.h"
 #include "Constant_Use.h"
-#include "TimeLineLoad.h"
-#include "Menu_Action.h"
+#include "SchedulerManager.h"
+#include "MenuManager.h"
 #include "GameCommonScene.h"
 USING_NS_CC;
 
-Node* MenuAction::create_Menu(int MenuNumber){
+Node* MenuManager::create_Menu(int MenuNumber){
     Node* Menu;
     switch(MenuNumber){
         case FAIL_LAYER:{
             Menu = CSLoader::createNode("res/Game/Other/Layer_Fail.csb");
+            isPause = true;
             setFailConfig(Menu);
             break;
         }
         case SUCCESS_LAYER:{
             Menu = CSLoader::createNode("res/Game/Other/Layer_Success.csb");
+            isPause = false;
             setSuccessConfig(Menu);
             break;
         }
         case STOP_LAYER:{
             Menu = CSLoader::createNode("res/Game/Other/Layer_Stop.csb");
+            isPause = true;
             setPauseConfig(Menu);
             break;
         }
@@ -35,7 +38,7 @@ Node* MenuAction::create_Menu(int MenuNumber){
 }
 
 
-void MenuAction::move_in(cocos2d::Node *menu){
+void MenuManager::move_in(cocos2d::Node *menu){
   //Movein
     MoveTo* Movein_1=MoveTo::create(0.3f,Point(0,0));
     EaseExponentialIn* moveIn_1 = EaseExponentialIn::create(Movein_1);
@@ -47,7 +50,7 @@ void MenuAction::move_in(cocos2d::Node *menu){
     menu->runAction(ac);
 }
 
-void MenuAction::move_out(cocos2d::Node *menu){
+void MenuManager::move_out(cocos2d::Node *menu){
     MoveTo* Moveout=MoveTo::create(0.3f,Point(0,VISIBLE_SIZE.height));
     EaseExponentialOut* moveOut = EaseExponentialOut::create(Moveout);
     
@@ -55,19 +58,19 @@ void MenuAction::move_out(cocos2d::Node *menu){
     menu->runAction(ac);
 }
 
-void MenuAction::setPauseConfig(Node* menu){
+void MenuManager::setPauseConfig(Node* menu){
     
     auto Button_Resume_pause = menu->getChildByName<ui::Button*>("Button_Resume");
     
-    Button_Resume_pause->addClickEventListener(CC_CALLBACK_1(MenuAction::pauseCallresume,this,menu));
+    Button_Resume_pause->addClickEventListener(CC_CALLBACK_1(MenuManager::pauseCallresume,this,menu));
     
     auto Button_Retry_pause = menu->getChildByName<ui::Button*>("Button_Retry");
     
-    Button_Retry_pause->addClickEventListener(CC_CALLBACK_1(MenuAction::Callrestart,this,menu));
+    Button_Retry_pause->addClickEventListener(CC_CALLBACK_1(MenuManager::Callrestart,this,menu));
     
     auto Button_Back_pause = menu->getChildByName<ui::Button*>("Button_Back");
     
-    Button_Back_pause->addClickEventListener(CC_CALLBACK_1(MenuAction::menuCloseCallback,this,menu));
+    Button_Back_pause->addClickEventListener(CC_CALLBACK_1(MenuManager::menuCloseCallback,this,menu));
     
     menu->setContentSize(VISIBLE_SIZE);
     
@@ -78,15 +81,15 @@ void MenuAction::setPauseConfig(Node* menu){
 }
 
 
-void MenuAction::setFailConfig(Node* menu){    
+void MenuManager::setFailConfig(Node* menu){
     
     auto Button_Back_Fail = menu->getChildByName<ui::Button*>("Button_Back");
     
-    Button_Back_Fail->addClickEventListener(CC_CALLBACK_1(MenuAction::menuCloseCallback,this,menu));
+    Button_Back_Fail->addClickEventListener(CC_CALLBACK_1(MenuManager::menuCloseCallback,this,menu));
 
     auto Button_Retry_Fail = menu->getChildByName<ui::Button*>("Button_Retry");
     
-    Button_Retry_Fail->addClickEventListener(CC_CALLBACK_1(MenuAction::Callrestart,this,menu));
+    Button_Retry_Fail->addClickEventListener(CC_CALLBACK_1(MenuManager::Callrestart,this,menu));
 
     menu->setContentSize(VISIBLE_SIZE);
     
@@ -96,19 +99,19 @@ void MenuAction::setFailConfig(Node* menu){
     
 }
 
-void MenuAction::setSuccessConfig(Node* menu){
+void MenuManager::setSuccessConfig(Node* menu){
     
     auto Button_Back_Success = menu->getChildByName<ui::Button*>("Button_Back");
     
-    Button_Back_Success->addClickEventListener(CC_CALLBACK_1(MenuAction::menuCloseCallback,this,menu));
+    Button_Back_Success->addClickEventListener(CC_CALLBACK_1(MenuManager::menuCloseCallback,this,menu));
     
     auto Button_Retry_Success = menu->getChildByName<ui::Button*>("Button_Retry");
     
-    Button_Retry_Success->addClickEventListener(CC_CALLBACK_1(MenuAction::Callrestart,this,menu));
+    Button_Retry_Success->addClickEventListener(CC_CALLBACK_1(MenuManager::Callrestart,this,menu));
     
     auto Button_Next_Success = menu->getChildByName<ui::Button*>("Button_Next");
     
-    Button_Next_Success->addClickEventListener(CC_CALLBACK_1(MenuAction::Callrestart,this,menu));//下一关还没实现，之后搞定
+    Button_Next_Success->addClickEventListener(CC_CALLBACK_1(MenuManager::Callrestart,this,menu));//下一关还没实现，之后搞定
         
     menu->setContentSize(VISIBLE_SIZE);
     
@@ -119,17 +122,21 @@ void MenuAction::setSuccessConfig(Node* menu){
 }
 
 
-void MenuAction::pauseCallresume(Ref* pSender,Node* layer){
-    MenuAction::move_out(layer);
-    TimeLineLoad::resumeTimeLine();
+void MenuManager::pauseCallresume(Ref* pSender,Node* layer){
+    SchedulerManager::resumePro();
+    SchedulerManager::resumeTimeLine();
+    MenuManager::move_out(layer);
+    
 }
 
-void MenuAction::Callrestart(Ref *pSender,Node* layer){
+void MenuManager::Callrestart(Ref *pSender,Node* layer){
     CCLOG("pop GAME");
     if(BUTTON_LOCK==false){
         BUTTON_LOCK= true;
         //menuCloseCallback(pSender);
-        MenuAction::move_out(layer);
+        MenuManager::move_out(layer);
+        if(isPause)
+            SchedulerManager::resumePro();
         Director::getInstance()->popScene();
         auto sceneNew = Game::createScene();        
         Director::getInstance()->pushScene(sceneNew);
@@ -137,13 +144,13 @@ void MenuAction::Callrestart(Ref *pSender,Node* layer){
     }
 }
 
-void MenuAction::menuCloseCallback(Ref* pSender,Node* layer)
+void MenuManager::menuCloseCallback(Ref* pSender,Node* layer)
 {
     if(BUTTON_LOCK==false){
         BUTTON_LOCK= true;
         //auto Scene =  Select_Detail::createScene();
         //auto transition=TransitionPageTurn::create(0.1f, Scene, false);
-        MenuAction::move_out(layer);
+        MenuManager::move_out(layer);
         // moveaction->target
         Director::getInstance()->popScene();
     }

@@ -19,7 +19,7 @@ private:
     
     cocos2d::Node* node_Pro;
     cocos2d::Node* node_else;
-    TIMELINE timeLine;
+   // TIMELINE timeLine;
     
 
 public:
@@ -50,7 +50,6 @@ public:
     
     bool switchMoveActionAfter(const cocos2d::PhysicsContact &contact);
     
-    cocostudio::timeline::ActionTimeline* getTimeLine();
 };
 
 #endif /* Move_action_hpp */

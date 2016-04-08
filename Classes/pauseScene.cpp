@@ -7,7 +7,7 @@
 //
 #include "Constant_Use.h"
 #include "pauseScene.h"
-#include "Menu_Action.h"
+#include "MenuManager.h"
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
 
@@ -66,11 +66,11 @@ void pauseScene::setUI(){
     
     addChild(stopNodeL);
     
-    MenuAction::move_in(stopNodeL);
+    MenuManager::move_in(stopNodeL);
 }
 
 
 
 void pauseScene::Callresume(Ref* pSender){
-    MenuAction::move_out(stopNodeL);
+    MenuManager::move_out(stopNodeL);
 }
