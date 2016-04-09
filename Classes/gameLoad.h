@@ -17,23 +17,20 @@
 #include "Sprite_mouse.h"
 #include "Sprite_coin.h"
 #include "Special_Section.h"
+using namespace std;
 class gameLoad{
 public:
     Sprite_jailer jailer[10];
     
     JailerListener jailerlistener[10];
     
-    std::vector<Sprite_mouse*> MouseList;
+    vector<Sprite_mouse*> MouseList;
     
-    std::vector<Sprite_wall*> WallList;
+    vector<Sprite_wall*> WallList;
     
-    std::vector<Sprite_coin*> CoinList;
+    vector<Sprite_coin*> CoinList;
     
-    std::vector<Sprite_SpecialSection*> SpecialSectionList;
-    
-    std::vector<cocos2d::EventListenerTouchOneByOne*> JailerlistenerList;
-    
-    std::vector<cocos2d::EventListenerTouchOneByOne*> WalllistenerList;
+    vector<Sprite_SpecialSection*> SpecialSectionList;
 
     void loadGame(cocos2d::Node* rootNodeL);
     
@@ -44,5 +41,4 @@ public:
         CCLOG("goodbye gameload");
     }
 };
-
 #endif /* gameLoad_hpp */

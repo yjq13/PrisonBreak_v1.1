@@ -9,6 +9,7 @@
 #ifndef __PrisonBreak__GameCommonScene__
 #define __PrisonBreak__GameCommonScene__
 #include "ContactManager.h"
+#include "GameManager.h"
 #include "cocos2d.h"
 #include "MyScene.h"
 #include "Section.h"
@@ -22,7 +23,7 @@ using namespace std;
 
 USING_NS_CC;
 class Game : public MyScene{
-    
+    GameManager manager;
     gameLoad gameload;
     moveListener movelistener;
     ContactManager moveaction;

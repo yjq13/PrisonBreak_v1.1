@@ -2,7 +2,7 @@
 #include "OC_callGameInfo.h"
 #include "Constant_Use.h"
 #include "TimeLineVo.h"
-#include "Constant_Game.h"
+#include "GameManager.h"
 using namespace std;
 TIMELINE SchedulerManager::loadTimeLine(cocos2d::Node* rootNodeL){
     string hand = "res/Game/";
@@ -33,22 +33,22 @@ TIMELINE SchedulerManager::loadTimeLine(cocos2d::Node* rootNodeL){
 
 
 void SchedulerManager::setProScheduler(Scheduler* sch){
-    PRO_SCHEDULER = sch;
+    GameManager::PRO_SCHEDULER = sch;
 }
 
 void SchedulerManager::pausePro(){
-    target_pro = PRO_SCHEDULER->pauseAllTargets();
+    GameManager::target_pro = GameManager::PRO_SCHEDULER->pauseAllTargets();
 }
 
 
 void SchedulerManager::resumePro(){
-    PRO_SCHEDULER->resumeTargets(target_pro);
+    GameManager::PRO_SCHEDULER->resumeTargets(GameManager::target_pro);
 }
 
 void SchedulerManager::pauseTimeLine(){
     for(int i=0;i<TIMELINE_NUM;i++){
-            CCLOG("%d",_TIMELINE.TimeLine[i]->getTag());
-            _TIMELINE.TimeLine[i]->pause();
+            //CCLOG("%d",GameManager::_TIMELINE.TimeLine[i]->getTag());
+            GameManager::_TIMELINE.TimeLine[i]->pause();
     }
 }
 
@@ -56,16 +56,16 @@ void SchedulerManager::pauseTimeLine(){
 void SchedulerManager::resumeTimeLine(){
     
     for(int i=0;i<TIMELINE_NUM;i++){
-        CCLOG("%d",_TIMELINE.TimeLine[i]->getTag());
-        _TIMELINE.TimeLine[i]->resume();
+        //CCLOG("%d",_TIMELINE.TimeLine[i]->getTag());
+        GameManager::_TIMELINE.TimeLine[i]->resume();
     }
 }
 
 
 void SchedulerManager::stopTimeLine(int Tag){
     for(int i = 0;i<20;i++){
-        if((signed)_TIMELINE.TimeLine[i]->getFlags()==Tag){
-            _TIMELINE.TimeLine[i]->pause();
+        if((signed)GameManager::_TIMELINE.TimeLine[i]->getFlags()==Tag){
+            GameManager::_TIMELINE.TimeLine[i]->pause();
             break;
         }
     }

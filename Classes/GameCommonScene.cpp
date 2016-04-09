@@ -49,7 +49,7 @@ Game::~Game(){
 bool Game::init(){
     
     scheduleUpdate();
-    
+
     initCacheData();
     //rootNodeS = CSLoader::createNode("res/Game/Scene_Game.csb");
     
@@ -67,7 +67,8 @@ bool Game::init(){
     
     //rootNodeL->setTag(131250081);
     
-    _TIMELINE = SchedulerManager::loadTimeLine(rootNodeL);
+    
+    GameManager::_TIMELINE = SchedulerManager::loadTimeLine(rootNodeL);
     
     EventListenerPhysicsContact* contactListener = moveaction.createProAction();
     
@@ -94,7 +95,7 @@ void Game::setUI(){
     
     addChild(rootNodeL);
     
-    
+    gameload.loadGame(rootNodeL);
     
     
     
@@ -154,7 +155,7 @@ void Game::setUI(){
     
     Button_Next_Success->addTouchEventListener(CC_CALLBACK_1(Game::Callrestart,this));
         
-    gameload.loadGame(rootNodeL);
+    
    }
 
 
@@ -273,21 +274,21 @@ void Game::doPasue(){
 }
 
 void Game::toolCallback(Ref* pSender,int toolMark){
-        switch(toolMark){
+    switch(toolMark){
         case 1:{
-            CCLOG("警卫数量%lu",gameload.JailerlistenerList.size());
-            for(int i = 0;i<gameload.JailerlistenerList.size();i++){
+            //CCLOG("警卫数量%lu",gameLoad::JailerlistenerList.size());
+            for(int i = 0;i<GameManager::JailerlistenerList.size();i++){
                 CCLOG("我设置好一个警卫啦");
-                EventListenerTouchOneByOne* listener = gameload.JailerlistenerList[i];
+                EventListenerTouchOneByOne* listener = GameManager::JailerlistenerList[i];
                 listener->setEnabled(true);
             }
            CCLOG("!!!!!%d",toolMark);
             break;
         }
         case 2:{
-            for(int i = 0;i<gameload.WalllistenerList.size();i++){
+            for(int i = 0;i<GameManager::WalllistenerList.size();i++){
                 CCLOG("我设置好一个墙啦");
-                EventListenerTouchOneByOne* listener = gameload.WalllistenerList[i];
+                EventListenerTouchOneByOne* listener = GameManager::WalllistenerList[i];
                 listener->setEnabled(true);
             }
 

@@ -21,7 +21,7 @@ USING_NS_CC;
     }TIMELINE;
 
 
-    extern TIMELINE _TIMELINE;
+    //extern TIMELINE _TIMELINE;
     
     extern int SPEED_PRO;
 

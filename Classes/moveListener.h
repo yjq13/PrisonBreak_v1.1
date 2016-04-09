@@ -13,6 +13,7 @@
 #include "ui/CocosGUI.h"
 #include "cocostudio/CocoStudio.h"
 #include "Section.h"
+#include "GameManager.h"
 class moveListener : public cocos2d::EventListenerTouchOneByOne{
 private:
     cocos2d::Sprite* protagonist;
@@ -25,6 +26,7 @@ private:
     cocos2d::Sequence* allAction;
     cocos2d::MoveTo* action[10000];
 public:
+    GameManager manager;
     virtual EventListenerTouchOneByOne* create(cocos2d::Node* layer);
     
     bool onTouchBegan(cocos2d::Touch* touch,cocos2d::Event* event);

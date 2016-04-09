@@ -16,7 +16,7 @@
 #include "Sprite_wall.h"
 #include "Special_Section.h"
 #include "Constant_Use.h"
-#include "Constant_Game.h"
+#include "GameManager.h"
 #include <iostream>
 #include "Sprite_mouse.h"
 #include "JailerListener.h"
@@ -27,13 +27,15 @@ USING_NS_CC;
 using namespace ui;
 
 
+
+
 void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     
     //起点加载
     auto startPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Start");
     Size size_start = startPosition->getContentSize();
     Vec2 position_start = startPosition->getPosition();
-    START_SECTION=Section(&size_start, &position_start);
+    GameManager::START_SECTION=Section(&size_start, &position_start);
     
     
     
@@ -41,7 +43,7 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     auto destinationPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Destination");
     Size size_destination = destinationPosition->getContentSize();
     Vec2 position_destination = destinationPosition->getPosition();
-    DESTINATION_SECTION=Section(&size_destination, &position_destination);
+    GameManager::DESTINATION_SECTION=Section(&size_destination, &position_destination);
     
     
     //暂停点加载
@@ -49,7 +51,7 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     if(stopPosition!=NULL){
         Size size_stop = stopPosition->getContentSize();
         Vec2 position_stop = stopPosition->getPosition();
-        STOP_SECTION=Section(&size_stop, &position_stop);
+        GameManager::STOP_SECTION=Section(&size_stop, &position_stop);
     }
 
     
@@ -71,11 +73,11 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     Demo_jailer[index] = rootNodeL->getChildByName<Sprite*>(all);
         if(Demo_jailer[index]!=NULL){
             jailer[index].setJailer(index,Demo_jailer[index]);
-            jailer[index].setTimeline(_TIMELINE);
+            jailer[index].setTimeline(GameManager::_TIMELINE);
             EventListenerTouchOneByOne* listener = jailerlistener[index].create(Demo_jailer[index],jailer[index].getTimeLine());
             jailer[index].setListener(&jailerlistener[index]);
             listener->setEnabled(false);
-            JailerlistenerList.push_back(listener);
+            GameManager::JailerlistenerList.push_back(listener);
             //_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, getSprite);
             //添加一个触摸委托给dispatcher的列表,委托对象this,
             Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, Demo_jailer[index]);
@@ -105,7 +107,7 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
             EventListenerTouchOneByOne* listener = spritelistener[index].create(Demo_wall[index]);
             
             listener->setEnabled(false);
-            WalllistenerList.push_back(listener);
+            GameManager::WalllistenerList.push_back(listener);
             //_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, getSprite);
             //添加一个触摸委托给dispatcher的列表,委托对象this,
             Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, Demo_wall[index]);
@@ -159,7 +161,7 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     SchedulerManager::setProScheduler(sched1);
     
     
-    
+    //特殊区域加载
     Sprite* Demo_Section[10];
     index = 0;
     do{
