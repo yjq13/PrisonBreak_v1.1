@@ -10,19 +10,19 @@
 #include "JailerListener.h"
 #include "cocos2d.h"
 #include "Constant_Use.h"
+#include "SchedulerManager.h"
+#include "GameManager.h"
+#include "ListenerManager.h"
 USING_NS_CC;
 
 EventListenerTouchOneByOne* JailerListener::create(cocos2d::Sprite* getSprite,cocostudio::timeline::ActionTimeline* Timeline){
     
-    listener=EventListenerTouchOneByOne::create();
+    EventListenerTouchOneByOne* listener=EventListenerTouchOneByOne::create();
     
     listener->onTouchMoved =CC_CALLBACK_2(JailerListener::onTouchMoved,this);
     listener->onTouchBegan =CC_CALLBACK_2(JailerListener::onTouchBegan,this);
     listener->onTouchEnded =CC_CALLBACK_2(JailerListener::onTouchEnded,this);
     jailer = getSprite;
-    timeline = Timeline;
-    //CCLOG("%d",timeline->getFlags());
-    speed = 1;
     CCLOG("JailerListener is OK!!!!!");
     return listener;
 }
@@ -55,23 +55,21 @@ bool JailerListener::onTouchBegan(Touch* touch, Event* event)
     //CCLOG("我被点啦！！！！");
     if(isTouched)
     {
-        Delay(0.0f);
+        //Delay(0.0f);
         CCLOG("%d",jailer->getTag());
         //timeline->;
         CCLOG("我开始睡觉啦！！！！");
         //sleep(2.5);
         CCLOG("我睡醒啦！！！");
-        jailer->getParent()->scheduleOnce(schedule_selector(JailerListener::Delay), 1.0f);
+        GameManager::isStop = true;
+        //jailer->getParent()->scheduleOnce(schedule_selector(this->Delay), 1.0f);
         //Director::getInstance()->getActionManager()->pauseTarget(jailer);
-        timeline->setTimeSpeed(0);
+        SchedulerManager::stopTimeLine(jailer->getTag());
         //jailer->getParent()->stopAction(timeline);
         //jailer->getParent()->runAction(timeline);
         //timeline->setTimeSpeed(1);
        // timeline->pause();
-        CCLOG("%f",speed);
-        
-
-        CCLOG("我睡醒啦！！！");
+        ListenerManager::removeListenerJailer();
         return false;
         
     }else{
@@ -88,7 +86,6 @@ void JailerListener::onTouchMoved(Touch* touch, Event* event){
 
 
 void JailerListener::Delay(float dt){
-    CCLOG("baibai%f",speed);
-    //timeline->setTimeSpeed(1);
-    //timeline->resume();
+    //CCLOG("%d",jailer->getTag());
+    SchedulerManager::resumeTimeLine(jailer->getTag());
     }

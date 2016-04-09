@@ -28,6 +28,8 @@ public:
     static void resumePro();
     
     static void resumeTimeLine();
+    
+    static void resumeTimeLine(int Tag);
     SchedulerManager(){
         CCLOG("hello TimeLineLoad");
     }

@@ -14,6 +14,8 @@
 class GameManager{
     
 public:
+
+static bool isStop;
     
 static TIMELINE _TIMELINE;
 

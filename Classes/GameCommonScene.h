@@ -47,7 +47,7 @@ public:
     }
     
     ~Game();
-    bool isStop = false;
+    
     
     void doPasue();
     

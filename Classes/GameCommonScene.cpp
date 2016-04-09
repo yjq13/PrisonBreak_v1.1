@@ -26,6 +26,7 @@
 #include "OC_callGameInfo.h"
 #include "CacheData.h"
 #include "pauseScene.h"
+#include "ListenerManager.h"
 USING_NS_CC;
 using namespace ui;
 
@@ -95,7 +96,7 @@ void Game::setUI(){
     
     addChild(rootNodeL);
     
-    gameload.loadGame(rootNodeL);
+    
     
     
     
@@ -154,14 +155,15 @@ void Game::setUI(){
     auto Button_Next_Success = successNodeL->getChildByName<ui::Button*>("Button_Next");
     
     Button_Next_Success->addTouchEventListener(CC_CALLBACK_1(Game::Callrestart,this));
-        
+    
+    gameload.loadGame(rootNodeL);
     
    }
 
 
 void Game::update(float dt){
     auto scale=VISIBLE_SIZE.width/DESIGN_SIZE.width;
-    if(!isStop){
+    if(!GameManager::isStop){
     //坐标重绘
     Sprite* Demo_jailer[10];
     int index = 0;
@@ -207,7 +209,7 @@ void Game::update(float dt){
 
 
 void Game::stopCallback(Ref* pSender){
-    isStop = true;
+    GameManager::isStop = true;
     SchedulerManager::pauseTimeLine();
     SchedulerManager::pausePro();
     doPasue();
@@ -276,22 +278,11 @@ void Game::doPasue(){
 void Game::toolCallback(Ref* pSender,int toolMark){
     switch(toolMark){
         case 1:{
-            //CCLOG("警卫数量%lu",gameLoad::JailerlistenerList.size());
-            for(int i = 0;i<GameManager::JailerlistenerList.size();i++){
-                CCLOG("我设置好一个警卫啦");
-                EventListenerTouchOneByOne* listener = GameManager::JailerlistenerList[i];
-                listener->setEnabled(true);
-            }
-           CCLOG("!!!!!%d",toolMark);
+            ListenerManager::addListenerJailer();
             break;
         }
         case 2:{
-            for(int i = 0;i<GameManager::WalllistenerList.size();i++){
-                CCLOG("我设置好一个墙啦");
-                EventListenerTouchOneByOne* listener = GameManager::WalllistenerList[i];
-                listener->setEnabled(true);
-            }
-
+            ListenerManager::addListenerWall();
             CCLOG("!!!!!%d",toolMark);
             break;
         }

@@ -17,19 +17,17 @@
 
 class JailerListener : public cocos2d::EventListenerTouchOneByOne{
 private:
-    cocos2d::EventListenerTouchOneByOne* listener;
     
     cocos2d::Sprite* jailer;
     
-    cocostudio::timeline::ActionTimeline* timeline;
+    void Delay(float dt);
 public:
-    float speed;
     
     virtual EventListenerTouchOneByOne* create(cocos2d::Sprite* getSprite,cocostudio::timeline::ActionTimeline* Timeline);
     
     cocos2d::Rect getRect();
     
-    void Delay(float dt);
+    
     
     JailerListener(){
         CCLOG("hello JailerListener");

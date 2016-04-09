@@ -14,73 +14,13 @@
 
 class ListenerManager{
 public:
-    \
+    static void addListenerJailer();
     
+    static void addListenerWall();
     
+    static void removeListenerJailer();
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    static void removeListenerWall();
 };
 
 #endif /* ListenerManager_hpp */
