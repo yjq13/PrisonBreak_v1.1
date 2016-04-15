@@ -61,8 +61,8 @@ void Select_Detail::setCoverflow(){
     float winWidth = Director::getInstance()->getWinSize().width;
     float winHeight = Director::getInstance()->getWinSize().height;
     
-    CCRect swRect_level = CCRectMake(0.01f*winWidth,0.0f*winHeight,0.98f*winWidth,1.0f*winHeight);
-    CCSize slSize_level = CCSizeMake(2.3f*winWidth,1.0f*winHeight);
+    Rect swRect_level = Rect::Rect(0.01f*winWidth,0.0f*winHeight,0.98f*winWidth,1.0f*winHeight);
+    Size slSize_level = Size::Size(2.3f*winWidth,1.0f*winHeight);
     float disDistance = 0.1f*winWidth;
     float disScale = 0.25f;
     levelView = CoverView::create(swRect_level,slSize_level,disDistance,disScale);

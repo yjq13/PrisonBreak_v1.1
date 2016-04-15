@@ -79,12 +79,12 @@ void Game::drawLine()
     int   alpha_min = 10;
     int   alpha_max =  200;
     
-    float  R = 20;//arc4random()%255;
+    float  R = 255;//arc4random()%255;
     float  G = 255;//arc4random()%255;
     float  B = 255;//arc4random()%255;
     
     int pointListCount = pointList.size();
-    std::list <CCPoint>::iterator it =pointList.begin();
+    std::list <Point>::iterator it =pointList.begin();
     
     a->clear();
     float pointIndex = 0;
@@ -181,46 +181,7 @@ void Game::setUI(){
     
     
     
-    auto Button_Back_Fail = failNodeL->getChildByName<ui::Button*>("Button_Back");
-    
-    Button_Back_Fail->addTouchEventListener(CC_CALLBACK_1(Game::menuCloseCallback,this));
-    
-    auto Button_Back_Success = successNodeL->getChildByName<ui::Button*>("Button_Back");
-    
-    Button_Back_Success->addTouchEventListener(CC_CALLBACK_1(Game::menuCloseCallback,this));
-    
-    auto Button_Back_Stop = stopNodeL->getChildByName<ui::Button*>("Button_Back");
-    
-    Button_Back_Stop->addTouchEventListener(CC_CALLBACK_1(Game::menuCloseCallback,this));
-    
-    
-    
-    auto Button_Retry_Fail = failNodeL->getChildByName<ui::Button*>("Button_Retry");
-    
-    Button_Retry_Fail->addTouchEventListener(CC_CALLBACK_1(Game::Callrestart,this));
-    
-    auto Button_Retry_Success = successNodeL->getChildByName<ui::Button*>("Button_Retry");
-    
-    Button_Retry_Success->addTouchEventListener(CC_CALLBACK_1(Game::Callrestart,this));
-    
-    auto Button_Retry_Stop = stopNodeL->getChildByName<ui::Button*>("Button_Retry");
-    
-    Button_Retry_Stop->addTouchEventListener(CC_CALLBACK_1(Game::Callrestart,this));
-
-    
-    
-    auto Button_Resume_Stop = stopNodeL->getChildByName<ui::Button*>("Button_Resume");
-    
-    Button_Resume_Stop->addTouchEventListener(CC_CALLBACK_1(Game::Callresume,this));
-    
-    //未完成部分
-    auto Button_Next_Success = successNodeL->getChildByName<ui::Button*>("Button_Next");
-    
-    Button_Next_Success->addTouchEventListener(CC_CALLBACK_1(Game::Callrestart,this));
-    
-   
-    
-   }
+      }
 
 
 void Game::update(float dt){
@@ -357,8 +318,8 @@ bool Game::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
     }
     //CCLOG("begin with (%f,%f)",touch->getLocation().x,touch->getLocation().y);
     //画线特效
-    CCPoint beginPoint = touch->getLocationInView();
-    beginPoint = CCDirector::sharedDirector()->convertToGL(beginPoint);
+    Point beginPoint = touch->getLocationInView();
+    beginPoint = Director::getInstance()->convertToGL(beginPoint);
     // beginPoint 检测
     pointList.push_back(beginPoint);
     
@@ -373,13 +334,13 @@ bool Game::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
 void Game::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event){
     isMoved=true;
     points[index]=touch->getLocation();
-    CCPoint nextPoint = touch->getLocationInView( );
-    nextPoint = CCDirector::sharedDirector()->convertToGL(nextPoint);
+    Point nextPoint = touch->getLocationInView( );
+    nextPoint = Director::getInstance()->convertToGL(nextPoint);
     // nextPoint 检测
-    CCPoint preMovePoint = touch->getPreviousLocationInView();
-    preMovePoint = CCDirector::sharedDirector()->convertToGL(preMovePoint);
+    Point preMovePoint = touch->getPreviousLocationInView();
+    preMovePoint = Director::getInstance()->convertToGL(preMovePoint);
     
-    float distance = ccpDistance(nextPoint, preMovePoint);
+    float distance = nextPoint.getDistance(preMovePoint);
     if (distance > 1)
     {
         int d = (int)distance;
@@ -389,7 +350,7 @@ void Game::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event){
             float distanceY = nextPoint.y - preMovePoint.y;
             
             float percent = i / distance;
-            CCPoint newPoint;
+            Point newPoint;
             newPoint.x = preMovePoint.x + (distanceX * percent);
             newPoint.y = preMovePoint.y + (distanceY * percent);
             

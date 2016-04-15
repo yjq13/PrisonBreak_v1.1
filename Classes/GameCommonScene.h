@@ -38,7 +38,7 @@ class Game : public MyScene{
     int index_target = 1;
     cocos2d::Sequence* allAction;
     cocos2d::MoveTo* action[10000];
-    std::list<cocos2d::CCPoint> pointList;
+    std::list<cocos2d::Point> pointList;
     //cocostudio::timeline::ActionTimeline* rootTimeLine2;
 public:
     virtual void draw(cocos2d::Renderer *renderer,const cocos2d::Mat4& transform,uint32_t flags);
