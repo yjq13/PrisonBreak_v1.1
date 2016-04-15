@@ -13,7 +13,6 @@
 #include <cocos2d.h>
 #include "ui/CocosGUI.h"
 #include "cocostudio/CocoStudio.h"
-#include "Section.h"
 class protagonistListener : public cocos2d::EventListenerTouchOneByOne{
 private:
     cocos2d::Sprite* protagonist;

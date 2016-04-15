@@ -14,7 +14,6 @@
 #include "cocostudio/CocoStudio.h"
 #include "Constant_Use.h"
 #include "ui/CocosGUI.h"
-#include "Section.h"
 #include "Sprite_jailer.h"
 #include <string>
 #include <iostream>
@@ -36,6 +35,7 @@ Scene* Game::createScene(){
     scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     auto layer=Game::create();
     
+    
     layer->setPhyWorld(scene->getPhysicsWorld());
     scene->addChild(layer);
     scene->setTag(131250077);
@@ -47,8 +47,70 @@ Game::~Game(){
     CCLOG("goodbye game");
 
     }
-bool Game::init(){
+void Game::draw(Renderer *renderer,const cocos2d::Mat4& transform,uint32_t flags)
+{
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    drawLine();
+}
+DrawNode* a;
+void Game::drawLine()
+{
+    int tickSubCount = 1;
+    int pointListKeepCount = 1000;
     
+    for (int i=0; i<tickSubCount ; i++)
+    {
+        if (pointList.size() >0)
+        {
+            pointList.pop_front();
+        }
+        else
+        {
+            break;
+        }
+    }
+    while (pointList.size() > pointListKeepCount)
+    {
+        pointList.pop_front();
+    }
+    
+    float max_lineWidth = 5;
+    float min_lineWidth = 1;
+    int   alpha_min = 10;
+    int   alpha_max =  200;
+    
+    float  R = 20;//arc4random()%255;
+    float  G = 255;//arc4random()%255;
+    float  B = 255;//arc4random()%255;
+    
+    int pointListCount = pointList.size();
+    std::list <CCPoint>::iterator it =pointList.begin();
+    
+    a->clear();
+    float pointIndex = 0;
+    for(;it!=pointList.end();it++)
+    {
+        int distanceToMiddle = fabs(pointIndex-pointListCount/2);
+        float percent = 1.0-(float)distanceToMiddle/(float)(pointListCount/2.0);
+        float lintWidth = min_lineWidth + max_lineWidth*percent;
+        float alpha = (alpha_min +alpha_max*percent)/200;
+        //Color4B(R,G,B,alpha);
+//        ccDrawColor4B(R,G,B,alpha);
+//        ccPointSize(lintWidth);
+//        ccDrawPoint(p);
+        
+        Point p=*it;
+        a->drawPoint(p, lintWidth, Color4F(R, G, B, alpha));
+        
+        pointIndex++;
+    }
+}
+
+bool Game::init(){
+    a=DrawNode::create();
+    
+    addChild(a,100);
+
     scheduleUpdate();
 
     initCacheData();
@@ -70,13 +132,18 @@ bool Game::init(){
     
     
     GameManager::_TIMELINE = SchedulerManager::loadTimeLine(rootNodeL);
+    gameload.loadGame(rootNodeL);
     
     EventListenerPhysicsContact* contactListener = moveaction.createProAction();
     
    // _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(contactListener,this);
 
-    EventListenerTouchOneByOne* listener = movelistener.create(rootNodeL);
+    auto listener=EventListenerTouchOneByOne::create();
+    
+    listener->onTouchMoved=CC_CALLBACK_2(Game::onTouchMoved, this);
+    listener->onTouchBegan=CC_CALLBACK_2(Game::onTouchBegan, this);
+    listener->onTouchEnded=CC_CALLBACK_2(Game::onTouchEnded, this);
     
     //_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener,this);
@@ -97,14 +164,9 @@ void Game::setUI(){
     addChild(rootNodeL);
     
     
-    
-    
-    
-    
     auto Button_Back = rootNodeL->getChildByName<ui::Button*>("Button_Stop");
     
     Button_Back->addClickEventListener(CC_CALLBACK_1(Game::stopCallback,this));
-    
     
     
     
@@ -156,7 +218,7 @@ void Game::setUI(){
     
     Button_Next_Success->addTouchEventListener(CC_CALLBACK_1(Game::Callrestart,this));
     
-    gameload.loadGame(rootNodeL);
+   
     
    }
 
@@ -288,5 +350,103 @@ void Game::toolCallback(Ref* pSender,int toolMark){
         }
     };
 }
+bool Game::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
+    
+    if(!moveLock){
+        return false;
+    }
+    //CCLOG("begin with (%f,%f)",touch->getLocation().x,touch->getLocation().y);
+    //画线特效
+    CCPoint beginPoint = touch->getLocationInView();
+    beginPoint = CCDirector::sharedDirector()->convertToGL(beginPoint);
+    // beginPoint 检测
+    pointList.push_back(beginPoint);
+    
+    index=0;
+    for(int i=0;i<10000;i++){
+        points[i]=Point(0,0);
+    }
+    
+    return true;
+}
+
+void Game::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event){
+    isMoved=true;
+    points[index]=touch->getLocation();
+    CCPoint nextPoint = touch->getLocationInView( );
+    nextPoint = CCDirector::sharedDirector()->convertToGL(nextPoint);
+    // nextPoint 检测
+    CCPoint preMovePoint = touch->getPreviousLocationInView();
+    preMovePoint = CCDirector::sharedDirector()->convertToGL(preMovePoint);
+    
+    float distance = ccpDistance(nextPoint, preMovePoint);
+    if (distance > 1)
+    {
+        int d = (int)distance;
+        for (int i =0; i < d; i++ )
+        {
+            float distanceX = nextPoint.x - preMovePoint.x;
+            float distanceY = nextPoint.y - preMovePoint.y;
+            
+            float percent = i / distance;
+            CCPoint newPoint;
+            newPoint.x = preMovePoint.x + (distanceX * percent);
+            newPoint.y = preMovePoint.y + (distanceY * percent);
+            
+            pointList.push_back(newPoint);
+        }
+    }
+    index++;
+}
+
+void Game::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event){
+    //CCLOG("end with (%f,%f)",touch->getLocation().x,touch->getLocation().y);
+    //CCLOG("%f,%f",DESTINATION_SECTION.position->x,DESTINATION_SECTION.position->y);
+    if (isMoved)
+    {
+        //下面是主角跟随路线移动
+        //下面是填装动作的容器
+        protagonist = rootNodeL->getChildByName<Sprite*>("Sprite_Protagonist");
+        //CCLOG("hello moveStart!!!!");
+        protagonist->setPosition(points[0]);
+        
+        moveLock = false;
+        
+        Vector<FiniteTimeAction*> actionVector;
+        
+        for (int i=0;i<10000;i++){
+            if (i!=0&&points[i].x!=0) {
+                action[i] = MoveTo::create((points[i-1]-points[i]).length()/SPEED_PRO, points[i]);
+                
+                //action->setTag(index);
+                
+                actionVector.pushBack(action[i]);
+                //actionVector.pushBack(callfun);
+                // protagonist->runAction(action);
+            }
+        }
+        auto callfun = CallFunc::create([&]{
+            MenuManager menuManager;
+            auto layer =menuManager.create_Menu(SUCCESS_LAYER);
+            protagonist->getParent()->addChild(layer);
+            MenuManager::move_in(layer);
+        });
+        
+        actionVector.pushBack(callfun);
+        
+        allAction=Sequence::create(actionVector);
+        allAction->setTag(70000);
+        protagonist->runAction(allAction);
+        
+    }
+    
+    
+    
+    isMoved=false;
+    pointList.clear();
+    
+    
+}
+
 
 

@@ -10,7 +10,6 @@
 #define Constant_Use_h
 #include <string>
 #include <stdio.h>
-#include "Section.h"
 #include "cocostudio/CocoStudio.h"
 
 using namespace std;

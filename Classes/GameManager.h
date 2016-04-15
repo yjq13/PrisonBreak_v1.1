@@ -10,7 +10,6 @@
 #define Constant_Game_hpp
 
 #include "Constant_Use.h"
-#include "Section.h"
 class GameManager{
     
 public:
@@ -18,12 +17,6 @@ public:
 static bool isStop;
     
 static TIMELINE _TIMELINE;
-
-static Section START_SECTION;
-
-static Section DESTINATION_SECTION;
-
-static Section STOP_SECTION;
 
 static Scheduler* PRO_SCHEDULER;
 

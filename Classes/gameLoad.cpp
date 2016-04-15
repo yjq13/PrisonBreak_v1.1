@@ -10,7 +10,6 @@
 #include <cocos2d.h>
 #include "ui/CocosGUI.h"
 #include "cocostudio/CocoStudio.h"
-#include "Section.h"
 #include "Sprite_protagonist.h"
 #include "Sprite_jailer.h"
 #include "Sprite_wall.h"
@@ -31,30 +30,7 @@ using namespace ui;
 
 void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     
-    //起点加载
-    auto startPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Start");
-    Size size_start = startPosition->getContentSize();
-    Vec2 position_start = startPosition->getPosition();
-    GameManager::START_SECTION=Section(&size_start, &position_start);
-    
-    
-    
-    //终点加载
-    auto destinationPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Destination");
-    Size size_destination = destinationPosition->getContentSize();
-    Vec2 position_destination = destinationPosition->getPosition();
-    GameManager::DESTINATION_SECTION=Section(&size_destination, &position_destination);
-    
-    
-    //暂停点加载
-    auto stopPosition=rootNodeL->getChildByName<ui::ImageView*>("Image_Stop");
-    if(stopPosition!=NULL){
-        Size size_stop = stopPosition->getContentSize();
-        Vec2 position_stop = stopPosition->getPosition();
-        GameManager::STOP_SECTION=Section(&size_stop, &position_stop);
-    }
-
-    
+       
     //警卫加载
 
     Sprite* Demo_jailer[10];

@@ -23,13 +23,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../Classes/MoveListener.cpp"
-            timestampString = "467469031.429789"
+            filePath = "../Classes/AppDelegate.cpp"
+            timestampString = "472312817.780211"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "moveListener::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event)"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "AppDelegate::applicationDidFinishLaunching()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -39,13 +39,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../Classes/AppDelegate.cpp"
-            timestampString = "472312817.780211"
+            filePath = "../Classes/GameCommonScene.cpp"
+            timestampString = "482388161.734979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "AppDelegate::applicationDidFinishLaunching()"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "Game::drawLine()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

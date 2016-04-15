@@ -11,7 +11,6 @@
 		0454C4F51C1AA94E001EC9F7 /* CoverView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0454C4F31C1AA94E001EC9F7 /* CoverView.cpp */; };
 		04671EB91CB80C54000BACC9 /* 白色方块.png in Resources */ = {isa = PBXBuildFile; fileRef = 04671EB81CB80C54000BACC9 /* 白色方块.png */; };
 		04671EBB1CB80E1F000BACC9 /* 绿色方块.png in Resources */ = {isa = PBXBuildFile; fileRef = 04671EBA1CB80E1F000BACC9 /* 绿色方块.png */; };
-		049178E21BDBDBB2004AAF5C /* Section.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049178E01BDBDBB2004AAF5C /* Section.cpp */; };
 		04BA48D01C3A8A220078D849 /* PEShapeCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BA48CE1C3A8A220078D849 /* PEShapeCache.cpp */; };
 		04F24EA79E2FEB16726F1559 /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D364C16A410D74FA7F2CF54 /* libcocos2d Mac.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -68,7 +67,6 @@
 		E30AC8B21BD930FE005B8686 /* Sprite_jailer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8B01BD930FE005B8686 /* Sprite_jailer.cpp */; };
 		E30AC8B51BD93281005B8686 /* Sprite_coin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8B31BD93281005B8686 /* Sprite_coin.cpp */; };
 		E30AC8B81BD9329B005B8686 /* Sprite_wall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8B61BD9329B005B8686 /* Sprite_wall.cpp */; };
-		E30AC8BB1BD984AC005B8686 /* moveListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8B91BD984AB005B8686 /* moveListener.cpp */; };
 		E30AC8BE1BD98B94005B8686 /* ContactManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30AC8BC1BD98B94005B8686 /* ContactManager.cpp */; };
 		E30E77811BCAD7DE0053F4B1 /* CacheData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E30E777F1BCAD7DE0053F4B1 /* CacheData.cpp */; };
 		E312DDA81C4875BC0062A35A /* protagonistListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E312DDA61C4875BC0062A35A /* protagonistListener.cpp */; };
@@ -130,8 +128,6 @@
 		0454C4F41C1AA94E001EC9F7 /* CoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverView.h; sourceTree = "<group>"; };
 		04671EB81CB80C54000BACC9 /* 白色方块.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "白色方块.png"; sourceTree = "<group>"; };
 		04671EBA1CB80E1F000BACC9 /* 绿色方块.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绿色方块.png"; sourceTree = "<group>"; };
-		049178E01BDBDBB2004AAF5C /* Section.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Section.cpp; path = ../Classes/Section.cpp; sourceTree = "<group>"; };
-		049178E11BDBDBB2004AAF5C /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Section.h; path = ../Classes/Section.h; sourceTree = "<group>"; };
 		04BA48CE1C3A8A220078D849 /* PEShapeCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PEShapeCache.cpp; sourceTree = "<group>"; };
 		04BA48CF1C3A8A220078D849 /* PEShapeCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEShapeCache.h; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
@@ -201,8 +197,6 @@
 		E30AC8B41BD93281005B8686 /* Sprite_coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sprite_coin.h; path = ../Classes/Sprite_coin.h; sourceTree = "<group>"; };
 		E30AC8B61BD9329B005B8686 /* Sprite_wall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Sprite_wall.cpp; path = ../Classes/Sprite_wall.cpp; sourceTree = "<group>"; };
 		E30AC8B71BD9329B005B8686 /* Sprite_wall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sprite_wall.h; path = ../Classes/Sprite_wall.h; sourceTree = "<group>"; };
-		E30AC8B91BD984AB005B8686 /* moveListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = moveListener.cpp; sourceTree = "<group>"; };
-		E30AC8BA1BD984AC005B8686 /* moveListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moveListener.h; sourceTree = "<group>"; };
 		E30AC8BC1BD98B94005B8686 /* ContactManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ContactManager.cpp; sourceTree = "<group>"; };
 		E30AC8BD1BD98B94005B8686 /* ContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactManager.h; sourceTree = "<group>"; };
 		E30E777F1BCAD7DE0053F4B1 /* CacheData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CacheData.cpp; sourceTree = "<group>"; };
@@ -528,8 +522,6 @@
 		E30AC8A21BD79D7D005B8686 /* BL */ = {
 			isa = PBXGroup;
 			children = (
-				E30AC8B91BD984AB005B8686 /* moveListener.cpp */,
-				E30AC8BA1BD984AC005B8686 /* moveListener.h */,
 				E30AC8BC1BD98B94005B8686 /* ContactManager.cpp */,
 				E30AC8BD1BD98B94005B8686 /* ContactManager.h */,
 				E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */,
@@ -555,8 +547,6 @@
 		E30AC8A91BD92C61005B8686 /* Game_Component */ = {
 			isa = PBXGroup;
 			children = (
-				049178E01BDBDBB2004AAF5C /* Section.cpp */,
-				049178E11BDBDBB2004AAF5C /* Section.h */,
 				E30AC8AA1BD92CDF005B8686 /* Sprite_protagonist.cpp */,
 				E30AC8AB1BD92CDF005B8686 /* Sprite_protagonist.h */,
 				E30AC8AD1BD92F8A005B8686 /* Sprite_mouse.cpp */,
@@ -833,7 +823,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E312DDA81C4875BC0062A35A /* protagonistListener.cpp in Sources */,
-				E30AC8BB1BD984AC005B8686 /* moveListener.cpp in Sources */,
 				E3CB5E8D1BC9753A005123B8 /* SystemPo.swift in Sources */,
 				0454C4F51C1AA94E001EC9F7 /* CoverView.cpp in Sources */,
 				E349DB0F1C4C67DA00DF7E66 /* JailerListener.cpp in Sources */,
@@ -860,7 +849,6 @@
 				E3CB5E8E1BC9753A005123B8 /* SystemVo.cpp in Sources */,
 				E30E77811BCAD7DE0053F4B1 /* CacheData.cpp in Sources */,
 				E3CB5E7C1BC9753A005123B8 /* ShopScene.cpp in Sources */,
-				049178E21BDBDBB2004AAF5C /* Section.cpp in Sources */,
 				E348B54C1C64823F004200F8 /* pauseScene.cpp in Sources */,
 				E3CB5E761BC9753A005123B8 /* Constant.cpp in Sources */,
 				E3CB5E7D1BC9753A005123B8 /* AppDelegate.cpp in Sources */,

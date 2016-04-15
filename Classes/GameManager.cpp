@@ -7,11 +7,6 @@
 //
 
 #include "GameManager.h"
-Section GameManager::START_SECTION = Section();
-
-Section GameManager::DESTINATION_SECTION = Section();
-
-Section GameManager::STOP_SECTION = Section();
 
 TIMELINE GameManager::_TIMELINE = *new TIMELINE();
 
