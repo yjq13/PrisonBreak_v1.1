@@ -313,7 +313,7 @@ void Game::toolCallback(Ref* pSender,int toolMark){
 }
 bool Game::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
     
-    if(!moveLock){
+    if(!GameManager::isTouchPro){
         return false;
     }
     //CCLOG("begin with (%f,%f)",touch->getLocation().x,touch->getLocation().y);
@@ -371,7 +371,7 @@ void Game::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event){
         //CCLOG("hello moveStart!!!!");
         protagonist->setPosition(points[0]);
         
-        moveLock = false;
+        GameManager::isTouchPro = false;
         
         Vector<FiniteTimeAction*> actionVector;
         
@@ -390,7 +390,10 @@ void Game::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event){
             MenuManager menuManager;
             auto layer =menuManager.create_Menu(SUCCESS_LAYER);
             protagonist->getParent()->addChild(layer);
+            GameManager::stepOfGame--;
+            if(GameManager::stepOfGame == 0){
             MenuManager::move_in(layer);
+            }
         });
         
         actionVector.pushBack(callfun);

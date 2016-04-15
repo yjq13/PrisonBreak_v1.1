@@ -21,6 +21,7 @@
 #include "JailerListener.h"
 #include "WallListener.h"
 #include "SchedulerManager.h"
+#include "protagonistListener.h"
 USING_NS_CC;
 
 using namespace ui;
@@ -136,6 +137,15 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     
     SchedulerManager::setProScheduler(sched1);
     
+    
+    
+    EventListenerTouchOneByOne* listener = proListener.create(Demo_protagonist);
+    
+    listener->setEnabled(true);
+    
+    GameManager::Prolistener = listener;
+    
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, Demo_protagonist);
     
     //特殊区域加载
     Sprite* Demo_Section[10];

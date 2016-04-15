@@ -17,12 +17,15 @@
 #include "Sprite_mouse.h"
 #include "Sprite_coin.h"
 #include "Special_Section.h"
+#include "protagonistListener.h"
 using namespace std;
 class gameLoad{
 public:
     Sprite_jailer jailer[10];
     
     JailerListener jailerlistener[10];
+    
+    protagonistListener proListener;
     
     vector<Sprite_mouse*> MouseList;
     

@@ -16,6 +16,12 @@ public:
 
 static bool isStop;
     
+static bool isTouchPro;
+    
+static int  stepOfGame;
+    
+static cocos2d::EventListenerTouchOneByOne* Prolistener;
+    
 static TIMELINE _TIMELINE;
 
 static Scheduler* PRO_SCHEDULER;

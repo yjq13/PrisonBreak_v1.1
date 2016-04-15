@@ -34,7 +34,7 @@ class Game : public MyScene{
     cocos2d::Point points[10000];//手指画出来的点集
     int index = 0;//计数器
     bool isMoved=false;
-    bool moveLock=true;
+
     int index_target = 1;
     cocos2d::Sequence* allAction;
     cocos2d::MoveTo* action[10000];

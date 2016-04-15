@@ -17,6 +17,12 @@ set<void *> GameManager::target_pro = *new set<void *>();
 
 std::vector<cocos2d::EventListenerTouchOneByOne*> GameManager::JailerlistenerList = *new std::vector<cocos2d::EventListenerTouchOneByOne*>();
 
+cocos2d::EventListenerTouchOneByOne* GameManager::Prolistener = new cocos2d::EventListenerTouchOneByOne();
+
 std::vector<cocos2d::EventListenerTouchOneByOne*> GameManager::WalllistenerList = *new std::vector<cocos2d::EventListenerTouchOneByOne*>();
 
 bool GameManager::isStop = false;
+
+bool GameManager::isTouchPro = false;
+
+int GameManager::stepOfGame = 3;

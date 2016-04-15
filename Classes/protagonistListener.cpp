@@ -10,6 +10,7 @@
 #include "cocos2d.h"
 #include "GameCommonScene.h"
 #include "Constant_Use.h"
+#include "GameManager.h"
 USING_NS_CC;
 
 EventListenerTouchOneByOne* protagonistListener::create(cocos2d::Sprite* getSprite){
@@ -52,8 +53,8 @@ bool protagonistListener::onTouchBegan(Touch* touch, Event* event)
     if(isTouched)
     {
         printf("我被点中了!\n");
-        
-        return true;
+        GameManager::isTouchPro = true;
+        return false;
         
     }else{
         printf("没有点中");
