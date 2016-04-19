@@ -69,5 +69,5 @@ void protagonistListener::onTouchMoved(Touch* touch, Event* event)
 }
 
 protagonistListener::~protagonistListener(){
-    CCLOG("SYE GOODBYE! LISTENER");
+    CCLOG("SYE GOODBYE! 主角");
 }

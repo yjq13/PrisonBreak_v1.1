@@ -39,6 +39,7 @@ string PATH_LEVEL = "";
 
 bool BUTTON_LOCK = true;
 
+int debugInt = 0;
 
 
 

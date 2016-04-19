@@ -26,6 +26,8 @@ USING_NS_CC;
 
     extern int ACTION_TAG;
 
+    extern int debugInt;
+
     /*extern Section START_SECTION;
 
     extern Section DESTINATION_SECTION;

@@ -137,9 +137,10 @@ void MenuManager::Callrestart(Ref *pSender,Node* layer){
         MenuManager::move_out(layer);
         if(isPause)
             SchedulerManager::resumePro();
-        Director::getInstance()->popScene();
-        auto sceneNew = Game::createScene();        
-        Director::getInstance()->pushScene(sceneNew);
+        
+        auto sceneNew = Game::createScene();
+        
+        Director::getInstance()->replaceScene(sceneNew);
         BUTTON_LOCK = false;
     }
 }

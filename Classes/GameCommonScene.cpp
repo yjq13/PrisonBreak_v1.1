@@ -43,8 +43,8 @@ Scene* Game::createScene(){
 }
 
 Game::~Game(){
-    
-    CCLOG("goodbye game");
+    debugInt+=1000;
+    CCLOG("goodbye game%d",debugInt);
 
     }
 void Game::draw(Renderer *renderer,const cocos2d::Mat4& transform,uint32_t flags)
@@ -83,7 +83,7 @@ void Game::drawLine()
     float  G = 255;//arc4random()%255;
     float  B = 255;//arc4random()%255;
     
-    int pointListCount = pointList.size();
+    int pointListCount =(int) pointList.size();
     std::list <Point>::iterator it =pointList.begin();
     
     a->clear();
@@ -107,6 +107,8 @@ void Game::drawLine()
 }
 
 bool Game::init(){
+    debugInt++;
+    CCLOG("init被调用过了%d",debugInt);
     a=DrawNode::create();
     
     addChild(a,100);
@@ -115,7 +117,7 @@ bool Game::init(){
 
     initCacheData();
     //rootNodeS = CSLoader::createNode("res/Game/Scene_Game.csb");
-    
+    GameManager::stepOfGame=3;
     string hand = "res/Game/";
     string tail = ".csb";
     string follow = "/Layer_Game_Level_";
@@ -271,7 +273,8 @@ void Game::menuCloseCallback(Ref* pSender)
 }
 
 void Game::onExit(){
-    
+    CCLOG("我退出了");
+
 }
 
 void Game::Callresume(Ref* pSender){
@@ -313,7 +316,7 @@ void Game::toolCallback(Ref* pSender,int toolMark){
 }
 bool Game::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
     
-    if(!GameManager::isTouchPro){
+    if((!GameManager::isTouchPro)||isMoved){
         return false;
     }
     //CCLOG("begin with (%f,%f)",touch->getLocation().x,touch->getLocation().y);
@@ -334,6 +337,7 @@ bool Game::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
 void Game::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event){
     isMoved=true;
     points[index]=touch->getLocation();
+    CCLOG("添加point：(%f,%f)",points[index].x,points[index].y);
     Point nextPoint = touch->getLocationInView( );
     nextPoint = Director::getInstance()->convertToGL(nextPoint);
     // nextPoint 检测
@@ -393,6 +397,7 @@ void Game::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event){
             GameManager::stepOfGame--;
             if(GameManager::stepOfGame == 0){
             MenuManager::move_in(layer);
+                
             }
         });
         
@@ -404,13 +409,12 @@ void Game::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event){
         
     }
     
-    
-    
     isMoved=false;
     pointList.clear();
     
     
 }
+
 
 
 

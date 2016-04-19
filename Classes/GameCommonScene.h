@@ -78,7 +78,6 @@ public:
     
     void onTouchEnded(cocos2d::Touch* touch,cocos2d::Event* event);
     
-
     
     virtual void onExit();
     virtual void update(float dt);

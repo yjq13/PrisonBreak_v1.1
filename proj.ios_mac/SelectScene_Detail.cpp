@@ -171,7 +171,7 @@ void Select_Detail::turnToGame(Ref* pSender)
 {
     if(BUTTON_LOCK){
         BUTTON_LOCK=false;
-        CCLOG("%d",BUTTON_LOCK);
+        //CCLOG("%d",BUTTON_LOCK);
         
         //Game gameScene;
         
