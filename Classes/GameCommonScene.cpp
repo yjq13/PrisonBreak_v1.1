@@ -191,7 +191,7 @@ void Game::setUI(){
 
 void Game::update(float dt){
     auto scale=VISIBLE_SIZE.width/DESIGN_SIZE.width;
-
+    if(!GameManager::isStop){
     //坐标重绘
     Sprite* Demo_jailer[10];
     int index = 0;
@@ -234,7 +234,7 @@ void Game::update(float dt){
             Demo_Mouse[index]->setPositionX(position_Before.x*scale);
         }
     }while(Demo_Mouse[index]!=NULL);
-
+    }
 }
 
 
