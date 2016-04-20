@@ -23,7 +23,7 @@ private:
     void Delay(float dt);
 public:
     
-    virtual EventListenerTouchOneByOne* create(cocos2d::Sprite* getSprite,cocostudio::timeline::ActionTimeline* Timeline);
+    virtual EventListenerTouchOneByOne* create(cocos2d::Sprite* getSprite);
     
     cocos2d::Rect getRect();
     

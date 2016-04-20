@@ -12,14 +12,14 @@
 #include "JailerListener.h"
 #include "Constant_Use.h"
 class Sprite_jailer{
-    cocostudio::timeline::ActionTimeline* timeline;
     
-    Sprite* sprite;
+   // Sprite* sprite;
     
-    JailerListener* Listener;
+    bool isStop;
     
-public:    
-    JailerListener* getlistener();
+    int Tag;
+    
+public:
     
     Sprite_jailer(){
         CCLOG("我是精灵警察！我被创造啦！！！");
@@ -30,13 +30,16 @@ public:
     }
 
     
+    void setIsStop(bool stop);
+    
+    bool getIsStop();
+    
+    int getTag();
+    
     cocostudio::timeline::ActionTimeline* getTimeLine();
     
     void setJailer(int number,cocos2d::Sprite* getSprite);
-    
-    void setTimeline(TIMELINE timeline);
-    
-    void setListener(JailerListener* listener);
+        
 };
 
 

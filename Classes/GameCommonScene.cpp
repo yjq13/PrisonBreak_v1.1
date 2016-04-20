@@ -26,6 +26,7 @@
 #include "CacheData.h"
 #include "pauseScene.h"
 #include "ListenerManager.h"
+#include "SpriteManager.h"
 USING_NS_CC;
 using namespace ui;
 
@@ -163,6 +164,8 @@ void Game::setUI(){
     //rootNodeS->addChild(rootNodeL);
     rootNodeL->setContentSize(VISIBLE_SIZE);
     
+    ui::Helper::doLayout(rootNodeL);
+    
     addChild(rootNodeL);
     
     
@@ -188,7 +191,7 @@ void Game::setUI(){
 
 void Game::update(float dt){
     auto scale=VISIBLE_SIZE.width/DESIGN_SIZE.width;
-    if(!GameManager::isStop){
+
     //坐标重绘
     Sprite* Demo_jailer[10];
     int index = 0;
@@ -203,9 +206,11 @@ void Game::update(float dt){
         string all = first+numberStr;
         
         Demo_jailer[index] = rootNodeL->getChildByName<Sprite*>(all);
-        if(Demo_jailer[index]!=NULL){
-            auto position_Before=Demo_jailer[index]->getPosition();
-            Demo_jailer[index]->setPositionX(position_Before.x*scale);
+        if((Demo_jailer[index]!=NULL)){
+            if(!SpriteManager::getJailerByTag(Demo_jailer[index]->getTag())->getIsStop()){
+                auto position_Before=Demo_jailer[index]->getPosition();
+                Demo_jailer[index]->setPositionX(position_Before.x*scale);
+            }
         }
     }while(Demo_jailer[index]!=NULL);
     
@@ -229,7 +234,7 @@ void Game::update(float dt){
             Demo_Mouse[index]->setPositionX(position_Before.x*scale);
         }
     }while(Demo_Mouse[index]!=NULL);
-    }
+
 }
 
 

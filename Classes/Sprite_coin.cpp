@@ -14,6 +14,7 @@ USING_NS_CC;
 Sprite* Sprite_coin::create(int number,Sprite* getSprite){
     auto coin= getSprite;
     
+    
     auto ManBody=PhysicsBody::createBox(coin->getContentSize());
     
     //CCLOG("%f,%f",coin->getContentSize().width,coin->getContentSize().height);

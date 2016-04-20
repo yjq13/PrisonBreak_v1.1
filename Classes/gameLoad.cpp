@@ -49,10 +49,8 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
         
     Demo_jailer[index] = rootNodeL->getChildByName<Sprite*>(all);
         if(Demo_jailer[index]!=NULL){
-            jailer[index].setJailer(index,Demo_jailer[index]);
-            jailer[index].setTimeline(GameManager::_TIMELINE);
-            EventListenerTouchOneByOne* listener = jailerlistener[index].create(Demo_jailer[index],jailer[index].getTimeLine());
-            jailer[index].setListener(&jailerlistener[index]);
+            GameManager::jailer[index].setJailer(index,Demo_jailer[index]);
+            EventListenerTouchOneByOne* listener = GameManager::jailerlistener[index].create(Demo_jailer[index]);
             listener->setEnabled(false);
             GameManager::JailerlistenerList.push_back(listener);
             //_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, getSprite);
@@ -139,7 +137,7 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     
     
     
-    EventListenerTouchOneByOne* listener = proListener.create(Demo_protagonist);
+    EventListenerTouchOneByOne* listener = GameManager::proListener.create(Demo_protagonist);
     
     listener->setEnabled(true);
     

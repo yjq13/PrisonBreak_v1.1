@@ -26,3 +26,11 @@ bool GameManager::isStop = false;
 bool GameManager::isTouchPro = false;
 
 int GameManager::stepOfGame = 3;
+
+protagonistListener GameManager::proListener = *new protagonistListener();
+
+Sprite_jailer GameManager::jailer[10];
+
+JailerListener GameManager::jailerlistener[10];
+
+

@@ -79,6 +79,7 @@
 		E349DB121C4C731000DF7E66 /* WallListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E349DB101C4C731000DF7E66 /* WallListener.cpp */; };
 		E34E6FBD1CB80A5E0026E129 /* MenuManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E34E6FBB1CB80A5E0026E129 /* MenuManager.cpp */; };
 		E35AFADF1CB644A100D2BCE4 /* GameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E35AFADD1CB644A100D2BCE4 /* GameManager.cpp */; };
+		E35FE8A41CC7D6AD009601DD /* SpriteManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E35FE8A21CC7D6AD009601DD /* SpriteManager.cpp */; };
 		E369982E1C0C24AA007BB3C8 /* LockofSelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */; };
 		E38CB7851CB9096C004D889B /* ListenerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E38CB7831CB9096C004D889B /* ListenerManager.cpp */; };
 		E3910A221C27AEA6008F65A6 /* Special_Section.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3910A201C27AEA6008F65A6 /* Special_Section.cpp */; };
@@ -220,6 +221,8 @@
 		E34E6FBC1CB80A5E0026E129 /* MenuManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuManager.h; sourceTree = "<group>"; };
 		E35AFADD1CB644A100D2BCE4 /* GameManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameManager.cpp; sourceTree = "<group>"; };
 		E35AFADE1CB644A100D2BCE4 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameManager.h; sourceTree = "<group>"; };
+		E35FE8A21CC7D6AD009601DD /* SpriteManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteManager.cpp; sourceTree = "<group>"; };
+		E35FE8A31CC7D6AD009601DD /* SpriteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteManager.h; sourceTree = "<group>"; };
 		E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LockofSelect.cpp; sourceTree = "<group>"; };
 		E369982D1C0C24AA007BB3C8 /* LockofSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockofSelect.h; sourceTree = "<group>"; };
 		E38CB7831CB9096C004D889B /* ListenerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ListenerManager.cpp; sourceTree = "<group>"; };
@@ -540,6 +543,8 @@
 				E34E6FBC1CB80A5E0026E129 /* MenuManager.h */,
 				E38CB7831CB9096C004D889B /* ListenerManager.cpp */,
 				E38CB7841CB9096C004D889B /* ListenerManager.h */,
+				E35FE8A21CC7D6AD009601DD /* SpriteManager.cpp */,
+				E35FE8A31CC7D6AD009601DD /* SpriteManager.h */,
 			);
 			name = BL;
 			sourceTree = "<group>";
@@ -835,6 +840,7 @@
 				E3CB5E8A1BC9753A005123B8 /* OC_callGameInfo.mm in Sources */,
 				E30AC8B81BD9329B005B8686 /* Sprite_wall.cpp in Sources */,
 				E3CB5E7F1BC9753A005123B8 /* Data_GameInfo.swift in Sources */,
+				E35FE8A41CC7D6AD009601DD /* SpriteManager.cpp in Sources */,
 				E3CB5E8B1BC9753A005123B8 /* SelectScene_ALL.cpp in Sources */,
 				E301E4DF1C1AA5D00094884D /* gameLoad.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,

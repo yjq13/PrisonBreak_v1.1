@@ -21,21 +21,15 @@
 using namespace std;
 class gameLoad{
 public:
-    Sprite_jailer jailer[10];
+//    Sprite_jailer jailer[10];
+//    
+//    JailerListener jailerlistener[10];
+//    
+//    protagonistListener proListener;
     
-    JailerListener jailerlistener[10];
-    
-    protagonistListener proListener;
-    
-    vector<Sprite_mouse*> MouseList;
-    
-    vector<Sprite_wall*> WallList;
-    
-    vector<Sprite_coin*> CoinList;
-    
-    vector<Sprite_SpecialSection*> SpecialSectionList;
-
     void loadGame(cocos2d::Node* rootNodeL);
+    
+    
     
     gameLoad(){
         CCLOG("hello gameload");

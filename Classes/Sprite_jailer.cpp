@@ -17,29 +17,22 @@ void Sprite_jailer::setJailer(int number,cocos2d::Sprite* getSprite){
     ManBody->setContactTestBitmask(0xFFFF);
     getSprite->setPhysicsBody(ManBody);
     getSprite->setTag(JAILER_TAG+number);
-    sprite = getSprite;
-    CCLOG("精灵设置");
-}
-
-void Sprite_jailer::setTimeline(TIMELINE timeLine){
-    for(int i = 0;i<20;i++){
-        if(timeLine.TimeLine[i]->getTag()!=157)
-            break;
-        if((signed)timeLine.TimeLine[i]->getFlags()==sprite->getTag()){
-            
-            timeline = timeLine.TimeLine[i];
-            
-            break;
-        }
-    }
-
-}
-
-cocostudio::timeline::ActionTimeline* Sprite_jailer::getTimeLine(){
-    return timeline;
+    //sprite = getSprite;
+    Tag = JAILER_TAG+number;
+    isStop = false;
 }
 
 
-void Sprite_jailer::setListener(JailerListener* listener){
-    Listener = listener;
+void Sprite_jailer::setIsStop(bool stop){
+    isStop = stop;
+}
+
+
+bool Sprite_jailer::getIsStop(){
+    return isStop;
+}
+
+
+int Sprite_jailer::getTag(){
+    return Tag;
 }

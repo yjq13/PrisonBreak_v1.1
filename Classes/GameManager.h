@@ -10,6 +10,10 @@
 #define Constant_Game_hpp
 
 #include "Constant_Use.h"
+#include "Sprite_jailer.h"
+#include "JailerListener.h"
+#include "protagonistListener.h"
+
 class GameManager{
     
 public:
@@ -29,6 +33,12 @@ static Scheduler* PRO_SCHEDULER;
 static set<void *> target_else;
 
 static set<void *> target_pro;
+    
+static Sprite_jailer jailer[10];
+    
+static JailerListener jailerlistener[10];
+    
+static protagonistListener proListener;
 
 static vector<cocos2d::EventListenerTouchOneByOne*> JailerlistenerList;
 

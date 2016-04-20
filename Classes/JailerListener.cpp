@@ -13,9 +13,10 @@
 #include "SchedulerManager.h"
 #include "GameManager.h"
 #include "ListenerManager.h"
+#include "SpriteManager.h"
 USING_NS_CC;
 
-EventListenerTouchOneByOne* JailerListener::create(cocos2d::Sprite* getSprite,cocostudio::timeline::ActionTimeline* Timeline){
+EventListenerTouchOneByOne* JailerListener::create(cocos2d::Sprite* getSprite){
     
     EventListenerTouchOneByOne* listener=EventListenerTouchOneByOne::create();
     
@@ -55,13 +56,9 @@ bool JailerListener::onTouchBegan(Touch* touch, Event* event)
     //CCLOG("我被点啦！！！！");
     if(isTouched)
     {
-        //Delay(0.0f);
-        CCLOG("%d",jailer->getTag());
-        //timeline->;
-        CCLOG("我开始睡觉啦！！！！");
-        //sleep(2.5);
-        CCLOG("我睡醒啦！！！");
-        GameManager::isStop = true;
+        SpriteManager::setStopJailer(jailer->getTag());
+        
+        
         //jailer->getParent()->scheduleOnce(schedule_selector(this->Delay), 1.0f);
         //Director::getInstance()->getActionManager()->pauseTarget(jailer);
         SchedulerManager::stopTimeLine(jailer->getTag());
