@@ -66,6 +66,7 @@ void SchedulerManager::resumeTimeLine(){
         }
         GameManager::_TIMELINE.TimeLine[i]->resume();
     }
+    GameManager::isStop = false;
 }
 
 
@@ -85,6 +86,7 @@ void SchedulerManager::stopTimeLine(int Tag){
 void SchedulerManager::resumeTimeLine(int Tag){
     for(int i = 0;i<20;i++){
         if((signed)GameManager::_TIMELINE.TimeLine[i]->getFlags()==Tag){
+            GameManager::_TIMELINE.TimeLine[i]->setTag(157);
             GameManager::_TIMELINE.TimeLine[i]->resume();
             break;
         }

@@ -7,5 +7,14 @@
         <LastRunType Value="Mac" />
       </Value>
     </Item>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="Selection_2/Layer_Selection_3.csd" />
+          <FilePathData Path="Selection_2/Layer_Dialog_Buy.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="Selection_2/Layer_Dialog_Buy.csd" />
+      </Value>
+    </Item>
   </Properties>
 </UserData>

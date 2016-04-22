@@ -13,6 +13,7 @@
 #include "CacheData.h"
 #include "MenuManager.h"
 #include "SchedulerManager.h"
+#include "SpriteManager.h"
 USING_NS_CC;
 
 EventListenerPhysicsContact* ContactManager::createProAction(){
@@ -110,6 +111,8 @@ ContactManager::~ContactManager(){
 bool ContactManager::onContactBeginPro_Jailer(){
     //node_Pro->getScheduler()->setTimeScale(0.0f);
     if(node_else->isVisible()){
+        SpriteManager::setStopJailer(node_else->getTag());
+        
         SchedulerManager::stopTimeLine(node_else->getTag());
         node_else->setVisible(false);
         target_pro = node_Pro->getScheduler()->pauseAllTargets();
@@ -117,6 +120,7 @@ bool ContactManager::onContactBeginPro_Jailer(){
         
         Node* layer =menuManager.create_Menu(FAIL_LAYER);
         node_else->getParent()->addChild(layer);
+        
         MenuManager::move_in(layer);
     }
     

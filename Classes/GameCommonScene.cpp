@@ -123,7 +123,7 @@ bool Game::init(){
     string tail = ".csb";
     string follow = "/Layer_Game_Level_";
     string all = hand+PATH_PART+follow+PATH_LEVEL+tail;
-    
+    GameManager::isStop = false;
     failNodeL = CSLoader::createNode("res/Game/Other/Layer_Fail.csb");
     successNodeL = CSLoader::createNode("res/Game/Other/Layer_Success.csb");
     stopNodeL = CSLoader::createNode("res/Game/Other/Layer_Stop.csb");
