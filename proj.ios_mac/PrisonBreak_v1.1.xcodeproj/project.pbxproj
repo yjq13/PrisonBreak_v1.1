@@ -11,6 +11,7 @@
 		0454C4F51C1AA94E001EC9F7 /* CoverView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0454C4F31C1AA94E001EC9F7 /* CoverView.cpp */; };
 		04671EB91CB80C54000BACC9 /* 白色方块.png in Resources */ = {isa = PBXBuildFile; fileRef = 04671EB81CB80C54000BACC9 /* 白色方块.png */; };
 		04671EBB1CB80E1F000BACC9 /* 绿色方块.png in Resources */ = {isa = PBXBuildFile; fileRef = 04671EBA1CB80E1F000BACC9 /* 绿色方块.png */; };
+		049BA1351CCA6B5700FF9C37 /* Section.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049BA1331CCA6B5700FF9C37 /* Section.cpp */; };
 		04BA48D01C3A8A220078D849 /* PEShapeCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BA48CE1C3A8A220078D849 /* PEShapeCache.cpp */; };
 		04F24EA79E2FEB16726F1559 /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D364C16A410D74FA7F2CF54 /* libcocos2d Mac.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -129,6 +130,8 @@
 		0454C4F41C1AA94E001EC9F7 /* CoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverView.h; sourceTree = "<group>"; };
 		04671EB81CB80C54000BACC9 /* 白色方块.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "白色方块.png"; sourceTree = "<group>"; };
 		04671EBA1CB80E1F000BACC9 /* 绿色方块.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绿色方块.png"; sourceTree = "<group>"; };
+		049BA1331CCA6B5700FF9C37 /* Section.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Section.cpp; path = ../Classes/Section.cpp; sourceTree = "<group>"; };
+		049BA1341CCA6B5700FF9C37 /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Section.h; path = ../Classes/Section.h; sourceTree = "<group>"; };
 		04BA48CE1C3A8A220078D849 /* PEShapeCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PEShapeCache.cpp; sourceTree = "<group>"; };
 		04BA48CF1C3A8A220078D849 /* PEShapeCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEShapeCache.h; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
@@ -564,6 +567,8 @@
 				E30AC8B71BD9329B005B8686 /* Sprite_wall.h */,
 				E3910A201C27AEA6008F65A6 /* Special_Section.cpp */,
 				E3910A211C27AEA6008F65A6 /* Special_Section.h */,
+				049BA1331CCA6B5700FF9C37 /* Section.cpp */,
+				049BA1341CCA6B5700FF9C37 /* Section.h */,
 			);
 			name = Game_Component;
 			sourceTree = "<group>";
@@ -866,6 +871,7 @@
 				E369982E1C0C24AA007BB3C8 /* LockofSelect.cpp in Sources */,
 				E3CB5E821BC9753A005123B8 /* FigurePo.swift in Sources */,
 				E30AC8B51BD93281005B8686 /* Sprite_coin.cpp in Sources */,
+				049BA1351CCA6B5700FF9C37 /* Section.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				E3CB5E861BC9753A005123B8 /* GamePo.swift in Sources */,
 				04BA48D01C3A8A220078D849 /* PEShapeCache.cpp in Sources */,
