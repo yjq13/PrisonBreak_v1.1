@@ -48,6 +48,10 @@ void SchedulerManager::resumePro(){
 void SchedulerManager::pauseTimeLine(){
     for(int i=0;i<TIMELINE_NUM;i++){
             //CCLOG("%d",GameManager::_TIMELINE.TimeLine[i]->getTag());
+        if(!GameManager::_TIMELINE.TimeLine[i]->isPlaying()){
+
+            GameManager::_TIMELINE.TimeLine[i]->setTag(1000);
+        }
             GameManager::_TIMELINE.TimeLine[i]->pause();
     }
 }
@@ -57,9 +61,15 @@ void SchedulerManager::resumeTimeLine(){
     
     for(int i=0;i<TIMELINE_NUM;i++){
         //CCLOG("%d",_TIMELINE.TimeLine[i]->getTag());
+        if(GameManager::_TIMELINE.TimeLine[i]->getTag()==1000){
+            continue;
+        }
         GameManager::_TIMELINE.TimeLine[i]->resume();
     }
 }
+
+
+
 
 
 void SchedulerManager::stopTimeLine(int Tag){

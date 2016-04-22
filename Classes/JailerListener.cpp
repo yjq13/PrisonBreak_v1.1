@@ -59,7 +59,8 @@ bool JailerListener::onTouchBegan(Touch* touch, Event* event)
         SpriteManager::setStopJailer(jailer->getTag());
         
         
-        //jailer->getParent()->scheduleOnce(schedule_selector(this->Delay), 1.0f);
+        jailer->getParent()->scheduleOnce({CC_CALLBACK_1(JailerListener::Delay, this,jailer->getTag())}, 5.0f, "yjq is so diao");
+        
         //Director::getInstance()->getActionManager()->pauseTarget(jailer);
         SchedulerManager::stopTimeLine(jailer->getTag());
         //jailer->getParent()->stopAction(timeline);
@@ -82,7 +83,7 @@ void JailerListener::onTouchMoved(Touch* touch, Event* event){
 }
 
 
-void JailerListener::Delay(float dt){
+void JailerListener::Delay(float dt,int Tag){
     //CCLOG("%d",jailer->getTag());
-    SchedulerManager::resumeTimeLine(jailer->getTag());
+    SchedulerManager::resumeTimeLine(Tag);
     }

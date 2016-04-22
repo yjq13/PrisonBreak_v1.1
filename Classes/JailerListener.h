@@ -20,7 +20,7 @@ private:
     
     cocos2d::Sprite* jailer;
     
-    void Delay(float dt);
+    void Delay(float dt,int Tag);
 public:
     
     virtual EventListenerTouchOneByOne* create(cocos2d::Sprite* getSprite);
