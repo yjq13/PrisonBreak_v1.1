@@ -18,7 +18,7 @@
 			<key>startTime</key>
 			<integer>0</integer>
 			<key>endTime</key>
-			<integer>100</integer>
+			<integer>99</integer>
 			<key>tag</key>
 			<real>3001</real>
 		</dict>
@@ -27,7 +27,7 @@
 			<key>startTime</key>
 			<integer>100</integer>
 			<key>endTime</key>
-			<integer>200</integer>
+			<integer>199</integer>
 			<key>tag</key>
 			<real>3002</real>
 		</dict>
@@ -39,7 +39,7 @@
 			<key>startTime</key>
 			<integer>0</integer>
 			<key>endTime</key>
-			<integer>100</integer>
+			<integer>99</integer>
 			<key>tag</key>
 			<real>3001</real>
 		</dict>
@@ -48,7 +48,7 @@
 			<key>startTime</key>
 			<integer>100</integer>
 			<key>endTime</key>
-			<integer>200</integer>
+			<integer>199</integer>
 			<key>tag</key>
 			<real>3002</real>
 		</dict>
