@@ -30,6 +30,11 @@ private:
     bool isShiftDone;
     //到哪一关了
     int whichLevel;
+    
+    //用于排序
+    ValueVector order_left;
+    ValueVector order_right;
+    int levelNum;
 public:
     CoverView();
     ~CoverView();
@@ -47,7 +52,8 @@ public:
     virtual void onTouchEnded(Touch* pTouch, Event* pEvent);
     void update(float dt);
     void initData();
-    void initCard(int cardNum);
+    void initCard(int cardNum,cocos2d::ui::Widget* card);
+    void initLevel(int currentLevel,cocos2d::ui::Widget* lock);
     void adjustCardScale(Point adjustPoint);
     int getCurLevel();
     void addCard(Node * card);

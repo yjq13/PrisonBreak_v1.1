@@ -78,11 +78,19 @@
           <Image Name="Protagonist_4.png" />
           <Image Name="Sprite_Wall.jpg" />
           <Image Name="Sprite_Special_Section.png" />
+          <Image Name="Page.png" />
+          <Image Name="Step.png" />
         </Folder>
         <Image Name="Protagonist_1.png" />
         <Image Name="Protagonist_2.png" />
         <Image Name="Protagonist_3.png" />
         <Image Name="Protagonist_4.png" />
+        <Image Name="Lock.png" />
+        <Image Name="GameStart.png" />
+        <Image Name="About.png" />
+        <Image Name="Background_Start.png" />
+        <Image Name="Button_Music.png" />
+        <Image Name="Button_Music_off.png" />
       </RootFolder>
     </Group>
   </SolutionFolder>

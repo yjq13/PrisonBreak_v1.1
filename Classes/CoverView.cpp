@@ -29,7 +29,6 @@ CoverView* CoverView::create(Rect swBox, Size slSize , float disDistance , float
     CC_SAFE_DELETE(cover);
     return NULL;
 }
-
 bool CoverView::init(Rect swBox , Size slSize , float disDistance , float disScale)
 {
     if(!Node::init()) return false;
@@ -101,10 +100,8 @@ void CoverView::update(float dt){
                 lastLevel->setRotationSkewY(-(90-(120)/2-30));
                 if(!isRight&&!card_left.empty()){
                     whichLevel--;
-                    thisLevel->setZOrder(-1000);
                     //左侧的书出栈一页进入右侧栈
                     CCLOG("左侧的书出栈一页进入右侧栈");
-                    card->setZOrder(0);
                     card_left.pop();
                     card_right.push(card);
                 }
@@ -118,10 +115,8 @@ void CoverView::update(float dt){
                 lastLevel->setRotationSkewY(-(90-(150-150)/2-30));
                 if(isRight&&!card_right.empty()){
                     whichLevel++;
-                    lastLevel->setZOrder(-1000);
                     //右侧的书出栈一页进入左侧栈
                     CCLOG("右侧的书出栈一页进入左侧栈");
-                    card->setZOrder(0);
                     card_right.pop();
                     card_left.push(card);
                 }
@@ -131,13 +126,39 @@ void CoverView::update(float dt){
     
     
 }
-void CoverView::initCard(int cardNum){
-    char* url="白色方块.png";
-    
+void CoverView::initCard(int cardNum,cocos2d::ui::Widget* card ){
     for(int i = 0 ; i< cardNum ; i++)
-    {Sprite* player = Sprite::create(url);
-        this->addCard(player);
+    {cocos2d::ui::Widget* player = card->clone();
+        this->addCard(player,1000+i*10);
+        
+        order_left.push_back(Value(i*10));
+        order_right.push_back(Value(1000+(cardNum-i-1)*10));
     }
+    
+}
+void CoverView::initLevel(int currentLevel,cocos2d::ui::Widget* lock ){
+     this->whichLevel=currentLevel-1;
+    for(int i=currentLevel;i<levelNum;i++){
+        cocos2d::ui::Widget* level_lock = lock->clone();
+        Node* level=scrollLayer->getChildByTag(i);
+        level_lock->setPosition(Vec2(level->getContentSize().width/2, level->getContentSize().height/2));
+        level->addChild(level_lock);
+        level->setScaleX(-0/sin(PI/3));
+        level->setRotationSkewY(-(90+0/2+30));
+    }
+    for(int i=0;i<currentLevel-1;i++){
+        Node* level=scrollLayer->getChildByTag(i);
+        level->setScaleX((sin((120)/2*PI/180)/sin(PI/3)));
+        level->setRotationSkewY(-(90-(120)/2-30));
+        
+        Node* card=card_right.top();
+        card->setRotationSkewY(-150);
+        card->setZOrder(order_left.at(card_left.empty()?0:card_left.size()).asInt());
+        card_right.pop();
+        card_left.push(card);
+    }
+    
+    scrollLayer->getChildByTag(currentLevel-1)->setLocalZOrder(10000);
     
 }
 void CoverView::initData()
@@ -150,6 +171,7 @@ void CoverView::initData()
     isHandOff=true;
     isShiftDone=true;
     whichLevel=0;
+    levelNum=0;
     
     
     offsetPosition = Point(swSize.width/2,swSize.height/2);
@@ -181,12 +203,12 @@ bool CoverView::onTouchBegin(Touch* pTouch, Event* pEvent)
         if(whichLevel+isRight>0&&whichLevel+isRight<cardNum+1){
             thisLevel=(Node*)levelArray->getObjectAtIndex(whichLevel+isRight);
             lastLevel=(Node*)levelArray->getObjectAtIndex(whichLevel-1+isRight);
-            thisLevel->setPosition(offsetPosition.x+170, offsetPosition.y-200);
+            thisLevel->setPositionX(offsetPosition.x+lastLevel->getContentSize().width/2);
             thisLevel->setAnchorPoint(Point(1,0));
             thisLevel->setScaleX(!isRight);
             thisLevel->setRotationSkewY(0);
             
-            lastLevel->setPosition(offsetPosition.x-170, offsetPosition.y-200);
+            lastLevel->setPositionX(offsetPosition.x-lastLevel->getContentSize().width/2);
             lastLevel->setAnchorPoint(Point(0,0));
             lastLevel->setScaleX(isRight);
             lastLevel->setRotationSkewY(0);
@@ -220,17 +242,18 @@ void CoverView::adjustCardScale(Point adjustPoint)
     lastLevel=(Node*)levelArray->getObjectAtIndex(whichLevel-1+isRight);
     if(isRight&&!card_right.empty()){
         Node* card = card_right.top();
-        card->setZOrder(1000);
         angle+=scale;
         //固定角度内才可以旋转
         if(angle<=-30&&angle>=-150){
             card->setRotationSkewY(angle);
             if(angle>-90){
-                thisLevel->setZOrder(500);
-                lastLevel->setZOrder(2000);
+                card->setZOrder(order_right.at(card_right.empty()?order_right.size()-1:order_right.size()-card_right.size()).asInt());
+                thisLevel->setZOrder(card->getZOrder()-1);
+                lastLevel->setZOrder(card->getZOrder()+10000);
             }else{
-                thisLevel->setZOrder(2000);
-                lastLevel->setZOrder(500);
+                card->setZOrder(order_left.at(card_left.empty()?0:card_left.size()).asInt());
+                thisLevel->setZOrder(card->getZOrder()+10000);
+                lastLevel->setZOrder(card->getZOrder()-1);
                 
             }
             thisLevel->setScaleX(-sin((-angle-30)/2*PI/180)/sin(PI/3));
@@ -240,17 +263,20 @@ void CoverView::adjustCardScale(Point adjustPoint)
         }
     }else if(!isRight&&!card_left.empty()){
         Node* card = card_left.top();
-        card->setZOrder(1000);
         angle+=scale;
         //固定角度内才可以旋转
         if(angle<=-30&&angle>=-150){
             card->setRotationSkewY(angle);
             if(angle>-90){
-                thisLevel->setZOrder(500);
-                lastLevel->setZOrder(2000);
+                card->setZOrder(order_right.at(card_right.empty()?order_right.size()-1:order_right.size()-card_right.size()-1).asInt());
+                
+                thisLevel->setZOrder(card->getZOrder()-1);
+                lastLevel->setZOrder(card->getZOrder()+10000);
             }else{
-                thisLevel->setZOrder(2000);
-                lastLevel->setZOrder(500);
+                card->setZOrder(order_left.at(card_left.empty()?0:card_left.size()-1).asInt());
+                thisLevel->setZOrder(card->getZOrder()+10000);
+                lastLevel->setZOrder(card->getZOrder()-1);
+                
             }
             thisLevel->setScaleX(-sin((-angle-30)/2*PI/180)/sin(PI/3));
             thisLevel->setRotationSkewY(-(90+(-angle-30)/2+30));
@@ -260,16 +286,17 @@ void CoverView::adjustCardScale(Point adjustPoint)
         
     }
 }
-
-
+//
+//
 void CoverView::turnToLevel(int whichLevel)
 {
     this->whichLevel=whichLevel-1;
-    for (int i=0; i<whichLevel; i++) {
+    for (int i=0; i<whichLevel-1; i++) {
         Node* card=card_right.top();
         card_right.pop();
         card_left.push(card);
     }
+    scrollLayer->getChildByTag(whichLevel-1)->setLocalZOrder(10000);
 }
 
 
@@ -277,13 +304,13 @@ void CoverView::turnToLevel(int whichLevel)
 
 void CoverView::addCard(Node * card)
 {
-    int zOrder = cardNum;
-    this->addCard(card, zOrder, 0);
+    int zOrder =0;
+    this->addCard(card, zOrder, -10);
 }
 
 void CoverView::addCard(Node * card, int zOrder)
 {
-    this->addCard(card, zOrder,0);
+    this->addCard(card, zOrder,-10);
 }
 
 void CoverView::addCard(Node* card, int zOrder, int tag)
@@ -291,7 +318,7 @@ void CoverView::addCard(Node* card, int zOrder, int tag)
     float positionX = offsetPosition.x;
     //float scale = 1 - disScale*cardNum;
     card->setAnchorPoint(Point(0,0));
-    card->setPosition(Point(positionX,offsetPosition.y-300));
+    card->setPosition(Point(positionX,offsetPosition.y-card->getContentSize().height));
     card->setRotationSkewY(-30);
     //card->setScale(scale);
     scrollLayer->addChild(card , zOrder,tag);
@@ -302,20 +329,20 @@ void CoverView::addCard(Node* card, int zOrder, int tag)
 
 void CoverView::addLevel(Node * level)
 {
-    int zOrder = -1000;
-    this->addLevel(level, zOrder, 0);
+    int zOrder = -1000-levelNum;
+    this->addLevel(level, zOrder, levelNum++);
 }
 
 void CoverView::addLevel(Node * level, int zOrder)
 {
-    this->addLevel(level, zOrder,0);
+    this->addLevel(level, zOrder,levelNum++);
 }
-
 void CoverView::addLevel(Node* level, int zOrder, int tag)
 {
     float positionX = offsetPosition.x;
     //float scale = 1 - disScale*cardNum;
-    level->setPosition(offsetPosition.x-170, offsetPosition.y-200);
+    
+    level->setPosition(offsetPosition.x-level->getContentSize().width/2, offsetPosition.y-card_right.top()->getContentSize().width/2);
     level->setAnchorPoint(Point(0,0));
     level->setScaleX(1);
     levelArray->addObject(level);

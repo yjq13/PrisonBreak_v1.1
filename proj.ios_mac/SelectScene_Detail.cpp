@@ -66,18 +66,21 @@ void Select_Detail::setCoverflow(){
     float disDistance = 0.1f*winWidth;
     float disScale = 0.25f;
     levelView = CoverView::create(swRect_level,slSize_level,disDistance,disScale);
-    levelView->initCard(9);
     
-    for(int i = 0 ; i< 9 ; i++)
+    levelView->initCard(9,rootNodeL_Basis->getChildByName<Widget*>("Page"));
+    
+    
+    Widget* step=rootNodeL_Basis->getChildByName<Widget*>("Step");
+    
+    
+    for(int i = 0 ; i< 10 ; i++)
     {
-        string url;
-        url="绿色方块.png";
-        Button* level=Button::create(url);
-        level->addClickEventListener(CC_CALLBACK_1(Select_Detail::show_GameReady,this,i));
-        levelView->addLevel(level);
+        Widget* a=step->clone();
+        a->addClickEventListener(CC_CALLBACK_1(Select_Detail::show_GameReady,this,i));
+        levelView->addLevel(a);
     }
-    //下面是调整图片位置
-    levelView->turnToLevel(STEP);
+    //跳关、加锁
+    levelView->initLevel(STEP, rootNodeL_Basis->getChildByName<Widget*>("Lock"));
     this->addChild(levelView);
     
     //下面是道具的coverflow，感觉没有必要

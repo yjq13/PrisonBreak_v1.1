@@ -6,14 +6,44 @@
       <ObjectData Name="Layer" Tag="60" ctype="GameLayerObjectData">
         <Size X="2208.0000" Y="1242.0000" />
         <Children>
-          <AbstractNodeData Name="Background_Selection_2" ActionTag="1414423381" Tag="134" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="-437.0000" RightMargin="-437.0000" TopMargin="-246.0000" BottomMargin="-246.0000" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="Step" ActionTag="-12628266" Tag="29" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="790.2938" RightMargin="980.7062" TopMargin="429.9214" BottomMargin="434.0786" TouchEnable="True" StretchWidthEnable="True" StretchHeightEnable="True" Scale9Width="437" Scale9Height="378" ctype="ImageViewObjectData">
+            <Size X="437.0000" Y="378.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="1008.7938" Y="623.0786" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.4569" Y="0.5017" />
+            <PreSize X="0.1979" Y="0.3043" />
+            <FileData Type="Normal" Path="Picture/Step.png" Plist="" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Lock" ActionTag="767187622" Tag="25" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="796.4153" RightMargin="899.5847" TopMargin="371.2265" BottomMargin="358.7735" StretchWidthEnable="True" StretchHeightEnable="True" Scale9Width="512" Scale9Height="512" ctype="ImageViewObjectData">
+            <Size X="512.0000" Y="512.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="1052.4153" Y="614.7735" />
+            <Scale ScaleX="0.8276" ScaleY="0.7318" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.4766" Y="0.4950" />
+            <PreSize X="0.2319" Y="0.4122" />
+            <FileData Type="Normal" Path="Lock.png" Plist="" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Page" ActionTag="-1344428698" Tag="27" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="625.3953" RightMargin="1078.6047" TopMargin="429.9235" BottomMargin="434.0765" StretchWidthEnable="True" StretchHeightEnable="True" Scale9Width="504" Scale9Height="378" ctype="ImageViewObjectData">
+            <Size X="504.0000" Y="378.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="877.3953" Y="623.0765" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.3974" Y="0.5017" />
+            <PreSize X="0.2283" Y="0.3043" />
+            <FileData Type="Normal" Path="Picture/Page.png" Plist="" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Background_Selection_2" ActionTag="1414423381" Tag="134" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="2208.0000" Y="1242.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="1104.0000" Y="621.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5000" />
-            <PreSize X="1.6552" Y="1.6560" />
+            <PreSize X="1.0000" Y="1.0000" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="Button_Back" ActionTag="-213106155" Tag="74" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="123.7390" RightMargin="1884.2610" TopMargin="92.9297" BottomMargin="1069.0703" TouchEnable="True" FontSize="14" ButtonText="back" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="170" Scale9Height="58" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -23,7 +53,7 @@
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.1013" Y="0.8930" />
-            <PreSize X="0.1499" Y="0.1067" />
+            <PreSize X="0.0906" Y="0.0644" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
             <PressedFileData Type="Normal" Path="Picture/Button_Back_pushed.png" Plist="" />
@@ -31,14 +61,14 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Image_Gold" ActionTag="-2069983422" Tag="75" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="1677.5804" RightMargin="484.4196" TopMargin="93.7078" BottomMargin="1102.2922" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="Image_Gold" ActionTag="-2069983422" Tag="75" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="1677.5803" RightMargin="484.4197" TopMargin="93.7080" BottomMargin="1102.2920" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="46.0000" Y="46.0000" />
             <AnchorPoint ScaleX="0.4742" ScaleY="0.4193" />
-            <Position X="1699.3936" Y="1121.5800" />
+            <Position X="1699.3936" Y="1121.5798" />
             <Scale ScaleX="1.8661" ScaleY="1.1925" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.7697" Y="0.9030" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PreSize X="0.0208" Y="0.0370" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="Image_Diamond" ActionTag="-1375100621" Tag="76" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="1887.8452" RightMargin="274.1548" TopMargin="92.9960" BottomMargin="1103.0040" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
@@ -48,7 +78,7 @@
             <Scale ScaleX="1.9533" ScaleY="1.1065" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.8659" Y="0.9048" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PreSize X="0.0208" Y="0.0370" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="Text_GoldNum" ActionTag="-898367231" Tag="77" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="1802.3456" RightMargin="394.6544" TopMargin="104.4938" BottomMargin="1114.5062" FontSize="20" LabelText="0" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -58,7 +88,7 @@
             <Scale ScaleX="2.9634" ScaleY="2.1548" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.8188" Y="0.9066" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PreSize X="0.0050" Y="0.0185" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
@@ -69,7 +99,7 @@
             <Scale ScaleX="2.9634" ScaleY="2.1548" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.9020" Y="0.9048" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PreSize X="0.0050" Y="0.0185" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
@@ -80,7 +110,7 @@
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.9371" Y="0.9048" />
-            <PreSize X="0.0375" Y="0.0667" />
+            <PreSize X="0.0226" Y="0.0403" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
             <PressedFileData Type="Normal" Path="Picture/Button_Add_pushed.png" Plist="" />
