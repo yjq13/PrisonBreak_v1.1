@@ -60,7 +60,6 @@ bool JailerListener::onTouchBegan(Touch* touch, Event* event)
         
         
         jailer->getParent()->scheduleOnce({CC_CALLBACK_1(JailerListener::Delay, this,jailer->getTag())}, 5.0f, "yjq is so diao");
-        
         //Director::getInstance()->getActionManager()->pauseTarget(jailer);
         SchedulerManager::stopTimeLine(jailer->getTag());
         //jailer->getParent()->stopAction(timeline);
