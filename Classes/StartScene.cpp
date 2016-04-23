@@ -56,7 +56,6 @@ void Start::setUI(){
     button_Start->addClickEventListener(CC_CALLBACK_1(Start::turnToSelect,this));
     
     auto button_Music = rootNodeL->getChildByName<ui::Button*>("Button_Music");
-    
     button_Music->addClickEventListener(CC_CALLBACK_1(Start::turnMusic,this));
 
     

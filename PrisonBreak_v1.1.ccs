@@ -33,15 +33,9 @@
         </Folder>
         <Image Name="P1.jpg" />
         <Image Name="P2.jpg" />
-        <Image Name="12.jpg" />
-        <Image Name="25.jpg" />
         <Folder Name="Picture">
-          <Image Name="Button_About.png" />
-          <Image Name="Button_About_pushed.png" />
           <Image Name="Button_Add.png" />
           <Image Name="Button_Add_pushed.png" />
-          <Image Name="Button_Back.png" />
-          <Image Name="Button_Back_pushed.png" />
           <Image Name="Button_Cancle.png" />
           <Image Name="Button_Cancle_pushed.png" />
           <Image Name="Button_CloseIndaoju.png" />
@@ -91,6 +85,9 @@
         <Image Name="Background_Start.png" />
         <Image Name="Button_Music.png" />
         <Image Name="Button_Music_off.png" />
+        <Image Name="Back.png" />
+        <Image Name="Book.png" />
+        <Image Name="Background.png" />
       </RootFolder>
     </Group>
   </SolutionFolder>

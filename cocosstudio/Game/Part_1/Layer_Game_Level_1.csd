@@ -207,7 +207,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.0566" Y="0.6666" />
             <PreSize X="0.0906" Y="0.1610" />
-            <FileData Type="Normal" Path="12.jpg" Plist="" />
+            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="Image_Destination" ActionTag="613995204" Tag="169" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1894.0225" RightMargin="113.9775" TopMargin="972.1996" BottomMargin="69.8004" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="200.0000" Y="200.0000" />
@@ -239,8 +239,8 @@
             <PreSize X="0.0906" Y="0.0644" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-            <PressedFileData Type="Normal" Path="Picture/Button_Back_pushed.png" Plist="" />
-            <NormalFileData Type="Normal" Path="Picture/Button_Back.png" Plist="" />
+            <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
+            <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
