@@ -9,13 +9,13 @@
 import Foundation
 class GamePo: NSObject {
     
-    var step :Int
+    var score :Int
     var state :Int
     var time :Int
     
-    init(step:Int,state:Int,time:Int){
+    init(score:Int,state:Int,time:Int){
         self.time=time
         self.state=state
-        self.step=step
+        self.score=score
     }
 }

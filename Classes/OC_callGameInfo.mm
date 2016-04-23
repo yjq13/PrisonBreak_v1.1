@@ -16,9 +16,17 @@ GameVo getGameInfo(int step){
     GamePo *po;
     GameInfo_deal *Gget = [[GameInfo_deal alloc]init];
     po = [Gget getGameInfoData:step];
-    vo.setData((NSInteger)po.step,(NSInteger)po.state,(NSInteger)po.time);
+    vo.setData((NSInteger)po.score,(NSInteger)po.state,(NSInteger)po.time);
     return vo;
 }
+
+void setFigureInfo(GameVo vo){
+    GamePo *po = [GamePo alloc];
+    [po initWithScore:vo._score state:vo._state time:vo._time];
+    GameInfo_deal *Gwrite = [[GameInfo_deal alloc]init];
+    [Gwrite writeGameInfoData:po];
+}
+
 
 std::vector<TimeLineVo> getTimeLine(std::string path){
     NSString *needpath = [NSString stringWithCString:path.c_str()

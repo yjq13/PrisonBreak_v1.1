@@ -6,8 +6,8 @@
 	<dict>
 		<key>time</key>
 		<integer>0</integer>
-		<key>step</key>
-		<integer>1</integer>
+		<key>score</key>
+		<integer>0</integer>
 		<key>state</key>
 		<integer>0</integer>
 	</dict>
@@ -15,8 +15,8 @@
 	<dict>
 		<key>time</key>
 		<integer>0</integer>
-		<key>step</key>
-		<integer>1</integer>
+		<key>score</key>
+		<integer>0</integer>
 		<key>state</key>
 		<integer>0</integer>
 	</dict>
@@ -24,8 +24,8 @@
 	<dict>
 		<key>time</key>
 		<integer>0</integer>
-		<key>step</key>
-		<integer>1</integer>
+		<key>score</key>
+		<integer>0</integer>
 		<key>state</key>
 		<integer>0</integer>
 	</dict>

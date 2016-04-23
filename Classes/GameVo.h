@@ -12,7 +12,7 @@
 class GameVo{
     
 public:
-    int _step;
+    int _score;
     int _state;
     int _time;
     void setData(int,int,int);

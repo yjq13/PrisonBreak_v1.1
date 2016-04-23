@@ -15,6 +15,8 @@ class TimeLineVo;
 
 GameVo getGameInfo(int);
 
+void setGameInfo(GameVo);
+
 std::vector<TimeLineVo> getTimeLine(std::string);
 
 #endif

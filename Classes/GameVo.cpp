@@ -8,8 +8,8 @@
 
 #include "GameVo.h"
 
-void GameVo::setData(int step,int state,int time){
-    _step = step;
+void GameVo::setData(int score,int state,int time){
+    _score = step;
     _state = state;
     _time = time;
 }

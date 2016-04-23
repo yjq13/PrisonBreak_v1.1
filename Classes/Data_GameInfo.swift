@@ -12,15 +12,28 @@ class GameInfo_deal: NSObject {
         let dict = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("GameInfo", ofType: "plist")!)
         
         let valueArr:AnyObject? = dict?.objectForKey("Game_\(step)")!
-        let _step: Int = valueArr?.objectForKey("step") as! Int
+        let _score: Int = valueArr?.objectForKey("score") as! Int
         let _state: Int = valueArr?.objectForKey("state") as! Int
         let _time: Int = valueArr?.objectForKey("time") as! Int
 
         
-        let Gpo : GamePo =  GamePo(step:_step,state:_state,time:_time)
+        let Gpo : GamePo =  GamePo(score:_score,state:_state,time:_time)
         return Gpo
     }
     
+    func writeGameInfoData(po:GamePo){
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentsDirectory = paths.objectAtIndex(0) as! NSString
+        let path = documentsDirectory.stringByAppendingPathComponent("GameInfo.plist")
+        let dict = NSMutableDictionary(contentsOfFile: path)
+        
+        dict?.setObject(po.score, forKey: "score")
+        dict?.setObject(po.state, forKey: "state")
+        //dict?.setObject(po.time, forKey: "time")
+        
+        dict?.writeToFile(path, atomically: false)
+        
+    }
     
     func getGameTmieLine(path:String)->[TimeLinePo]{
         let dict = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("TimeLine", ofType: "plist")!)
