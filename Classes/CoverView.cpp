@@ -152,8 +152,8 @@ void CoverView::initLevel(int currentLevel,cocos2d::ui::Widget* lock ){
     }
     for(int i=0;i<currentLevel-1;i++){
         Node* level=scrollLayer->getChildByTag(i);
-        level->setScaleX((sin((120)/2*PI/180)/sin(PI/3)));
-        level->setRotationSkewY(-(90-(120)/2-30));
+        level->setScaleX((sin((-150+150)/2*PI/180)/sin(PI/3)));
+        level->setRotationSkewY(-(90-(150-150)/2-30));
         
         Node* card=card_right.top();
         card->setRotationSkewY(-150);
@@ -246,23 +246,27 @@ void CoverView::adjustCardScale(Point adjustPoint)
     float scale = adjustPoint.x/swSize.width*360;
     thisLevel=(Node*)levelArray->getObjectAtIndex(whichLevel+isRight);
     lastLevel=(Node*)levelArray->getObjectAtIndex(whichLevel-1+isRight);
+    
+    CCLOG("angle=%f",angle);
     if(isRight&&!card_right.empty()){
         Node* card = card_right.top();
+        if(angle>-90&&angle+scale<=-90){
+            SimpleAudioEngine::getInstance()->playEffect(M_TURNSTEP.data());
+        }
         angle+=scale;
+        if(angle>-90){
+            card->setZOrder(order_right.at(card_right.empty()?order_right.size()-1:order_right.size()-card_right.size()).asInt());
+            thisLevel->setZOrder(card->getZOrder()-1);
+            lastLevel->setZOrder(card->getZOrder()+10000);
+        }else{
+            card->setZOrder(order_left.at(card_left.empty()?0:card_left.size()).asInt());
+            thisLevel->setZOrder(card->getZOrder()+10000);
+            lastLevel->setZOrder(card->getZOrder()-1);
+            
+        }
         //固定角度内才可以旋转
         if(angle<=-30&&angle>=-150){
             card->setRotationSkewY(angle);
-            if(angle>-90){
-                card->setZOrder(order_right.at(card_right.empty()?order_right.size()-1:order_right.size()-card_right.size()).asInt());
-                thisLevel->setZOrder(card->getZOrder()-1);
-                lastLevel->setZOrder(card->getZOrder()+10000);
-            }else{
-                SimpleAudioEngine::getInstance()->playEffect(M_TURNSTEP.data());
-                card->setZOrder(order_left.at(card_left.empty()?0:card_left.size()).asInt());
-                thisLevel->setZOrder(card->getZOrder()+10000);
-                lastLevel->setZOrder(card->getZOrder()-1);
-                
-            }
             thisLevel->setScaleX(-sin((-angle-30)/2*PI/180)/sin(PI/3));
             thisLevel->setRotationSkewY(-(90+(-angle-30)/2+30));
             lastLevel->setScaleX((sin((angle+150)/2*PI/180)/sin(PI/3)));
@@ -270,22 +274,24 @@ void CoverView::adjustCardScale(Point adjustPoint)
         }
     }else if(!isRight&&!card_left.empty()){
         Node* card = card_left.top();
+        if(angle<=-90&&angle+scale>-90){
+            SimpleAudioEngine::getInstance()->playEffect(M_TURNSTEP.data());
+        }
         angle+=scale;
+        if(angle>-90){
+            card->setZOrder(order_right.at(card_right.empty()?order_right.size()-1:order_right.size()-card_right.size()-1).asInt());
+            
+            thisLevel->setZOrder(card->getZOrder()-1);
+            lastLevel->setZOrder(card->getZOrder()+10000);
+        }else{
+            card->setZOrder(order_left.at(card_left.empty()?0:card_left.size()-1).asInt());
+            thisLevel->setZOrder(card->getZOrder()+10000);
+            lastLevel->setZOrder(card->getZOrder()-1);
+            
+        }
         //固定角度内才可以旋转
         if(angle<=-30&&angle>=-150){
             card->setRotationSkewY(angle);
-            if(angle>-90){
-                SimpleAudioEngine::getInstance()->playEffect(M_TURNSTEP.data());
-                card->setZOrder(order_right.at(card_right.empty()?order_right.size()-1:order_right.size()-card_right.size()-1).asInt());
-                
-                thisLevel->setZOrder(card->getZOrder()-1);
-                lastLevel->setZOrder(card->getZOrder()+10000);
-            }else{
-                card->setZOrder(order_left.at(card_left.empty()?0:card_left.size()-1).asInt());
-                thisLevel->setZOrder(card->getZOrder()+10000);
-                lastLevel->setZOrder(card->getZOrder()-1);
-                
-            }
             thisLevel->setScaleX(-sin((-angle-30)/2*PI/180)/sin(PI/3));
             thisLevel->setRotationSkewY(-(90+(-angle-30)/2+30));
             lastLevel->setScaleX((sin((angle+150)/2*PI/180)/sin(PI/3)));

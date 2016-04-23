@@ -66,7 +66,7 @@ void Start::setUI(){
     
     addChild(rootNodeL);
     
-    SimpleAudioEngine::getInstance()->playBackgroundMusic(M_BACKGROUND_START.data());
+    SimpleAudioEngine::getInstance()->playBackgroundMusic(M_BACKGROUND_START.data(),true);
 
 }
 void Start::initMusic(){
