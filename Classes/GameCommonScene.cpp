@@ -7,6 +7,7 @@
 //
 
 #include "GameCommonScene.h"
+#include "GameVo.h"
 #include "Sprite_protagonist.h"
 #include "JailerListener.h"
 #include "WallListener.h"
@@ -16,6 +17,7 @@
 #include "ui/CocosGUI.h"
 #include "Sprite_jailer.h"
 #include <string>
+#include <sstream>
 #include <iostream>
 #include "SelectScene_Detail.h"
 #include "Sprite_wall.h"
@@ -118,7 +120,14 @@ bool Game::init(){
 
     initCacheData();
     //rootNodeS = CSLoader::createNode("res/Game/Scene_Game.csb");
-    GameManager::stepOfGame=3;
+    int number;
+    
+    stringstream ss(PATH_LEVEL);
+    
+    ss>>number;
+    
+    GameVo Gvo = getGameInfo(number);
+    GameManager::stepOfGame=Gvo._time;
     string hand = "res/Game/";
     string tail = ".csb";
     string follow = "/Layer_Game_Level_";
