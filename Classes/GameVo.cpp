@@ -9,7 +9,7 @@
 #include "GameVo.h"
 
 void GameVo::setData(int score,int state,int time){
-    _score = step;
+    _score = score;
     _state = state;
     _time = time;
 }
