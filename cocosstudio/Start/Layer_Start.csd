@@ -6,20 +6,20 @@
       <ObjectData Name="Layer" Tag="9" ctype="GameLayerObjectData">
         <Size X="2208.0000" Y="1242.0000" />
         <Children>
-          <AbstractNodeData Name="Background_Start" ActionTag="1849021317" Tag="103" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="-3.4259" RightMargin="3.4258" TopMargin="-0.0002" BottomMargin="0.0002" Scale9Width="2208" Scale9Height="1242" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="Background_Start" ActionTag="1849021317" Tag="103" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="-3.5328" RightMargin="3.5327" Scale9Width="2208" Scale9Height="1242" ctype="ImageViewObjectData">
             <Size X="2208.0000" Y="1242.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1100.5741" Y="621.0002" />
+            <Position X="1100.4672" Y="621.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.4984" Y="0.5000" />
             <PreSize X="1.0000" Y="1.0000" />
             <FileData Type="Normal" Path="Background_Start.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_Start" ActionTag="-640947691" Tag="10" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="945.3528" RightMargin="951.6472" TopMargin="554.8187" BottomMargin="376.1813" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="281" Scale9Height="289" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_Start" ActionTag="-640947691" Tag="10" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="945.4088" RightMargin="951.5912" TopMargin="554.7998" BottomMargin="376.2002" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="281" Scale9Height="289" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="311.0000" Y="311.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1100.8528" Y="531.6813" />
+            <Position X="1100.9088" Y="531.7002" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.4986" Y="0.4281" />
@@ -46,10 +46,10 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_Music" ActionTag="780577777" Tag="32" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1779.6576" RightMargin="264.3424" TopMargin="106.0881" BottomMargin="974.9119" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="134" Scale9Height="139" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_Music" ActionTag="780577777" Tag="32" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1779.5648" RightMargin="264.4352" TopMargin="106.0485" BottomMargin="974.9515" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="134" Scale9Height="139" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="164.0000" Y="161.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1861.6576" Y="1055.4119" />
+            <Position X="1861.5648" Y="1055.4515" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.8431" Y="0.8498" />

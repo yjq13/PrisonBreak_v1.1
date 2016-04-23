@@ -8,6 +8,10 @@
 #include "CoverView.h"
 #define PI 3.14159
 using namespace std;
+#include "Constant_Use.h"
+//声音头文件及命名空间
+#include "SimpleAudioEngine.h"
+using namespace CocosDenshion;
 CoverView::CoverView()
 {
     
@@ -173,6 +177,8 @@ void CoverView::initData()
     whichLevel=0;
     levelNum=0;
     
+    SimpleAudioEngine::getInstance()->preloadEffect(M_TURNSTEP.data());
+    
     
     offsetPosition = Point(swSize.width/2,swSize.height/2);
     
@@ -251,6 +257,7 @@ void CoverView::adjustCardScale(Point adjustPoint)
                 thisLevel->setZOrder(card->getZOrder()-1);
                 lastLevel->setZOrder(card->getZOrder()+10000);
             }else{
+                SimpleAudioEngine::getInstance()->playEffect(M_TURNSTEP.data());
                 card->setZOrder(order_left.at(card_left.empty()?0:card_left.size()).asInt());
                 thisLevel->setZOrder(card->getZOrder()+10000);
                 lastLevel->setZOrder(card->getZOrder()-1);
@@ -268,6 +275,7 @@ void CoverView::adjustCardScale(Point adjustPoint)
         if(angle<=-30&&angle>=-150){
             card->setRotationSkewY(angle);
             if(angle>-90){
+                SimpleAudioEngine::getInstance()->playEffect(M_TURNSTEP.data());
                 card->setZOrder(order_right.at(card_right.empty()?order_right.size()-1:order_right.size()-card_right.size()-1).asInt());
                 
                 thisLevel->setZOrder(card->getZOrder()-1);

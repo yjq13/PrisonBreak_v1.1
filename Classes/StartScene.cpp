@@ -9,7 +9,10 @@
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
 USING_NS_CC;
-using namespace ui;
+
+//声音头文件及命名空间
+#include "SimpleAudioEngine.h"
+using namespace CocosDenshion;
 
 Scene* Start::createScene()
 {
@@ -41,7 +44,7 @@ bool Start::init()
     ORIGIN = cocos2d::Director::getInstance()->getVisibleOrigin();
     
     rootNodeL = CSLoader::createNode("res/Start/Layer_Start.csb");
-    
+    initMusic();
     setUI();
     return true;
 }
@@ -50,7 +53,12 @@ void Start::setUI(){
 
     auto button_Start = rootNodeL->getChildByName<ui::Button*>("Button_Start");
     
-    button_Start->addTouchEventListener(CC_CALLBACK_1(Start::turnToSelect,this));
+    button_Start->addClickEventListener(CC_CALLBACK_1(Start::turnToSelect,this));
+    
+    auto button_Music = rootNodeL->getChildByName<ui::Button*>("Button_Music");
+    
+    button_Music->addClickEventListener(CC_CALLBACK_1(Start::turnMusic,this));
+
     
     rootNodeL->setContentSize(VISIBLE_SIZE);
     
@@ -58,18 +66,29 @@ void Start::setUI(){
     
     addChild(rootNodeL);
     
+    SimpleAudioEngine::getInstance()->playBackgroundMusic(M_BACKGROUND_START.data());
 
 }
+void Start::initMusic(){
+    SimpleAudioEngine::getInstance()->preloadBackgroundMusic(M_BACKGROUND_START.data());
+    SimpleAudioEngine::getInstance()->preloadEffect(M_BUTTON_CLICK.data());
 
+}
 
 
 //点击按钮转到游戏界面
 void Start::turnToSelect(Ref* pSender)
 {
-    
+      SimpleAudioEngine::getInstance()->playEffect(M_BUTTON_CLICK.data());
     auto scene = Select::createScene();
     //this->removeAllChildren();
     ////下面搞个翻页效果
     //TransitionPageTurn* transition = createTransition_Page(scene);
     Director::getInstance()->replaceScene(scene);
+}
+void Start::turnMusic(Ref* pSender)
+{
+    SimpleAudioEngine::getInstance()->setEffectsVolume(SimpleAudioEngine::getInstance()->getEffectsVolume()==0?10:0);
+    SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(SimpleAudioEngine::getInstance()->getBackgroundMusicVolume()==0?10:0);
+
 }

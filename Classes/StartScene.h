@@ -13,7 +13,10 @@ public:
     
     virtual void setUI();
     
+    void initMusic();
+    
     void turnToSelect(cocos2d::Ref* pSender);
+      void turnMusic(cocos2d::Ref* pSender);
     // implement the "static create()" method manually
     CREATE_FUNC(Start);
 };

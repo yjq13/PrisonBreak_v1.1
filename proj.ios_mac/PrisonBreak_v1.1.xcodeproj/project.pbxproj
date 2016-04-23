@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0408A2D51C1B1326004D5BAC /* TimeLine.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0408A2D41C1B1326004D5BAC /* TimeLine.plist */; };
+		0426B9051CCB6B0A00B545E9 /* ButtonClick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0426B9041CCB6B0A00B545E9 /* ButtonClick.wav */; };
+		0426B90A1CCB711A00B545E9 /* BackGround_Start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0426B9091CCB711A00B545E9 /* BackGround_Start.mp3 */; };
+		0426B90C1CCB7A1300B545E9 /* TurnStep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0426B90B1CCB7A1300B545E9 /* TurnStep.wav */; };
 		0454C4F51C1AA94E001EC9F7 /* CoverView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0454C4F31C1AA94E001EC9F7 /* CoverView.cpp */; };
 		049BA1351CCA6B5700FF9C37 /* Section.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049BA1331CCA6B5700FF9C37 /* Section.cpp */; };
 		04BA48D01C3A8A220078D849 /* PEShapeCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BA48CE1C3A8A220078D849 /* PEShapeCache.cpp */; };
@@ -125,6 +128,9 @@
 
 /* Begin PBXFileReference section */
 		0408A2D41C1B1326004D5BAC /* TimeLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TimeLine.plist; sourceTree = "<group>"; };
+		0426B9041CCB6B0A00B545E9 /* ButtonClick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonClick.wav; sourceTree = "<group>"; };
+		0426B9091CCB711A00B545E9 /* BackGround_Start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackGround_Start.mp3; sourceTree = "<group>"; };
+		0426B90B1CCB7A1300B545E9 /* TurnStep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TurnStep.wav; sourceTree = "<group>"; };
 		0454C4F31C1AA94E001EC9F7 /* CoverView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoverView.cpp; sourceTree = "<group>"; };
 		0454C4F41C1AA94E001EC9F7 /* CoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverView.h; sourceTree = "<group>"; };
 		049BA1331CCA6B5700FF9C37 /* Section.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Section.cpp; path = ../Classes/Section.cpp; sourceTree = "<group>"; };
@@ -693,6 +699,9 @@
 		E3CB5ECE1BC97DF3005123B8 /* MusicFile */ = {
 			isa = PBXGroup;
 			children = (
+				0426B9041CCB6B0A00B545E9 /* ButtonClick.wav */,
+				0426B9091CCB711A00B545E9 /* BackGround_Start.mp3 */,
+				0426B90B1CCB7A1300B545E9 /* TurnStep.wav */,
 			);
 			name = MusicFile;
 			sourceTree = "<group>";
@@ -799,10 +808,12 @@
 				E3CB5EBF1BC97B39005123B8 /* CloseSelected.png in Resources */,
 				E3CB5EB71BC97B39005123B8 /* 01.jpg in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
+				0426B90A1CCB711A00B545E9 /* BackGround_Start.mp3 in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				E3CB5EC31BC97B39005123B8 /* SystemInfo.plist in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
+				0426B9051CCB6B0A00B545E9 /* ButtonClick.wav in Resources */,
 				E3CB5EBC1BC97B39005123B8 /* 06.jpg in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
@@ -810,6 +821,7 @@
 				E3CB5EBE1BC97B39005123B8 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 				686C4C598BE2D33D72717162 /* res in Resources */,
+				0426B90C1CCB7A1300B545E9 /* TurnStep.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

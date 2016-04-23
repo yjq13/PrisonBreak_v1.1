@@ -15,57 +15,63 @@
 using namespace std;
 USING_NS_CC;
 
-    typedef struct TIMELINE{
-        cocostudio::timeline::ActionTimeline* TimeLine[20];
-    }TIMELINE;
+typedef struct TIMELINE{
+    cocostudio::timeline::ActionTimeline* TimeLine[20];
+}TIMELINE;
 
 
-    //extern TIMELINE _TIMELINE;
-    
-    extern int SPEED_PRO;
+//extern TIMELINE _TIMELINE;
 
-    extern int ACTION_TAG;
+extern int SPEED_PRO;
 
-    extern int debugInt;
+extern int ACTION_TAG;
 
-    /*extern Section START_SECTION;
+extern int debugInt;
 
-    extern Section DESTINATION_SECTION;
+/*extern Section START_SECTION;
+ 
+ extern Section DESTINATION_SECTION;
+ 
+ extern Section STOP_SECTION;*/
 
-    extern Section STOP_SECTION;*/
+extern cocos2d::Size VISIBLE_SIZE;
 
-    extern cocos2d::Size VISIBLE_SIZE;
-    
-    extern cocos2d::Vec2 ORIGIN;
+extern cocos2d::Vec2 ORIGIN;
 
-    extern cocos2d::TransitionPageTurn* createTransition_Page(cocos2d::Scene* sceneNew);
-    
-    extern cocos2d::Size DESIGN_SIZE;
+extern cocos2d::TransitionPageTurn* createTransition_Page(cocos2d::Scene* sceneNew);
 
-    extern string PATH_PART;
+extern cocos2d::Size DESIGN_SIZE;
 
-    extern string PATH_LEVEL;
+extern string PATH_PART;
 
-    extern bool BUTTON_LOCK;
+extern string PATH_LEVEL;
 
-    extern int TIMELINE_NUM;
+extern bool BUTTON_LOCK;
 
-    const int PROTAGONIST_TAG = 1000;
+extern int TIMELINE_NUM;
 
-    const int MOUSE_TAG = 2000;
+const int PROTAGONIST_TAG = 1000;
 
-    const int JAILER_TAG = 3000;
+const int MOUSE_TAG = 2000;
 
-    const int COIN_TAG = 4000;
+const int JAILER_TAG = 3000;
 
-    const int WALL_TAG = 5000;
+const int COIN_TAG = 4000;
 
-    const int SECTION_TAG = 6000;
+const int WALL_TAG = 5000;
 
-    const int STOP_LAYER = 1;
+const int SECTION_TAG = 6000;
 
-    const int FAIL_LAYER = 2;
+const int STOP_LAYER = 1;
 
-    const int SUCCESS_LAYER = 3;
+const int FAIL_LAYER = 2;
+
+const int SUCCESS_LAYER = 3;
+
+const string M_BUTTON_CLICK="ButtonClick.wav";
+
+const string M_BACKGROUND_START="BackGround_Start.mp3";
+
+const string M_TURNSTEP="TurnStep.wav";
 
 #endif /* Constant_Use_h*/
