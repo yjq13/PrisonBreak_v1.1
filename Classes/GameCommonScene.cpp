@@ -396,9 +396,9 @@ void Game::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event){
         for (int i=0;i<10000;i++){
             if (i!=0&&points[i].x!=0) {
                 action[i] = MoveTo::create((points[i-1]-points[i]).length()/SPEED_PRO, points[i]);
-                
+                auto callfun = CallFunc::create([&]{POINT_GET++;});
                 //action->setTag(index);
-                
+                actionVector.pushBack(callfun);
                 actionVector.pushBack(action[i]);
                 //actionVector.pushBack(callfun);
                 // protagonist->runAction(action);
@@ -406,7 +406,7 @@ void Game::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event){
         }
         auto callfun = CallFunc::create([&]{
             MenuManager menuManager;
-            auto layer =menuManager.create_Menu(SUCCESS_LAYER);
+            auto layer =menuManager.create_Menu(FAIL_LAYER);
             protagonist->getParent()->addChild(layer);
             GameManager::stepOfGame--;
             if(GameManager::stepOfGame == 0){

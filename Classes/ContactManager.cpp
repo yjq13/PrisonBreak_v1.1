@@ -118,6 +118,8 @@ bool ContactManager::onContactBeginPro_End(){
     
     Node* layer =menuManager.create_Menu(SUCCESS_LAYER);
     
+    getScore();
+    CCLOG("%d",SCORE_GET);
     updateConstant();
     
     node_else->getParent()->addChild(layer);

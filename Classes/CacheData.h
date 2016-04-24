@@ -15,8 +15,11 @@
 
    extern int DIAMOND_GET;
 
-   extern int TIME_GET;
+   extern int POINT_GET;
+
+    extern int SCORE_GET;
 
 extern void initCacheData();
 
+extern int getScore();
 #endif /* CacheData_h*/
