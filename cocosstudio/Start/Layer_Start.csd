@@ -46,18 +46,33 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_Music" ActionTag="780577777" Tag="32" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1824.0643" RightMargin="308.9357" TopMargin="150.5488" BottomMargin="1019.4512" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="134" Scale9Height="139" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="75.0000" Y="72.0000" />
+          <AbstractNodeData Name="Button_MusicOn" ActionTag="780577777" Tag="32" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1779.5542" RightMargin="264.4458" TopMargin="106.0532" BottomMargin="974.9468" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="134" Scale9Height="139" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="164.0000" Y="161.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1861.5643" Y="1055.4512" />
-            <Scale ScaleX="1.5706" ScaleY="1.4953" />
+            <Position X="1861.5542" Y="1055.4468" />
+            <Scale ScaleX="0.8322" ScaleY="0.7758" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.8431" Y="0.8498" />
-            <PreSize X="0.0340" Y="0.0580" />
+            <PreSize X="0.0743" Y="0.1296" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
             <PressedFileData Type="Normal" Path="Button_Music_off.png" Plist="" />
             <NormalFileData Type="Normal" Path="Button_Music.png" Plist="" />
+            <OutlineColor A="255" R="255" G="0" B="0" />
+            <ShadowColor A="255" R="110" G="110" B="110" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Button_MusicOff" ActionTag="-1121359204" Tag="29" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1780.4170" RightMargin="263.5830" TopMargin="110.2301" BottomMargin="970.7699" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="134" Scale9Height="139" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="164.0000" Y="161.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="1862.4170" Y="1051.2699" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.8435" Y="0.8464" />
+            <PreSize X="0.0743" Y="0.1296" />
+            <TextColor A="255" R="65" G="65" B="70" />
+            <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+            <PressedFileData Type="Normal" Path="Button_Music.png" Plist="" />
+            <NormalFileData Type="Normal" Path="Button_Music_off.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>

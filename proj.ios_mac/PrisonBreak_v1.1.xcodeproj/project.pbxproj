@@ -12,6 +12,7 @@
 		0426B90A1CCB711A00B545E9 /* BackGround_Start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0426B9091CCB711A00B545E9 /* BackGround_Start.mp3 */; };
 		0426B90C1CCB7A1300B545E9 /* TurnStep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0426B90B1CCB7A1300B545E9 /* TurnStep.wav */; };
 		0454C4F51C1AA94E001EC9F7 /* CoverView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0454C4F31C1AA94E001EC9F7 /* CoverView.cpp */; };
+		046DE45E1CCCA6F00092CD5B /* MusicManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 046DE45C1CCCA6F00092CD5B /* MusicManager.cpp */; };
 		049BA1351CCA6B5700FF9C37 /* Section.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049BA1331CCA6B5700FF9C37 /* Section.cpp */; };
 		04BA48D01C3A8A220078D849 /* PEShapeCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BA48CE1C3A8A220078D849 /* PEShapeCache.cpp */; };
 		04F24EA79E2FEB16726F1559 /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D364C16A410D74FA7F2CF54 /* libcocos2d Mac.a */; };
@@ -133,6 +134,8 @@
 		0426B90B1CCB7A1300B545E9 /* TurnStep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TurnStep.wav; sourceTree = "<group>"; };
 		0454C4F31C1AA94E001EC9F7 /* CoverView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoverView.cpp; sourceTree = "<group>"; };
 		0454C4F41C1AA94E001EC9F7 /* CoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverView.h; sourceTree = "<group>"; };
+		046DE45C1CCCA6F00092CD5B /* MusicManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MusicManager.cpp; sourceTree = "<group>"; };
+		046DE45D1CCCA6F00092CD5B /* MusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicManager.h; sourceTree = "<group>"; };
 		049BA1331CCA6B5700FF9C37 /* Section.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Section.cpp; path = ../Classes/Section.cpp; sourceTree = "<group>"; };
 		049BA1341CCA6B5700FF9C37 /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Section.h; path = ../Classes/Section.h; sourceTree = "<group>"; };
 		04BA48CE1C3A8A220078D849 /* PEShapeCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PEShapeCache.cpp; sourceTree = "<group>"; };
@@ -555,6 +558,8 @@
 				E35FE8A31CC7D6AD009601DD /* SpriteManager.h */,
 				E3C0B64A1CCB0EB90021168A /* GameDataManager.cpp */,
 				E3C0B64B1CCB0EB90021168A /* GameDataManager.h */,
+				046DE45C1CCCA6F00092CD5B /* MusicManager.cpp */,
+				046DE45D1CCCA6F00092CD5B /* MusicManager.h */,
 			);
 			name = BL;
 			sourceTree = "<group>";
@@ -846,6 +851,7 @@
 				0454C4F51C1AA94E001EC9F7 /* CoverView.cpp in Sources */,
 				E349DB0F1C4C67DA00DF7E66 /* JailerListener.cpp in Sources */,
 				E30AC8AF1BD92F8A005B8686 /* Sprite_mouse.cpp in Sources */,
+				046DE45E1CCCA6F00092CD5B /* MusicManager.cpp in Sources */,
 				E3CB5E771BC9753A005123B8 /* Data_FigureInfo.swift in Sources */,
 				E347D4251C1C0AE4009ECC95 /* TimeLinePo.swift in Sources */,
 				E3CB5E7B1BC9753A005123B8 /* OC_callSystemInfo.mm in Sources */,

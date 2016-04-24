@@ -41,5 +41,7 @@ bool BUTTON_LOCK = true;
 
 int debugInt = 0;
 
+MusicManager* MUSICMANAGER=new MusicManager();
+
 
 

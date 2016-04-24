@@ -11,6 +11,7 @@
 #include <string>
 #include <stdio.h>
 #include "cocostudio/CocoStudio.h"
+#include "MusicManager.h"
 
 using namespace std;
 USING_NS_CC;
@@ -50,6 +51,8 @@ extern bool BUTTON_LOCK;
 
 extern int TIMELINE_NUM;
 
+extern MusicManager* MUSICMANAGER;
+
 const int PROTAGONIST_TAG = 1000;
 
 const int MOUSE_TAG = 2000;
@@ -73,5 +76,6 @@ const string M_BUTTON_CLICK="ButtonClick.wav";
 const string M_BACKGROUND_START="BackGround_Start.mp3";
 
 const string M_TURNSTEP="TurnStep.wav";
+
 
 #endif /* Constant_Use_h*/

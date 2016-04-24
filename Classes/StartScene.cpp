@@ -8,6 +8,7 @@
 #include "Constant_Use.h"
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
+#include "MusicManager.h"
 USING_NS_CC;
 
 //声音头文件及命名空间
@@ -55,9 +56,13 @@ void Start::setUI(){
     
     button_Start->addClickEventListener(CC_CALLBACK_1(Start::turnToSelect,this));
     
-    auto button_Music = rootNodeL->getChildByName<ui::Button*>("Button_Music");
-    button_Music->addClickEventListener(CC_CALLBACK_1(Start::turnMusic,this));
-
+    auto button_MusicOn = rootNodeL->getChildByName<ui::Widget*>("Button_MusicOn");
+    auto button_MusicOff = rootNodeL->getChildByName<ui::Widget*>("Button_MusicOff");
+    
+    button_MusicOn->addClickEventListener(CC_CALLBACK_1(MusicManager::turnMusicOn,MUSICMANAGER,button_MusicOn,button_MusicOff));
+    button_MusicOff->addClickEventListener(CC_CALLBACK_1(MusicManager::turnMusicOff,MUSICMANAGER,button_MusicOn,button_MusicOff));
+    
+    MUSICMANAGER->init(button_MusicOn, button_MusicOff);
     
     rootNodeL->setContentSize(VISIBLE_SIZE);
     
@@ -84,10 +89,4 @@ void Start::turnToSelect(Ref* pSender)
     ////下面搞个翻页效果
     //TransitionPageTurn* transition = createTransition_Page(scene);
     Director::getInstance()->replaceScene(scene);
-}
-void Start::turnMusic(Ref* pSender)
-{
-    SimpleAudioEngine::getInstance()->setEffectsVolume(SimpleAudioEngine::getInstance()->getEffectsVolume()==0?10:0);
-    SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(SimpleAudioEngine::getInstance()->getBackgroundMusicVolume()==0?10:0);
-
 }
