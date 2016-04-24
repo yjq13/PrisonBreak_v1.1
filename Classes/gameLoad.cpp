@@ -22,6 +22,7 @@
 #include "WallListener.h"
 #include "SchedulerManager.h"
 #include "protagonistListener.h"
+#include "Section.h"
 USING_NS_CC;
 
 using namespace ui;
@@ -164,5 +165,13 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     
     CCLOG("GAMELOAD is OK!!!!");
    
+    
+    //终点加载
+    Sprite* End_Section;
+
+    string all = "Sprite_Destination";
+    End_Section = rootNodeL->getChildByName<Sprite*>(all);
+
+    End_Section::setEnd_Section(index,End_Section);
     
 }

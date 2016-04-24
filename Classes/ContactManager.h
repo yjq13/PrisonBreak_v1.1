@@ -42,6 +42,8 @@ public:
     
     bool onContactBeginPro_Section();
     
+    bool onContactBeginPro_End();
+    
     bool onContactBeginPro_Wall();
     
     bool onContactSeparatePro_Section();

@@ -14,6 +14,7 @@
 #include "MenuManager.h"
 #include "SchedulerManager.h"
 #include "SpriteManager.h"
+#include "Constant.h"
 USING_NS_CC;
 
 EventListenerPhysicsContact* ContactManager::createProAction(){
@@ -68,6 +69,10 @@ bool ContactManager::switchMoveAction(const cocos2d::PhysicsContact &contact){
             ContactManager::onContactBeginPro_Wall();
             break;
         }
+        case SECTION_END_TAG:{
+            ContactManager::onContactBeginPro_End();
+            break;
+        }
     }
     
     
@@ -104,6 +109,24 @@ bool ContactManager::switchMoveActionAfter(const cocos2d::PhysicsContact &contac
 
 ContactManager::~ContactManager(){
     CCLOG("GOODBYE MOVEACTION");
+}
+
+bool ContactManager::onContactBeginPro_End(){
+    
+    target_pro = node_Pro->getScheduler()->pauseAllTargets();
+    MenuManager menuManager;
+    
+    Node* layer =menuManager.create_Menu(SUCCESS_LAYER);
+    
+    updateConstant();
+    
+    node_else->getParent()->addChild(layer);
+    
+    MenuManager::move_in(layer);
+
+    
+    
+    return false;
 }
 
 

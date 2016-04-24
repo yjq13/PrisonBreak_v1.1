@@ -23,7 +23,7 @@ Node* MenuManager::create_Menu(int MenuNumber){
         }
         case SUCCESS_LAYER:{
             Menu = CSLoader::createNode("res/Game/Other/Layer_Success.csb");
-            isPause = false;
+            isPause = true;
             setSuccessConfig(Menu);
             break;
         }
@@ -149,6 +149,9 @@ void MenuManager::menuCloseCallback(Ref* pSender,Node* layer)
 {
     if(BUTTON_LOCK==false){
         BUTTON_LOCK= true;
+        if(isPause)
+            SchedulerManager::resumePro();
+
         //auto Scene =  Select_Detail::createScene();
         //auto transition=TransitionPageTurn::create(0.1f, Scene, false);
         MenuManager::move_out(layer);

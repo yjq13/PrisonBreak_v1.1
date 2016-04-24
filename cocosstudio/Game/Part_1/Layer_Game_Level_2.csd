@@ -341,10 +341,10 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Destination" ActionTag="773875964" Tag="47" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1937.3298" RightMargin="224.6702" TopMargin="1065.3679" BottomMargin="130.6320" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Sprite_Destination" ActionTag="773875964" Tag="47" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1937.2623" RightMargin="224.7377" TopMargin="1065.3646" BottomMargin="130.6354" ctype="SpriteObjectData">
             <Size X="46.0000" Y="46.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1960.3298" Y="153.6320" />
+            <Position X="1960.2623" Y="153.6354" />
             <Scale ScaleX="5.2213" ScaleY="4.3168" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.8878" Y="0.1237" />
