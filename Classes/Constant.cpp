@@ -11,7 +11,7 @@
 #include "OC_callSystemInfo.h"
 #include "SystemVo.h"
 #include "FigureVo.h"
-
+#include "CacheData.h"
 bool VOICE = true;
 
 bool SOUND = true;
@@ -30,6 +30,11 @@ int STEP = 0;
 
 extern void setConstant();
 
+void updateConstant(){
+    DIAMOND = DIAMOND+DIAMOND_GET;
+    STEP = STEP+1;
+    GOLD_COIN = GOLD_COIN+GOLD_COIN_GET;
+};
 
 void setConstant(){
     SystemVo Svo;

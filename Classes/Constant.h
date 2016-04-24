@@ -27,4 +27,5 @@
 
     extern void setConstant();
 
+    extern void updateConstant();
 #endif /* defined(__PrisonBreak__Constant__) */
