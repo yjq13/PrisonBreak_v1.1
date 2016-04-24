@@ -65,6 +65,8 @@ const int WALL_TAG = 5000;
 
 const int SECTION_TAG = 6000;
 
+const int SECTION_END_TAG = 7000;
+
 const int STOP_LAYER = 1;
 
 const int FAIL_LAYER = 2;

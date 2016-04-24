@@ -10,12 +10,9 @@
 
 #include <stdio.h>
 #include "ui/CocosGUI.h"
-class Section{
-    cocos2d::Size* size;
-    cocos2d::Vec2* position;
+class End_Section : public cocos2d::Sprite{
 public:
-    Section(cocos2d::Size* size,cocos2d::Vec2* position);
-    Section();
-    bool isInside(cocos2d::Touch* touch);
+    static void setEnd_Section(int number,cocos2d::Sprite* getSprite);
 };
+
 #endif /* Section_hpp */
