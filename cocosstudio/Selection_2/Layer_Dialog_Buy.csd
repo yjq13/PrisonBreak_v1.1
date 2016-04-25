@@ -1,5 +1,5 @@
 <GameFile>
-  <PropertyGroup Name="Layer_Dialog_Buy" Type="Layer" ID="0d60b557-cc0b-4370-9a01-258de239ffb6" Version="2.3.3.0" />
+  <PropertyGroup Name="Layer_Dialog_Buy" Type="Layer" ID="0d60b557-cc0b-4370-9a01-258de239ffb6" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />

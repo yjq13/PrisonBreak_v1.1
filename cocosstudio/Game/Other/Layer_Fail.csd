@@ -1,5 +1,5 @@
 <GameFile>
-  <PropertyGroup Name="Layer_Fail" Type="Layer" ID="710df92d-1ed4-40f0-8971-0f5d8158ec63" Version="2.3.3.0" />
+  <PropertyGroup Name="Layer_Fail" Type="Layer" ID="710df92d-1ed4-40f0-8971-0f5d8158ec63" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />

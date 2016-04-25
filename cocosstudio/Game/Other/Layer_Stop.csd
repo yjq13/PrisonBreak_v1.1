@@ -1,5 +1,5 @@
 <GameFile>
-  <PropertyGroup Name="Layer_Stop" Type="Layer" ID="06c17c19-034b-4996-b555-fb887ad3eede" Version="2.3.3.0" />
+  <PropertyGroup Name="Layer_Stop" Type="Layer" ID="06c17c19-034b-4996-b555-fb887ad3eede" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />

@@ -1,5 +1,5 @@
 <GameFile>
-  <PropertyGroup Name="Layer_DiamondShop" Type="Layer" ID="21706ffe-7bd4-47b8-8e21-b7b0d13bb713" Version="2.3.3.0" />
+  <PropertyGroup Name="Layer_DiamondShop" Type="Layer" ID="21706ffe-7bd4-47b8-8e21-b7b0d13bb713" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="30" Speed="1.0000">
