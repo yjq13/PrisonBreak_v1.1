@@ -59,10 +59,11 @@ void Start::setUI(){
     auto button_MusicOn = rootNodeL->getChildByName<ui::Widget*>("Button_MusicOn");
     auto button_MusicOff = rootNodeL->getChildByName<ui::Widget*>("Button_MusicOff");
     
-    button_MusicOn->addClickEventListener(CC_CALLBACK_1(MusicManager::turnMusicOn,MUSICMANAGER,button_MusicOn,button_MusicOff));
-    button_MusicOff->addClickEventListener(CC_CALLBACK_1(MusicManager::turnMusicOff,MUSICMANAGER,button_MusicOn,button_MusicOff));
-    
     MUSICMANAGER->init(button_MusicOn, button_MusicOff);
+
+    button_MusicOn->addClickEventListener(CC_CALLBACK_1(MusicManager::turnMusicOn,MUSICMANAGER));
+    button_MusicOff->addClickEventListener(CC_CALLBACK_1(MusicManager::turnMusicOff,MUSICMANAGER));
+    
     
     rootNodeL->setContentSize(VISIBLE_SIZE);
     

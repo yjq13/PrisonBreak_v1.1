@@ -18,6 +18,10 @@
 #include "CoverView.h"
 #include "ShopScene.h"
 #include "MenuManager.h"
+#include "MusicManager.h"
+#include "OC_callGameInfo.h"
+#include "GameVo.h"
+#include <strstream>
 
 USING_NS_CC;
 using namespace ui;
@@ -112,6 +116,16 @@ void Select_Detail::setUI(){
     
     
     Button_StartGame->addTouchEventListener(CC_CALLBACK_1(Select_Detail::turnToGame,this));
+    
+    auto button_MusicOn = rootNodeL_Basis->getChildByName<ui::Widget*>("Button_MusicOn");
+    auto button_MusicOff = rootNodeL_Basis->getChildByName<ui::Widget*>("Button_MusicOff");
+    
+    MUSICMANAGER->init(button_MusicOn, button_MusicOff);
+    
+    button_MusicOn->addClickEventListener(CC_CALLBACK_1(MusicManager::turnMusicOn,MUSICMANAGER));
+    button_MusicOff->addClickEventListener(CC_CALLBACK_1(MusicManager::turnMusicOff,MUSICMANAGER));
+    
+
     
     //rootNodeS->addChild(rootNodeL_Diamond);
     
@@ -212,8 +226,14 @@ void Select_Detail::show_GameReady(Ref* pSender,int level)
     }
     CCLOG("step:%d,level:%d,view:%d",STEP,level,levelView->getCurLevel());
     if (result&&(level==levelView->getCurLevel()||iscur)) {
-        
+        GameVo gVO=getGameInfo(level+1);
         //Menu Movein
+        auto text_score=rootNodeL_GameStep->getChildByName<ui::TextBMFont*>("Text_Score");
+        strstream ss;
+        ss<<gVO._score;
+        string score;
+        ss>>score;
+        text_score->setText(score);
         MenuManager::move_in(rootNodeL_GameStep);
         //rootNodeL_GameStep->setVisible(true);
         //levelView->removeListener();

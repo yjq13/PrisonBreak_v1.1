@@ -15,9 +15,12 @@
 #include <stdio.h>
 #include "ui/CocosGUI.h"
 class MusicManager{
+private:
+    cocos2d::ui::Widget* buttonOn;
+    cocos2d::ui::Widget* buttonOff;
 public:
-    void turnMusicOn(cocos2d::Ref* pSender,cocos2d::ui::Widget* buttonOn,cocos2d::ui::Widget* buttonOff);
-    void turnMusicOff(cocos2d::Ref* pSender,cocos2d::ui::Widget* buttonOn,cocos2d::ui::Widget* buttonOff);
+    void turnMusicOn(cocos2d::Ref* pSender);
+    void turnMusicOff(cocos2d::Ref* pSender);
     void init(cocos2d::ui::Widget* buttonOn,cocos2d::ui::Widget* buttonOff);
 };
 

@@ -193,6 +193,7 @@ void Game::setUI(){
     Button_Tool_2->addClickEventListener(CC_CALLBACK_1(Game::toolCallback,this,2));
     
     
+    protagonist = rootNodeL->getChildByName<Sprite*>("Sprite_Protagonist");
     
     
       }
@@ -344,6 +345,9 @@ bool Game::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
     for(int i=0;i<10000;i++){
         points[i]=Point(0,0);
     }
+    if(protagonist->getNumberOfRunningActions()!=0){
+        return false;
+    }
     
     return true;
 }
@@ -351,7 +355,6 @@ bool Game::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
 void Game::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event){
     isMoved=true;
     points[index]=touch->getLocation();
-    CCLOG("添加point：(%f,%f)",points[index].x,points[index].y);
     Point nextPoint = touch->getLocationInView( );
     nextPoint = Director::getInstance()->convertToGL(nextPoint);
     // nextPoint 检测
@@ -385,7 +388,6 @@ void Game::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event){
     {
         //下面是主角跟随路线移动
         //下面是填装动作的容器
-        protagonist = rootNodeL->getChildByName<Sprite*>("Sprite_Protagonist");
         //CCLOG("hello moveStart!!!!");
         protagonist->setPosition(points[0]);
         

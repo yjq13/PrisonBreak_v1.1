@@ -15,6 +15,9 @@
 #include "SchedulerManager.h"
 #include "SpriteManager.h"
 #include "Constant.h"
+#include <strstream>
+#include "GameVo.h"
+#include "OC_callGameInfo.h"
 USING_NS_CC;
 
 EventListenerPhysicsContact* ContactManager::createProAction(){
@@ -119,7 +122,17 @@ bool ContactManager::onContactBeginPro_End(){
     Node* layer =menuManager.create_Menu(SUCCESS_LAYER);
     
     getScore();
-    CCLOG("%d",SCORE_GET);
+    strstream ss;
+    string score;
+    ss<<SCORE_GET;
+    ss>>score;
+    auto text_score=layer->getChildByName<ui::TextBMFont*>("Text_Score");
+    text_score->setText(score);
+    //此处应该有个算星星的方法
+    GameVo gVo;
+    gVo.setData(SCORE_GET, 3, 0);
+    setGameInfo(gVo);
+    
     updateConstant();
     
     node_else->getParent()->addChild(layer);

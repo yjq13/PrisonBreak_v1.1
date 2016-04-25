@@ -9,6 +9,8 @@
 #include "MusicManager.h"
 using namespace CocosDenshion;
 void MusicManager::init(cocos2d::ui::Widget* buttonOn,cocos2d::ui::Widget* buttonOff){
+    this->buttonOn=buttonOn;
+    this->buttonOff=buttonOff;
     if (SimpleAudioEngine::getInstance()->getBackgroundMusicVolume()!=0) {
         buttonOn->setVisible(false);
         buttonOn->setEnabled(false);
@@ -22,7 +24,7 @@ void MusicManager::init(cocos2d::ui::Widget* buttonOn,cocos2d::ui::Widget* butto
     }
 
 }
-void MusicManager::turnMusicOn(cocos2d::Ref *pSender, cocos2d::ui::Widget* buttonOn,cocos2d::ui::Widget* buttonOff){
+void MusicManager::turnMusicOn(cocos2d::Ref *pSender){
     if (SimpleAudioEngine::getInstance()->getBackgroundMusicVolume()==0) {
         buttonOn->setVisible(false);
         buttonOn->setEnabled(false);
@@ -32,7 +34,7 @@ void MusicManager::turnMusicOn(cocos2d::Ref *pSender, cocos2d::ui::Widget* butto
     SimpleAudioEngine::getInstance()->setEffectsVolume(SimpleAudioEngine::getInstance()->getEffectsVolume()==0?10:0);
     SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(SimpleAudioEngine::getInstance()->getBackgroundMusicVolume()==0?10:0);
 }
-void MusicManager::turnMusicOff(cocos2d::Ref *pSender, cocos2d::ui::Widget* buttonOn,cocos2d::ui::Widget* buttonOff){
+void MusicManager::turnMusicOff(cocos2d::Ref *pSender){
     if (SimpleAudioEngine::getInstance()->getBackgroundMusicVolume()!=0) {
         buttonOn->setVisible(true);
         buttonOn->setEnabled(true);
