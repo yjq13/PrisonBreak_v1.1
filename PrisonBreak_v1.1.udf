@@ -10,12 +10,19 @@
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
         <OpenedDocuments>
+<<<<<<< HEAD
           <FilePathData Path="Game/Other/Layer_Success.csd" />
           <FilePathData Path="Game/Part_1/Layer_Game_Level_1.csd" />
           <FilePathData Path="Selection_2/Layer_Selection_2.csd" />
           <FilePathData Path="Selection_2/Layer_Selection_3.csd" />
         </OpenedDocuments>
         <ActiveDocument Path="Selection_2/Layer_Selection_3.csd" />
+=======
+          <FilePathData Path="Game/Part_1/Layer_Game_Level_1.csd" />
+          <FilePathData Path="Game/Part_1/Layer_Game_Level_2.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="Game/Part_1/Layer_Game_Level_2.csd" />
+>>>>>>> origin/master
       </Value>
     </Item>
   </Properties>

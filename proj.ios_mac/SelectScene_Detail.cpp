@@ -226,6 +226,8 @@ void Select_Detail::show_GameReady(Ref* pSender,int level)
     }
     CCLOG("step:%d,level:%d,view:%d",STEP,level,levelView->getCurLevel());
     if (result&&(level==levelView->getCurLevel()||iscur)) {
+        CCLOG("第%d关",level+1);
+        GameManager::stepNow = level+1;
         GameVo gVO=getGameInfo(level+1);
         //Menu Movein
         auto text_score=rootNodeL_GameStep->getChildByName<ui::TextBMFont*>("Text_Score");

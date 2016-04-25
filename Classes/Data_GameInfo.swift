@@ -9,30 +9,32 @@
 import Foundation
 class GameInfo_deal: NSObject {
     func getGameInfoData(step:Int)->GamePo{
-        let dict = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("GameInfo", ofType: "plist")!)
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentsDirectory = paths.objectAtIndex(0) as! NSString
+        let path = documentsDirectory.stringByAppendingPathComponent("GameInfo.plist")
+        let dict = NSDictionary(contentsOfFile: path)
         
         let valueArr:AnyObject? = dict?.objectForKey("Game_\(step)")!
         let _score: Int = valueArr?.objectForKey("score") as! Int
         let _state: Int = valueArr?.objectForKey("state") as! Int
         let _time: Int = valueArr?.objectForKey("time") as! Int
-
         
         let Gpo : GamePo =  GamePo(score:_score,state:_state,time:_time)
         return Gpo
     }
     
-    func writeGameInfoData(po:GamePo){
+    func writeGameInfoData(po:GamePo,step:Int){
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
         let documentsDirectory = paths.objectAtIndex(0) as! NSString
         let path = documentsDirectory.stringByAppendingPathComponent("GameInfo.plist")
         let dict = NSMutableDictionary(contentsOfFile: path)
         
-        dict?.setObject(po.score, forKey: "score")
-        dict?.setObject(po.state, forKey: "state")
+        let valueArr:AnyObject? = dict?.objectForKey("Game_\(step)")!
+        valueArr?.setObject(po.score, forKey: "score")
+        valueArr?.setObject(po.state, forKey: "state")
         //dict?.setObject(po.time, forKey: "time")
         
         dict?.writeToFile(path, atomically: false)
-        
     }
     
     func getGameTmieLine(path:String)->[TimeLinePo]{
