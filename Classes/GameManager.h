@@ -17,6 +17,7 @@
 class GameManager{
     
 public:
+static int stepNow;
 
 static bool isStop;
     

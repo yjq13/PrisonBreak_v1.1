@@ -18,6 +18,7 @@
 #include <strstream>
 #include "GameVo.h"
 #include "OC_callGameInfo.h"
+#include "GameManager.h"
 USING_NS_CC;
 
 EventListenerPhysicsContact* ContactManager::createProAction(){
@@ -131,7 +132,7 @@ bool ContactManager::onContactBeginPro_End(){
     //此处应该有个算星星的方法
     GameVo gVo;
     gVo.setData(SCORE_GET, 3, 0);
-    setGameInfo(gVo);
+    setGameInfo(gVo,GameManager::stepNow);
     
     updateConstant();
     
@@ -183,10 +184,16 @@ bool ContactManager::onContactBeginPro_Mouse(){
 
 
 bool ContactManager::onContactBeginPro_Wall(){
-    
-    CCLOG("Pro_Wall boom!!!!");
-    //    removeChild(protagonist);
-    return false;
+
+//    target_pro = node_Pro->getScheduler()->pauseAllTargets();
+//    MenuManager menuManager;
+//    
+//    Node* layer =menuManager.create_Menu(FAIL_LAYER);
+//    node_else->getParent()->addChild(layer);
+//    
+//    MenuManager::move_in(layer);
+//
+//    return false;
 }
 
 

@@ -20,11 +20,11 @@ GameVo getGameInfo(int step){
     return vo;
 }
 
-void setGameInfo(GameVo vo){
+void setGameInfo(GameVo vo,int step){
     GamePo *po = [GamePo alloc];
     [po initWithScore:vo._score state:vo._state time:vo._time];
     GameInfo_deal *Gwrite = [[GameInfo_deal alloc]init];
-    [Gwrite writeGameInfoData:po];
+    [Gwrite writeGameInfoData:po step:step];
 }
 
 

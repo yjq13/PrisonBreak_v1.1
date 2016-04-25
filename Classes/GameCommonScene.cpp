@@ -355,6 +355,7 @@ bool Game::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
 void Game::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event){
     isMoved=true;
     points[index]=touch->getLocation();
+
     Point nextPoint = touch->getLocationInView( );
     nextPoint = Director::getInstance()->convertToGL(nextPoint);
     // nextPoint 检测

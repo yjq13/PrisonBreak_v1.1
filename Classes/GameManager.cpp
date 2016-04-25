@@ -27,6 +27,8 @@ bool GameManager::isTouchPro = false;
 
 int GameManager::stepOfGame = 3;
 
+int GameManager::stepNow = 0;
+
 protagonistListener GameManager::proListener = *new protagonistListener();
 
 Sprite_jailer GameManager::jailer[10];
