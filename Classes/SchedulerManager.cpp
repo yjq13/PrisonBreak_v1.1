@@ -26,8 +26,7 @@ TIMELINE SchedulerManager::loadTimeLine(cocos2d::Node* rootNodeL){
         rootNodeL->runAction(_timeline.TimeLine[i]);
         TIMELINE_NUM++;
     }
-    
-    CCLOG("TIMELINE is OK!!!!!");
+
     return _timeline;
 }
 

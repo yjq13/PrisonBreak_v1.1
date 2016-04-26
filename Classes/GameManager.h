@@ -13,7 +13,7 @@
 #include "Sprite_jailer.h"
 #include "JailerListener.h"
 #include "protagonistListener.h"
-
+#include "WallListener.h"
 class GameManager{
     
 public:
@@ -38,6 +38,8 @@ static set<void *> target_pro;
 static Sprite_jailer jailer[10];
     
 static JailerListener jailerlistener[10];
+    
+static wallListener walllistener[10];
     
 static protagonistListener proListener;
 

@@ -24,7 +24,6 @@ EventListenerTouchOneByOne* JailerListener::create(cocos2d::Sprite* getSprite){
     listener->onTouchBegan =CC_CALLBACK_2(JailerListener::onTouchBegan,this);
     listener->onTouchEnded =CC_CALLBACK_2(JailerListener::onTouchEnded,this);
     jailer = getSprite;
-    CCLOG("JailerListener is OK!!!!!");
     return listener;
 }
 
@@ -33,7 +32,6 @@ EventListenerTouchOneByOne* JailerListener::create(cocos2d::Sprite* getSprite){
 //获取精灵的位置
 Rect  JailerListener::getRect()
 {
-    CCLOG("@@@@%d",jailer->getTag());
     return Rect(jailer->getPositionX() - jailer->getContentSize().width * jailer->getAnchorPoint().x,
                 jailer->getPositionY() - jailer->getContentSize().height * jailer->getAnchorPoint().y,
                 jailer->getContentSize().width, jailer->getContentSize().height);

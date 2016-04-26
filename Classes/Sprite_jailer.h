@@ -20,14 +20,6 @@ class Sprite_jailer{
     int Tag;
     
 public:
-    
-    Sprite_jailer(){
-        CCLOG("我是精灵警察！我被创造啦！！！");
-    }
-    
-    ~Sprite_jailer(){
-        CCLOG("我是精灵警察！我被删掉啦！！！");
-    }
 
     
     void setIsStop(bool stop);

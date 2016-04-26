@@ -45,11 +45,7 @@ Scene* Game::createScene(){
     return scene;
 }
 
-Game::~Game(){
-    debugInt+=1000;
-    CCLOG("goodbye game%d",debugInt);
 
-    }
 void Game::draw(Renderer *renderer,const cocos2d::Mat4& transform,uint32_t flags)
 {
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -111,7 +107,7 @@ void Game::drawLine()
 
 bool Game::init(){
     debugInt++;
-    CCLOG("init被调用过了%d",debugInt);
+
     a=DrawNode::create();
     
     addChild(a,100);

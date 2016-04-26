@@ -28,15 +28,6 @@ public:
     cocos2d::Rect getRect();
     
     
-    
-    JailerListener(){
-        CCLOG("hello JailerListener");
-    }
-    
-    ~JailerListener(){
-        CCLOG("goodbye Jailerlistener");
-    };
-    
     bool onTouchBegan(cocos2d::Touch* touch,cocos2d::Event* event);
     
     void onTouchMoved(cocos2d::Touch* touch,cocos2d::Event* event);

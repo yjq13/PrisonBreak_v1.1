@@ -35,4 +35,6 @@ Sprite_jailer GameManager::jailer[10];
 
 JailerListener GameManager::jailerlistener[10];
 
+wallListener GameManager::walllistener[10];
+
 

@@ -54,8 +54,7 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
             EventListenerTouchOneByOne* listener = GameManager::jailerlistener[index].create(Demo_jailer[index]);
             listener->setEnabled(false);
             GameManager::JailerlistenerList.push_back(listener);
-            //_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, getSprite);
-            //添加一个触摸委托给dispatcher的列表,委托对象this,
+            
             Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, Demo_jailer[index]);
             
         }
@@ -75,12 +74,12 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
         string first = "Sprite_Wall_";
         string all = first+numberStr;
         
-        wallListener spritelistener[10];
+        
         Demo_wall[index] = rootNodeL->getChildByName<Sprite*>(all);
         if(Demo_wall[index]!=NULL){
             Sprite_wall::setWall(index,Demo_wall[index]);
             
-            EventListenerTouchOneByOne* listener = spritelistener[index].create(Demo_wall[index]);
+            EventListenerTouchOneByOne* listener = GameManager::walllistener[index].create(Demo_wall[index]);
             
             listener->setEnabled(false);
             GameManager::WalllistenerList.push_back(listener);
@@ -163,7 +162,6 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
             Sprite_SpecialSection::setSpecialSection(index,Demo_Section[index]);
     }while(Demo_Section[index]!=NULL);
     
-    CCLOG("GAMELOAD is OK!!!!");
    
     
     //终点加载

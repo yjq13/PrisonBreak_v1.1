@@ -51,11 +51,7 @@ public:
     void setPhyWorld(PhysicsWorld* world){
     m_world=world;
     };
-    Game(){
-        CCLOG("hello game");
-    }
     
-    ~Game();
     
     
     void doPasue();

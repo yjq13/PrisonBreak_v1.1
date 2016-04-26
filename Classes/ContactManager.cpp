@@ -32,7 +32,6 @@ EventListenerPhysicsContact* ContactManager::createProAction(){
     
     //Sprite* node  = NodeL->getChildByName<Sprite*>("Sprite_Mouse_1");
     
-    CCLOG("contact is OK!!!!!");
     
     return contactListener;
     
@@ -111,9 +110,6 @@ bool ContactManager::switchMoveActionAfter(const cocos2d::PhysicsContact &contac
     return false;
 }
 
-ContactManager::~ContactManager(){
-    CCLOG("GOODBYE MOVEACTION");
-}
 
 bool ContactManager::onContactBeginPro_End(){
     
@@ -169,7 +165,7 @@ bool ContactManager::onContactBeginPro_Jailer(){
     }
     
     //layer->setVisible(true);
-    CCLOG("Pro_Jailer boom!!!!");
+
     return false;
 }
 
@@ -182,7 +178,7 @@ bool ContactManager::onContactBeginPro_Mouse(){
         node_else->setVisible(false);
         DIAMOND_GET++;
     }
-    CCLOG("Pro_Mouse boom and diamond = %d!!!!",DIAMOND_GET);
+    
     return false;
 }
 
@@ -190,22 +186,22 @@ bool ContactManager::onContactBeginPro_Mouse(){
 
 bool ContactManager::onContactBeginPro_Wall(){
 
-//    target_pro = node_Pro->getScheduler()->pauseAllTargets();
-//    MenuManager menuManager;
-//    
-//    Node* layer =menuManager.create_Menu(FAIL_LAYER);
-//    node_else->getParent()->addChild(layer);
-//    
-//    MenuManager::move_in(layer);
-//
-//    return false;
+    target_pro = node_Pro->getScheduler()->pauseAllTargets();
+    MenuManager menuManager;
+    
+    Node* layer =menuManager.create_Menu(FAIL_LAYER);
+    node_else->getParent()->addChild(layer);
+    
+    MenuManager::move_in(layer);
+
+    return false;
 }
 
 
 
 
 bool ContactManager::onContactBeginPro_Coin(){
-    CCLOG("Pro_coin boom!!!!");
+
     //    removeChild(protagonist);
     return false;
 }
@@ -222,7 +218,7 @@ bool ContactManager::onContactBeginPro_Section(){
     sched->setTimeScale(0.2f);
     
     //node_Pro->runAction(action);
-        CCLOG("Pro_Section boom!!!!");
+
     return true;
 }
 

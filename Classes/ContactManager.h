@@ -26,14 +26,10 @@ public:
     std::set<void *> target_else;
     
     std::set<void *> target_pro;
-    ContactManager(){
-        CCLOG("hello contactmanager");
-    }
+
     
     virtual EventListenerPhysicsContact* createProAction();
-    
-    ~ContactManager();
-    
+        
     bool onContactBeginPro_Jailer();
     
     bool onContactBeginPro_Mouse();

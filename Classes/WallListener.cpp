@@ -9,6 +9,7 @@
 #include "WallListener.h"
 #include "cocos2d.h"
 #include "Constant_Use.h"
+#include "ListenerManager.h"
 USING_NS_CC;
 
 EventListenerTouchOneByOne* wallListener::create(cocos2d::Sprite* getSprite){
@@ -19,7 +20,6 @@ EventListenerTouchOneByOne* wallListener::create(cocos2d::Sprite* getSprite){
     listener->onTouchBegan =CC_CALLBACK_2(wallListener::onTouchBegan,this);
     listener->onTouchEnded =CC_CALLBACK_2(wallListener::onTouchEnded,this);
     wall = getSprite;
-    CCLOG("WallListener is OK!!!!!");
     return listener;
 }
 
@@ -48,14 +48,9 @@ bool wallListener::onTouchBegan(Touch* touch, Event* event)
     bool isTouched = rc.containsPoint(localPos);
     if(isTouched&&wall->isVisible())
     {
-        CCLOG("我不见啦！！！");
         wall->setVisible(false);
         wall->getPhysicsBody()->setEnable(false);
-        
-        return false;
-        
-    }else{
-        CCLOG("你点偏啦！！！！！");
+        ListenerManager::removeListenerWall();
     }
     return false;
 }

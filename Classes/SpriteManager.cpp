@@ -14,7 +14,6 @@ void SpriteManager::setStopJailer(int Tag){
     for(int i=0;i<10;i++){
         if(GameManager::jailer[i].getTag()==Tag){
             GameManager::jailer[i].setIsStop(true);
-            CCLOG("精灵设置为听下啦");
             break;
         }
     }

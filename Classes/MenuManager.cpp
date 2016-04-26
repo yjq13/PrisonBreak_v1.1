@@ -131,7 +131,6 @@ void MenuManager::pauseCallresume(Ref* pSender,Node* layer){
 }
 
 void MenuManager::Callrestart(Ref *pSender,Node* layer){
-    CCLOG("pop GAME");
     if(BUTTON_LOCK==false){
         BUTTON_LOCK= true;
         //menuCloseCallback(pSender);

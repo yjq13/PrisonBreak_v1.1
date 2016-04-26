@@ -27,7 +27,7 @@ void ListenerManager::removeListenerJailer(){
 
 void ListenerManager::removeListenerWall(){
     for(int i = 0;i<GameManager::JailerlistenerList.size();i++){
-        EventListenerTouchOneByOne* listener = GameManager::JailerlistenerList[i];
+        EventListenerTouchOneByOne* listener = GameManager::WalllistenerList[i];
         listener->setEnabled(false);
     }
     

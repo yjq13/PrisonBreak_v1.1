@@ -20,14 +20,13 @@ public:
     virtual EventListenerTouchOneByOne* create(cocos2d::Sprite* getSprite);
     cocos2d::Rect getRect();
     
-    ~protagonistListener();
+
     
     bool onTouchBegan(cocos2d::Touch* touch,cocos2d::Event* event);
     
     void onTouchMoved(cocos2d::Touch* touch,cocos2d::Event* event);
     
     void onTouchEnded(cocos2d::Touch* touch,cocos2d::Event* event);
-    
-    //bool isMoveValid();
+
 };
 #endif /* SpriteListener_hpp */

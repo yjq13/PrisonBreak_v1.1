@@ -21,8 +21,7 @@ EventListenerTouchOneByOne* protagonistListener::create(cocos2d::Sprite* getSpri
     listener->onTouchBegan =CC_CALLBACK_2(protagonistListener::onTouchBegan,this);
     listener->onTouchEnded =CC_CALLBACK_2(protagonistListener::onTouchEnded,this);
     protagonist = getSprite;
-    CCLOG("%d",protagonist->getTag());
-    CCLOG("SpriteListener is OK!!!!!");
+
     return listener;
 }
 
@@ -52,12 +51,10 @@ bool protagonistListener::onTouchBegan(Touch* touch, Event* event)
     bool isTouched = rc.containsPoint(localPos);
     if(isTouched)
     {
-        printf("我被点中了!\n");
         GameManager::isTouchPro = true;
         return false;
         
     }else{
-        printf("没有点中");
         return false;
     }
     
@@ -66,8 +63,4 @@ bool protagonistListener::onTouchBegan(Touch* touch, Event* event)
 void protagonistListener::onTouchMoved(Touch* touch, Event* event)
 {
     
-}
-
-protagonistListener::~protagonistListener(){
-    CCLOG("SYE GOODBYE! 主角");
 }

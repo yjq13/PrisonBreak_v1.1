@@ -31,11 +31,6 @@ public:
     
     
     
-    gameLoad(){
-        CCLOG("hello gameload");
-    }
-    ~gameLoad(){
-        CCLOG("goodbye gameload");
-    }
+
 };
 #endif /* gameLoad_hpp */

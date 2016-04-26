@@ -137,7 +137,7 @@ void Select::turnToSelect_Detail(Ref* pSender,int number)
         Director::getInstance()->replaceScene(sceneNew);
         
     }else{
-        
+        CCLOG("这个大关未开启！！");
     }
 }
 

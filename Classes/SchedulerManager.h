@@ -31,11 +31,6 @@ public:
     
     static void resumeTimeLine(int Tag);
     
-    SchedulerManager(){
-        CCLOG("hello TimeLineLoad");
-    }
-    ~SchedulerManager(){
-        CCLOG("goodbye TimeLineLoad");
-    }
+
 };
 #endif /* TimeLineLoad_hpp */

@@ -16,7 +16,6 @@ Sprite* Sprite_mouse::create(int number,Sprite* getSprite){
     
     auto ManBody=PhysicsBody::createBox(mouse->getContentSize());
     
-    CCLOG("%f,%f",mouse->getContentSize().width,mouse->getContentSize().height);
     
     ManBody->setGravityEnable(false);
     ManBody->setContactTestBitmask(0xFFFF);
