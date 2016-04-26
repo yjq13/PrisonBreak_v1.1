@@ -126,8 +126,10 @@ bool Game::init(){
     
     ss>>number;
     
+    
     GameVo Gvo = getGameInfo(number);
     GameManager::stepOfGame=Gvo._time;
+    
     string hand = "res/Game/";
     string tail = ".csb";
     string follow = "/Layer_Game_Level_";
@@ -142,6 +144,7 @@ bool Game::init(){
     
     //rootNodeL->setTag(131250081);
     
+    getScoreF();
     
     GameManager::_TIMELINE = SchedulerManager::loadTimeLine(rootNodeL);
     gameload.loadGame(rootNodeL);

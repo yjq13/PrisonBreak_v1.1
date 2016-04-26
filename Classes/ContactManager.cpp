@@ -130,9 +130,14 @@ bool ContactManager::onContactBeginPro_End(){
     auto text_score=layer->getChildByName<ui::TextBMFont*>("Text_Score");
     text_score->setText(score);
     //此处应该有个算星星的方法
+    CCLOG("sss:%d",getState());
     GameVo gVo;
-    gVo.setData(SCORE_GET, 3, 0);
-    setGameInfo(gVo,GameManager::stepNow);
+    GameVo gvoG = getGameInfo(GameManager::stepNow);
+    
+    if(gvoG._score<SCORE_GET){
+        gVo.setData(SCORE_GET, 3, getState());
+        setGameInfo(gVo,GameManager::stepNow);
+    }
     
     updateConstant();
     

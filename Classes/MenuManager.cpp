@@ -10,6 +10,7 @@
 #include "SchedulerManager.h"
 #include "MenuManager.h"
 #include "GameCommonScene.h"
+#include "SelectScene_Detail.h"
 USING_NS_CC;
 
 Node* MenuManager::create_Menu(int MenuNumber){
@@ -157,6 +158,10 @@ void MenuManager::menuCloseCallback(Ref* pSender,Node* layer)
         MenuManager::move_out(layer);
         // moveaction->target
         Director::getInstance()->popScene();
+        
+        auto sceneNew = Select_Detail::createScene();
+        
+        Director::getInstance()->replaceScene(sceneNew);
     }
     //#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     //exit(0);

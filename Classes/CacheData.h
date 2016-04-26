@@ -19,7 +19,13 @@
 
     extern int SCORE_GET;
 
+extern int SCOREF_GET;
+
 extern void initCacheData();
 
+extern int getScoreF();
+
 extern int getScore();
+
+extern int getState();
 #endif /* CacheData_h*/
