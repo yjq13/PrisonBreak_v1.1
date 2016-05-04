@@ -235,7 +235,7 @@ void Select_Detail::show_GameReady(Ref* pSender,int level)
         ss<<gVO._score;
         string score;
         ss>>score;
-        text_score->setText(score);
+        text_score->setString(score);
         MenuManager::move_in(rootNodeL_GameStep);
         //rootNodeL_GameStep->setVisible(true);
         //levelView->removeListener();

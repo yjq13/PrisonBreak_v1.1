@@ -334,6 +334,16 @@ void CoverView::addCard(Node* card, int zOrder, int tag)
     card->setAnchorPoint(Point(0,0));
     card->setPosition(Point(positionX,offsetPosition.y-card->getContentSize().height));
     card->setRotationSkewY(-30);
+    
+    
+    ui::TextBMFont* text_level=ui::TextBMFont::create();
+    text_level->setString("Level_");
+    text_level->
+    text_level->setColor(Color3B(0, 0, 0));
+    text_level->setContentSize(card->getContentSize()/2);
+    text_level->setPosition(Vec2(card->getContentSize().width/10, card->getContentSize().height/2));
+    card->addChild(text_level);
+    
     //card->setScale(scale);
     scrollLayer->addChild(card , zOrder,tag);
     cardNum++;

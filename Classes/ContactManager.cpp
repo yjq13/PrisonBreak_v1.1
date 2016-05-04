@@ -124,7 +124,7 @@ bool ContactManager::onContactBeginPro_End(){
     ss<<SCORE_GET;
     ss>>score;
     auto text_score=layer->getChildByName<ui::TextBMFont*>("Text_Score");
-    text_score->setText(score);
+    text_score->setString(score);
     //此处应该有个算星星的方法
     CCLOG("sss:%d",getState());
     GameVo gVo;
