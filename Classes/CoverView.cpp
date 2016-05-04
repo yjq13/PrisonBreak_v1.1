@@ -338,7 +338,6 @@ void CoverView::addCard(Node* card, int zOrder, int tag)
     
     ui::TextBMFont* text_level=ui::TextBMFont::create();
     text_level->setString("Level_");
-    text_level->
     text_level->setColor(Color3B(0, 0, 0));
     text_level->setContentSize(card->getContentSize()/2);
     text_level->setPosition(Vec2(card->getContentSize().width/10, card->getContentSize().height/2));
