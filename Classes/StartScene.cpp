@@ -89,5 +89,5 @@ void Start::turnToSelect(Ref* pSender)
     //this->removeAllChildren();
     ////下面搞个翻页效果
     //TransitionPageTurn* transition = createTransition_Page(scene);
-    Director::getInstance()->replaceScene(scene);
+    Director::getInstance()->pushScene(scene);
 }

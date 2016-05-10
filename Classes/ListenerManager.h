@@ -21,6 +21,12 @@ public:
     static void removeListenerJailer();
     
     static void removeListenerWall();
+    
+    static void removeListenerAll();
+    
+    static void removeListenerPro();
+    
+    static void resumeListenerPro();
 };
 
 #endif /* ListenerManager_hpp */

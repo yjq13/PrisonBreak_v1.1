@@ -9,8 +9,10 @@
 #include "Constant_Use.h"
 #include "SchedulerManager.h"
 #include "MenuManager.h"
+#include "ListenerManager.h"
 #include "GameCommonScene.h"
 #include "SelectScene_Detail.h"
+#include "ButtonManager.h"
 USING_NS_CC;
 
 Node* MenuManager::create_Menu(int MenuNumber){
@@ -124,8 +126,13 @@ void MenuManager::setSuccessConfig(Node* menu){
 
 
 void MenuManager::pauseCallresume(Ref* pSender,Node* layer){
+    TIMEEND = getTime();
+    
     SchedulerManager::resumePro();
     SchedulerManager::resumeTimeLine();
+    ListenerManager::resumeListenerPro();
+    ButtonManager::resumeButton();
+    
     MenuManager::move_out(layer);
     
 }

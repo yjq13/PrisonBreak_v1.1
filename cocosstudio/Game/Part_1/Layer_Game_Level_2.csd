@@ -278,7 +278,7 @@
             <FileData Type="Normal" Path="Picture/Mouse_1.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Special_Section_1" ActionTag="-8519406" Tag="25" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="857.6320" RightMargin="950.3680" TopMargin="193.8381" BottomMargin="648.1618" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Sprite_Slow_Section_1" ActionTag="-8519406" Tag="25" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="857.6320" RightMargin="950.3680" TopMargin="193.8381" BottomMargin="648.1618" ctype="SpriteObjectData">
             <Size X="400.0000" Y="400.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="1057.6320" Y="848.1618" />
@@ -350,6 +350,17 @@
             <PrePosition X="0.8878" Y="0.1237" />
             <PreSize X="0.0208" Y="0.0370" />
             <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
+            <BlendFunc Src="770" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Sprite_Quick_Section_1" ActionTag="-768260981" Tag="37" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="842.4150" RightMargin="965.5850" TopMargin="724.5153" BottomMargin="117.4847" ctype="SpriteObjectData">
+            <Size X="400.0000" Y="400.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="1042.4150" Y="317.4847" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.4721" Y="0.2556" />
+            <PreSize X="0.1812" Y="0.3221" />
+            <FileData Type="Normal" Path="Picture/Sprite_Special_Section.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
         </Children>

@@ -35,6 +35,12 @@ static set<void *> target_else;
 
 static set<void *> target_pro;
     
+static cocos2d::ui::Button* Button_Back;
+    
+static cocos2d::ui::Button* Button_Tool_1;
+    
+static cocos2d::ui::Button* Button_Tool_2;
+    
 static Sprite_jailer jailer[10];
     
 static JailerListener jailerlistener[10];

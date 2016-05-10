@@ -11,6 +11,7 @@
 #include <string>
 #include <stdio.h>
 #include "cocostudio/CocoStudio.h"
+#include "cocos2d.h"
 #include "MusicManager.h"
 
 using namespace std;
@@ -51,6 +52,10 @@ extern bool BUTTON_LOCK;
 
 extern int TIMELINE_NUM;
 
+extern long TIMESTART;
+
+extern long TIMEEND;
+
 extern MusicManager* MUSICMANAGER;
 
 const int PROTAGONIST_TAG = 1000;
@@ -72,6 +77,8 @@ const int STOP_LAYER = 1;
 const int FAIL_LAYER = 2;
 
 const int SUCCESS_LAYER = 3;
+
+extern long getTime();
 
 const string M_BUTTON_CLICK="ButtonClick.wav";
 

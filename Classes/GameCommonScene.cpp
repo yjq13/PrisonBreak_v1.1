@@ -14,6 +14,7 @@
 #include "ContactManager.h"
 #include "cocostudio/CocoStudio.h"
 #include "Constant_Use.h"
+#include "Constant.h"
 #include "ui/CocosGUI.h"
 #include "Sprite_jailer.h"
 #include <string>
@@ -29,13 +30,14 @@
 #include "pauseScene.h"
 #include "ListenerManager.h"
 #include "SpriteManager.h"
+#include "ButtonManager.h"
 USING_NS_CC;
 using namespace ui;
 
 int i = 0;
 Scene* Game::createScene(){
     auto scene=Scene::createWithPhysics();
-    scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+    //scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     auto layer=Game::create();
     
     
@@ -177,19 +179,19 @@ void Game::setUI(){
     addChild(rootNodeL);
     
     
-    auto Button_Back = rootNodeL->getChildByName<ui::Button*>("Button_Stop");
+    GameManager::Button_Back = rootNodeL->getChildByName<ui::Button*>("Button_Stop");
     
-    Button_Back->addClickEventListener(CC_CALLBACK_1(Game::stopCallback,this));
+    GameManager::Button_Back->addClickEventListener(CC_CALLBACK_1(Game::stopCallback,this));
     
     
     
-    auto Button_Tool_1 = rootNodeL->getChildByName<ui::Button*>("Button_Tool_1");
+    GameManager::Button_Tool_1 = rootNodeL->getChildByName<ui::Button*>("Button_Tool_1");
     
-    Button_Tool_1->addClickEventListener(CC_CALLBACK_1(Game::toolCallback,this,1));
+    GameManager::Button_Tool_1->addClickEventListener(CC_CALLBACK_1(Game::toolCallback,this,1));
     
-    auto Button_Tool_2 = rootNodeL->getChildByName<ui::Button*>("Button_Tool_2");
+    GameManager::Button_Tool_2 = rootNodeL->getChildByName<ui::Button*>("Button_Tool_2");
     
-    Button_Tool_2->addClickEventListener(CC_CALLBACK_1(Game::toolCallback,this,2));
+    GameManager::Button_Tool_2->addClickEventListener(CC_CALLBACK_1(Game::toolCallback,this,2));
     
     
     protagonist = rootNodeL->getChildByName<Sprite*>("Sprite_Protagonist");
@@ -249,8 +251,12 @@ void Game::update(float dt){
 
 void Game::stopCallback(Ref* pSender){
     GameManager::isStop = true;
+    TIMESTART = getTime();
     SchedulerManager::pauseTimeLine();
     SchedulerManager::pausePro();
+    ListenerManager::removeListenerPro();
+    //有时间分离出去吧累死了
+    ButtonManager::shieldButton();
     doPasue();
     //addChild(stopNodeL);
     //target = Director::getInstance()->getScheduler()->pauseAllTargets();
@@ -287,8 +293,7 @@ void Game::menuCloseCallback(Ref* pSender)
 }
 
 void Game::onExit(){
-    CCLOG("我退出了");
-
+   
 }
 
 void Game::Callresume(Ref* pSender){
@@ -323,7 +328,6 @@ void Game::toolCallback(Ref* pSender,int toolMark){
         }
         case 2:{
             ListenerManager::addListenerWall();
-            CCLOG("!!!!!%d",toolMark);
             break;
         }
     };

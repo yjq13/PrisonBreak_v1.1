@@ -24,6 +24,7 @@ class Game : public MyScene{
     GameManager manager;
     gameLoad gameload;
     ContactManager moveaction;
+
     cocos2d::Node* rootNodeL;
     cocos2d::Node* failNodeL;
     cocos2d::Node* successNodeL;

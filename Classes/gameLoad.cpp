@@ -146,7 +146,7 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, Demo_protagonist);
     
     //特殊区域加载
-    Sprite* Demo_Section[10];
+    Sprite* Demo_Section_Slow[10];
     index = 0;
     do{
         index++;
@@ -155,12 +155,29 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
         sprintf(number,"%d",index);
         string numberStr=number;
         
-        string first = "Sprite_Special_Section_";
+        string first = "Sprite_Slow_Section_";
         string all = first+numberStr;
-        Demo_Section[index] = rootNodeL->getChildByName<Sprite*>(all);
-        if(Demo_Section[index]!=NULL)
-            Sprite_SpecialSection::setSpecialSection(index,Demo_Section[index]);
-    }while(Demo_Section[index]!=NULL);
+        Demo_Section_Slow[index] = rootNodeL->getChildByName<Sprite*>(all);
+        if(Demo_Section_Slow[index]!=NULL)
+            Sprite_SpecialSection::setSpecialSection(index,Demo_Section_Slow[index]);
+    }while(Demo_Section_Slow[index]!=NULL);
+    
+    //特殊区域加载
+    Sprite* Demo_Section_Quick[10];
+    index = 0;
+    do{
+        index++;
+        char number[25];
+        memset(number,0,sizeof(number));
+        sprintf(number,"%d",index);
+        string numberStr=number;
+        
+        string first = "Sprite_Quick_Section_";
+        string all = first+numberStr;
+        Demo_Section_Quick[index] = rootNodeL->getChildByName<Sprite*>(all);
+        if(Demo_Section_Quick[index]!=NULL)
+            Sprite_SpecialSection::setSpecialSection(500+index,Demo_Section_Quick[index]);
+    }while(Demo_Section_Quick[index]!=NULL);
     
    
     

@@ -61,15 +61,23 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Text_Score" ActionTag="-119877833" Tag="31" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1039.4417" RightMargin="1006.5583" TopMargin="370.1023" BottomMargin="835.8977" LabelText="Fnt Text Label" ctype="TextBMFontObjectData">
-            <Size X="162.0000" Y="36.0000" />
+          <AbstractNodeData Name="Text_Score" ActionTag="-119877833" Tag="31" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1082.8391" RightMargin="1050.1609" TopMargin="380.6250" BottomMargin="846.3750" LabelText="Fnt Text Label" ctype="TextBMFontObjectData">
+            <Size X="75.0000" Y="15.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1120.4417" Y="853.8977" />
+            <Position X="1120.3391" Y="853.8750" />
             <Scale ScaleX="4.6723" ScaleY="8.2389" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5074" Y="0.6875" />
-            <PreSize X="0.0734" Y="0.0290" />
-            <LabelBMFontFile_CNB Type="Default" Path="Default/defaultBMFont.fnt" Plist="" />
+            <PreSize X="0.0340" Y="0.0121" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Text_State" ActionTag="-252768785" Tag="61" IconVisible="False" LeftMargin="1080.7706" RightMargin="1052.2294" TopMargin="577.2079" BottomMargin="649.7921" LabelText="Fnt Text Label" ctype="TextBMFontObjectData">
+            <Size X="75.0000" Y="15.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="1118.2706" Y="657.2921" />
+            <Scale ScaleX="4.6605" ScaleY="6.3383" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.5065" Y="0.5292" />
+            <PreSize X="0.0340" Y="0.0121" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

@@ -123,10 +123,23 @@ bool ContactManager::onContactBeginPro_End(){
     string score;
     ss<<SCORE_GET;
     ss>>score;
+    
     auto text_score=layer->getChildByName<ui::TextBMFont*>("Text_Score");
-    text_score->setText(score);
+    text_score->setString(score);
+    
+    if(GameManager::stepNow==STEP){
+        STEP++;
+    }
+    
     //此处应该有个算星星的方法
-    CCLOG("sss:%d",getState());
+    int stateN = getState();
+     strstream ss1;
+    string state;
+    ss1<<stateN;
+    ss1>>state;
+    CCLOG("星星：%d",stateN);
+    auto text_state=layer->getChildByName<ui::TextBMFont*>("Text_State");
+    text_state->setString(state);
     GameVo gVo;
     GameVo gvoG = getGameInfo(GameManager::stepNow);
     
@@ -213,10 +226,11 @@ bool ContactManager::onContactBeginPro_Section(){
     
     Scheduler* sched = node_Pro->getScheduler();
     
-    //sched->pauseAllTargets();
-    
-    sched->setTimeScale(0.2f);
-    
+    if(node_else->getTag()>= 6500){
+    sched->setTimeScale(1.5f);
+    }else{
+    sched->setTimeScale(0.5f);
+    }
     //node_Pro->runAction(action);
 
     return true;

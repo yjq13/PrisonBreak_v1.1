@@ -31,13 +31,13 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Image_Gold" ActionTag="1852493722" Tag="24" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="1672.2595" RightMargin="489.7405" TopMargin="104.3484" BottomMargin="1091.6516" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="Image_Gold" ActionTag="1852493722" Tag="24" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="1665.8806" RightMargin="496.1194" TopMargin="108.0613" BottomMargin="1087.9387" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
             <Size X="46.0000" Y="46.0000" />
-            <AnchorPoint ScaleX="0.4742" ScaleY="0.4193" />
-            <Position X="1694.0728" Y="1110.9395" />
+            <AnchorPoint ScaleX="0.3141" />
+            <Position X="1680.3289" Y="1087.9387" />
             <Scale ScaleX="1.8661" ScaleY="1.1925" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.7672" Y="0.8945" />
+            <PrePosition X="0.7610" Y="0.8760" />
             <PreSize X="0.0208" Y="0.0370" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
@@ -51,25 +51,25 @@
             <PreSize X="0.0208" Y="0.0370" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Text_GoldNum" ActionTag="-395964772" Tag="27" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="1797.0222" RightMargin="399.9778" TopMargin="115.1355" BottomMargin="1103.8645" FontSize="20" LabelText="0" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-            <Size X="11.0000" Y="23.0000" />
+          <AbstractNodeData Name="Text_GoldNum" ActionTag="-395964772" Tag="27" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="1796.0222" RightMargin="399.9778" TopMargin="115.1355" BottomMargin="1103.8645" FontSize="20" LabelText="0" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+            <Size X="12.0000" Y="23.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1802.5222" Y="1115.3645" />
+            <Position X="1802.0222" Y="1115.3645" />
             <Scale ScaleX="2.9634" ScaleY="2.1548" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.8164" Y="0.8980" />
-            <PreSize X="0.0050" Y="0.0185" />
+            <PrePosition X="0.8161" Y="0.8980" />
+            <PreSize X="0.0054" Y="0.0185" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Text_DiamondNum" ActionTag="-350297381" Tag="28" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="1981.1157" RightMargin="215.8843" TopMargin="116.8527" BottomMargin="1102.1473" FontSize="20" LabelText="0" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-            <Size X="11.0000" Y="23.0000" />
+          <AbstractNodeData Name="Text_DiamondNum" ActionTag="-350297381" Tag="28" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="1980.1157" RightMargin="215.8843" TopMargin="116.8527" BottomMargin="1102.1473" FontSize="20" LabelText="0" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+            <Size X="12.0000" Y="23.0000" />
             <AnchorPoint ScaleX="0.4650" ScaleY="0.4785" />
-            <Position X="1986.2307" Y="1113.1528" />
+            <Position X="1985.6957" Y="1113.1528" />
             <Scale ScaleX="2.9634" ScaleY="2.1548" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.8996" Y="0.8963" />
-            <PreSize X="0.0050" Y="0.0185" />
+            <PrePosition X="0.8993" Y="0.8963" />
+            <PreSize X="0.0054" Y="0.0185" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>

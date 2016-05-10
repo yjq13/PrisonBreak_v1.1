@@ -45,7 +45,7 @@ class GameInfo_deal: NSObject {
         var valueArr = dict_LEVEL?.allValues
         var polist:[TimeLinePo] = []
         var count = 0
-        for(count;count<counter;count++){
+        for(;count<counter;count++){
             let tag: Int = valueArr![count].objectForKey("tag") as! Int
             let startTime: Int = valueArr![count].objectForKey("startTime") as! Int
             let endTime: Int = valueArr![count].objectForKey("endTime") as! Int

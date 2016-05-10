@@ -55,9 +55,10 @@ bool JailerListener::onTouchBegan(Touch* touch, Event* event)
     if(isTouched)
     {
         SpriteManager::setStopJailer(jailer->getTag());
-        
-        
+
+
         jailer->getParent()->scheduleOnce({CC_CALLBACK_1(JailerListener::Delay, this,jailer->getTag())}, 5.0f, "yjq is so diao");
+
         //Director::getInstance()->getActionManager()->pauseTarget(jailer);
         SchedulerManager::stopTimeLine(jailer->getTag());
         //jailer->getParent()->stopAction(timeline);
@@ -65,10 +66,12 @@ bool JailerListener::onTouchBegan(Touch* touch, Event* event)
         //timeline->setTimeSpeed(1);
        // timeline->pause();
         ListenerManager::removeListenerJailer();
+        GameManager::Button_Tool_1->setEnabled(false);
         return false;
         
     }else{
-        
+        ListenerManager::removeListenerJailer();
+        CCLOG("没有点中");
     }
     return false;
 }
@@ -78,9 +81,12 @@ void JailerListener::onTouchMoved(Touch* touch, Event* event){
     
     
 }
-
+void resumeCompensate(float dt ,int Tag){
+    SchedulerManager::resumeTimeLine(Tag);
+}
 
 void JailerListener::Delay(float dt,int Tag){
     //CCLOG("%d",jailer->getTag());
-    SchedulerManager::resumeTimeLine(Tag);
+
+        SchedulerManager::resumeTimeLine(Tag);
     }

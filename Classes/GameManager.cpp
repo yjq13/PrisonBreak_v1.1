@@ -12,6 +12,12 @@ TIMELINE GameManager::_TIMELINE = *new TIMELINE();
 
 Scheduler* GameManager::PRO_SCHEDULER = new Scheduler();
 
+cocos2d::ui::Button* GameManager::Button_Back;
+
+cocos2d::ui::Button* GameManager::Button_Tool_1;
+
+cocos2d::ui::Button* GameManager::Button_Tool_2;
+
 
 set<void *> GameManager::target_pro = *new set<void *>();
 

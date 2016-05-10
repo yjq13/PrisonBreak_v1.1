@@ -84,6 +84,7 @@
 		E35AFADF1CB644A100D2BCE4 /* GameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E35AFADD1CB644A100D2BCE4 /* GameManager.cpp */; };
 		E35FE8A41CC7D6AD009601DD /* SpriteManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E35FE8A21CC7D6AD009601DD /* SpriteManager.cpp */; };
 		E369982E1C0C24AA007BB3C8 /* LockofSelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */; };
+		E382710A1CD1B9DC00B38057 /* ButtonManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E38271081CD1B9DC00B38057 /* ButtonManager.cpp */; };
 		E38CB7851CB9096C004D889B /* ListenerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E38CB7831CB9096C004D889B /* ListenerManager.cpp */; };
 		E3910A221C27AEA6008F65A6 /* Special_Section.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3910A201C27AEA6008F65A6 /* Special_Section.cpp */; };
 		E3C0B64C1CCB0EB90021168A /* GameDataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3C0B64A1CCB0EB90021168A /* GameDataManager.cpp */; };
@@ -234,6 +235,8 @@
 		E35FE8A31CC7D6AD009601DD /* SpriteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteManager.h; sourceTree = "<group>"; };
 		E369982C1C0C24AA007BB3C8 /* LockofSelect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LockofSelect.cpp; sourceTree = "<group>"; };
 		E369982D1C0C24AA007BB3C8 /* LockofSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockofSelect.h; sourceTree = "<group>"; };
+		E38271081CD1B9DC00B38057 /* ButtonManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ButtonManager.cpp; sourceTree = "<group>"; };
+		E38271091CD1B9DC00B38057 /* ButtonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonManager.h; sourceTree = "<group>"; };
 		E38CB7831CB9096C004D889B /* ListenerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ListenerManager.cpp; sourceTree = "<group>"; };
 		E38CB7841CB9096C004D889B /* ListenerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenerManager.h; sourceTree = "<group>"; };
 		E3910A201C27AEA6008F65A6 /* Special_Section.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Special_Section.cpp; path = ../Classes/Special_Section.cpp; sourceTree = "<group>"; };
@@ -560,6 +563,8 @@
 				E3C0B64B1CCB0EB90021168A /* GameDataManager.h */,
 				046DE45C1CCCA6F00092CD5B /* MusicManager.cpp */,
 				046DE45D1CCCA6F00092CD5B /* MusicManager.h */,
+				E38271081CD1B9DC00B38057 /* ButtonManager.cpp */,
+				E38271091CD1B9DC00B38057 /* ButtonManager.h */,
 			);
 			name = BL;
 			sourceTree = "<group>";
@@ -885,6 +890,7 @@
 				E3CB5E801BC9753A005123B8 /* Data_SystemInfo.swift in Sources */,
 				E3CB5E781BC9753A005123B8 /* GameCommonScene.cpp in Sources */,
 				E369982E1C0C24AA007BB3C8 /* LockofSelect.cpp in Sources */,
+				E382710A1CD1B9DC00B38057 /* ButtonManager.cpp in Sources */,
 				E3CB5E821BC9753A005123B8 /* FigurePo.swift in Sources */,
 				E30AC8B51BD93281005B8686 /* Sprite_coin.cpp in Sources */,
 				049BA1351CCA6B5700FF9C37 /* Section.cpp in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #include "LockofSelect.h"
-bool LockofSelect::checkLock_outside(int number){
+bool LockofSelect::checkLock_inside(int number){
     if(number<=STEP){
         return true;
     }else{
@@ -15,7 +15,7 @@ bool LockofSelect::checkLock_outside(int number){
     }
 }
 
-bool LockofSelect::checkLock_inside(int number){
+bool LockofSelect::checkLock_outside(int number){
     if((number-1)<=STEP/15){
         return true;
     }else{

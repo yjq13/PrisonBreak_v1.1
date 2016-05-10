@@ -33,6 +33,10 @@ int ACTION_TAG = 0;
 
 int TIMELINE_NUM = 0;
 
+long TIMESTART = 0;
+
+long TIMEEND = 0;
+
 string PATH_PART = "";
 
 string PATH_LEVEL = "";
@@ -43,5 +47,10 @@ int debugInt = 0;
 
 MusicManager* MUSICMANAGER=new MusicManager();
 
+long getTime(){
+    struct timeval nowTimeval;
+    gettimeofday(&nowTimeval, NULL);
+    return (nowTimeval.tv_sec*1000 + nowTimeval.tv_usec / 1000);
+}
 
 

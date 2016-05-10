@@ -109,6 +109,23 @@ void Select_Detail::setCoverflow(){
 
 void Select_Detail::setUI(){
     
+    auto Diamond_Num = rootNodeL_Basis->getChildByName<ui::Text*>("Text_DiamondNum");
+    
+    char number[2];
+    memset(number,0,sizeof(number));
+    sprintf(number,"%d",DIAMOND);
+    string numberStr=number;
+    
+    Diamond_Num->setString(numberStr);
+    
+    auto Gold_Num = rootNodeL_Basis->getChildByName<ui::Text*>("Text_GoldNum");
+    
+    memset(number,0,sizeof(number));
+    sprintf(number,"%d",GOLD_COIN);
+    numberStr=number;
+    
+    Gold_Num->setString(numberStr);
+    
     auto Button_Close   =  rootNodeL_GameStep->getChildByName<ui::Button*>("Button_Close");
     auto Button_StartGame = rootNodeL_GameStep->getChildByName<ui::Button*>("Button_StartGame");
     
@@ -175,11 +192,15 @@ void Select_Detail::menuCloseCallback(Ref* pSender)
 
 void Select_Detail::shieldButton(){
     auto Button_Back = rootNodeL_Basis->getChildByName<ui::Button*>("Button_Back");
+    auto Button_AddDiamond=rootNodeL_Basis->getChildByName<ui::Button*>("Button_AddDiamond");
+    Button_AddDiamond->setEnabled(false);
     Button_Back->setEnabled(false);
 }
 
 void Select_Detail::resumeButton(){
     auto Button_Back = rootNodeL_Basis->getChildByName<ui::Button*>("Button_Back");
+    auto Button_AddDiamond=rootNodeL_Basis->getChildByName<ui::Button*>("Button_AddDiamond");
+    Button_AddDiamond->setEnabled(true);
     Button_Back->setEnabled(true);
 }
 
@@ -210,7 +231,7 @@ void Select_Detail::turnToGame(Ref* pSender)
 void Select_Detail::show_GameReady(Ref* pSender,int level)
 {
     LockofSelect lock;
-    bool result = lock.checkLock_outside(level+1);
+    bool result = lock.checkLock_inside(level+1);
     
     char data[25];
     memset(data,0,sizeof(data));
@@ -220,15 +241,16 @@ void Select_Detail::show_GameReady(Ref* pSender,int level)
     PATH_LEVEL = stepSu;
     //CCLOG("asasd%d  %d",level,levelView->getCurCardIndex());
     bool iscur=false;//是否未滑动
-    if(level+1==STEP){
+    if(level==(STEP-1)%15){
         //999999表示未滑动，即选择当前关
         iscur=true;
     }
     CCLOG("step:%d,level:%d,view:%d",STEP,level,levelView->getCurLevel());
     if (result&&(level==levelView->getCurLevel()||iscur)) {
         CCLOG("第%d关",level+1);
-        GameManager::stepNow = level+1;
-        GameVo gVO=getGameInfo(level+1);
+        
+        GameManager::stepNow = STEP;
+        GameVo gVO=getGameInfo(STEP);
         //Menu Movein
         auto text_score=rootNodeL_GameStep->getChildByName<ui::TextBMFont*>("Text_Score");
         strstream ss;

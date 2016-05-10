@@ -32,8 +32,15 @@ extern void setConstant();
 
 void updateConstant(){
     DIAMOND = DIAMOND+DIAMOND_GET;
-    STEP = STEP+1;
+    
+    STEP = STEP;
     GOLD_COIN = GOLD_COIN+GOLD_COIN_GET;
+    FigureVo Fvo;
+    Fvo._step = STEP;
+    Fvo._diamond = DIAMOND;
+    Fvo._gold_coin = GOLD_COIN;
+    
+    setFigureInfo(Fvo);
 };
 
 void setConstant(){

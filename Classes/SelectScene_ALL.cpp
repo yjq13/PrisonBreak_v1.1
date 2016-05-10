@@ -71,29 +71,42 @@ void Select::setUI(){
     
     auto Button_AddDiamond=rootNodeL->getChildByName<ui::Button*>("Button_AddDiamond");
     
+    auto Diamond_Num = rootNodeL->getChildByName<ui::Text*>("Text_DiamondNum");
     
-    Button_Part_1->addTouchEventListener(CC_CALLBACK_1(Select::turnToSelect_Detail,this,1));
+    char number[2];
+    memset(number,0,sizeof(number));
+    sprintf(number,"%d",DIAMOND);
+    string numberStr=number;
+    Diamond_Num->setString(numberStr);
     
-    Button_Part_2->addTouchEventListener(CC_CALLBACK_1(Select::turnToSelect_Detail,this,2));
+    auto Gold_Num = rootNodeL->getChildByName<ui::Text*>("Text_GoldNum");
     
-    Button_Part_3->addTouchEventListener(CC_CALLBACK_1(Select::turnToSelect_Detail,this,3));
+    memset(number,0,sizeof(number));
+    sprintf(number,"%d",GOLD_COIN);
+    numberStr=number;
     
-    Button_Part_4->addTouchEventListener(CC_CALLBACK_1(Select::turnToSelect_Detail,this,4));
+    Gold_Num->setString(numberStr);
     
-    Button_Back->addTouchEventListener(CC_CALLBACK_1(Select::menuCloseCallback,this));
+    Button_Part_1->addClickEventListener(CC_CALLBACK_1(Select::turnToSelect_Detail,this,1));
     
-    Button_AddDiamond->addTouchEventListener(CC_CALLBACK_1(Select::turnToShop,this));
+    Button_Part_2->addClickEventListener(CC_CALLBACK_1(Select::turnToSelect_Detail,this,2));
+    
+    Button_Part_3->addClickEventListener(CC_CALLBACK_1(Select::turnToSelect_Detail,this,3));
+    
+    Button_Part_4->addClickEventListener(CC_CALLBACK_1(Select::turnToSelect_Detail,this,4));
+    
+    Button_Back->addClickEventListener(CC_CALLBACK_1(Select::menuCloseCallback,this));
+    
+    Button_AddDiamond->addClickEventListener(CC_CALLBACK_1(Select::turnToShop,this));
 
 }
 
 
 void Select::menuCloseCallback(Ref* pSender)
 {
-    
-    auto Scene=Start::createScene();
 
     //auto transition=createTransition_Page(Scene);
-    Director::getInstance()->replaceScene(Scene);
+    Director::getInstance()->popScene();
     
 }
 

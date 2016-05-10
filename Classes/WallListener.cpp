@@ -9,6 +9,7 @@
 #include "WallListener.h"
 #include "cocos2d.h"
 #include "Constant_Use.h"
+#include "GameManager.h"
 #include "ListenerManager.h"
 USING_NS_CC;
 
@@ -50,6 +51,9 @@ bool wallListener::onTouchBegan(Touch* touch, Event* event)
     {
         wall->setVisible(false);
         wall->getPhysicsBody()->setEnable(false);
+        ListenerManager::removeListenerWall();
+        GameManager::Button_Tool_2->setEnabled(false);
+    }else{
         ListenerManager::removeListenerWall();
     }
     return false;

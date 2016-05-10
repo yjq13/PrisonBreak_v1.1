@@ -33,6 +33,15 @@ void ListenerManager::removeListenerWall(){
     
 }
 
+void ListenerManager::removeListenerPro(){
+    GameManager::Prolistener->setEnabled(false);
+}
+
+void ListenerManager::resumeListenerPro(){
+    GameManager::Prolistener->setEnabled(true);
+}
+
+
 void ListenerManager::addListenerWall(){
     for(int i = 0;i<GameManager::WalllistenerList.size();i++){
         EventListenerTouchOneByOne* listener = GameManager::WalllistenerList[i];
