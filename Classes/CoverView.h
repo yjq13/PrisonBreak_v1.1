@@ -78,5 +78,6 @@ private:
     Size wSize;
     Array* levelArray;
     ScrollView* scrollView;
+    int totalCard;
 };
 #endif

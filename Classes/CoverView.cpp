@@ -9,6 +9,8 @@
 #define PI 3.14159
 using namespace std;
 #include "Constant_Use.h"
+#include "strstream"
+#include "string.h"
 //声音头文件及命名空间
 #include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
@@ -131,8 +133,21 @@ void CoverView::update(float dt){
     
 }
 void CoverView::initCard(int cardNum,cocos2d::ui::Widget* card ){
+    totalCard=cardNum;
+    
+    //第一关的字
+    ui::TextBMFont* text_level=ui::TextBMFont::create();
+    text_level->setAnchorPoint(Point(0,0));
+    text_level->setString("Level_1");
+    text_level->setColor(Color3B(0, 0, 0));
+    text_level->setRotationSkewY(30);
+    text_level->setScale(5, 5);
+    text_level->setPosition(Vec2(-card->getContentSize().width*sin(PI/3), 0)+Point(offsetPosition.x,offsetPosition.y));
+    addChild(text_level);
+    
     for(int i = 0 ; i< cardNum ; i++)
-    {cocos2d::ui::Widget* player = card->clone();
+    {
+        cocos2d::ui::Widget* player = card->clone();
         this->addCard(player,1000+i*10);
         
         order_left.push_back(Value(i*10));
@@ -334,6 +349,25 @@ void CoverView::addCard(Node* card, int zOrder, int tag)
     card->setAnchorPoint(Point(0,0));
     card->setPosition(Point(positionX,offsetPosition.y-card->getContentSize().height));
     card->setRotationSkewY(-30);
+    
+    char level[20]="Level_";
+    strstream ss;
+    char* l;
+//    ss<<10;
+//    ss>>l;
+    sprintf(l, "%d",totalCard-cardNum+1);
+    
+    strcat(level, l);
+    
+    ui::TextBMFont* text_level=ui::TextBMFont::create();
+    text_level->setString(level);
+    text_level->setColor(Color3B(0, 0, 0));
+    text_level->setRotationSkewY(-180);
+    text_level->setAnchorPoint(Point(0,0));
+    text_level->setScale(5, 5);
+    text_level->setPosition(Vec2(card->getContentSize().width, card->getContentSize().height/3));
+    card->addChild(text_level);
+    
     //card->setScale(scale);
     scrollLayer->addChild(card , zOrder,tag);
     cardNum++;
