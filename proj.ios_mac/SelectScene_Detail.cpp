@@ -65,19 +65,26 @@ void Select_Detail::setCoverflow(){
     float winWidth = Director::getInstance()->getWinSize().width;
     float winHeight = Director::getInstance()->getWinSize().height;
     
+    Widget* start_0=rootNodeL_Basis->getChildByName<ImageView*>("Start_0");
+    Widget* start_1=rootNodeL_Basis->getChildByName<ImageView*>("Start_1");
+    Widget* start_2=rootNodeL_Basis->getChildByName<ImageView*>("Start_2");
+    Widget* start_3=rootNodeL_Basis->getChildByName<ImageView*>("Start_3");
+    
     Rect swRect_level = Rect::Rect(0.01f*winWidth,0.0f*winHeight,0.98f*winWidth,1.0f*winHeight);
     Size slSize_level = Size::Size(2.3f*winWidth,1.0f*winHeight);
     float disDistance = 0.1f*winWidth;
     float disScale = 0.25f;
     levelView = CoverView::create(swRect_level,slSize_level,disDistance,disScale);
     
-    levelView->initCard(9,rootNodeL_Basis->getChildByName<Widget*>("Page"));
+    
+    
+    levelView->initCard(3-1,rootNodeL_Basis->getChildByName<Widget*>("Page"),start_0,start_1,start_2,start_3);
     
     
     Widget* step=rootNodeL_Basis->getChildByName<Widget*>("Step");
     
     
-    for(int i = 0 ; i< 10 ; i++)
+    for(int i = 0 ; i< 3 ; i++)
     {
         Widget* a=step->clone();
         a->addClickEventListener(CC_CALLBACK_1(Select_Detail::show_GameReady,this,i));

@@ -14,7 +14,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.4929" />
             <PreSize X="1.0000" Y="1.0000" />
-            <FileData Type="Normal" Path="Background.png" Plist="" />
+            <FileData Type="Normal" Path="NewUI/Background.png" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="Button_Back" ActionTag="1601702668" Tag="23" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="107.7772" RightMargin="1900.2228" TopMargin="76.9702" BottomMargin="1085.0298" TouchEnable="True" FontSize="14" ButtonText="back" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="200.0000" Y="80.0000" />

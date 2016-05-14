@@ -11,6 +11,8 @@ using namespace std;
 #include "Constant_Use.h"
 #include "strstream"
 #include "string.h"
+#include "GameVo.h"
+#include "OC_callGameInfo.h"
 //声音头文件及命名空间
 #include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
@@ -132,9 +134,12 @@ void CoverView::update(float dt){
     
     
 }
-void CoverView::initCard(int cardNum,cocos2d::ui::Widget* card ){
+void CoverView::initCard(int cardNum,cocos2d::ui::Widget* card ,cocos2d::ui::Widget* start_0,cocos2d::ui::Widget* start_1,cocos2d::ui::Widget* start_2,cocos2d::ui::Widget* start_3){
     totalCard=cardNum;
-    
+    this->start_0=start_0;
+    this->start_1=start_1;
+    this->start_2=start_2;
+    this->start_3=start_3;
     //第一关的字
     ui::TextBMFont* text_level=ui::TextBMFont::create();
     text_level->setAnchorPoint(Point(0,0));
@@ -144,6 +149,40 @@ void CoverView::initCard(int cardNum,cocos2d::ui::Widget* card ){
     text_level->setScale(5, 5);
     text_level->setPosition(Vec2(-card->getContentSize().width*sin(PI/3), 0)+Point(offsetPosition.x,offsetPosition.y));
     addChild(text_level);
+    
+    //最后一关的星级
+    GameVo gVO=getGameInfo(cardNum+1);
+    start_0->setAnchorPoint(Vec2(1, 0));
+    start_0->setPosition(Vec2(card->getContentSize().width*sin(PI/3), 0)+Point(offsetPosition.x,offsetPosition.y));
+    start_0->setRotationSkewY(-30);
+    start_1->setAnchorPoint(Vec2(1, 0));
+    start_1->setPosition(Vec2(card->getContentSize().width*sin(PI/3), 0)+Point(offsetPosition.x,offsetPosition.y));
+    start_1->setRotationSkewY(-30);
+    start_2->setAnchorPoint(Vec2(1, 0));
+    start_2->setPosition(Vec2(card->getContentSize().width*sin(PI/3), 0)+Point(offsetPosition.x,offsetPosition.y));
+    start_2->setRotationSkewY(-30);
+    start_3->setAnchorPoint(Vec2(1, 0));
+    start_3->setPosition(Vec2(card->getContentSize().width*sin(PI/3), 0)+Point(offsetPosition.x,offsetPosition.y));
+    start_3->setRotationSkewY(-30);
+    switch (gVO._state) {
+        case 0:
+            CCLOG("a wodongl:%f,%f",offsetPosition.x,offsetPosition.y);
+            
+            addChild(start_0->clone());
+            break;
+        case 1:
+            addChild(start_1->clone());
+            break;
+        case 2:
+            addChild(start_2->clone());
+            break;
+        case 3:
+            addChild(start_3->clone());
+            break;
+        default:
+            break;
+    }
+
     
     for(int i = 0 ; i< cardNum ; i++)
     {
@@ -173,6 +212,8 @@ void CoverView::initLevel(int currentLevel,cocos2d::ui::Widget* lock ){
         Node* card=card_right.top();
         card->setRotationSkewY(-150);
         card->setZOrder(order_left.at(card_left.empty()?0:card_left.size()).asInt());
+        card->getChildByTag(10)->setVisible(true);
+        card->getChildByTag(20)->setVisible(false);
         card_right.pop();
         card_left.push(card);
     }
@@ -273,10 +314,14 @@ void CoverView::adjustCardScale(Point adjustPoint)
             card->setZOrder(order_right.at(card_right.empty()?order_right.size()-1:order_right.size()-card_right.size()).asInt());
             thisLevel->setZOrder(card->getZOrder()-1);
             lastLevel->setZOrder(card->getZOrder()+10000);
+            card->getChildByTag(10)->setVisible(false);
+            card->getChildByTag(20)->setVisible(true);
         }else{
             card->setZOrder(order_left.at(card_left.empty()?0:card_left.size()).asInt());
             thisLevel->setZOrder(card->getZOrder()+10000);
             lastLevel->setZOrder(card->getZOrder()-1);
+            card->getChildByTag(10)->setVisible(true);
+            card->getChildByTag(20)->setVisible(false);
             
         }
         //固定角度内才可以旋转
@@ -298,10 +343,14 @@ void CoverView::adjustCardScale(Point adjustPoint)
             
             thisLevel->setZOrder(card->getZOrder()-1);
             lastLevel->setZOrder(card->getZOrder()+10000);
+            card->getChildByTag(10)->setVisible(false);
+            card->getChildByTag(20)->setVisible(true);
         }else{
             card->setZOrder(order_left.at(card_left.empty()?0:card_left.size()-1).asInt());
             thisLevel->setZOrder(card->getZOrder()+10000);
             lastLevel->setZOrder(card->getZOrder()-1);
+            card->getChildByTag(10)->setVisible(true);
+            card->getChildByTag(20)->setVisible(false);
             
         }
         //固定角度内才可以旋转
@@ -366,7 +415,40 @@ void CoverView::addCard(Node* card, int zOrder, int tag)
     text_level->setAnchorPoint(Point(0,0));
     text_level->setScale(5, 5);
     text_level->setPosition(Vec2(card->getContentSize().width, card->getContentSize().height/3));
-    card->addChild(text_level);
+    
+    text_level->setVisible(false);
+    card->addChild(text_level,0,10);
+    
+    //加入星级
+    GameVo gVO=getGameInfo(cardNum+1);
+    start_0->setAnchorPoint(Vec2(1, 0));
+    start_0->setPosition(Vec2(card->getContentSize().width, card->getContentSize().height/4));
+    start_0->setRotationSkewY(0);
+    start_1->setAnchorPoint(Vec2(1, 0));
+    start_1->setPosition(Vec2(card->getContentSize().width, card->getContentSize().height/4));
+    start_1->setRotationSkewY(0);
+    start_2->setAnchorPoint(Vec2(1, 0));
+    start_2->setPosition(Vec2(card->getContentSize().width, card->getContentSize().height/4));
+    start_2->setRotationSkewY(0);
+    start_3->setAnchorPoint(Vec2(1, 0));
+    start_3->setPosition(Vec2(card->getContentSize().width, card->getContentSize().height/4));
+    start_3->setRotationSkewY(0);
+    switch (gVO._state) {
+        case 0:
+            card->addChild(start_0->clone(),0,20);
+            break;
+        case 1:
+            card->addChild(start_1->clone(),0,20);
+            break;
+        case 2:
+            card->addChild(start_2->clone(),0,20);
+            break;
+        case 3:
+            card->addChild(start_3->clone(),0,20);
+            break;
+        default:
+            break;
+    }
     
     //card->setScale(scale);
     scrollLayer->addChild(card , zOrder,tag);

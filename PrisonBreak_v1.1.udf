@@ -9,14 +9,11 @@
     </Item>
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
-<<<<<<< HEAD
-        <ActiveDocument />
-=======
         <OpenedDocuments>
           <FilePathData Path="Selection_2/Layer_Selection_2.csd" />
+          <FilePathData Path="Selection_2/Layer_Selection_3.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="Selection_2/Layer_Selection_2.csd" />
->>>>>>> origin/master
+        <ActiveDocument Path="Selection_2/Layer_Selection_3.csd" />
       </Value>
     </Item>
   </Properties>

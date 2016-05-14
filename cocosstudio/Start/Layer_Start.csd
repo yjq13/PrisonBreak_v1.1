@@ -14,7 +14,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.4984" Y="0.5000" />
             <PreSize X="1.0000" Y="1.0000" />
-            <FileData Type="Normal" Path="Background_Start.png" Plist="" />
+            <FileData Type="Normal" Path="NewUI/Background_Start.png" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="Button_Start" ActionTag="-640947691" Tag="10" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="945.4088" RightMargin="951.5912" TopMargin="554.7998" BottomMargin="376.2002" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="281" Scale9Height="289" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="311.0000" Y="311.0000" />
@@ -27,7 +27,7 @@
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
             <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
-            <NormalFileData Type="Normal" Path="GameStart.png" Plist="" />
+            <NormalFileData Type="Normal" Path="NewUI/GameStart.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
@@ -42,7 +42,7 @@
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
             <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
-            <NormalFileData Type="Normal" Path="About.png" Plist="" />
+            <NormalFileData Type="Normal" Path="NewUI/About.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
@@ -56,8 +56,8 @@
             <PreSize X="0.0743" Y="0.1296" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-            <PressedFileData Type="Normal" Path="Button_Music_off.png" Plist="" />
-            <NormalFileData Type="Normal" Path="Button_Music.png" Plist="" />
+            <PressedFileData Type="Normal" Path="NewUI/Button_Music_off.png" Plist="" />
+            <NormalFileData Type="Normal" Path="NewUI/Button_Music.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
@@ -71,8 +71,8 @@
             <PreSize X="0.0743" Y="0.1296" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-            <PressedFileData Type="Normal" Path="Button_Music.png" Plist="" />
-            <NormalFileData Type="Normal" Path="Button_Music_off.png" Plist="" />
+            <PressedFileData Type="Normal" Path="NewUI/Button_Music.png" Plist="" />
+            <NormalFileData Type="Normal" Path="NewUI/Button_Music_off.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>

@@ -50,7 +50,6 @@
           <Image Name="Mouse_2.png" />
           <Image Name="Mouse_3.png" />
           <Image Name="Mouse_4.png" />
-          <Image Name="Page.png" />
           <Image Name="Protagonist_1.png" />
           <Image Name="Protagonist_2.png" />
           <Image Name="Protagonist_3.png" />
@@ -60,7 +59,6 @@
           <Image Name="Sprite_Protagonist.png" />
           <Image Name="Sprite_Special_Section.png" />
           <Image Name="Sprite_Wall.jpg" />
-          <Image Name="Step.png" />
         </Folder>
         <Folder Name="Selection_1">
           <Project Name="Layer_Selection_1.csd" Type="Layer" />
@@ -73,21 +71,34 @@
         <Folder Name="Start">
           <Project Name="Layer_Start.csd" Type="Layer" />
         </Folder>
-        <Image Name="About.png" />
-        <Image Name="Back.png" />
-        <Image Name="Background.png" />
-        <Image Name="Background_Start.png" />
-        <Image Name="Book.png" />
-        <Image Name="Button_Music.png" />
-        <Image Name="Button_Music_off.png" />
-        <Image Name="GameStart.png" />
-        <Image Name="Lock.png" />
         <Image Name="P1.jpg" />
         <Image Name="P2.jpg" />
         <Image Name="Protagonist_1.png" />
         <Image Name="Protagonist_2.png" />
         <Image Name="Protagonist_3.png" />
         <Image Name="Protagonist_4.png" />
+        <Folder Name="NewUI">
+          <Image Name="About.png" />
+          <Image Name="Back.png" />
+          <Image Name="Background.png" />
+          <Image Name="BackGround_Selection_3.png" />
+          <Image Name="Background_Start.png" />
+          <Image Name="Book.png" />
+          <Image Name="Button_Close.png" />
+          <Image Name="Button_CloseOn.png" />
+          <Image Name="Button_Music.png" />
+          <Image Name="Button_Music_off.png" />
+          <Image Name="Button_StartGame.png" />
+          <Image Name="GameStart.png" />
+          <Image Name="GameStartOn.png" />
+          <Image Name="Lock.png" />
+          <Image Name="Page.png" />
+          <Image Name="start0.png" />
+          <Image Name="Start1.png" />
+          <Image Name="start2.png" />
+          <Image Name="start3.png" />
+          <Image Name="Step.png" />
+        </Folder>
       </RootFolder>
     </Group>
   </SolutionFolder>

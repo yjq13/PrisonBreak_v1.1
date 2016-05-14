@@ -52,7 +52,7 @@ public:
     virtual void onTouchEnded(Touch* pTouch, Event* pEvent);
     void update(float dt);
     void initData();
-    void initCard(int cardNum,cocos2d::ui::Widget* card);
+    void initCard(int cardNum,cocos2d::ui::Widget* card,cocos2d::ui::Widget* start_0,cocos2d::ui::Widget* start_1,cocos2d::ui::Widget* start_2,cocos2d::ui::Widget* start_3);
     void initLevel(int currentLevel,cocos2d::ui::Widget* lock);
     void adjustCardScale(Point adjustPoint);
     int getCurLevel();
@@ -79,5 +79,9 @@ private:
     Array* levelArray;
     ScrollView* scrollView;
     int totalCard;
+    cocos2d::ui::Widget* start_0;
+    cocos2d::ui::Widget* start_1;
+    cocos2d::ui::Widget* start_2;
+    cocos2d::ui::Widget* start_3;
 };
 #endif
