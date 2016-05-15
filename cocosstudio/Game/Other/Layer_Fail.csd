@@ -6,45 +6,54 @@
       <ObjectData Name="Layer" Tag="26" ctype="GameLayerObjectData">
         <Size X="2208.0000" Y="1242.0000" />
         <Children>
-          <AbstractNodeData Name="Background_Fail" ActionTag="-1744088320" Tag="8" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1081.0000" RightMargin="1081.0000" TopMargin="598.0000" BottomMargin="598.0000" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
-            <Size X="46.0000" Y="46.0000" />
+          <AbstractNodeData Name="Background_Fail" ActionTag="-1744088320" Tag="8" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftEage="728" RightEage="728" TopEage="409" BottomEage="409" Scale9OriginX="728" Scale9OriginY="409" Scale9Width="752" Scale9Height="424" ctype="ImageViewObjectData">
+            <Size X="2208.0000" Y="1242.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="1104.0000" Y="621.0000" />
-            <Scale ScaleX="47.5214" ScaleY="26.6520" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5000" />
-            <PreSize X="0.0208" Y="0.0370" />
-            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
+            <PreSize X="1.0000" Y="1.0000" />
+            <FileData Type="Normal" Path="NewUI/BackGround_Selection_3.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_Back" ActionTag="-244406998" Tag="27" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="566.3745" RightMargin="1441.6255" TopMargin="627.1127" BottomMargin="534.8873" TouchEnable="True" FontSize="14" ButtonText="Button" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="170" Scale9Height="58" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="200.0000" Y="80.0000" />
+          <AbstractNodeData Name="Button_Back" ActionTag="-244406998" Tag="27" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="806.2763" RightMargin="1176.7236" TopMargin="671.6344" BottomMargin="345.3656" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="195" Scale9Height="203" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="225.0000" Y="225.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="666.3745" Y="574.8873" />
-            <Scale ScaleX="2.2000" ScaleY="3.0000" />
+            <Position X="918.7763" Y="457.8656" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.3018" Y="0.4629" />
-            <PreSize X="0.0906" Y="0.0644" />
+            <PrePosition X="0.4161" Y="0.3687" />
+            <PreSize X="0.1019" Y="0.1812" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
             <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
-            <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+            <NormalFileData Type="Normal" Path="NewUI/Button_Back.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_Retry" ActionTag="11638453" Tag="28" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="1642.4944" RightMargin="519.5056" TopMargin="641.7926" BottomMargin="564.2074" TouchEnable="True" FontSize="14" ButtonText="Retry" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="46.0000" Y="36.0000" />
+          <AbstractNodeData Name="Button_Retry" ActionTag="11638453" Tag="28" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="1192.7527" RightMargin="790.2473" TopMargin="668.9028" BottomMargin="348.0971" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="195" Scale9Height="203" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="225.0000" Y="225.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1665.4944" Y="582.2074" />
-            <Scale ScaleX="9.7529" ScaleY="7.8917" />
+            <Position X="1305.2527" Y="460.5971" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.7543" Y="0.4688" />
-            <PreSize X="0.0208" Y="0.0290" />
+            <PrePosition X="0.5911" Y="0.3709" />
+            <PreSize X="0.1019" Y="0.1812" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
             <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
-            <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+            <NormalFileData Type="Normal" Path="NewUI/Retry.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Text_Score" ActionTag="1406667524" Tag="41" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="792.0720" RightMargin="1340.9280" TopMargin="386.4401" BottomMargin="840.5599" LabelText="Fnt Text Label" ctype="TextBMFontObjectData">
+            <Size X="75.0000" Y="15.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="829.5720" Y="848.0599" />
+            <Scale ScaleX="3.5868" ScaleY="5.1374" />
+            <CColor A="255" R="0" G="0" B="0" />
+            <PrePosition X="0.3757" Y="0.6828" />
+            <PreSize X="0.0340" Y="0.0121" />
           </AbstractNodeData>
         </Children>
       </ObjectData>
