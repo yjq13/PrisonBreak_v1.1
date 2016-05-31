@@ -24,6 +24,7 @@
           <Image Name="About.png" />
           <Image Name="Back.png" />
           <Image Name="Background.png" />
+          <Image Name="BackGround_Game.png" />
           <Image Name="BackGround_Selection_3.png" />
           <Image Name="Background_Start.png" />
           <Image Name="Book.png" />
@@ -32,11 +33,14 @@
           <Image Name="Button_CloseOn.png" />
           <Image Name="Button_Music.png" />
           <Image Name="Button_Music_off.png" />
+          <Image Name="button_Next.png" />
           <Image Name="Button_StartGame.png" />
           <Image Name="GameStart.png" />
           <Image Name="GameStartOn.png" />
+          <Image Name="Gold.png" />
           <Image Name="Lock.png" />
           <Image Name="Page.png" />
+          <Image Name="Protagonist.png" />
           <Image Name="Resume.png" />
           <Image Name="Retry.png" />
           <Image Name="start0.png" />
@@ -44,6 +48,7 @@
           <Image Name="start2.png" />
           <Image Name="start3.png" />
           <Image Name="Step.png" />
+          <Image Name="Wall_1.png" />
         </Folder>
         <Folder Name="Picture">
           <Image Name="Button_Add.png" />

@@ -73,20 +73,6 @@
             <TextureFile Type="Normal" Path="Picture/Jailer_4.png" Plist="" />
           </TextureFrame>
         </Timeline>
-        <Timeline ActionTag="1558405148" Property="FileData">
-          <TextureFrame FrameIndex="0" Tween="False">
-            <TextureFile Type="Normal" Path="Picture/Protagonist_1.png" Plist="" />
-          </TextureFrame>
-          <TextureFrame FrameIndex="5" Tween="False">
-            <TextureFile Type="Normal" Path="Picture/Protagonist_2.png" Plist="" />
-          </TextureFrame>
-          <TextureFrame FrameIndex="10" Tween="False">
-            <TextureFile Type="Normal" Path="Picture/Protagonist_3.png" Plist="" />
-          </TextureFrame>
-          <TextureFrame FrameIndex="15" Tween="False">
-            <TextureFile Type="Normal" Path="Picture/Protagonist_4.png" Plist="" />
-          </TextureFrame>
-        </Timeline>
         <Timeline ActionTag="-2113337950" Property="Position">
           <PointFrame FrameIndex="100" X="1572.5452" Y="374.3196">
             <EasingData Type="0" />
@@ -209,16 +195,6 @@
             <PreSize X="0.0906" Y="0.1610" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Image_Stop" ActionTag="1455529122" Tag="18" IconVisible="False" LeftMargin="1110.4032" RightMargin="1051.5968" TopMargin="1165.1984" BottomMargin="30.8016" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
-            <Size X="46.0000" Y="46.0000" />
-            <AnchorPoint />
-            <Position X="1110.4032" Y="30.8016" />
-            <Scale ScaleX="2.1135" ScaleY="2.5310" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5029" Y="0.0248" />
-            <PreSize X="0.0208" Y="0.0370" />
-            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
-          </AbstractNodeData>
           <AbstractNodeData Name="Button_Stop" ActionTag="1639506448" Tag="31" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="65.2472" RightMargin="1942.7528" TopMargin="36.6403" BottomMargin="1125.3597" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="200.0000" Y="80.0000" />
             <AnchorPoint ScaleX="0.4841" ScaleY="0.6211" />
@@ -243,17 +219,6 @@
             <PrePosition X="0.0831" Y="0.1841" />
             <PreSize X="0.2201" Y="0.2995" />
             <FileData Type="Normal" Path="Picture/Jailer_1.png" Plist="" />
-            <BlendFunc Src="770" Dst="771" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Protagonist" ActionTag="1558405148" Tag="27" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="61.1632" RightMargin="1836.8368" TopMargin="230.8592" BottomMargin="808.1408" ctype="SpriteObjectData">
-            <Size X="310.0000" Y="203.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="216.1632" Y="909.6408" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.0979" Y="0.7324" />
-            <PreSize X="0.1404" Y="0.1634" />
-            <FileData Type="Normal" Path="Picture/Protagonist_1.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
           <AbstractNodeData Name="Sprite_Jailer_2" ActionTag="-2113337950" Tag="28" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1329.5452" RightMargin="392.4548" TopMargin="681.6804" BottomMargin="188.3196" ctype="SpriteObjectData">
@@ -287,28 +252,6 @@
             <PrePosition X="0.4790" Y="0.6829" />
             <PreSize X="0.1812" Y="0.3221" />
             <FileData Type="Normal" Path="Picture/Sprite_Special_Section.png" Plist="" />
-            <BlendFunc Src="770" Dst="771" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Wall_1" ActionTag="-1539446216" Tag="28" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="643.1408" RightMargin="1514.8591" TopMargin="35.6936" BottomMargin="406.3065" ctype="SpriteObjectData">
-            <Size X="50.0000" Y="800.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="668.1408" Y="806.3065" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.3026" Y="0.6492" />
-            <PreSize X="0.0226" Y="0.6441" />
-            <FileData Type="Normal" Path="Picture/Sprite_Wall.jpg" Plist="" />
-            <BlendFunc Src="770" Dst="771" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Wall_2" ActionTag="-1218345873" Tag="29" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1408.6543" RightMargin="749.3457" TopMargin="429.0350" BottomMargin="12.9650" ctype="SpriteObjectData">
-            <Size X="50.0000" Y="800.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1433.6543" Y="412.9650" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.6493" Y="0.3325" />
-            <PreSize X="0.0226" Y="0.6441" />
-            <FileData Type="Normal" Path="Picture/Sprite_Wall.jpg" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
           <AbstractNodeData Name="Button_Tool_1" ActionTag="-1754799690" Tag="26" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1440.4624" RightMargin="721.5376" TopMargin="45.3420" BottomMargin="1160.6580" TouchEnable="True" FontSize="14" ButtonText="道具1" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -352,15 +295,125 @@
             <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_Quick_Section_1" ActionTag="-768260981" Tag="37" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="842.4150" RightMargin="965.5850" TopMargin="724.5153" BottomMargin="117.4847" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Sprite_Quick_Section_1" ActionTag="-768260981" Tag="37" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="842.3967" RightMargin="965.6033" TopMargin="724.5448" BottomMargin="117.4552" ctype="SpriteObjectData">
             <Size X="400.0000" Y="400.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1042.4150" Y="317.4847" />
+            <Position X="1042.3967" Y="317.4552" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.4721" Y="0.2556" />
             <PreSize X="0.1812" Y="0.3221" />
             <FileData Type="Normal" Path="Picture/Sprite_Special_Section.png" Plist="" />
+            <BlendFunc Src="770" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Sprite_Protagonist" ActionTag="-1810331186" Tag="68" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="98.6631" RightMargin="1874.3369" TopMargin="217.5776" BottomMargin="785.4224" ctype="SpriteObjectData">
+            <Size X="235.0000" Y="239.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="216.1631" Y="904.9224" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.0979" Y="0.7286" />
+            <PreSize X="0.1064" Y="0.1924" />
+            <FileData Type="Normal" Path="NewUI/Protagonist.png" Plist="" />
+            <BlendFunc Src="1" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Sprite_Wall_2" ActionTag="1880363762" Tag="70" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1293.8542" RightMargin="795.1458" TopMargin="789.5313" BottomMargin="333.4688" ctype="SpriteObjectData">
+            <Size X="119.0000" Y="119.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="1353.3542" Y="392.9688" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.6129" Y="0.3164" />
+            <PreSize X="0.0539" Y="0.0958" />
+            <FileData Type="Normal" Path="NewUI/Wall_1.png" Plist="" />
+            <BlendFunc Src="770" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Sprite_Wall_1" ActionTag="1583996094" Tag="73" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="1295.2244" RightMargin="793.7756" TopMargin="673.7437" BottomMargin="449.2563" ctype="SpriteObjectData">
+            <Size X="119.0000" Y="119.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="1354.7244" Y="508.7563" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.6136" Y="0.4096" />
+            <PreSize X="0.0539" Y="0.0958" />
+            <FileData Type="Normal" Path="NewUI/Wall_1.png" Plist="" />
+            <BlendFunc Src="770" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Sprite_Wall_3" ActionTag="213713024" Tag="74" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="895.7201" RightMargin="1193.2799" TopMargin="134.0734" BottomMargin="988.9266" ctype="SpriteObjectData">
+            <Size X="119.0000" Y="119.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="955.2201" Y="1048.4266" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.4326" Y="0.8441" />
+            <PreSize X="0.0539" Y="0.0958" />
+            <FileData Type="Normal" Path="NewUI/Wall_1.png" Plist="" />
+            <BlendFunc Src="770" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Sprite_Wall_4" ActionTag="-1788870355" Tag="75" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="773.7994" RightMargin="1315.2006" TopMargin="127.5830" BottomMargin="995.4170" ctype="SpriteObjectData">
+            <Size X="119.0000" Y="119.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="833.2994" Y="1054.9170" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.3774" Y="0.8494" />
+            <PreSize X="0.0539" Y="0.0958" />
+            <FileData Type="Normal" Path="NewUI/Wall_1.png" Plist="" />
+            <BlendFunc Src="770" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Sprite_Wall_5" ActionTag="557305504" Tag="76" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="764.5612" RightMargin="1324.4388" TopMargin="931.8560" BottomMargin="191.1440" ctype="SpriteObjectData">
+            <Size X="119.0000" Y="119.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="824.0612" Y="250.6440" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.3732" Y="0.2018" />
+            <PreSize X="0.0539" Y="0.0958" />
+            <FileData Type="Normal" Path="NewUI/Wall_1.png" Plist="" />
+            <BlendFunc Src="770" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Sprite_Wall_6" ActionTag="1915085711" Tag="77" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="650.8855" RightMargin="1438.1145" TopMargin="125.5959" BottomMargin="997.4041" ctype="SpriteObjectData">
+            <Size X="119.0000" Y="119.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="710.3855" Y="1056.9041" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.3217" Y="0.8510" />
+            <PreSize X="0.0539" Y="0.0958" />
+            <FileData Type="Normal" Path="NewUI/Wall_1.png" Plist="" />
+            <BlendFunc Src="770" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Sprite_Wall_7" ActionTag="1569707351" Tag="78" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="649.8921" RightMargin="1439.1079" TopMargin="251.0270" BottomMargin="871.9730" ctype="SpriteObjectData">
+            <Size X="119.0000" Y="119.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="709.3921" Y="931.4730" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.3213" Y="0.7500" />
+            <PreSize X="0.0539" Y="0.0958" />
+            <FileData Type="Normal" Path="NewUI/Wall_1.png" Plist="" />
+            <BlendFunc Src="770" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Sprite_Wall_8" ActionTag="1764516500" Tag="79" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="651.6467" RightMargin="1437.3533" TopMargin="362.7166" BottomMargin="760.2834" ctype="SpriteObjectData">
+            <Size X="119.0000" Y="119.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="711.1467" Y="819.7834" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.3221" Y="0.6601" />
+            <PreSize X="0.0539" Y="0.0958" />
+            <FileData Type="Normal" Path="NewUI/Wall_1.png" Plist="" />
+            <BlendFunc Src="770" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Sprite_Wall_9" ActionTag="1960673875" Tag="80" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="653.4021" RightMargin="1435.5979" TopMargin="474.4053" BottomMargin="648.5947" ctype="SpriteObjectData">
+            <Size X="119.0000" Y="119.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="712.9021" Y="708.0947" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.3229" Y="0.5701" />
+            <PreSize X="0.0539" Y="0.0958" />
+            <FileData Type="Normal" Path="NewUI/Wall_1.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
         </Children>

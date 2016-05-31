@@ -78,7 +78,9 @@ void gameLoad::loadGame(cocos2d::Node* rootNodeL){
         Demo_wall[index] = rootNodeL->getChildByName<Sprite*>(all);
         if(Demo_wall[index]!=NULL){
             Sprite_wall::setWall(index,Demo_wall[index]);
-            
+            auto height=Director::getInstance()->getOpenGLView()->getFrameSize().height;
+            Demo_wall[index]->setScale(DESIGN_SIZE.height/height);
+
             EventListenerTouchOneByOne* listener = GameManager::walllistener[index].create(Demo_wall[index]);
             
             listener->setEnabled(false);
