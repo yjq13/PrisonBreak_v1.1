@@ -126,6 +126,12 @@ bool ContactManager::onContactBeginPro_End(){
     
     auto text_score=layer->getChildByName<ui::TextBMFont*>("Text_Score");
     text_score->setString(score);
+
+    
+    if(GameManager::stepNow==STEP){
+        STEP++;
+    }
+
     //此处应该有个算星星的方法
     int stateN = getState();
      strstream ss1;
